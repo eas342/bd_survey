@@ -5,14 +5,11 @@
 *.top
 *.synctex.gz
 *.blg
-*.pdf
 *.tui
 *-mpgraph.mp
-es_apj.log
-es_apj_written_as_apj.bst
 *.DS_Store
+ms.pdf
 image_backups/*
-dhs_white_paper_draf*.pdf
 sync_bib.sh
 msNotes.bib
 *~
