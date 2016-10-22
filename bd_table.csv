@@ -1,4 +1,4 @@
-Name             ,Rotation Period, Spectral Type
-                 , hr            , 
-2MASS J1821+14010,  4.2          , L5
-2MASS J0835-019  ,  9            , L5
+Name             ,Rotation Period, Spectral Type,K magnitude
+                 , hr            , ,
+2MASS J1821+14010,4.2, L5,11.14
+2MASS J0835-019  ,9, L5,11.65

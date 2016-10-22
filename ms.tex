@@ -135,24 +135,60 @@ BD Science
 %%  Otherwise, LaTeX will issue an error. 
 
 \section{Introduction}
+
+Brown dwarfs atmospheres are an intriguing environment to explore cloud composition, particle size and formation that also complement studies of exoplanet atmospheres.
+
+The cloud layers may be studied from the direct spectroscopy and photometry of large populations of brown dwarf atmospheres.
+
+In addition to the direct spectroscopy and photometry, brown dwarfs may be observed over their rotation periods to understand the spatial cloud structure and composition, that can change rapidly with time.
+
+The photometry brown dwarfs at the L/T transition is explained by (silicate?) clouds at a temperature of (?).
+
 \citep{burgaser2014irtf} first demonstrated that the Infrared Telescope Facility (IRTF) was a useful tool for characterizing brown dwarf variability and that a simultaneous reference can be used to correct for common-mode variability, such as telluric transmission variations.
 
 We observed the three brown dwarfs as part of a pilot program to assess the efficacy of IRTF for measuring spectral variability in brown dwarf atmospheres.
 2MASS J18212815+1414010 is an L5 brown dwarf showing a triangular H-band spectrum \citep{looper2008peculiarLdwarfs}.
 2MASS J1821's short rotation period (4.2 hr) allows for time series spectroscopy for all longitudes in a single ground based observation night.
-2MASS J0835-019 \citep{cruz2003coolNeighbors} is also an L5 brown dwarf known to be variable.
+2MASS J08354256-0819237 \citep{cruz2003coolNeighbors} is also an L5 brown dwarf known to be variable.
 
-\input{bd_table.tex}
+\begin{table*}
+\begin{center}
+\begin{tabular}{cccc}
+Name & Rotation Period & Spectral Type & K magnitude \\
+-- & hr & -- & -- \\
+2MASS J1821+14010 & 4.2 & L5 & 11.14 \\
+2MASS J0835-019 & 9 & L5 & 11.65 \\
+\end{tabular}
+\end{center}
+\end{table*}
+
 
 \section{Observations}
 We observed 2MASS J1821 and 2MASS J0835 for one night each with the IRTF.
-For 2MASS J1821, we observed a simultaneous reference - (I think it was 2MASS 18212622+1414064, $J$=12.58, $H$=11.97, $K_S$=11.82  at a distance of 24 \arcsec. 
+For 2MASS J1821, we observed a simultaneous reference - 2MASS 18212622+1414064, $J$=12.58, $H$=11.97, $K_S$=11.82  at a distance of 24 \arcsec.
+We were able to measure spectrophotometry over ? hours, which was greater than one full rotation period of the brown dwarf.
+Assuming the brown dwarfs cloud structure was relatively unchanged in one rotation, this enabled confirmation that the signal was astrophysical as opposed to the systematics affecting the same instrument telescope for observations of the  KIC 12557548 system \citep{schlawin2016kic1255}.
 %Using MORIS image for distance and plate scale in header of 0.1143 arcsec/px
-\input{observing_table.tex}
+For 2MASS J0835, we observed a simultaneous reference - 2MASS 08354383-0819212, $J$=12.74, $H$=12.28, $K_S$=12.19 at a distance of 28 arcsec.
+%Using SpeX Guider image for distance of 241px  and plate scale in header of 0.116 arcsec/px
+
+\begin{table*}
+\begin{center}
+\begin{tabular}{ccccc}
+Target & Observing Date & N$_{int}$ & t$_{exp}$ & Reference Star \\
+-- & UT Start & -- & (s) & -- \\
+\hline
+2MASS J1821 & 2015-12-31 & 363 & 45 & 2MASS 18212622+1414064 \\
+2MASS J0835 & 2016-06-25 & 352 & 60 & 2MASS 08354383-0819212 \\
+\end{tabular}
+\end{center}
+\end{table*}
 
 We use the same method as \citet{schlawin2014} to obtain high precision spectrophotometry.
+We used a 0.9~$\mu$m dichoric to split the optical wavelengths to the MORIS imager \citep{Gulbis2011}.
+For guiding, we use the MORIS imager in the SDSS $i$ band and 60 second long exposures in order to obtain simultaneous photometry on 2MASS J1821.
+For 2MASS J0835, we were unable to obtain photometry - why? due to the fainter source?
 
-For 2MASS J1821, we 
 
 \section{Light Curves}
 \begin{figure}[!ht]
