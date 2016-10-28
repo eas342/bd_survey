@@ -45,7 +45,7 @@
 %\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
 
 \usepackage{natbib}
-
+\usepackage[caption=false]{subfig}
 \newcommand{\vdag}{(v)^\dagger}
 
 %% You can insert a short comment on the title page using the command below.
@@ -192,11 +192,20 @@ For 2MASS J0835, we were unable to obtain photometry - why? due to the fainter s
 
 
 \section{Light Curves}
-\begin{figure}[!ht]
+
+\begin{figure*}[!t]
 \centering
-\includegraphics[width=0.5\textwidth]{specphot_j1821.pdf}
-\caption{Top Panel: 2MASS 1821's median spectrum compared with the reference star. The reference star is a significantly higher temperature star. Bottom Panel: Dynamic spectrum of 2MASS J1821.}\label{fig:DHSRes}
-\end{figure}
+\subfloat[2MASS J0835]{
+	\includegraphics[width=0.5\textwidth]{specphot_j0835.pdf}
+	\label{fig:specphot0835}
+	}
+\subfloat[2MASS J1821]{
+	\includegraphics[width=0.5\textwidth]{specphot_j1821.pdf}
+	\label{fig:specphot1821}
+	}
+	\caption{Top Panels: The target stars' median raw spectrum compared with the reference star. The areas near 1.4 and 1.8 $\mu$m are contaminated by telluric water absorption. The reference stars are significantly higher temperatures. Bottom Panels: Dynamic spectrum of 2MASS J1821.}
+	\label{fig:corner}
+\end{figure*} 
 
 \begin{figure}[!ht]
 \centering
