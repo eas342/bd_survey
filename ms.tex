@@ -170,6 +170,7 @@ Name & Rotation Period & Spectral Type & K magnitude \\
 \section{Observations}
 
 For 2MASS J0835, we observed a simultaneous reference - 2MASS 08354383-0819212, $J$=12.74, $H$=12.28, $K_S$=12.19 at a distance of 28 arcsec.
+We obtained spectrophotometry over 4.65 hours, covering about half of a rotation period for 2MASS J0835.
 
 We observed 2MASS J1821 and 2MASS J0835 for one night each with the IRTF.
 For 2MASS J1821, we observed a simultaneous reference - 2MASS 18212622+1414064, $J$=12.58, $H$=11.97, $K_S$=11.82  at a distance of 24\arcsec.
@@ -207,6 +208,14 @@ Table \ref{tab:obsParam} shows the observing parameters for each target includin
 Wavelength calibrations were performed with a 0.3$\times$60\arcsec\ slit and an argon emission lamp.
 We performed calibrations sequences of argon emission lamp spectra and flat fielding with the 3$\times$60\arcsec\ slit both before and after the brown dwarf time series to obtain information on the flat field and any flexure in the instrument with telescope orientation.
 
+For 2MASS J0835, we use a combination of an incandescent lamp and a sky frame to construct a flat.
+Due to flexure and motion with thin the system, we use a sky frame to get the structure of the background with low order polynomials fits in the horizontal direction.
+All of the (large $\gtrsim$ 30 px) structure is removed from the lamp frame with low order polynomials, and this residual flat is used to correct the pixel-to-pixel variations while the sky frame is used to measure the larger structures.
+We cross-correlate the sky frame with each image to account for any spatial shifts and apply the pixel-to-pixel flat to construct a custom flat field for every image.
+For 2MASS J1821, we did not have sufficient sky frames for sky flats so we use an incandescent lamp for flat fielding.
+
+As in \citep{schlawin2016kic1255}, we perform background subtraction over the entire slit with polynomial fit.
+We use a 4th order polynomial through all points outside +/-30 pixels of each aperture for the background subtraction.
 
 \section{Light Curves}
 
