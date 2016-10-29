@@ -160,7 +160,7 @@ We observed the three brown dwarfs as part of a pilot program to assess the effi
 Name & Rotation Period & Spectral Type & K magnitude \\
 -- & hr & -- & -- \\
 \hline \hline
-2MASS J1821+14010 & 4.2\footnote{\citet{metchev2015weatherII}} & L5 & 11.14 \\
+2MASS J1821+14010 & 4.2\footnote{\citet{metchev2015weatherII}} & L4.5 & 11.14 \\
 2MASS J0835-019 & 9 & L5 & 11.65 \\
 \end{tabular}
 \end{center}
@@ -168,16 +168,28 @@ Name & Rotation Period & Spectral Type & K magnitude \\
 
 
 \section{Observations}
+
+For 2MASS J0835, we observed a simultaneous reference - 2MASS 08354383-0819212, $J$=12.74, $H$=12.28, $K_S$=12.19 at a distance of 28 arcsec.
+
 We observed 2MASS J1821 and 2MASS J0835 for one night each with the IRTF.
 For 2MASS J1821, we observed a simultaneous reference - 2MASS 18212622+1414064, $J$=12.58, $H$=11.97, $K_S$=11.82  at a distance of 24\arcsec.
-We were able to measure spectrophotometry over 7.47 hours, which was 1.78 rotations at the rotation period.
+We were able to measure spectrophotometry over 7.47 hours, which was 1.8 rotations at the 4.2 rotation period from \citet{metchev2015weatherII}.
+
+As visible in Figure \ref{fig:specphot1821}, the light curves repeat the same fluctuations after one rotation period.
 Assuming the brown dwarfs cloud structure was relatively unchanged in one rotation, this enabled confirmation that the signal was astrophysical as opposed to the systematics affecting the same instrument telescope for observations of the  KIC 12557548 system \citep{schlawin2016kic1255}.
 %Using MORIS image for distance and plate scale in header of 0.1143 arcsec/px
-For 2MASS J0835, we observed a simultaneous reference - 2MASS 08354383-0819212, $J$=12.74, $H$=12.28, $K_S$=12.19 at a distance of 28 arcsec.
+
 %Using SpeX Guider image for distance of 241px  and plate scale in header of 0.116 arcsec/px
+
+
+We use the same method as \citet{schlawin2014} to obtain high precision spectrophotometry.
+We used a 0.9~$\mu$m dichoric to split the optical wavelengths to the MORIS imager \citep{Gulbis2011}.
+For guiding, we use the MORIS imager in the SDSS $i$ band and 60 second long exposures in order to obtain simultaneous photometry on 2MASS J1821.
+For 2MASS J0835, we were unable to obtain photometry - why? due to the fainter source?
 
 \begin{table*}
 \begin{center}
+\caption{Observing Parameters}\label{tab:obsParam}
 \begin{tabular}{ccccc}
 Target & Observing Date & N$_{int}$ & t$_{exp}$ & Reference Star \\
 -- & UT Start & -- & (s) & -- \\
@@ -186,12 +198,14 @@ Target & Observing Date & N$_{int}$ & t$_{exp}$ & Reference Star \\
 2MASS J0835 & 2016-06-25 & 352 & 60 & 2MASS 08354383-0819212 \\
 \end{tabular}
 \end{center}
+\tablenotetext{}{}
 \end{table*}
 
-We use the same method as \citet{schlawin2014} to obtain high precision spectrophotometry.
-We used a 0.9~$\mu$m dichoric to split the optical wavelengths to the MORIS imager \citep{Gulbis2011}.
-For guiding, we use the MORIS imager in the SDSS $i$ band and 60 second long exposures in order to obtain simultaneous photometry on 2MASS J1821.
-For 2MASS J0835, we were unable to obtain photometry - why? due to the fainter source?
+We observed 2MASS J1821 and J0835 each for one night as part of a pilot program to explore a variety of brown dwarfs with different variability levels and atmospheric temperatures.
+Table \ref{tab:obsParam} shows the observing parameters for each target including the integration time, number of integrations and reference star.
+
+Wavelength calibrations were performed with a 0.3$\times$60\arcsec\ slit and an argon emission lamp.
+We performed calibrations sequences of argon emission lamp spectra and flat fielding with the 3$\times$60\arcsec\ slit both before and after the brown dwarf time series to obtain information on the flat field and any flexure in the instrument with telescope orientation.
 
 
 \section{Light Curves}
