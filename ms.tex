@@ -176,7 +176,7 @@ We observed 2MASS J1821 and 2MASS J0835 for one night each with the IRTF.
 For 2MASS J1821, we observed a simultaneous reference - 2MASS 18212622+1414064, $J$=12.58, $H$=11.97, $K_S$=11.82  at a distance of 24\arcsec.
 We were able to measure spectrophotometry over 7.47 hours, which was 1.8 rotations at the 4.2 rotation period from \citet{metchev2015weatherII}.
 
-As visible in Figure \ref{fig:specphot1821}, the light curves repeat the same fluctuations after one rotation period.
+As visible in Figure \ref{fig:specphot1821}, the light curves for 2MASS J1821 repeat the same fluctuations after one rotation period.
 Assuming the brown dwarfs cloud structure was relatively unchanged in one rotation, this enabled confirmation that the signal was astrophysical as opposed to the systematics affecting the same instrument telescope for observations of the  KIC 12557548 system \citep{schlawin2016kic1255}.
 %Using MORIS image for distance and plate scale in header of 0.1143 arcsec/px
 
@@ -212,7 +212,11 @@ For 2MASS J0835, we use a combination of an incandescent lamp and a sky frame to
 Due to flexure and motion with thin the system, we use a sky frame to get the structure of the background with low order polynomials fits in the horizontal direction.
 All of the (large $\gtrsim$ 30 px) structure is removed from the lamp frame with low order polynomials, and this residual flat is used to correct the pixel-to-pixel variations while the sky frame is used to measure the larger structures.
 We cross-correlate the sky frame with each image to account for any spatial shifts and apply the pixel-to-pixel flat to construct a custom flat field for every image.
+
 For 2MASS J1821, we did not have sufficient sky frames for sky flats so we use an incandescent lamp for flat fielding.
+Here, we fit the flat field structure with low order polynomials in the incandescent flat field to describe the spatial structure and use the residual image as a pixel-to-pixel flat.
+As in 2MASS J0835, we cross-correlate the spatial structure image to find a shift and then multiply it by the pixel-to-pixel flat to create a custom flat field for every image.
+In both 2MASS J0835 and 2MASS J1821 we remove all spectral structure from the flat fields to make ``response'' images that do not include the spectral structure of the lamp or dramatically alter the flux levels that would affect SNR calculations from the number of photo-electrons in a given pixel.
 
 As in \citep{schlawin2016kic1255}, we perform background subtraction over the entire slit with polynomial fit.
 We use a 4th order polynomial through all points outside +/-30 pixels of each aperture for the background subtraction.
