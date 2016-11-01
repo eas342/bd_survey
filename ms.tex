@@ -137,17 +137,20 @@ BD Science
 \section{Introduction}
 
 Brown dwarfs atmospheres are an intriguing environment to explore cloud composition, particle size and formation that also complement studies of exoplanet atmospheres.
+Their temperatures are cool enough that they span condensation points of many cloud-producing  compounds.
 
-The cloud layers may be studied from the direct spectroscopy and photometry of large populations of brown dwarf atmospheres.
-
-In addition to the direct spectroscopy and photometry, brown dwarfs may be observed over their rotation periods to understand the spatial cloud structure and composition, that can change rapidly with time.
+The cloud layers may be studied from the direct spectroscopy of a populations of brown dwarf atmospheres \citep[e.g.][]{burgasser2006ltTrans,liu2006}.
+In addition to these direct spectroscopy and photometry, brown dwarfs may be observed over their rotation periods to understand the spatial cloud structure and composition, that can change rapidly with time.
+In the case where the targets are bright enough, Doppler imaging can be used to map out the cloud structures on brown dwarfs as in \citet{crossfield2014dopplerimg}.
 
 The photometry brown dwarfs at the L/T transition is explained by (silicate?) clouds at a temperature of (?).
 
 L dwarfs are found to be variable with periods of 1-100 hours \citep{bailer-jones1999bdvar,bailer-jones1999varevo}.
 This variability is explained by a patchy clouds at the L/T transition \citep{marley2010patchyc}.
+Virtually all L dwarfs and most T dwarfs likely have photospheric heterogeneities that cause flux variations larger than 0.2\% in the near infrared \citep{metchev2015weatherII}
 
-\citep{burgaser2014irtf} first demonstrated that the Infrared Telescope Facility (IRTF) was a useful tool for characterizing brown dwarf variability and that a simultaneous reference can be used to correct for common-mode variability, such as telluric transmission variations.
+\citet{burgaser2014irtf} first demonstrated that the Infrared Telescope Facility (IRTF) was a useful tool for characterizing brown dwarf variability and that a simultaneous reference can be used to correct for common-mode variability, such as telluric transmission variations.
+\citet{burgaser2014irtf} observed the binary system Luhman 16 AB and used the more stable Luhman 16A as a simultaneous reference to measure spectral variability in Luhman 16B.
 
 We observed the three brown dwarfs as part of a pilot program to assess the efficacy of IRTF for measuring spectral variability in brown dwarf atmospheres.
 2MASS J18212815+1414010 is an L5 brown dwarf showing a triangular H-band spectrum \citep{looper2008peculiarLdwarfs}.
@@ -253,12 +256,25 @@ We use a 4th order polynomial through all points outside +/-30 pixels of each ap
 
 
 
-
-\begin{figure}[!ht]
+\begin{figure*}[!]
 \centering
-\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821.pdf}
-\caption{Sine fit amplitude versus wavelength for 2MASS J1821. The regions at 1.4~$\mu$m and 1.9~$\mu$m are contaminated by telluric absorption so the variations can likely be due to telluric variability not corrected by the reference star.}\label{fig:DHSRes}
-\end{figure}
+\subfloat[2MASS J0835 - \colorbox{red}{fit needs more work} ]{
+	\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j0835.pdf}
+	\label{fig:ampspec0835}
+	}
+\subfloat[2MASS J1821]{
+	\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821.pdf}
+	\label{fig:ampspec1821}
+	}
+	\caption{Sine fit amplitude versus wavelength for each brown dwarf. The regions at 1.4~$\mu$m and 1.9~$\mu$m are contaminated by telluric absorption so the variations can likely be due to telluric variability not corrected by the reference star.}
+	\label{fig:ampSpect}
+\end{figure*} 
+
+%    \begin{figure}[!ht]
+%    \centering
+%    \includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821.pdf}
+%    \caption{Sine fit amplitude versus wavelength for 2MASS J1821. The regions at 1.4~$\mu$m and 1.9~$\mu$m are contaminated by telluric absorption so the variations can likely be due to telluric variability not corrected by the reference star.}\label{fig:DHSRes}
+%    \end{figure}
 
 
 \section{Conclusions}
