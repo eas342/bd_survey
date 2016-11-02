@@ -223,6 +223,8 @@ In both 2MASS J0835 and 2MASS J1821 we remove all spectral structure from the fl
 
 As in \citep{schlawin2016kic1255}, we perform background subtraction over the entire slit with polynomial fit.
 We use a 4th order polynomial through all points outside +/-30 pixels of each aperture for the background subtraction.
+We use optimal extraction \citep{horne1986optimalE} to maximize the signal to noise.
+The spatial profiles are fit with low order polynomials with 20$\sigma$ rejection to remove cosmic rays and bad pixels.
 
 \section{Light Curves}
 
@@ -240,6 +242,11 @@ We use a 4th order polynomial through all points outside +/-30 pixels of each ap
 	\label{fig:specphot}
 \end{figure*} 
 
+Figure \ref{fig:specphot} shows the dynamic spectra for both brown dwarfs with the individual spectra of the target and reference stars on the upper panels.
+At the few percent level, 2MASS j0835 shows no variations or systematics.
+2MASS J1821 on the other hand, shows a periodic signal that is strongest at the short wavelength and gradually gets smaller toward longer wavelengths.
+2MASS J1821 also exhibits systematic trends near strong slopes in the raw spectra due to telluric absorption bands.
+
 \begin{figure*}[!t]
 \centering
 \subfloat[2MASS J0835]{
@@ -254,7 +261,18 @@ We use a 4th order polynomial through all points outside +/-30 pixels of each ap
 	\label{fig:tserPfold}
 \end{figure*} 
 
+2MASS J0835 exhibits no periodic behavior whereas 2MASS 1821 shows large varations when phasing the dynamic spectra at the known rotation periods of the two brown dwarfs, shown in Figure \ref{fig:tserPfold}.
+For 2MASS 1821, the variations are mostly sinusoidal and repeat over multiple rotations of the brown dwarf - the exception is wavelengths near telluric features, such as 1.43~$\mu$m and 1.79~$\mu$m.
 
+We fit the time series of each brown dwarf in 25 spectral bins each to assess the wavelength-dependent nature of their variations.
+The simple model can be described as 
+\begin{equation}
+F(t) = A * \sin(2 \pi (t - t_0)/\tau) + B t + C
+\end{equation}
+where $F$ is the flux as a function of time ($t$), A is the amplitude of the variations, $t_0$ is the time offset of the variations and $\tau$ is the and B and C are linear terms describing the baseline trend.
+For the fits, we include a 4 free parameters: $A$, $t_0$, $B$ and $C$.
+We fixed the sinusoidal period $\tau$ at the literature value of periodicity because there are also variations due to variable telluric variation that are not relevant to the brown dwarf system.
+We imposed a prior that $A$ >= 0 so that a solution with a $\pi$ phase offset and negative amplitude isn't found.
 
 \begin{figure*}[!]
 \centering
@@ -267,8 +285,15 @@ We use a 4th order polynomial through all points outside +/-30 pixels of each ap
 	\label{fig:ampspec1821}
 	}
 	\caption{Sine fit amplitude versus wavelength for each brown dwarf. The regions at 1.4~$\mu$m and 1.9~$\mu$m are contaminated by telluric absorption so the variations can likely be due to telluric variability not corrected by the reference star.}
-	\label{fig:ampSpect}
+	\label{fig:ampSpec}
 \end{figure*} 
+
+Figure \ref{fig:ampSpec} shows the best fit amplitudes as a function of wavelength.
+We use the standard deviation of points near minimum to estimate the noise in the flux time series.
+The Levenberg-Marquardt chi-squared minimization code \texttt{mpfit} is used to fit each wavelength bin independently and propagate the errors in the flux time series to amplitude uncertainty.
+The amplitude spectrum of 2MASS J0835 shown in Figure \ref{fig:ampspec0835} shows random fluctuations as a function of wavelength.
+2MASS J1821, on the other hand, shows a clear decreasing trend as function of wavelength.
+This was also observed in the shorter wavelength range of 1.1~$\mu$m to 1.7~$\mu$m in \citet{yang2016exStormsBD}.
 
 %    \begin{figure}[!ht]
 %    \centering
