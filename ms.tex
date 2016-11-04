@@ -101,7 +101,7 @@
 %% editorial office after submission.
 
 \begin{abstract}
-BD Science
+L and T brown dwarfs show variability associated with the rotation of non-uniform atmospheres. We present a high precision ground-based study of 2 brown dwarfs - 2MASS J08354256-0819237 and 2MASS J18212815+1414010. 2MASS J0835 shows relatively little spectral variability from 0.8~$\mu$m to 2.4~$\mu$m. 2MASS J1821 by contrast shows a strong variability in the shorter wavelengths that falls off toward 2.4~$\mu$m. We interpret the spectral variability in 2MASS J1821 as being due to clouds with sub-micron-sized particles.
 \end{abstract}
 
 %% Keywords should appear after the \end{abstract} command. The uncommented
@@ -242,6 +242,7 @@ The spatial profiles are fit with low order polynomials with 20$\sigma$ rejectio
 	}
 	\caption{Top Panels: The target stars' median raw spectrum compared with the reference star. The areas near 1.4 and 1.8 $\mu$m are contaminated by telluric water absorption. The reference stars are significantly higher temperatures. Bottom Panels: Dynamic spectrum of 2MASS J1821.}
 	\label{fig:specphot}
+	\vspace{0.1in}
 \end{figure*} 
 
 Figure \ref{fig:specphot} shows the dynamic spectra for both brown dwarfs with the individual spectra of the target and reference stars on the upper panels.
@@ -304,13 +305,22 @@ This was also observed in the shorter wavelength range of 1.1~$\mu$m to 1.7~$\mu
 %    \end{figure}
 
 \section{Simple Model Fits}
+
+We model the wavelength dependence of 2MASS 1821 as an optically thin cloud layer consisting of a log-normal distribution of particle sizes.
+In this simple model, the amplitude of the variability is directly proportional to the opacity or $Q_{ext}$ of the particles.
+We model the extinction coefficient from the \texttt{IDL} Mie theory code \texttt{mie\_single.pro} \citep{grainger04} to calculate the extinction as a function of wavelength.
+We use the complex indices of refraction from \citet{dorschner95pyrox} for Mg-rich pyroxene grains.
+For the particle size distribution we assume a log-normal distribution around a characteristic size with a distribution $\sigma$ of 0.5.
+
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821_mie_sc.pdf}
-\caption{Sine fit amplitude versus wavelength with simple Mie scattering models with a log-normal particle size distribution centered at 0.1 and 0.2~$\mu$m}\label{fig:ampspec1821}
+\caption{Sine fit amplitude versus wavelength with simple Mie scattering models with a log-normal particle size distribution centered at 0.1 and 0.2~$\mu$m}\label{fig:ampspec1821mie}
 \end{centering}
 \end{figure}
 
+Figure \ref{fig:ampspec1821mie} shows the simple Mie scattering model as compared to the data for two example particle sizes of 0.1~$\mu$m and 0.2~$\mu$m.
+In these cases the reduced chi-squared values are 9.6 and 2.5 respectively, when ignoring the points within the shaded telluric contamination regions.
 \section{Conclusions}
 
 \section{Acknowledgements}
