@@ -60,7 +60,7 @@
 %% Running heads will not print in the manuscript style.
 
 \shorttitle{IRTF BD Spectro-photometry}
-\shortauthors{BD team.}
+\shortauthors{Schlawin et al.}
 
 %% This is the end of the preamble.  Indicate the beginning of the
 %% paper itself with \begin{document}.
@@ -101,7 +101,7 @@
 %% editorial office after submission.
 
 \begin{abstract}
-L and T brown dwarfs show variability associated with the rotation of non-uniform atmospheres. We present a high precision ground-based study of 2 brown dwarfs - 2MASS J08354256-0819237 and 2MASS J18212815+1414010. 2MASS J0835 shows relatively little spectral variability from 0.8~$\mu$m to 2.4~$\mu$m. 2MASS J1821 by contrast shows a strong variability in the shorter wavelengths that falls off toward 2.4~$\mu$m. We interpret the spectral variability in 2MASS J1821 as being due to clouds with sub-micron-sized particles.
+L and T brown dwarfs show variability associated with the rotation of non-uniform atmospheres. We present a high precision ground-based time series study of 2 brown dwarfs - 2MASS J08354256-0819237 and 2MASS J18212815+1414010. 2MASS J0835 shows relatively little spectral variability from 0.8~$\mu$m to 2.4~$\mu$m. 2MASS J1821 by contrast shows a strong variability in the shorter wavelengths that falls off toward 2.4~$\mu$m, that can be fit by Mie extinction of sub-micron dust particles.
 \end{abstract}
 
 %% Keywords should appear after the \end{abstract} command. The uncommented
@@ -142,10 +142,10 @@ Brown dwarfs atmospheres are an intriguing environment to explore cloud composit
 Their temperatures are cool enough that they span condensation points of many cloud-producing  compounds.
 
 The cloud layers may be studied from the direct spectroscopy of a populations of brown dwarf atmospheres \citep[e.g.][]{burgasser2006ltTrans,liu2006}.
-In addition to these direct spectroscopy and photometry, brown dwarfs may be observed over their rotation periods to understand the spatial cloud structure and composition, that can change rapidly with time.
+In addition to these direct spectroscopy and photometry, brown dwarfs may be observed over their rotation periods to understand the spatial cloud structure and composition, that can change rapidly with time \citep[e.g.][]{yang2016exStormsBD}.
 In the case where the targets are bright enough, Doppler imaging can be used to map out the cloud structures on brown dwarfs as in \citet{crossfield2014dopplerimg}.
 
-The photometry brown dwarfs at the L/T transition is explained by (silicate?) clouds at a temperature of (?).
+The photometry brown dwarfs at the L/T transition is explained by (silicate and sulfide?) clouds at a temperature of (?).
 
 L dwarfs are found to be variable with periods of 1-100 hours \citep{bailer-jones1999bdvar,bailer-jones1999varevo}.
 This variability is explained by a patchy clouds at the L/T transition \citep{marley2010patchyc}.
@@ -165,7 +165,7 @@ We observed the three brown dwarfs as part of a pilot program to assess the effi
 Name & Rotation Period & Spectral Type & K magnitude \\
 -- & hr & -- & -- \\
 \hline \hline
-2MASS J1821+14010 & 4.2\footnote{\citet{metchev2015weatherII}} & L4.5 & 11.14 \\
+2MASS J1821+14010 & 4.2\footnote{\citet{metchev2015weatherII}} & L4.5 - L5 & 11.14 \\
 2MASS J0835-019 & 9 & L5 & 11.65 \\
 \end{tabular}
 \end{center}
@@ -315,12 +315,15 @@ For the particle size distribution we assume a log-normal distribution around a 
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821_mie_sc.pdf}
-\caption{Sine fit amplitude versus wavelength with simple Mie scattering models with a log-normal particle size distribution centered at 0.1 and 0.2~$\mu$m}\label{fig:ampspec1821mie}
+\caption{Sine fit amplitude versus wavelength excluding the regions contaminated by telluric absorption. with simple Mie scattering models with a log-normal particle size distribution centered at 0.1 and 0.2~$\mu$m}\label{fig:ampspec1821mie}
 \end{centering}
 \end{figure}
 
 Figure \ref{fig:ampspec1821mie} shows the simple Mie scattering model as compared to the data for two example particle sizes of 0.1~$\mu$m and 0.2~$\mu$m.
 In these cases the reduced chi-squared values are 9.6 and 2.5 respectively, when ignoring the points within the shaded telluric contamination regions.
+
+\citet{yang2015hstRotBD} also observe wavelength-dependent variability of 2MASS J1821.
+
 \section{Conclusions}
 
 \section{Acknowledgements}
