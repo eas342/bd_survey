@@ -275,7 +275,7 @@ F(t) = A * \sin(2 \pi (t - t_0)/\tau) + B t + C
 where $F$ is the flux as a function of time ($t$), A is the amplitude of the variations, $t_0$ is the time offset of the variations and $\tau$ is the and B and C are linear terms describing the baseline trend.
 For the fits, we include a 4 free parameters: $A$, $t_0$, $B$ and $C$.
 We fixed the sinusoidal period $\tau$ at the literature value of periodicity because there are also variations due to variable telluric variation that are not relevant to the brown dwarf system.
-We imposed a prior that $A$ >= 0 so that a solution with a $\pi$ phase offset and negative amplitude isn't found.
+We imposed a prior that $A \geq 0$ so that a solution with a $\pi$ phase offset and negative amplitude isn't found.
 
 \begin{figure*}[!]
 \centering
@@ -287,7 +287,7 @@ We imposed a prior that $A$ >= 0 so that a solution with a $\pi$ phase offset an
 	\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821.pdf}
 	\label{fig:ampspec1821}
 	}
-	\caption{Sine fit amplitude versus wavelength for each brown dwarf. The regions at 1.4~$\mu$m and 1.9~$\mu$m are contaminated by telluric absorption so the variations can likely be due to telluric variability not corrected by the reference star.}
+	\caption{Sine fit amplitude versus wavelength for each brown dwarf. The regions at 1.4~$\mu$m and 1.9~$\mu$m (shaded with a salmon color) are contaminated by telluric absorption so the variations can likely be due to telluric variability not corrected by the reference star.}
 	\label{fig:ampSpec}
 \end{figure*} 
 
@@ -322,7 +322,17 @@ For the particle size distribution we assume a log-normal distribution around a 
 Figure \ref{fig:ampspec1821mie} shows the simple Mie scattering model as compared to the data for two example particle sizes of 0.1~$\mu$m and 0.2~$\mu$m.
 In these cases the reduced chi-squared values are 9.6 and 2.5 respectively, when ignoring the points within the shaded telluric contamination regions.
 
-\citet{yang2015hstRotBD} also observe wavelength-dependent variability of 2MASS J1821.
+\citet{yang2015hstRotBD} also observe wavelength-dependent variability of 2MASS J1821 with the Hubble Space Telescope's (HST's) Wide Field Camera (WFC3) over 2 visits of 3 orbits each.
+Their maximum over minimum flux spectrum is converted to an amplitude spectrum by assuming that the amplitude is half the difference in maximum and minimum flux, which can be shown to be 
+\begin{equation}
+A  = \frac{f_R - 1}{f_R + 1}
+\end{equation}
+where $f_R$ is the flux ratio of the maximum over minimum flux.
+
+The WFC3 amplitude spectrum is shown with the data in Figure \ref{fig:ampspec1821mie}.
+There is a multiplicative offset between the IRTF and WFC3 spectrum because they were taken at different epochs and therefore different spatial cloud and temperature distributions.
+The WFC3 spectrum is not affected by the telluric absorption the way the SpeX data is.
+\citet{yang2015hstRotBD} find that the WFC3 spectrum has no significant water vapor absorption which indicates a high haze layer in 2MASS J1821, consistent with our Mie scattering fit.
 
 \section{Conclusions}
 
