@@ -101,7 +101,7 @@
 %% editorial office after submission.
 
 \begin{abstract}
-L and T brown dwarfs show variability associated with the rotation of non-uniform atmospheres. We present a high precision ground-based time series study of 2 brown dwarfs - 2MASS J08354256-0819237 and 2MASS J18212815+1414010. 2MASS J0835 shows relatively little spectral variability from 0.8~$\mu$m to 2.4~$\mu$m. 2MASS J1821 by contrast shows a strong variability in the shorter wavelengths that falls off toward 2.4~$\mu$m, that can be fit by Mie extinction of sub-micron dust particles.
+L and T brown dwarfs show variability associated with the rotation of non-uniform atmospheres. We present a high precision ground-based time series study of 2 brown dwarfs - 2MASS J08354256-0819237 and 2MASS J18212815+1414010, both of spectral type L4-L5. 2MASS J0835 shows relatively little spectral variability from 0.8~$\mu$m to 2.4~$\mu$m. 2MASS J1821 by contrast shows a strong variability in the shorter wavelengths that falls off toward 2.4~$\mu$m, that can be fit by Mie extinction of sub-micron dust particles.
 \end{abstract}
 
 %% Keywords should appear after the \end{abstract} command. The uncommented
@@ -273,6 +273,9 @@ At the few percent level, 2MASS j0835 shows no variations or systematics.
 2MASS J0835 exhibits no periodic behavior whereas 2MASS 1821 shows large varations when phasing the dynamic spectra at the known rotation periods of the two brown dwarfs, shown in Figure \ref{fig:tserPfold}.
 For 2MASS 1821, the variations are mostly sinusoidal and repeat over multiple rotations of the brown dwarf - the exception is wavelengths near telluric features, such as 1.43~$\mu$m and 1.79~$\mu$m.
 
+
+\section{Sinusoidal Model Fits}
+
 We fit the time series of each brown dwarf in 25 spectral bins each to assess the wavelength-dependent nature of their variations.
 The simple model can be described as 
 \begin{equation}
@@ -310,7 +313,7 @@ This was also observed in the shorter wavelength range of 1.1~$\mu$m to 1.7~$\mu
 %    \caption{Sine fit amplitude versus wavelength for 2MASS J1821. The regions at 1.4~$\mu$m and 1.9~$\mu$m are contaminated by telluric absorption so the variations can likely be due to telluric variability not corrected by the reference star.}\label{fig:DHSRes}
 %    \end{figure}
 
-\section{Sinusoidal Model Fits}
+\subsection{Mie Scattering Fit}
 
 We model the wavelength dependence of 2MASS 1821 as an optically thin cloud layer consisting of a log-normal distribution of particle sizes.
 In this simple model, the amplitude of the variability is directly proportional to the opacity or $Q_{ext}$ of the particles.
@@ -321,7 +324,7 @@ For the particle size distribution we assume a log-normal distribution around a 
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821_mie_sc.pdf}
-\caption{Sine fit amplitude versus wavelength excluding the regions contaminated by telluric absorption. with simple Mie scattering models with a log-normal particle size distribution centered at 0.1 and 0.2~$\mu$m}\label{fig:ampspec1821mie}
+\caption{Sine fit amplitude versus wavelength excluding the regions contaminated by telluric absorption. with simple Mie scattering models with a log-normal particle size distribution centered at 0.1 and 0.2~$\mu$m. Also shown in the figure is the WFC3 amplitude from \citet{yang2015hstRotBD}. The WFC3 observations were from a different epoch, with different cloud coverage.}\label{fig:ampspec1821mie}
 \end{centering}
 \end{figure}
 
@@ -339,6 +342,22 @@ The WFC3 amplitude spectrum is shown with the data in Figure \ref{fig:ampspec182
 There is a multiplicative offset between the IRTF and WFC3 spectrum because they were taken at different epochs and therefore different spatial cloud and temperature distributions.
 The WFC3 spectrum is not affected by the telluric absorption the way the SpeX data is.
 \citet{yang2015hstRotBD} find that the WFC3 spectrum has no significant water vapor absorption which indicates a high haze layer in 2MASS J1821, consistent with our Mie scattering fit.
+
+\subsection{Spot Model Fit}
+
+Another simple model we attempt is a spot model - that the brown dwarf spectral variability has to do with a non-uniform temperature distribution on the brown dwarf in the same way that starspots modulate the brightness of hydrogen burning stars.
+In Figure \ref{fig:ampspec1821tdiff}, we fit the same amplitude spectrum as in Figure \ref{fig:ampspec1821mie}.
+This time we model the data with two layers in local thermodynamic equilibrium (LTE) so that the flux is a ratio of two Planck functions.
+We include a multiplicative constant to account for the geometric area ratio of the two temperature layers.
+The two-layer model best-fits the data with a reduced chi-squared of 4.0, which is significantly disfavored as compared to the Mie scattering mode.
+Furthermore, the 400 K temperature variation in the model is significantly more than the expected 50 K horizontal temperature variations expected in circulation models \citep{showman2013bdgpDynamics}.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821_t_diff.pdf}
+\caption{The same data as in Figure \ref{fig:ampspec1821mie}. We fit the data as a temperature differential between the effective temperature of the brown dwarf and a cooler temperature.}\label{fig:ampspec1821tdiff}
+\end{centering}
+\end{figure}
 
 \section{Conclusions}
 
