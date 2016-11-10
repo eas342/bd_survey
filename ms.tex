@@ -47,6 +47,7 @@
 \usepackage{natbib}
 \usepackage[caption=false]{subfig}
 \newcommand{\vdag}{(v)^\dagger}
+\newcommand{\degree}{$^\circ$}
 
 %% You can insert a short comment on the title page using the command below.
 
@@ -339,7 +340,7 @@ In these cases the reduced chi-squared values are 9.6 and 2.5 respectively, when
 Their maximum over minimum flux spectrum is converted to an amplitude spectrum by assuming that the amplitude is half the difference in maximum and minimum flux, which can be shown to be 
 \begin{equation}
 A  = \frac{f_R - 1}{f_R + 1}
-\end{equation}
+\end{equation}\label{eq:ampFromRatio}
 where $f_R$ is the flux ratio of the maximum over minimum flux.
 
 The WFC3 amplitude spectrum is shown with the data in Figure \ref{fig:ampspec1821mie}.
@@ -358,10 +359,30 @@ Furthermore, the 400 K temperature variation in the model is significantly more 
 
 \begin{figure}
 \begin{centering}
+\includegraphics[width=0.4\textwidth]{temperature_drawing.pdf}
+\caption{A simple two layer model with two different temperatures and different areal fractions for longitudes 0\degree\ and 180\degree.}\label{fig:tdiffschem}
+\end{centering}
+\end{figure}
+
+\begin{figure}
+\begin{centering}
 \includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821_t_diff.pdf}
 \caption{The same data as in Figure \ref{fig:ampspec1821mie}. We fit the data as a temperature differential between the effective temperature of the brown dwarf and a cooler temperature.}\label{fig:ampspec1821tdiff}
 \end{centering}
 \end{figure}
+
+I should change the spot model fit to the following model
+\begin{equation}
+f_{R,\lambda} = \frac{\alpha_1 B_\lambda(T_1) + (1-\alpha_1) B_\lambda(T_2)}{\alpha_2 B_\lambda(T_1) + (1-\alpha_2) B_\lambda(T_2)}
+\end{equation}
+where $\alpha_1$ and $\alpha_2$ are the areal fractions of the two temperature layers limited to [0,1], $B_\lambda$ is the Planck function, and $T_1$ and $T_2$ are the temperatures of the two levels.
+
+Using equation \ref{eq:ampFromRatio}, the amplitude then becomes
+\begin{equation}
+A_\lambda = \frac{\left(\alpha_1 - \alpha_2 \right) \left(B_\lambda(T_1) - B_\lambda(T_2) \right)}{\left(\alpha_1 + \alpha_2\right) B_\lambda(T_1) + \left(2 - \alpha_1 - \alpha_2\right) B_\lambda(T_2)}.
+\end{equation}
+If the temperature difference is significant so that one Planck function is in the Wien's limit while the other is in the Rayleigh Jeans tail, the cooler temperature essentially becomes black and the contrast approaches a constant for short wavelengths.
+
 
 \section{Conclusions}
 
