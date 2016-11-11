@@ -46,6 +46,7 @@
 
 \usepackage{natbib}
 \usepackage[caption=false]{subfig}
+\usepackage{amsmath,amssymb}
 \newcommand{\vdag}{(v)^\dagger}
 \newcommand{\degree}{$^\circ$}
 
@@ -329,7 +330,7 @@ For the particle size distribution we assume a log-normal distribution around a 
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821_mie_sc.pdf}
-\caption{Sine fit amplitude versus wavelength excluding the regions contaminated by telluric absorption. with simple Mie scattering models with a log-normal particle size distribution centered at 0.1 and 0.2~$\mu$m. Also shown in the figure is the WFC3 amplitude from \citet{yang2015hstRotBD}. The WFC3 observations were from a different epoch, with different cloud coverage.}\label{fig:ampspec1821mie}
+\caption{Sine fit amplitude versus wavelength excluding the wavelength regions contaminated by telluric absorption. with simple Mie scattering models with a log-normal particle size distribution centered at 0.1 and 0.2~$\mu$m. Also shown in the figure is the WFC3 amplitude from \citet{yang2015hstRotBD}. The WFC3 observations were from a different epoch, with different cloud coverage.}\label{fig:ampspec1821mie}
 \end{centering}
 \end{figure}
 
@@ -350,38 +351,53 @@ The WFC3 spectrum is not affected by the telluric absorption the way the SpeX da
 
 \subsection{Spot Model Fit}
 
-Another simple model we attempt is a spot model - that the brown dwarf spectral variability has to do with a non-uniform temperature distribution on the brown dwarf in the same way that starspots modulate the brightness of hydrogen burning stars.
-In Figure \ref{fig:ampspec1821tdiff}, we fit the same amplitude spectrum as in Figure \ref{fig:ampspec1821mie}.
-This time we model the data with two layers in local thermodynamic equilibrium (LTE) so that the flux is a ratio of two Planck functions.
-We include a multiplicative constant to account for the geometric area ratio of the two temperature layers.
-The two-layer model best-fits the data with a reduced chi-squared of 4.0, which is significantly disfavored as compared to the Mie scattering mode.
-Furthermore, the 400 K temperature variation in the model is significantly more than the expected 50 K horizontal temperature variations expected in circulation models \citep{showman2013bdgpDynamics}.
-
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.4\textwidth]{temperature_drawing.pdf}
-\caption{A simple two layer model with two different temperatures and different areal fractions for longitudes 0\degree\ and 180\degree.}\label{fig:tdiffschem}
+\caption{A simple two region model with two different temperatures and different areal fractions for longitudes 0\degree\ and 180\degree.}\label{fig:tdiffschem}
 \end{centering}
 \end{figure}
 
-\begin{figure}
-\begin{centering}
-\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821_t_diff.pdf}
-\caption{The same data as in Figure \ref{fig:ampspec1821mie}. We fit the data as a temperature differential between the effective temperature of the brown dwarf and a cooler temperature.}\label{fig:ampspec1821tdiff}
-\end{centering}
-\end{figure}
-
-I should change the spot model fit to the following model
+Another simple model we attempt is a spot model - that the brown dwarf spectral variability has to do with a non-uniform temperature distribution on the brown dwarf in the same way that starspots modulate the brightness of hydrogen burning stars as they spin.
+In Figure \ref{fig:ampspec1821tdiff}, we fit the same amplitude spectrum as in Figure \ref{fig:ampspec1821mie}.
+This time we model the data with two temperature regions as shown in Figure \ref{fig:tdiffschem} with two opposite longitudes of the planet at the brightness minimum and maximum.
+We assume that are each in local thermodynamic equilibrium (LTE) so that the flux is proportional to the Planck function times the areal coverage.
+The flux ratio between maximum and minimum flux is then
 \begin{equation}
 f_{R,\lambda} = \frac{\alpha_1 B_\lambda(T_1) + (1-\alpha_1) B_\lambda(T_2)}{\alpha_2 B_\lambda(T_1) + (1-\alpha_2) B_\lambda(T_2)}
 \end{equation}
 where $\alpha_1$ and $\alpha_2$ are the areal fractions of the two temperature layers limited to [0,1], $B_\lambda$ is the Planck function, and $T_1$ and $T_2$ are the temperatures of the two levels.
-
 Using equation \ref{eq:ampFromRatio}, the amplitude then becomes
 \begin{equation}
 A_\lambda = \frac{\left(\alpha_1 - \alpha_2 \right) \left(B_\lambda(T_1) - B_\lambda(T_2) \right)}{\left(\alpha_1 + \alpha_2\right) B_\lambda(T_1) + \left(2 - \alpha_1 - \alpha_2\right) B_\lambda(T_2)}.
 \end{equation}
 If the temperature difference is significant so that one Planck function is in the Wien's limit while the other is in the Rayleigh Jeans tail, the cooler temperature essentially becomes black and the contrast approaches a constant for short wavelengths.
+If we ignore projection effects for small area coverage, the effective temperature is 
+\begin{equation}
+\sigma T_{eff}^4 \approx (\alpha_1 + \alpha_2) \sigma T_1^4 + (2 - \alpha_1 - \alpha_2) \sigma T_2^4
+\end{equation}
+where $\sigma$ is the Stephan-Boltzmann constant.
+
+Our model best-fits the data with $\alpha_i$ << 1 and also with much lower temperatures than equilibrium, shown in Figure \ref{fig:ampspec1821tdiff}.
+This model has a reduced chi-squared of 1.3, consistent with the data, but not with the effective temperature.
+If we restrict the model to be a two-faced model where $\alpha_1$ = 1 and $\alpha_2$ = 0, so that the two halves of the brown dwarf are different temperatures, the best-fit is a poor match to the data, also shown in Figure \ref{fig:ampspec1821tdiff} with a $\bar{\chi}^2$ = 15.
+Finally, we attempt a model where we restrict the temperature limits to [1300,2500] to ensure that the final effective temperature is close to the measured 1600 K \citep{citet{gagne2015banyan7}}.
+The best fit model has $T_{eff} \approx $1590 K, but pushes to the edges of our prior with $T_1$ = 2500 K and $T_2$ = 1300 K.
+This model fits with $\bar{\chi}^2$ = 2.1.
+However, the temperature contrasts in these models are significantly more than the expected 50 K horizontal temperature variations expected in circulation models \citep{showman2013bdgpDynamics}.
+
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821_t_diff.pdf}
+\caption{The same data as in Figure \ref{fig:ampspec1821mie}. We fit the data with a two region model that assumes the effective temperature of the brown dwarf and a cooler temperature.}\label{fig:ampspec1821tdiff}
+\end{centering}
+\end{figure}
+% Command used:
+% plot_rad_vs_wavl,/amp,/shadetell,custxrange=[0.8,2.5],custyrange=[-0.1,1.9],/showYang,/twoTreg
+
+
+
 
 
 \section{Conclusions}
