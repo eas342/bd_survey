@@ -73,7 +73,7 @@
 %% one line. However, you may use \\ to force a line break if
 %% you desire.
 
-\title{IRTF Spectro-Photometry of Rotating Brown Dwarfs}
+\title{IRTF Spectro-Photometry of Two Rotating Brown Dwarfs: \\2MASS J08354256-0819237 and 2MASS J18212815+1414010}
 
 %% Use \author, \affil, and the \and command to format
 %% author and affiliation information.
@@ -103,7 +103,7 @@
 %% editorial office after submission.
 
 \begin{abstract}
-L and T brown dwarfs show variability associated with the rotation of non-uniform atmospheres. We present a high precision ground-based time series study of 2 brown dwarfs - 2MASS J08354256-0819237 and 2MASS J18212815+1414010, both of spectral type L4-L5. 2MASS J0835 shows relatively little spectral variability from 0.8~$\mu$m to 2.4~$\mu$m. 2MASS J1821 by contrast shows a strong variability in the shorter wavelengths that falls off toward 2.4~$\mu$m, that can be fit by Mie extinction of sub-micron dust particles.
+L and T brown dwarfs show variability associated with the rotation of non-uniform atmospheres. We present a high precision ground-based time series study of 2 brown dwarfs - 2MASS J08354256-0819237 and 2MASS J18212815+1414010, both of spectral type L4-L5 using the Infrared Telescope Facility (IRTF). 2MASS J0835 shows relatively little spectral variability from 0.8~$\mu$m to 2.4~$\mu$m. 2MASS J1821 by contrast shows a strong variability in the shorter wavelengths that falls off toward 2.4~$\mu$m, that can be fit by Mie extinction of sub-micron dust particles. It can also be fit by a hot spots on the brown dwarf surface, but they require implausible temperature variations, so we prefer the Mie scattering model.
 \end{abstract}
 
 %% Keywords should appear after the \end{abstract} command. The uncommented
@@ -323,8 +323,8 @@ This was also observed in the shorter wavelength range of 1.1~$\mu$m to 1.7~$\mu
 
 We model the wavelength dependence of 2MASS 1821 as an optically thin cloud layer consisting of a log-normal distribution of particle sizes.
 In this simple model, the amplitude of the variability is directly proportional to the opacity or $Q_{ext}$ of the particles.
-We model the extinction coefficient from the \texttt{IDL} Mie theory code \texttt{mie\_single.pro} \citep{grainger04} to calculate the extinction as a function of wavelength.
-We use the complex indices of refraction from \citet{dorschner95pyrox} for Mg-rich pyroxene grains.
+We model the extinction coefficient, $Q_{ext}$ from the \texttt{IDL} Mie theory code \texttt{mie\_single.pro} \citep{grainger04} to calculate the extinction as a function of wavelength.
+We use the complex indices of refraction from \citet{dorschner95pyrox} for Mg-rich pyroxene grains (MgSiO$_3$).
 For the particle size distribution we assume a log-normal distribution around a characteristic size with a distribution $\sigma$ of 0.5.
 
 \begin{figure}
@@ -378,14 +378,13 @@ If we ignore projection effects for small area coverage, the effective temperatu
 \end{equation}
 where $\sigma$ is the Stephan-Boltzmann constant.
 
-Our model best-fits the data with $\alpha_i$ << 1 and also with much lower temperatures than equilibrium, shown in Figure \ref{fig:ampspec1821tdiff}.
+Our model best-fits the data with $\alpha_i << $1 and also with much lower temperatures than equilibrium, shown in Figure \ref{fig:ampspec1821tdiff}.
 This model has a reduced chi-squared of 1.3, consistent with the data, but not with the effective temperature.
 If we restrict the model to be a two-faced model where $\alpha_1$ = 1 and $\alpha_2$ = 0, so that the two halves of the brown dwarf are different temperatures, the best-fit is a poor match to the data, also shown in Figure \ref{fig:ampspec1821tdiff} with a $\bar{\chi}^2$ = 15.
-Finally, we attempt a model where we restrict the temperature limits to [1300,2500] to ensure that the final effective temperature is close to the measured 1600 K \citep{citet{gagne2015banyan7}}.
+Finally, we attempt a model where we restrict the temperature limits to [1300,2500] to ensure that the final effective temperature is close to the measured 1600 K \citep{gagne2015banyan7}.
 The best fit model has $T_{eff} \approx $1590 K, but pushes to the edges of our prior with $T_1$ = 2500 K and $T_2$ = 1300 K.
-This model fits with $\bar{\chi}^2$ = 2.1.
-However, the temperature contrasts in these models are significantly more than the expected 50 K horizontal temperature variations expected in circulation models \citep{showman2013bdgpDynamics}.
-
+The temperature contrasts in these models (with the exception of the two-faced model which poorly matches the data) are significantly more than the expected 50 K horizontal temperature variations expected in circulation models \citep{showman2013bdgpDynamics}.
+Therefore, we suspect that hot or cold spots on the surface a are a less likely scenario to explain the variability of 2MASS 1821.
 
 \begin{figure}
 \begin{centering}
@@ -404,10 +403,14 @@ However, the temperature contrasts in these models are significantly more than t
 
 We observed two brown dwarfs of spectral type L4-L5: 2MASS 1821 and 2MASS 0835.
 These brown dwarfs have temperatures near the condensation temperatures of MgSiO$_3$ and Mg$_2$SiO$_4$.
-We obtained high precision ground-based spectrophotometry of both systems to measure the variability spectra of these systems.
-After fitting sinusoids to both of the time series, we find that the 
+We obtained high precision ground-based spectrophotometry of both systems to measure the variability spectra of these systems with the IRTF.
+After fitting sinusoids to both of the time series, we find that 2MASS 0835 is not variable to within measurement precision.
 
 \section{Acknowledgements}
+Thanks to Vivien Parmentier for useful discussions on cloud versus a spotted temperature model.
+Funding for the E Schlawin is provided by NASA Goddard Spaceflight Center.
+This research has made use of the Exoplanet Orbit Database and the Exoplanet Data Explorer at exoplanets.org.
+
 %If  used, this work made use of the \texttt{astropy} package \citep{astropy2013}.
 %If used, some data was collected from the Open Exoplanet Catalogue \citep{rein2012openExoCat}.
 
