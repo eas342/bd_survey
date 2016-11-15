@@ -145,9 +145,7 @@ Their temperatures are cool enough that they span condensation points of many cl
 
 The cloud layers may be studied from the direct spectroscopy of a populations of brown dwarf atmospheres \citep[e.g.][]{burgasser2006ltTrans,liu2006}.
 Brown dwarfs may be observed over their rotation periods to understand the spatial cloud structure and composition, that can change rapidly with time \citep[e.g.][]{yang2016exStormsBD}.
-In the case where the targets are bright enough, Doppler imaging can be used to map out the cloud structures on brown dwarfs as in \citet{crossfield2014dopplerimg}.
-
-The photometry brown dwarfs at the L/T transition is explained by (silicate and sulfide?) clouds at a temperature of (?).
+In the case where the targets are bright enough for high resolution spectroscopy, Doppler imaging can be used to map out the cloud structures on brown dwarfs \citep{crossfield2014dopplerimg}.
 
 L dwarfs are found to be variable with periods of 1-100 hours \citep{bailer-jones1999bdvar,bailer-jones1999varevo}.
 This variability is explained by a patchy clouds at the L/T transition \citep{marley2010patchyc}.
@@ -160,33 +158,35 @@ We observed the two brown dwarfs as part of a pilot program to assess the effica
 2MASS J18212815+1414010 is an L5 brown dwarf showing a triangular H-band spectrum \citep{looper2008peculiarLdwarfs}.
 The spectral type is peculiar and has also been designated as L4 \citep{gagne2015banyan7}.
 2MASS J1821's short rotation period (4.2 hr) allows for time series spectroscopy for all longitudes in a single ground based observation night.
-2MASS J08354256-0819237 \citep{cruz2003coolNeighbors} is also an L5 brown dwarf known to be variable with a period of 9 hr.
+2MASS J08354256-0819237 \citep{cruz2003coolNeighbors} is also an L4-L5 brown dwarf known to be variable with a period of 9 hr.
+The basic properties of each system are listed in Table \ref{tab:bdProp}.
 
-Both brown dwarfs' effective temperatures in Table \ref{tab:bdProp} are near the condensation temperatures of MgSiO$_3$ and Mg$_2$SiO$_4$ \citep{marley2015rev} so these are viable candidates for clouds in their atmospheres.
+Both brown dwarfs' effective temperatures in Table \ref{tab:bdProp} are near the condensation temperatures of MgSiO$_3$ (enstatite) and Mg$_2$SiO$_4$ (forsterite) \citep{marley2015rev} so these are viable candidates for clouds in their atmospheres.
 
 \begin{table*}
 \begin{center}
 \caption{Brown Dwarf Properties}\label{tab:bdProp}
-\begin{tabular}{ccccrr}
-Name & Rotation Period & Spectral Type & K magnitude  & T$_\mathrm{eff}$ &  $v$ sin($i$) \\
--- & (hr) & -- & -- & (K) & (km/s) \\
+\begin{tabular}{cccccrr}
+Name & Rotation Period & Spectral Type & K magnitude  & $J$ - $K$ & T$_\mathrm{eff}$ &  $v$ sin($i$) \\
+-- & (hr) & -- & -- & -- & (K) & (km/s) \\
 \hline \hline
-2MASS 1821 & 4.2\tablenotemark{a} & L4 Pec\tablenotemark{b} - L5 Pec\tablenotemark{c} & 11.14 & 1600 $\pm$ 100\tablenotemark{b} & 28.85 $\pm$ 0.16\tablenotemark{d}\\
-2MASS 0835 & 3.1\tablenotemark{d} & L4 Pec\tablenotemark{b} - L5 & 11.65 & 1800 $\pm$ 100\tablenotemark{b} & 14.18 $\pm$ 0.43\tablenotemark{d} \\
+2MASS 1821 & 4.2\tablenotemark{a} & L4 Pec\tablenotemark{b} - L5 Pec\tablenotemark{c} & 11.14 & 1.78 & 1600 $\pm$ 100\tablenotemark{b} & 28.85 $\pm$ 0.16\tablenotemark{d}\\
+2MASS 0835 & 3.1\tablenotemark{e} & L4 Pec\tablenotemark{b} - L5\tablenotemark{f} & 11.65 & 2.03 & 1800 $\pm$ 100\tablenotemark{b} & 14.18 $\pm$ 0.43\tablenotemark{d} \\
 \end{tabular}
 \end{center}
 \tablenotetext{a}{\citet{metchev2015weatherII}.}
 \tablenotetext{b}{\citet{gagne2015banyan7}.}
 \tablenotetext{c}{\citet{looper2008peculiarLdwarfs}}
 \tablenotetext{d}{\citet{blake2010nirspecVS}}
-\tablenotetext{e}{\citet{koen2004ibandBD}}
+\tablenotetext{e}{Tentative period from \citet{koen2004ibandBD}}
+\tablenotetext{f}{\citet{cruz2003coolNeighbors}}
 \end{table*}
 
 
 \section{Observations}
 
 For 2MASS J0835, we observed a simultaneous reference - 2MASS 08354383-0819212, $J$=12.74, $H$=12.28, $K_S$=12.19 at a distance of 28 arcsec.
-We obtained spectrophotometry over 4.65 hours, covering about half of a rotation period for 2MASS J0835.
+We obtained spectrophotometry over 4.65 hours, covering 1.5 rotation periods for 2MASS J0835.
 
 We observed 2MASS J1821 and 2MASS J0835 for one night each with the IRTF.
 For 2MASS J1821, we observed a simultaneous reference - 2MASS 18212622+1414064, $J$=12.58, $H$=11.97, $K_S$=11.82  at a distance of 24\arcsec.
@@ -312,6 +312,9 @@ The Levenberg-Marquardt chi-squared minimization code \texttt{mpfit} is used to 
 The amplitude spectrum of 2MASS J0835 shown in Figure \ref{fig:ampspec0835} shows random fluctuations as a function of wavelength.
 2MASS J1821, on the other hand, shows a clear decreasing trend as function of wavelength.
 This was also observed in the shorter wavelength range of 1.1~$\mu$m to 1.7~$\mu$m in \citet{yang2016exStormsBD}.
+
+This type of wavelength trend was also recently observed for WISEP J004701.06+680352.1 \citep{lew2016w0047}, which has a much $J-K$ 2.55 spectrum.
+In WISEP J0047, the wavelength trend could be fit by $\sim 0.4~\mu$m forsterite grains.
 
 %    \begin{figure}[!ht]
 %    \centering
