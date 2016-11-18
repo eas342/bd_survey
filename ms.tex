@@ -158,7 +158,7 @@ We observed the two brown dwarfs as part of a pilot program to assess the effica
 2MASS J18212815+1414010 is an L5 brown dwarf showing a triangular H-band spectrum \citep{looper2008peculiarLdwarfs}.
 The spectral type is peculiar and has also been designated as L4 \citep{gagne2015banyan7}.
 2MASS J1821's short rotation period (4.2 hr) allows for time series spectroscopy for all longitudes in a single ground based observation night.
-2MASS J08354256-0819237 \citep{cruz2003coolNeighbors} is also an L4-L5 brown dwarf known to be variable with a period of 9 hr.
+2MASS J08354256-0819237 \citep{cruz2003coolNeighbors} is also an L4-L5 brown dwarf known to be variable with a period of 3 hr.
 The basic properties of each system are listed in Table \ref{tab:bdProp}.
 
 Both brown dwarfs' effective temperatures in Table \ref{tab:bdProp} are near the condensation temperatures of MgSiO$_3$ (enstatite) and Mg$_2$SiO$_4$ (forsterite) \citep{marley2015rev} so these are viable candidates for clouds in their atmospheres.
@@ -182,27 +182,35 @@ Name & Rotation Period & Spectral Type & K magnitude  & $J$ - $K$ & T$_\mathrm{e
 \tablenotetext{f}{\citet{cruz2003coolNeighbors}}
 \end{table*}
 
+In this paper, we describe time series observations of both 2MASS J1821 and 2MASS J0835 over one rotation period with spectral coverage from 0.8 to 2.4 $\mu$m.
+In Section \ref{sec:obs}, we describe our observations with the Infrared Telescope Facility (IRTF).
+In Section \ref{sec:ModelFits}, we describe how we fit the data with sinusoidal models to create an amplitude spectrum.
+We fit the amplitude spectra with two different physical models.
+We conclude in Section \ref{sec:conclusions}.
 
-\section{Observations}
+
+\section{Observations}\label{sec:obs}
 
 For 2MASS J0835, we observed a simultaneous reference - 2MASS 08354383-0819212, $J$=12.74, $H$=12.28, $K_S$=12.19 at a distance of 28 arcsec.
 We obtained spectrophotometry over 4.65 hours, covering 1.5 rotation periods for 2MASS J0835.
+%Using MORIS image for distance and plate scale in header of 0.1143 arcsec/px
 
 We observed 2MASS J1821 and 2MASS J0835 for one night each with the IRTF.
 For 2MASS J1821, we observed a simultaneous reference - 2MASS 18212622+1414064, $J$=12.58, $H$=11.97, $K_S$=11.82  at a distance of 24\arcsec.
 We were able to measure spectrophotometry over 7.47 hours, which was 1.8 rotations at the 4.2 rotation period from \citet{metchev2015weatherII}.
+%Using SpeX Guider image for distance of 241px  and plate scale in header of 0.116 arcsec/px
 
 As visible in Figure \ref{fig:specphot1821}, the light curves for 2MASS J1821 repeat the same fluctuations after one rotation period.
 Assuming the brown dwarfs cloud structure was relatively unchanged in one rotation, this enabled confirmation that the signal was astrophysical as opposed to the systematics affecting the same instrument telescope for observations of the  KIC 12557548 system \citep{schlawin2016kic1255}.
-%Using MORIS image for distance and plate scale in header of 0.1143 arcsec/px
 
-%Using SpeX Guider image for distance of 241px  and plate scale in header of 0.116 arcsec/px
-
+We observed 2MASS J1821 and J0835 each for one night as part of a pilot program to explore a variety of brown dwarfs with different variability levels and atmospheric temperatures.
+The program also included WISE J1906+4011, but weather prevented successful observations of this brown dwarf.
+Table \ref{tab:obsParam} shows the observing parameters for each of the two observed targets including the integration time, number of integrations and reference star.
 
 We use the same method as \citet{schlawin2014} to obtain high precision spectrophotometry.
-We used a 0.9~$\mu$m dichoric to split the optical wavelengths to the MORIS imager \citep{Gulbis2011}.
+We used a 0.9~$\mu$m dichroic to split the optical wavelengths to the MORIS imager \citep{Gulbis2011}.
 For guiding, we use the MORIS imager in the SDSS $i$ band and 60 second long exposures in order to obtain simultaneous photometry on 2MASS J1821.
-For 2MASS J0835, we were unable to obtain photometry - why? due to the fainter source?
+For 2MASS J0835, the source was too faint for photometry in $i$ band.
 
 \begin{table*}
 \begin{center}
@@ -218,11 +226,8 @@ Target & Observing Date & N$_{int}$ & t$_{exp}$ & Reference Star \\
 \tablenotetext{}{}
 \end{table*}
 
-We observed 2MASS J1821 and J0835 each for one night as part of a pilot program to explore a variety of brown dwarfs with different variability levels and atmospheric temperatures.
-The program also included WISE J1906+4011, but weather prevented successful observations of this brown dwarf.
-Table \ref{tab:obsParam} shows the observing parameters for each target including the integration time, number of integrations and reference star.
 
-Wavelength calibrations were performed with a 0.3$\times$60\arcsec\ slit and an argon emission lamp.
+Wavelength calibrations were performed with a 0.3$\times$60\arcsec\ slit and an argon emission lamp while science data was taken with a 3$\times$60\arcsec\ slit to minimized slit losses.
 We performed calibrations sequences of argon emission lamp spectra and flat fielding with the 3$\times$60\arcsec\ slit both before and after the brown dwarf time series to obtain information on the flat field and any flexure in the instrument with telescope orientation.
 
 For 2MASS J0835, we use a combination of an incandescent lamp and a sky frame to construct a flat.
@@ -235,12 +240,12 @@ Here, we fit the flat field structure with low order polynomials in the incandes
 As in 2MASS J0835, we cross-correlate the spatial structure image to find a shift and then multiply it by the pixel-to-pixel flat to create a custom flat field for every image.
 In both 2MASS J0835 and 2MASS J1821 we remove all spectral structure from the flat fields to make ``response'' images that do not include the spectral structure of the lamp or dramatically alter the flux levels that would affect SNR calculations from the number of photo-electrons in a given pixel.
 
-As in \citep{schlawin2016kic1255}, we perform background subtraction over the entire slit with polynomial fit.
+As in \citet{schlawin2016kic1255}, we perform background subtraction over the entire slit with polynomial fit.
 We use a 4th order polynomial through all points outside +/-30 pixels of each aperture for the background subtraction.
 We use optimal extraction \citep{horne1986optimalE} to maximize the signal to noise.
 The spatial profiles are fit with low order polynomials with 20$\sigma$ rejection to remove cosmic rays and bad pixels.
 
-\section{Light Curves}
+\subsection{Light Curves}
 
 \begin{figure*}[!t]
 \centering
@@ -252,13 +257,13 @@ The spatial profiles are fit with low order polynomials with 20$\sigma$ rejectio
 	\includegraphics[width=0.5\textwidth]{specphot_j1821.pdf}
 	\label{fig:specphot1821}
 	}
-	\caption{Top Panels: The target stars' median raw spectrum compared with the reference star. The areas near 1.4 and 1.8 $\mu$m are contaminated by telluric water absorption. The reference stars are significantly higher temperatures. Bottom Panels: Dynamic spectrum of 2MASS J1821.}
+	\caption{Top Panels: The target stars' median raw spectrum compared with the reference star. The areas near 1.4 and 1.8 $\mu$m are contaminated by telluric water absorption. The reference stars have significantly bluer spectra than the brown dwarfs. Bottom Panels: Dynamic spectra of each brown dwarf system.}
 	\label{fig:specphot}
 	\vspace{0.1in}
 \end{figure*} 
 
 Figure \ref{fig:specphot} shows the dynamic spectra for both brown dwarfs with the individual spectra of the target and reference stars on the upper panels.
-At the few percent level, 2MASS j0835 shows no variations or systematics.
+At the $\lesssim 1$\% level, 2MASS J0835 shows no variations or systematics.
 2MASS J1821 on the other hand, shows a periodic signal that is strongest at the short wavelength and gradually gets smaller toward longer wavelengths.
 2MASS J1821 also exhibits systematic trends near strong slopes in the raw spectra due to telluric absorption bands.
 
@@ -280,7 +285,7 @@ At the few percent level, 2MASS j0835 shows no variations or systematics.
 For 2MASS 1821, the variations are mostly sinusoidal and repeat over multiple rotations of the brown dwarf - the exception is wavelengths near telluric features, such as 1.43~$\mu$m and 1.79~$\mu$m.
 
 
-\section{Sinusoidal Model Fits}
+\section{Sinusoidal Model Fits}\label{sec:ModelFits}
 
 We fit the time series of each brown dwarf in 25 spectral bins each to assess the wavelength-dependent nature of their variations.
 The simple model can be described as 
@@ -402,7 +407,7 @@ Therefore, we suspect that hot or cold spots on the surface a are a less likely 
 
 
 
-\section{Conclusions}
+\section{Conclusions}\label{sec:conclusions}
 
 We observed two brown dwarfs of spectral type L4-L5: 2MASS 1821 and 2MASS 0835.
 These brown dwarfs have temperatures near the condensation temperatures of MgSiO$_3$ and Mg$_2$SiO$_4$.
@@ -423,6 +428,16 @@ Therefore, we favor the Mie scattering model as a better explanation for the var
 Thanks to Vivien Parmentier for useful discussions on cloud versus a spotted temperature model.
 Funding for the E Schlawin is provided by NASA Goddard Spaceflight Center.
 This research has made use of the Exoplanet Orbit Database and the Exoplanet Data Explorer at exoplanets.org.
+
+\appendix
+
+\section{Color-Magnitude Diagram}
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{color_mag.pdf}
+\caption{Color-Magnitude diagram from Dupuy and Liu.}\label{fig:CMD}
+\end{centering}
+\end{figure}
 
 %If  used, this work made use of the \texttt{astropy} package \citep{astropy2013}.
 %If used, some data was collected from the Open Exoplanet Catalogue \citep{rein2012openExoCat}.
