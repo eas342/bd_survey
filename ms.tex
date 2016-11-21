@@ -292,9 +292,9 @@ The simple model can be described as
 \begin{equation}
 F(t) = A * \sin(2 \pi (t - t_0)/\tau) + B t + C
 \end{equation}
-where $F$ is the flux as a function of time ($t$), A is the amplitude of the variations, $t_0$ is the time offset of the variations and $\tau$ is the and B and C are linear terms describing the baseline trend.
-For the fits, we include a 4 free parameters: $A$, $t_0$, $B$ and $C$.
-We fixed the sinusoidal period $\tau$ at the literature value of rotation period (Table \ref{tab:bdProp}) because are trends (with a period of $\sim$24 hr) due to uncorrected telluric variations that that are not relevant to the brown dwarf system.
+where $F$ is the flux as a function of time ($t$), A is the amplitude of the variations, $t_0$ is the time offset of the variations, $\tau$ is period of the variations and B and C are linear terms describing the baseline trend.
+For the fits, we let $A$, $t_0$, $B$ and $C$ be free parameters.
+We fixed the sinusoidal period $\tau$ at the literature value of rotation period (Table \ref{tab:bdProp}) because there are trends (with a period of $\sim$24 hr) due to uncorrected telluric variations that that are not relevant to the brown dwarf system.
 We imposed a prior that $A \geq 0$ so that a solution with a $\pi$ phase offset and negative amplitude isn't found.
 
 \begin{figure*}[!]
@@ -314,9 +314,10 @@ We imposed a prior that $A \geq 0$ so that a solution with a $\pi$ phase offset 
 Figure \ref{fig:ampSpec} shows the best fit amplitudes as a function of wavelength.
 We use the standard deviation of points near minimum to estimate the noise in the flux time series.
 The Levenberg-Marquardt chi-squared minimization code \texttt{mpfit} is used to fit each wavelength bin independently and propagate the errors in the flux time series to amplitude uncertainty.
-The amplitude spectrum of 2MASS J0835 shown in Figure \ref{fig:ampspec0835} shows small ($\lesssim 0.4\%$) amplitudes with a flat trend as a function of wavelength.
+The amplitude spectrum ($A$ as a function of wavelength) of 2MASS J0835, (Figure \ref{fig:ampspec0835}), shows small ($\lesssim 0.4\%$) amplitudes with a flat trend as a function of wavelength.
 2MASS J1821, on the other hand, shows a clear decreasing trend as function of wavelength.
 This was is the same trend observed for 2MASS J1821 by HST over a shorter wavelength range (1.1 to 1.7~$\mu$m) by \citet{yang2016exStormsBD}.
+We shade the regions from 1.32 to 1.5~$\mu$m and 1.78 to 1.95~$\mu$m in Figure \ref{fig:ampSpec} because these wavelength ranges are affected by telluric water vapor absorption not fully removed by the simultaneous reference star.
 
 %    \begin{figure}[!ht]
 %    \centering
