@@ -8,7 +8,7 @@
 *.tui
 *-mpgraph.mp
 *.DS_Store
-ms.pdf
+ms*.pdf
 image_backups/*
 sync_bib.sh
 msNotes.bib
