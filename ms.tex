@@ -103,7 +103,7 @@
 %% editorial office after submission.
 
 \begin{abstract}
-L and T brown dwarfs show variability associated with the rotation of non-uniform atmospheres. We present a high precision ground-based time series study of 2 brown dwarfs - 2MASS J08354256-0819237 and 2MASS J18212815+1414010, both of spectral type L4-L5 using the Infrared Telescope Facility (IRTF). 2MASS J0835 shows relatively little spectral variability from 0.8~$\mu$m to 2.4~$\mu$m. 2MASS J1821 by contrast shows a strong variability in the shorter wavelengths that falls off toward 2.4~$\mu$m, that can be fit by Mie extinction of sub-micron dust particles. It can also be fit by a hot spots on the brown dwarf surface, but they require implausible temperature variations, so we prefer the Mie scattering model.
+L and T brown dwarfs show variability associated with the rotation of heterogeneous atmospheres. We present a high precision ground-based time series study of 2 brown dwarfs - 2MASS J08354256-0819237 and 2MASS J18212815+1414010, both of spectral type L4-L5 using the Infrared Telescope Facility (IRTF). 2MASS J0835 shows low level ($\lesssim 0.4\%$) spectral variability with no wavelength dependence from 0.8~$\mu$m to 2.4~$\mu$m. 2MASS J1821, by contrast, shows $\sim$2\%  variability in the shorter wavelengths that falls off toward 2.4~$\mu$m. The variability amplitude spectrum can be fit by Mie extinction of sub-micron dust particles. It can also be fit by a hot spots on the brown dwarf surface, but they require implausible temperature variations, so we prefer the Mie scattering model.
 \end{abstract}
 
 %% Keywords should appear after the \end{abstract} command. The uncommented
@@ -144,21 +144,21 @@ Brown dwarfs atmospheres are an intriguing environment to explore cloud composit
 Their temperatures are cool enough that they span condensation points of many cloud-producing  compounds including H$_2$O, MgSiO$_3$, Mg$_2$SiO$_4$ and Fe \citep{marley2015rev}.
 
 The cloud layers may be studied from the direct spectroscopy of a populations of brown dwarf atmospheres \citep[e.g.][]{burgasser2006ltTrans,liu2006}.
-Brown dwarfs may be observed over their rotation periods to understand the spatial cloud structure and composition, that can change rapidly with time \citep[e.g.][]{yang2016exStormsBD}.
+Brown dwarfs can also be observed over their rotation periods to understand the spatial cloud structure and composition, that can change rapidly with time \citep[e.g.][]{yang2016exStormsBD}.
 In the case where the targets are bright enough for high resolution spectroscopy, Doppler imaging can be used to map out the cloud structures on brown dwarfs \citep{crossfield2014dopplerimg}.
 
 L dwarfs are found to be variable with periods of 1-100 hours \citep{bailer-jones1999bdvar,bailer-jones1999varevo}.
 This variability is explained by a patchy clouds at the L/T transition \citep{marley2010patchyc}.
 Virtually all L dwarfs and most T dwarfs likely have photospheric heterogeneities that cause flux variations larger than 0.2\% in the near infrared \citep{metchev2015weatherII}
 
-\citet{burgaser2014irtf} first demonstrated that the Infrared Telescope Facility (IRTF) was a useful tool for characterizing brown dwarf variability and that a simultaneous reference can be used to correct for common-mode variability, such as telluric transmission variations.
+\citet{burgaser2014irtf} first demonstrated that the Infrared Telescope Facility (IRTF) is a useful tool for characterizing brown dwarf variability and that a simultaneous reference can be used to correct for common-mode variability, such as telluric transmission variations.
 \citet{burgaser2014irtf} observed the binary system Luhman 16 AB and used the more stable Luhman 16A as a simultaneous reference to measure spectral variability in Luhman 16B.
 
-We observed the two brown dwarfs as part of a pilot program to assess the efficacy of IRTF for measuring spectral variability in brown dwarf atmospheres with the techniques of \citet{schlawin2014} to achieve high precision spectro-photometry.
+We observed the two brown dwarfs as part of a pilot program to assess the efficacy of IRTF for measuring spectral variability in brown dwarf atmospheres with the exoplanet techniques of \citet{schlawin2014} to achieve high precision spectro-photometry.
 2MASS J18212815+1414010 is an L5 brown dwarf showing a triangular H-band spectrum \citep{looper2008peculiarLdwarfs}.
 The spectral type is peculiar and has also been designated as L4 \citep{gagne2015banyan7}.
 2MASS J1821's short rotation period (4.2 hr) allows for time series spectroscopy for all longitudes in a single ground based observation night.
-2MASS J08354256-0819237 \citep{cruz2003coolNeighbors} is also an L4-L5 brown dwarf known to be variable with a tentative period of 3 hr \citep{koen2004ibandBD}, which also permitted multiple rotation periods.
+2MASS J08354256-0819237 \citep{cruz2003coolNeighbors} is also an L4-L5 brown dwarf known to be variable with a tentative period of 3.1 hr \citep{koen2004ibandBD}, which also permitted about 1.5 rotation periods.
 The basic properties of each system are listed in Table \ref{tab:bdProp}.
 
 Both brown dwarfs' effective temperatures in Table \ref{tab:bdProp} are near the condensation temperatures of MgSiO$_3$ (enstatite) and Mg$_2$SiO$_4$ (forsterite) \citep{marley2015rev} so these are viable candidates for clouds in their atmospheres.
@@ -185,7 +185,7 @@ Name & Rotation Period & Spectral Type & K magnitude  & $J$ - $K$ & T$_\mathrm{e
 In this paper, we describe time series observations of both 2MASS J1821 and 2MASS J0835 over one rotation period with spectral coverage from 0.8 to 2.4 $\mu$m.
 In Section \ref{sec:obs}, we describe our observations with the Infrared Telescope Facility (IRTF).
 In Section \ref{sec:ModelFits}, we describe how we fit the data with sinusoidal models to create an amplitude spectrum.
-We fit the amplitude spectra with two different physical models.
+We fit the variability amplitude spectra with two different physical models - Mie scattering from clouds and a heterogenous temperature distribution.
 We conclude in Section \ref{sec:conclusions}.
 
 
@@ -207,23 +207,24 @@ We observed 2MASS J1821 and J0835 each for one night as part of a pilot program 
 The program also included WISE J1906+4011, but weather prevented successful observations of this brown dwarf.
 Table \ref{tab:obsParam} shows the observing parameters for each of the two observed targets including the integration time, number of integrations and reference star.
 
-We use the same method as \citet{schlawin2014} to obtain high precision spectrophotometry.
+We use the same method as \citet{schlawin2014} to obtain high precision spectrophotometry which employs a large 3\arcsec $\times$ 60\arcsec\ slit.
 We used a 0.9~$\mu$m dichroic to split the optical wavelengths to the MORIS imager \citep{Gulbis2011}.
-For guiding, we use the MORIS imager in the SDSS $i$ band and 60 second long exposures in order to obtain simultaneous photometry on 2MASS J1821.
-For 2MASS J0835, the source was too faint for photometry in $i$ band.
+For guiding, we use the MORIS imager in the SDSS $i$ band.
+For 2MASS J0835, we used short (<15 sec) integrations as is standard for guiding, so the source was too faint for photometry in $i$ band.
+For 2MASS J1821, we extended the integration time to 60 seconds in order to obtain simultaneous $i$ band photometry.
 
 \begin{table*}
 \begin{center}
 \caption{Observing Parameters}\label{tab:obsParam}
-\begin{tabular}{ccccc}
-Target & Observing Date & N$_{int}$ & t$_{exp}$ & Reference Star \\
--- & UT Start & -- & (s) & -- \\
+\begin{tabular}{cccccc}
+Target & Observing Date & N$_{int}$ & t$_{int}$ & Duration & Reference Star \\
+-- & UT Start & -- & (s) & (hr) &  -- \\
 \hline
-2MASS J1821 & 2015-12-31 & 363 & 45 & 2MASS 18212622+1414064 \\
-2MASS J0835 & 2016-06-25 & 352 & 60 & 2MASS 08354383-0819212 \\
+2MASS J1821 & 2015-12-31 & 363 & 45 & 4.65 &  2MASS 18212622+1414064 \\
+2MASS J0835 & 2016-06-25 & 352 & 60 & 7.47 &  2MASS 08354383-0819212 \\
 \end{tabular}
 \end{center}
-\tablenotetext{}{}
+\tablenotetext{}{N$_{int}$ is the number of integrations and t$_{int}$ is the effective integration time for the 32 non-destructive reads up the ramp. The duration is the total time from start to end of the observations including the reset times and overheads.}
 \end{table*}
 
 
@@ -244,6 +245,7 @@ As in \citet{schlawin2016kic1255}, we perform background subtraction over the en
 We use a 4th order polynomial through all points outside +/-30 pixels of each aperture for the background subtraction.
 We use optimal extraction \citep{horne1986optimalE} to maximize the signal to noise.
 The spatial profiles are fit with low order polynomials with 20$\sigma$ rejection to remove cosmic rays and bad pixels.
+These spatial profiles are then used to calculate a weighted sum spectrum.
 
 \subsection{Light Curves}
 
@@ -281,7 +283,7 @@ At the $\lesssim 1$\% level, 2MASS J0835 shows no variations or systematics.
 	\label{fig:tserPfold}
 \end{figure*} 
 
-2MASS J0835 exhibits very little variability over our 4.8 hr whereas 2MASS 1821 shows large varations when phasing the dynamic spectra at the known rotation periods of the two brown dwarfs, shown in Figure \ref{fig:tserPfold}.
+2MASS J0835 exhibits very little variability over our 4.7 hr whereas 2MASS 1821 shows large variability at the 4.2 hr rotation period, shown in Figure \ref{fig:tserPfold}.
 For 2MASS 1821, the variations are mostly sinusoidal and repeat over multiple rotations of the brown dwarf - the exception is wavelengths near telluric features, such as 1.43~$\mu$m and 1.79~$\mu$m.
 
 
@@ -395,10 +397,10 @@ Next, we attempt a model where we allow $\alpha_1$ and $\alpha_2$ to be free par
 The best fit model has $T_{eff} \approx $1590 K and $\bar{\chi}^2$=2.1, but pushes to the edges of our prior with $T_1$ = 2500 K and $T_2$ = 1300 K.
 Finally, we consider a model where all four parameters, $\alpha_1$, $\alpha_2$, $T_1$ and $T_2$ are all free.
 With these loose constraints, the model fits the data with $\bar{\chi}^2$ = 1.3, consistent with the data, but not with the effective temperature ($T_{eff}$ = 850 K).
-THe $\alpha$ values are much smaller indicating that the model is like dark patch.
+The $\alpha$ values,  $\alpha_i <<$ 1 indicating that the model fits with dark patches on a small fraction of the surface.
 
 The temperature contrasts in these models (with the exception of the two-faced model which poorly matches the data) are significantly larger than the expected 50 K horizontal temperature variations expected in circulation models \citep{showman2013bdgpDynamics}.
-Therefore, we suspect that hot or cold spots on the surface a are a less likely scenario to explain the variability of 2MASS 1821.
+Therefore, we suspect that hot or cold spots on the surface are a less plausible explanation of the variability of 2MASS 1821 than a heterogenous temperature distribution.
 
 \begin{figure}
 \begin{centering}
@@ -427,7 +429,7 @@ The lack of the water vapor band gives evidence of a high altitude aerosol layer
 We fit the variability amplitude spectrum with an optically thin Mie scattering model and find it is consistent with Mg-rich pyroxene grains with sub-micron sized particles.
 A log-normal particle size distribution with a median of 0.2$\mu$m fits the data with a $\bar{\chi^2}$ of 2.5.
 We also model the wavelength dependence with a spotted surface model with two different Planck functions covering different spatial regions.
-The two temperature region model can fit variability amplitude spectrum well within errors, but gives implausible temperatures and temperature differences.
+The two temperature region model can fit variability amplitude spectrum well within errors, but gives implausible temperature differences.
 Therefore, we favor the Mie scattering model as a better explanation for the variability amplitude spectrum.
 
 \section{Acknowledgements}
