@@ -1,0 +1,652 @@
+% manuscript produces a one-column, double-spaced document:
+%\documentclass[12pt,preprint]{aastex}
+\documentclass[twocolumn]{aastex6}
+%\documentclass[iop]{emulateapj}
+
+% preprint2 produces a double-column, single-spaced document:
+%\documentclass[preprint2]{aastex}
+
+%Packages
+%\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
+
+\usepackage{natbib}
+\usepackage[caption=false]{subfig}
+\usepackage{amsmath,amssymb}
+\newcommand{\vdag}{(v)^\dagger}
+\newcommand{\degree}{$^\circ$}
+\newcommand{\vtan}{$V_{tan}$}
+\newcommand{\kms}{km~s$^{-1}$}
+\newcommand{\msun}{M$_{\sun}$}
+\newcommand{\rjup}{R$_{Jup}$}
+\newcommand{\ldl}{$\lambda/{\Delta}{\lambda}$}
+\newcommand{\lsun}{L$_{\sun}$}
+\newcommand{\lbol}{$\log_{10}{L_{bol}/L_{\sun}}$}
+\newcommand{\teff}{T$_{eff}$}
+\newcommand{\logg}{$\log{g}$}
+\newcommand{\fsed}{$f_{sed}$}
+\newcommand{\kzz}{$K_{zz}$}
+\newcommand{\meth}{CH$_4$}
+\newcommand{\wat}{H$_2$O}
+\newcommand{\sha}{2MASS~J0835$-$0819}
+\newcommand{\shb}{2MASS~J1812+1414}
+
+\slugcomment{To be submitted to ApJ/AJ}
+
+
+\shorttitle{Spectral Variability of L Dwarfs}
+\shortauthors{Schlawin et al.}
+
+
+\begin{document}
+
+
+\title{Spectral Variability of Two Rapidly Rotating Brown Dwarfs: \\2MASS J08354256-0819237 and 2MASS J18212815+1414010}
+
+%% Use \author, \affil, and the \and command to format
+%% author and affiliation information.
+%% Note that \email has replaced the old \authoremail command
+%% from AASTeX v4.0. You can use \email to mark an email address
+%% anywhere in the paper, not just in the front matter.
+%% As in the title, use \\ to force line breaks.
+
+\author{E. Schlawin\altaffilmark{1,2}, Adam J.\ Burgasser\altaffilmark{2,3}, J. Teske\altaffilmark{4}, J. Gizis\altaffilmark{5} \and T. Karalidi\altaffilmark{1}}
+
+\altaffiltext{1}{Steward Observatory, Tucson AZ 85721 \email{eas342@email.arizona.edu}}
+\altaffiltext{2}{Visiting Astronomer at the Infrared Telescope Facility, which is operated by the University of Hawaii under contract NNH14CK55B with the National Aeronautics and Space Administration}
+\altaffiltext{3}{Center for Astrophysics and Space Science, University of California San Diego, La Jolla, CA 92093, USA}
+\altaffiltext{4}{Carnegie DTM, 5241 Broad Branch Road, NV, Washington, DC 20015, USA}
+\altaffiltext{5}{Department of Physics and Astronomy, University of Delaware, Newark, DE 19716, USA}
+
+
+\begin{abstract}
+Low-temperature L dwarfs exhibit low-level, rotationally-modulated photometric variability generally associated with heterogeneous, cloud-covered atmospheres. The spectral character of these variations yield insight into the composition and vertical structure of the clouds. Here we present the results of a high precision, ground-based, near-infrared, spectral monitoring study of two mid-type L dwarfs, 2MASS~J08354256$-$0819237 and 2MASS~J18212815+1414010, using the SpeX instrument on the Infrared Telescope Facility. By simultaneously observing a nearby visual companion, we achieve $<$0.15\% per-band sensitivity in relative brightness changes across the 0.9--2.4$\mu$m band. We find that 2MASS~J0835$-$0819 exhibits low-level ($\lesssim$ 0.4\% per band) variability with no spectral dependence, while 2MASS~J1821+1414 varies by up to $\pm$2\% at 1~$\mu$m and declines toward longer wavelengths. The latter result extends the variability trend observed in prior $HST$/WFC3 spectral monitoring of 2MASS~J1821+1414 over 1.1--1.6~$\mu$m. We reproduce the variability amplitude spectrum of 2MASS~J1821+1414 with Mie extinction of sub-micron dust particles, although this model becomes too strong at short wavelengths. An alternate model based on surface hot spots more accurately reproduces the variability amplitude spectrum, but requires implausibly large temperature variations. {\bf [phase variation? differences between 0835 and 1821?]}
+\end{abstract}
+
+
+\keywords{techniques: spectroscopic -- stars: atmospheres -- stars: brown dwarfs -- stars: individual (\objectname{2MASS J08354256-0819237}, \objectname{2MASS J18212815+1414010}) -- stars: late-type -- stars: variables: general}
+
+
+
+\section{Introduction}
+
+The atmospheres of L-type stars and brown dwarfs (1300~K $\lesssim$ {\teff} $\lesssim$ 2200~K; \citealt{2015ApJ...810..158F}) are sufficiently cool that species of mineral and metal condensates form spontaneously in their atmospheres \citep{1996A&A...305L...1T,2010ApJ...716.1060V}.
+In addition to influencing spectral energy distributions (e.g., \citealt{2001ApJ...556..357A,2008ApJ...674..451B}) and photospheric chemistry (e.g., \citealt{2000ApJ...531..438B}), condensates can coalesce into large-scale cloud and haze structures \citep{1989ApJ...338..314L,2001ApJ...556..872A,2014Natur.505..654C}
+whose surface and vertical structure may produce rotationally-modulated brightness variations (e.g., \citealt{2012ApJ...750..105R}), and long-term variations from differential rotation and/or cloud structure evolution (e.g., \citealt{2009ApJ...701.1534A,2013A&A...555L...5G,2016ApJ...826....8Y}). Evidence of cloud-driven variability extends to the cooler T dwarfs (e.g., \citealt{2009ApJ...701.1534A,2012ApJ...760L..31B,2015ApJ...799..154M}), and virtually all L dwarfs and most T dwarfs likely have photospheric heterogeneities leading to infrared flux variations $\gtrsim$0.2\% in amplitude \citep{2015ApJ...799..154M}. Clouds and hazes are important constituents of exoplanetary atmospheres as well (e.g., \citealt{2011ApJ...733...65B,2014Natur.505...69K,2016Natur.529...59S}).
+
+Multi-wavelength monitoring of low-temperature stars and brown dwarfs allows the measurement of cloud vertical structure, as grey grain scattering opacity competes with strongly wavelength-dependent molecular gas opacity. The amplitude of variability as a function of wavelength samples the vertical depths of cloud layers \citep{2013ApJ...768..121A}, and amplitude spectra have been show to vary with effective temperature, ({\teff}; e.g., \citealt{2015ApJ...798L..13Y}) and surface gravity (e.g., \citealt{2016ApJ...829L..32L}). Wavelength-dependent phase variance in lightcurves has also been observed \citep{2012ApJ...760L..31B,2013ApJ...778L..10B,2016ApJ...826....8Y}. Since different wavelengths sample different photospheric depths in the highly structured spectra of L and T dwarfs, these phase variations have been interpreted as arising from the relative motion of distinct cloud layers or deep thermal pulsation \citep{2014ApJ...785..158R}. 
+
+Broad-band variability amplitudes are typically $<$1\% in L and T dwarfs, with some dramatic exceptions \citep{2009ApJ...701.1534A,2012ApJ...750..105R,2013A&A...555L...5G,2016ApJ...829L..32L}. 
+Ground-based spectral (e.g., CLOUDS; \citealt{2008A&A...487..277G}) and broad-band photometric monitoring surveys (e.g., \citealt{1999A&A...348..800B,2003MNRAS.346..473K,2014ApJ...793...75R,2014A&A...566A.111W}) are generally limited to $>$1-3\% relative precision due to telluric atmospheric instabilities (i.e., ``red noise'') and insufficient calibrators \citep{2003MNRAS.339..477B}.
+In contrast, the stability of space-based platforms $Hubble$ ($HST$), $Spitzer$ and $Kepler$ provide order-of-magnitude improvements in relative photometric and spectro-photometric precision, and have been responsible for the discovery of the majority of known L and T dwarf variables \citep{2013ApJ...768..121A,2013ApJ...779..172G,2015ApJ...799..154M}. However, these facilities are not suited, for building up robust statistical samples to assess the physical bases of surface heterogeneity or different variability modes.
+
+High-precision, spectro-photometric monitoring from the ground has been demonstrated in a few specific cases. \citet{2014ApJ...783....5S} achieved $<$0.1\% per band variability precision for the planet-host star Corot-1 using the NASA Infrared Telescope Facility (IRTF) SpeX spectrograph \citep{2003PASP..115..362R}, by simultaneously monitoring the star and a nearby visual binary companion in a wide (3$\arcsec$) slit. This was sufficient to infer the presence of a cloud/haze layer in Corot-1b via transmission spectroscopy. A similar investigation of the disintegrating rocky exoplanet KIC 12557548b  enabled the characterization of the grain properties of its tidal debris tail \citep{2016ApJ...826..156S}. In a parallel effort, \citet{2014ApJ...785...48B} obtained $<$0.5\% per-band relative precision across the 1--2.5~$\mu$m band with IRTF/SpeX for the variable T dwarf Luhman 16B, by simultaneously observing it and its L dwarf companion. Both studies demonstrate that high-precision, near-infrared spectral monitoring observations can be achieved from the ground.
+
+This article reports the results of a pilot study adapting these methods to measuring the variability of two L-type dwarfs with nearby visual companions. We describe the target identification strategy and pilot targets in Section~\ref{sec:targets}.
+In Section~\ref{sec:obs}, we describe our monitoring observations and data reduction procedures to generate relative spectro-photometric time series.
+In Section~\ref{sec:ModelFits}, we analyze these time series using sinusoidal model fits over discrete spectral bands to generate individual light curves and amplitude spectra.
+We then fit the variability amplitude spectra to two different physical models, Mie scattering from clouds and heterogeneous temperature spots, to assess which more accurately reproduces the data.
+We summarize our results in Section~\ref{sec:conclusions}.
+
+
+\section{Target Selection}\label{sec:targets}
+
+We identified potential targets for relative spectro-photometry by selecting among the $\approx$200 known L dwarfs\footnote{We identified these sources from DwarfArchives,  \url{http://dwarfarchives.org}. The declination range corresponds to the visibility region of IRTF.} with $H$ $<$ 14 and $-$30{\degree}  $<$ $\delta$ $<$ +67{\degree} those sources that have comparable-brightness ($\Delta{H}$ $<$ 1) visual binary companions at apparent separations of 5$\arcsec$--30$\arcsec$. We identified 30 potential targets, and prioritized those with previously detected photometric variability or rotational $v\sin{i}$ measurements indicating periods $\leq$10~hr.  Two sources were identified as ideal initial targets (Table~\ref{tab:bdProp}).
+2MASS~J08354256$-$0819237 (hereafter {\sha}; \citealt{2003AJ....126.2421C} is a bright, nearby ($d$ = 8.5$\pm$0.8~pc; \citealt{2012ApJ...752...56F}) L5 dwarf that has been observed to vary in both optical and near-infrared bands with a period of 3.1~hr and an amplitude of $\sim$1\%  \citep{2004MNRAS.354..378K,2014A&A...566A.111W}. Its $v\sin{i}$ = 14.2$\pm$0.4~{\kms} \citep{2010ApJ...723..684B} suggests a near pole-on viewing angle assuming radius R = 1~{\rjup}. There is an $H$ = 12.3 star (2MASS~J08354383$-$0819212) at a separation of 19$\arcsec$ suitable for relative flux calibration (Figure~\ref{fig:images}). 
+2MASS J18212815+1414010 (hereafter {\shb}; \citealt{2008ApJ...686..528L}) is a similarly bright and nearby ($d$ = 9.38$\pm$0.03; \citealt{2016MNRAS.455..357S}) L4.5 dwarf, which exhibits a peculiar near-infrared spectrum attributed to thick clouds \citep{2008ApJ...686..528L,2015ApJS..219...33G}. This source is a photometric variable with a period of 4.2$\pm$0.1~hr \citep{2015ApJ...799..154M} and $v\sin{i}$ = 28.85$\pm$0.16~{\kms}, suggesting a near equator-on orientation.  \citet{2015ApJ...798L..13Y} measured 1--3\% spectral variability with $HST$/WFC3 over 1.1--1.6~$\micron$, with greater variabilty at shorter wavelengths. There are two suitably bright comparison stars within 20$\arcsec$ for relative calibration: 2MASS~J18212812+1414089 with $H$ = 12.6 at 7$\arcsec$ separation and 2MASS~J18212715+1413482 with $H$ = 12.0 at 29$\arcsec$ separation; we chose the latter for our monitoring observations.
+
+
+\begin{deluxetable*}{llcccccccl}
+\tablecaption{Brown Dwarf Properties}\label{tab:bdProp}
+\tablewidth{0pt}
+\tablehead{
+\colhead{Name} & 
+\colhead{SpT} & 
+\colhead{$d$} & 
+\colhead{2MASS $H$} & 
+\colhead{$J-K_s$} & 
+\colhead{\teff} & 
+\colhead{P$_{rot}$} &
+\colhead{$v\sin{i}$} & 
+\colhead{$i$\tablenotemark{a}} & 
+\colhead{Refs} \\
+ &  & \colhead{(pc)} & &  & \colhead{(K)} & \colhead{(hr)} & \colhead{(km/s)} & \colhead{($degree$)} \\
+ }
+\startdata
+{\sha} & L5 & 8.52$\pm$0.08 & 11.94$\pm$0.02 & 2.03$\pm$0.03 & 1754$\pm$112 & 3.1\tablenotemark{b} & 14.18$\pm$0.43 & 21 & 1-5 \\
+{\shb} & L4.5pec & 9.38$\pm$0.03 & 12.40$\pm$0.02 & 1.78$\pm$0.03 & 1600$\pm$100 & 4.2$\pm$0.1 & 28.85$\pm$0.16 & 83 & 5-10 \\
+\enddata
+\tablenotetext{a}{Estimated inclination angle $i$ assuming a radius = 1 Jupiter radius, so that $\sin{i}$ = 8.2$\times$10$^{-3}Pv\sin{i}$, where $P$ is in hours and $v\sin{i}$ is in km/s. A value of $i$ $\approx$ 0{\degree} is viewed pole-on, $i$ $\approx$ 90{\degree} is viewed equator-on.}
+\tablenotetext{b}{Tentative period.}
+\tablerefs{(1) \citet{2003AJ....126.2421C};
+(2) \citet{2012ApJ...752...56F}; 
+(3) \citet{2015ApJ...810..158F};
+(4) \citet{2004MNRAS.354..378K};
+(5) \citet{2010ApJ...723..684B};
+(6) \citet{2008ApJ...686..528L}; 
+(7) \citet{2016MNRAS.455..357S};
+(8) \citet{2015ApJ...798...73G};
+(9) \citet{2015ApJ...799..154M}
+(10) \citet{2015ApJ...798L..13Y}; 
+}
+\end{deluxetable*}
+
+
+\begin{figure*}
+\centering
+	\plottwo{image0835-0819.pdf}{image1821+1414.pdf}
+	\label{fig:image1821}
+	\caption{2MASS $JHK_s$ three-color images of the fields around our targets {\sha} (left) and {\shb} (right).  Each image is centered on the target, and span a 1$\arcmin\times\arcmin$ field of view oriented with North up and East the left. The comparison stars referred to in the text appear as blue sources in these images. }
+	\label{fig:images}
+	\vspace{0.1in}
+\end{figure*} 
+
+
+\section{Observations}\label{sec:obs}
+
+We observed {\sha} and {\shb} for one night each with the IRTF/SpeX (Table \ref{tab:obsParam}).
+{\sha} was observed for 4.65 hours, covering 1.5 rotation periods; {\shb} was observed for 7.47 hours, covering 1.8 rotation periods.
+Following \citet{2014ApJ...783....5S}, we used SpeX in its prism-dispersed mode, obtaining 0.9--2.4~$\micron$ spectra in a single order at low dispersion. The short-wavelength limit was set by the use of a 0.9~$\mu$m dichroic which deflected optical light into the MIT Optical Rapid Imaging System (MORIS) camera \citep{2011PASP..123..461G}, which was used for $i$-band guiding.
+For {\sha} our exposures were 15~sec, which was sufficient for guiding but not precision photometry. For {\shb}, we were able to guide on sources in the SpeX imaging channel, so we increased the $i$-band exposures to 60~sec to obtain a simultaneous $i$-band light-curve.
+
+\begin{deluxetable*}{lcccccccll}
+\tablecaption{Observations}\label{tab:obsParam}
+\tablewidth{0pt}
+\tablehead{
+ & \multicolumn{3}{c}{Observation Epoch (UT)} \\
+ \cline{2-4}
+\colhead{Target} & 
+\colhead{Date} & 
+\colhead{Start} & 
+\colhead{End} & 
+\colhead{$N_{int}$} & 
+\colhead{$t_{int}$} & 
+\colhead{Duration} & 
+\colhead{Airmass} & 
+\colhead{Reference Star} & 
+\colhead{Conditions} \\
+ & &  &  & & \colhead{(s)} & \colhead{(hr)} & \colhead{Range} }
+\startdata
+{\sha} & 2016-06-25 & XXX & XXX & 352 & 60 & 7.47 & XXX-XXX & J08354383-0819212 & XXX \\
+{\shb} & 2015-12-31 & XXX & XXX & 363 & 45 & 4.65 & XXX-XXX & J18212622+1414064 & XXX \\
+\enddata
+\tablecomments{N$_{int}$ is the number of integrations and t$_{int}$ is the effective integration time for the 32 non-destructive reads up the ramp. The duration is the total time from start to end of the observations including the reset times and overheads.}
+\end{deluxetable*}
+
+
+Wavelength calibrations were performed using observations of ThAr  emission lamps with the 0.3$\times$60$\arcsec$.
+We also obtained calibration sequences of ThAr and flat-field lamps with the 3$\times$60$\arcsec$ slit  before and after the brown dwarf time series to obtain information on the flat field and any flexure in the instrument with telescope orientation.
+
+[ADAM STOPPED HERE]
+
+For 2MASS J0835, we use a combination of an incandescent lamp and a sky frame to construct a flat.
+Due to flexure and motion with thin the system, we use a sky frame to get the structure of the background with low order polynomials fits in the horizontal direction.
+All of the (large $\gtrsim$ 30 px) structure is removed from the lamp frame with low order polynomials, and this residual flat is used to correct the pixel-to-pixel variations while the sky frame is used to measure the larger structures.
+We cross-correlate the sky frame with each image to account for any spatial shifts and apply the pixel-to-pixel flat to construct a custom flat field for every image.
+
+For 2MASS J1821, we did not have sufficient sky frames for sky flats so we use an incandescent lamp for flat fielding.
+Here, we fit the flat field structure with low order polynomials in the incandescent flat field to describe the spatial structure and use the residual image as a pixel-to-pixel flat.
+As in 2MASS J0835, we cross-correlate the spatial structure image to find a shift and then multiply it by the pixel-to-pixel flat to create a custom flat field for every image.
+In both 2MASS J0835 and 2MASS J1821 we remove all spectral structure from the flat fields to make ``response'' images that do not include the spectral structure of the lamp or dramatically alter the flux levels that would affect SNR calculations from the number of photo-electrons in a given pixel.
+
+As in \citet{schlawin2016kic1255}, we perform background subtraction over the entire slit with polynomial fit.
+We use a 4th order polynomial through all points outside +/-30 pixels of each aperture for the background subtraction.
+We use optimal extraction \citep{horne1986optimalE} to maximize the signal to noise.
+The spatial profiles are fit with low order polynomials with 20$\sigma$ rejection to remove cosmic rays and bad pixels.
+These spatial profiles are then used to calculate a weighted sum spectrum.
+
+
+
+\subsection{Light Curves}
+
+\begin{figure*}[!t]
+\centering
+\subfloat[2MASS J0835]{
+	\includegraphics[width=0.5\textwidth]{specphot_j0835.pdf}
+	\label{fig:specphot0835}
+	}
+\subfloat[2MASS J1821]{
+	\includegraphics[width=0.5\textwidth]{specphot_j1821.pdf}
+	\label{fig:specphot1821}
+	}
+	\caption{Top Panels: Normalized median raw spectra of {\sha} (left) and {\shb} (right) in black, compared with the respective reference stars (blue) and background emission (red; mostly telluric OH emission and thermal background). These spectra have not been corrected for telluric absorption or instrumental spectral response. The reference stars have significantly bluer spectra than the brown dwarfs. Bottom Panels: Dynamic spectra of each brown dwarf system. [MORE DESCRIPTION] {\bf [y-axis in hours not days, change top normalization or y-range so full spectrum is visible, and remove labels]}}
+	\label{fig:specphot}
+	\vspace{0.1in}
+\end{figure*} 
+
+Figure \ref{fig:specphot} shows the dynamic spectra of both targets, as well as the median spectra of the target and reference stars.
+{\sha} shows no variations or systematics at the $\lesssim1$\% level, while {\shb} shows a clear periodic signal that is strongest at the shortest wavelengths and declines in amplitude toward the longest wavelengths. The periodic signal is coincident with the 4.2~hr period measured by \citet{2015ApJ...799..154M}, enabling confirmation that the signal is astrophysical rather than arising from systematic effects (see \citealt{2016ApJ...826..156S}).
+{\shb} does exhibits some systematic features near the strong telluric absorption bands at 1.4 and 1.8~$\mu$m, likely caused by slight wavelength drifts and lower signals-to-noise.
+
+
+\begin{figure*}[!t]
+\centering
+\subfloat[2MASS J0835]{
+	\includegraphics[width=0.5\textwidth]{2mass_0835_t_series.pdf}
+	\label{fig:tserPhase0835}
+	}
+\subfloat[2MASS J1821]{
+	\includegraphics[width=0.5\textwidth]{2mass_1821_t_series.pdf}
+	\label{fig:tserPhase1821}
+	}
+	\caption{Time series for each system with an offset added for clarity. Each wavelength bin is labeled on the right side. Alternating colors are used to distinguished the light curves with offsets. {\bf [increased vertical scale so fluctuations are visible; replace diamonds with vertical bars (unc) or smaller symbols]}}
+	\label{fig:tserPfold}
+\end{figure*} 
+
+
+\section{Sinusoidal Model Fits}\label{sec:ModelFits}
+
+We extracted separate lightcurves for each target in 25 spectral bins of width XXX~$\mu$m, as shown in Figure~\ref{fig:tserPfold}. Each of these were fit to a simple sinusoidal model {\bf [NOTE: CHANGE TO COSINE FOR SIMPLER INTERPRETATION OF TO]:
+\begin{equation}
+F(t) = A * \cos(2 \pi (t - t_0)/\tau) + B t + C
+\end{equation}
+Here, $F(t)$ is the flux as a function of time $t$, $A$ is the amplitude of periodic variations, $t_0$ is the time of maximum periodic flux, $\tau$ is period of the variations, and $B$ and $C$ are linear terms describing any baseline trend.
+For the fits, we let $A$, $t_0$, $B$ and $C$ be free parameters, but fixed $\tau$ at the literature value of rotation period due to systematic trends (with a period of $\sim$24 hr) caused by uncorrected telluric variations.
+We also imposed a prior that $A \geq 0$ so that solutions with a $\pi$ phase offset and negative amplitude were ignored.
+
+\begin{figure*}[!]
+\centering
+\subfloat[2MASS J0835 - \colorbox{red}{fit might need more work} ]{
+	\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j0835.pdf}
+	\label{fig:ampspec0835}
+	}
+\subfloat[2MASS J1821]{
+	\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821.pdf}
+	\label{fig:ampspec1821}
+	}
+	\caption{Sine fit amplitude versus wavelength for each brown dwarf. The regions at 1.4~$\mu$m and 1.9~$\mu$m (shaded with a salmon color) are contaminated by telluric absorption so the variations can likely be due to telluric variability not corrected by the reference star. 2MASS J0835 shows no clear trend in wavelength, while 2MASS J1821 has a strong slope indicative of Mie-scattering particles.}
+	\label{fig:ampSpec}
+\end{figure*} 
+
+Figure \ref{fig:ampSpec} shows the best fit amplitudes as a function of wavelength.
+We use the standard deviation of points near minimum to estimate the noise in the flux time series.
+The Levenberg-Marquardt chi-squared minimization code \texttt{mpfit} is used to fit each wavelength bin independently and propagate the errors in the flux time series to amplitude uncertainty.
+The amplitude spectrum ($A$ as a function of wavelength) of 2MASS J0835, (Figure \ref{fig:ampspec0835}), shows small ($\lesssim 0.4\%$) amplitudes with a flat trend as a function of wavelength.
+2MASS J1821, on the other hand, shows a clear decreasing trend as function of wavelength.
+This is the same trend observed for 2MASS J1821 by HST over a shorter wavelength range (1.1 to 1.7~$\mu$m) by \citet{yang2016exStormsBD}.
+We shade the regions from 1.32 to 1.5~$\mu$m and 1.78 to 1.95~$\mu$m in Figure \ref{fig:ampSpec} because these wavelength ranges are affected by telluric water vapor absorption not fully removed by the simultaneous reference star.
+
+%    \begin{figure}[!ht]
+%    \centering
+%    \includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821.pdf}
+%    \caption{Sine fit amplitude versus wavelength for 2MASS J1821. The regions at 1.4~$\mu$m and 1.9~$\mu$m are contaminated by telluric absorption so the variations can likely be due to telluric variability not corrected by the reference star.}\label{fig:DHSRes}
+%    \end{figure}
+
+\subsection{Mie Scattering Fit}
+
+We model the wavelength dependence of 2MASS 1821 as an optically thin cloud layer consisting of a log-normal distribution of particle sizes.
+In this simple model, the amplitude of the variability is directly proportional to the opacity or $Q_{ext}$ of the particles.
+We model the extinction coefficient, $Q_{ext}$ from the \texttt{IDL} Mie theory code \texttt{mie\_single.pro} \citep{grainger04} to calculate the extinction as a function of wavelength.
+We use the complex indices of refraction from \citet{dorschner95pyrox} for Mg-rich pyroxene grains (MgSiO$_3$).
+For the particle size distribution we assume a log-normal distribution around a characteristic size, $s$ and a standard deviation of the logarithm (scale parameter), $\sigma$ =0.5.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821_mie_sc.pdf}
+\caption{Sine fit amplitude versus wavelength excluding the wavelength regions contaminated by telluric absorption. with simple Mie scattering models with a log-normal particle size distribution centered at 0.1 and 0.2~$\mu$m. Also shown in the figure is the WFC3 amplitude from \citet{yang2015hstRotBD}. The WFC3 observations were from a different epoch, with different cloud coverage.}\label{fig:ampspec1821mie}
+\end{centering}
+\end{figure}
+
+Figure \ref{fig:ampspec1821mie} shows the simple Mie scattering model as compared to the data for two example particle sizes of 0.1~$\mu$m and 0.2~$\mu$m.
+In these cases the reduced chi-squared values are 9.6 and 2.5 respectively, when ignoring the points within the shaded telluric contamination regions.
+
+\citet{yang2015hstRotBD} also observe wavelength-dependent variability of 2MASS J1821 with the Hubble Space Telescope's (HST's) Wide Field Camera (WFC3) over 2 visits of 3 orbits each.
+Their maximum over minimum flux spectrum is converted to an amplitude spectrum by assuming that the amplitude is half the difference in maximum and minimum flux, which can be shown to be 
+\begin{equation}
+A  = \frac{f_R - 1}{f_R + 1}
+\end{equation}\label{eq:ampFromRatio}
+where $f_R$ is the flux ratio of the maximum over minimum flux.
+
+The WFC3 amplitude spectrum is shown with the data in Figure \ref{fig:ampspec1821mie}.
+There is a multiplicative offset between the IRTF and WFC3 spectrum because they were taken at different epochs and therefore different spatial cloud and temperature distributions.
+The WFC3 spectrum is not affected by the telluric absorption the way the SpeX data is.
+\citet{yang2015hstRotBD} find that the WFC3 spectrum has no significant water vapor absorption which indicates a high haze layer in 2MASS J1821 and consistent with our Mie scattering fit.
+
+A similar amplitude versus wavelength trend was recently observed for WISEP J004701.06+680352.1 \citep{lew2016w0047}, which has very red ($J-K$ = 2.55) spectral energy distribution thought to be caused by a high altitude haze layer.
+In WISEP J0047, the wavelength trend could be fit by $\sim 0.4~\mu$m forsterite grains, similar to our characteristic particle size.
+
+\subsection{Spot Model Fit}
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.4\textwidth]{temperature_drawing.pdf}
+\caption{A simple two region model with two different temperatures and different areal fractions for longitudes 0\degree\ and 180\degree.}\label{fig:tdiffschem}
+\end{centering}
+\end{figure}
+
+Another simple model we attempt is a spot model - that the brown dwarf spectral variability has to do with a non-uniform temperature distribution on the brown dwarf in the same way that starspots modulate the brightness of hydrogen burning stars as they spin.
+In Figure \ref{fig:ampspec1821tdiff}, we fit the same amplitude spectrum as in Figure \ref{fig:ampspec1821mie}.
+This time we model the data with two temperature regions as shown in Figure \ref{fig:tdiffschem} with two opposite longitudes of the planet at the brightness minimum and maximum.
+We assume that are each in local thermodynamic equilibrium (LTE) so that the flux is proportional to the Planck function times the areal coverage.
+The flux ratio between maximum and minimum flux is then
+\begin{equation}
+f_{R,\lambda} = \frac{\alpha_1 B_\lambda(T_1) + (1-\alpha_1) B_\lambda(T_2)}{\alpha_2 B_\lambda(T_1) + (1-\alpha_2) B_\lambda(T_2)}
+\end{equation}
+where $\alpha_1$ and $\alpha_2$ are the areal fractions of the first ($T_1$ and second ($T_2$) regions respectively, $B_\lambda$ is the Planck function, and $T_1$ and $T_2$ are the temperatures of the two levels.
+$\alpha_1$ and $\alpha_2$ are limited to [0,1].
+Using equation \ref{eq:ampFromRatio}, the amplitude then becomes
+\begin{equation}
+A_\lambda = \frac{\left(\alpha_1 - \alpha_2 \right) \left(B_\lambda(T_1) - B_\lambda(T_2) \right)}{\left(\alpha_1 + \alpha_2\right) B_\lambda(T_1) + \left(2 - \alpha_1 - \alpha_2\right) B_\lambda(T_2)}.
+\end{equation}
+If the temperature difference is significant so that one Planck function is in the Wien's limit while the other is in the Rayleigh Jeans tail, the cooler temperature essentially becomes black and the contrast approaches a constant for short wavelengths.
+If we ignore projection effects for small area coverage, the effective temperature is 
+\begin{equation}
+\sigma T_{eff}^4 \approx (\alpha_1 + \alpha_2) \sigma T_1^4 + (2 - \alpha_1 - \alpha_2) \sigma T_2^4
+\end{equation}
+where $\sigma$ is the Stephan-Boltzmann constant.
+
+We start by considering a two-faced model where $\alpha_1$ = 1 and $\alpha_2$ = 0, so that the two halves of the brown dwarf are different temperatures.
+To be close to the effective temperature of the brown dwarf, we fix $T_1$ to be 1600 K and only vary $T_2$.
+This model is a poor match to the data, also shown in Figure \ref{fig:ampspec1821tdiff} with a reduced chi-squared, $\bar{\chi}^2$ = 15.
+Next, we attempt a model where we allow $\alpha_1$ and $\alpha_2$ to be free parameters and restrict the temperature limits of the two regions to [1300,2500] to ensure that the final effective temperature is close to the measured 1600 K \citep{gagne2015banyan7}.
+The best fit model has $T_{eff} \approx $1590 K and $\bar{\chi}^2$=2.1, but pushes to the edges of our prior with $T_1$ = 2500 K and $T_2$ = 1300 K.
+Finally, we consider a model where all four parameters, $\alpha_1$, $\alpha_2$, $T_1$ and $T_2$ are all free.
+With these loose constraints, the model fits the data with $\bar{\chi}^2$ = 1.3, consistent with the data, but not with the effective temperature ($T_{eff}$ = 850 K).
+The $\alpha$ values,  $\alpha_i <<$ 1 indicating that the model fits with dark patches on a small fraction of the surface.
+
+The temperature contrasts in these models (with the exception of the two-faced model which poorly matches the data) are significantly larger than the expected 50 K horizontal temperature variations expected in circulation models \citep{showman2013bdgpDynamics}.
+Therefore, we suspect that hot or cold spots on the surface are a less plausible explanation of the variability of 2MASS 1821 than a heterogenous temperature distribution.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821_t_diff.pdf}
+\caption{The same data as in Figure \ref{fig:ampspec1821mie}. We fit the data with a two region model that assumes the effective temperature of the brown dwarf and a cooler temperature.}\label{fig:ampspec1821tdiff}
+\end{centering}
+\end{figure}
+% Command used:
+% plot_rad_vs_wavl,/amp,/shadetell,custxrange=[0.8,2.5],custyrange=[-0.1,1.9],/showYang,/twoTreg
+
+
+
+
+
+\section{Conclusions}\label{sec:conclusions}
+
+We observed two brown dwarfs of spectral type L4-L5: 2MASS 1821 and 2MASS 0835.
+These brown dwarfs have temperatures near the condensation temperatures of MgSiO$_3$ and Mg$_2$SiO$_4$.
+We obtained high precision ground-based spectrophotometry of both systems to measure the variability spectra of these systems with the IRTF.
+After fitting sinusoids to both of the time series, we find that 2MASS 0835 has low levels of variability and no significant wavelength dependence.
+
+2MASS J1821 shows significant variability up to the 1.1\% amplitude at short wavelengths (0.8$\mu$m) which decreases towards the near infrared (2.4$\mu$m).
+This is consistent with HST measurements for the system that show a gradual decrease in variability amplitude with wavelength \citep{yang2016exStormsBD} from 1.1$\mu$m to 1.7 $\mu$m with no decrease in the water vapor band.
+The lack of the water vapor band gives evidence of a high altitude aerosol layer in the atmosphere.
+
+We fit the variability amplitude spectrum with an optically thin Mie scattering model and find it is consistent with Mg-rich pyroxene grains with sub-micron sized particles.
+A log-normal particle size distribution with a median of 0.2$\mu$m fits the data with a $\bar{\chi^2}$ of 2.5.
+We also model the wavelength dependence with a spotted surface model with two different Planck functions covering different spatial regions.
+The two temperature region model can fit variability amplitude spectrum well within errors, but gives implausible temperature differences.
+Therefore, we favor the Mie scattering model as a better explanation for the variability amplitude spectrum.
+
+\section{Acknowledgements}
+Thanks to Vivien Parmentier for useful discussions on cloud versus a spotted temperature model.
+Funding for the E Schlawin is provided by NASA Goddard Spaceflight Center.
+This research has made use of the Exoplanet Orbit Database and the Exoplanet Data Explorer at exoplanets.org.
+This research made use of the \texttt{astropy} package \citep{astropy2013}.
+
+\appendix
+
+\section{Color-Magnitude Diagram}
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{color_mag.pdf}
+\caption{Color-Magnitude diagram from \citet{dupuy2012ltparallax}. We added 2MASS J1821 and 2MASS J0835 using Simbad magnitudes and parallaxes.}\label{fig:CMD}
+\end{centering}
+\end{figure}
+
+%If  used, this work made use of the \texttt{astropy} package \citep{astropy2013}.
+%If used, some data was collected from the Open Exoplanet Catalogue \citep{rein2012openExoCat}.
+
+%% In a manner similar to \objectname authors can provide links to dataset
+%% hosted at participating data centers via the \dataset{} command.  The
+%% second curly bracket argument is printed in the text while the first
+%% parentheses argument serves as the valid data set identifier.  Large
+%% lists of data set are best provided in a table (see Table 3 for an example).
+%% Valid data set identifiers should be obtained from the data center that
+%% is currently hosting the data.
+%%
+%% Note that AASTeX interprets everything between the curly braces in the 
+%% macro as regular text, so any special characters, e.g. "#" or "_," must be 
+%% preceded by a backslash. Otherwise, you will get a LaTeX error when you 
+%% compile your manuscript.  Special characters do not 
+%% need to be escaped in the optional, square-bracket argument.
+
+
+
+%% In this section, we use  the \subsection command to set off
+%% a subsection.  \footnote is used to insert a footnote to the text.
+
+%% Observe the use of the LaTeX \label
+%% command after the \subsection to give a symbolic KEY to the
+%% subsection for cross-referencing in a \ref command.
+%% You can use LaTeX's \ref and \label commands to keep track of
+%% cross-references to sections, equations, tables, and figures.
+%% That way, if you change the order of any elements, LaTeX will
+%% automatically renumber them.
+
+%% This section also includes several of the displayed math environments
+%% mentioned in the Author Guide.
+
+
+%% The equation environment wil produce a numbered display equation.
+
+
+%% The \notetoeditor{TEXT} command allows the author to communicate
+%% information to the copy editor.  This information will appear as a
+%% footnote on the printed copy for the manuscript style file.  Nothing will
+%% appear on the printed copy if the preprint or
+%% preprint2 style files are used.
+
+%% The eqnarray environment produces multi-line display math. The end of
+%% each line is marked with a \\. Lines will be numbered unless the \\
+%% is preceded by a \nonumber command.
+%% Alignment points are marked by ampersands (&). There should be two
+%% ampersands (&) per line.
+
+%% Putting eqnarrays or equations inside the mathletters environment groups
+%% the enclosed equations by letter. For instance, the eqnarray below, instead
+%% of being numbered, say, (4) and (5), would be numbered (4a) and (4b).
+%% LaTeX the paper and look at the output to see the results.
+
+%% This section contains more display math examples, including unnumbered
+%% equations (displaymath environment). The last paragraph includes some
+%% examples of in-line math featuring a couple of the AASTeX symbol macros.
+
+%% The displaymath environment will produce the same sort of equation as
+%% the equation environment, except that the equation will not be numbered
+%% by LaTeX.
+%% If you wish to include an acknowledgments section in your paper,
+%% separate it off from the body of the text using the \acknowledgments
+%% command.
+
+%% Included in this acknowledgments section are examples of the
+%% AASTeX hypertext markup commands. Use \url without the optional [HREF]
+%% argument when you want to print the url directly in the text. Otherwise,
+%% use either \url or \anchor, with the HREF as the first argument and the
+%% text to be printed in the second.
+
+\acknowledgments
+
+
+
+%% To help institutions obtain information on the effectiveness of their
+%% telescopes, the AAS Journals has created a group of keywords for telescope
+%% facilities. A common set of keywords will make these types of searches
+%% significantly easier and more accurate. In addition, they will also be
+%% useful in linking papers together which utilize the same telescopes
+%% within the framework of the National Virtual Observatory.
+%% See the AASTeX Web site at http://aastex.aas.org/
+%% for information on obtaining the facility keywords.
+
+%% After the acknowledgments section, use the following syntax and the
+%% \facility{} macro to list the keywords of facilities used in the research
+%% for the paper.  Each keyword will be checked against the master list during
+%% copy editing.  Individual instruments or configurations can be provided 
+%% in parentheses, after the keyword, but they will not be verified.
+
+%{\it Facilities:} \facility{Nickel}, \facility{HST (STIS)}, \facility{CXO (ASIS)}.
+
+%% Appendix material should be preceded with a single \appendix command.
+%% There should be a \section command for each appendix. Mark appendix
+%% subsections with the same markup you use in the main body of the paper.
+
+%% Each Appendix (indicated with \section) will be lettered A, B, C, etc.
+%% The equation counter will reset when it encounters the \appendix
+%% command and will number appendix equations (A1), (A2), etc.
+
+\appendix
+
+
+%% The reference list follows the main body and any appendices.
+%% Use LaTeX's thebibliography environment to mark up your reference list.
+%% Note \begin{thebibliography} is followed by an empty set of
+%% curly braces.  If you forget this, LaTeX will generate the error
+%% "Perhaps a missing \item?".
+%%
+%% thebibliography produces citations in the text using \bibitem-\cite
+%% cross-referencing. Each reference is preceded by a
+%% \bibitem command that defines in curly braces the KEY that corresponds
+%% to the KEY in the \cite commands (see the first section above).
+%% Make sure that you provide a unique KEY for every \bibitem or else the
+%% paper will not LaTeX. The square brackets should contain
+%% the citation text that LaTeX will insert in
+%% place of the \cite commands.
+
+%% We have used macros to produce journal name abbreviations.
+%% AASTeX provides a number of these for the more frequently-cited journals.
+%% See the Author Guide for a list of them.
+
+%% Note that the style of the \bibitem labels (in []) is slightly
+%% different from previous examples.  The natbib system solves a host
+%% of citation expression problems, but it is necessary to clearly
+%% delimit the year from the author name used in the citation.
+%% See the natbib documentation for more details and options.
+
+\bibliographystyle{apj}
+\bibliography{bd_biblio}
+
+%\clearpage
+
+%% Use the figure environment and \plotone or \plottwo to include
+%% figures and captions in your electronic submission.
+%% To embed the sample graphics in
+%% the file, uncomment the \plotone, \plottwo, and
+%% \includegraphics commands
+%%
+%% If you need a layout that cannot be achieved with \plotone or
+%% \plottwo, you can invoke the graphicx package directly with the
+%% \includegraphics command or use \plotfiddle. For more information,
+%% please see the tutorial on "Using Electronic Art with AASTeX" in the
+%% documentation section at the AASTeX Web site, http://aastex.aas.org/
+%%
+%% The examples below also include sample markup for submission of
+%% supplemental electronic materials. As always, be sure to check
+%% the instructions to authors for the journal you are submitting to
+%% for specific submissions guidelines as they vary from
+%% journal to journal.
+
+%% This example uses \plotone to include an EPS file scaled to
+%% 80% of its natural size with \epsscale. Its caption
+%% has been written to indicate that additional figure parts will be
+%% available in the electronic journal.
+
+%\begin{figure}
+%\epsscale{.80}
+%\plotone{f1.eps}
+%\caption{Derived spectra for 3C138 \citep[see][]{heiles03}. Plots for all sources are available
+%in the electronic edition of {\it The Astrophysical Journal}.\label{fig1}}
+%\end{figure}
+
+%\clearpage
+
+%% Here we use \plottwo to present two versions of the same figure,
+%% one in black and white for print the other in RGB color
+%% for online presentation. Note that the caption indicates
+%% that a color version of the figure will be available online.
+%%
+
+%\begin{figure}
+%\plottwo{f2.eps}{f2_color.eps}
+%\caption{A panel taken from Figure 2 of \citet{rudnick03}. 
+%See the electronic edition of the Journal for a color version 
+%of this figure.\label{fig2}}
+%\end{figure}
+
+%% This figure uses \includegraphics to scale and rotate the still frame
+%% for an mpeg animation.
+
+%\begin{figure}
+%\includegraphics[angle=90,scale=.50]{f3.eps}
+%\caption{Animation still frame taken from \citet{kim03}.
+%This figure is also available as an mpeg
+%animation in the electronic edition of the
+%{\it Astrophysical Journal}.}
+%\end{figure}
+
+%% If you are not including electonic art with your submission, you may
+%% mark up your captions using the \figcaption command. See the
+%% User Guide for details.
+%%
+%% No more than seven \figcaption commands are allowed per page,
+%% so if you have more than seven captions, insert a \clearpage
+%% after every seventh one.
+
+%% Tables should be submitted one per page, so put a \clearpage before
+%% each one.
+
+%% Two options are available to the author for producing tables:  the
+%% deluxetable environment provided by the AASTeX package or the LaTeX
+%% table environment.  Use of deluxetable is preferred.
+%%
+
+%% Three table samples follow, two marked up in the deluxetable environment,
+%% one marked up as a LaTeX table.
+
+%% In this first example, note that the \tabletypesize{}
+%% command has been used to reduce the font size of the table.
+%% We also use the \rotate command to rotate the table to
+%% landscape orientation since it is very wide even at the
+%% reduced font size.
+%%
+%% Note also that the \label command needs to be placed
+%% inside the \tablecaption.
+
+%% This table also includes a table comment indicating that the full
+%% version will be available in machine-readable format in the electronic
+%% edition.
+
+%% If you use the table environment, please indicate horizontal rules using
+%% \tableline, not \hline.
+%% Do not put multiple tabular environments within a single table.
+%% The optional \label should appear inside the \caption command.
+
+
+
+%% If the table is more than one page long, the width of the table can vary
+%% from page to page when the default \tablewidth is used, as below.  The
+%% individual table widths for each page will be written to the log file; a
+%% maximum tablewidth for the table can be computed from these values.
+%% The \tablewidth argument can then be reset and the file reprocessed, so
+%% that the table is of uniform width throughout. Try getting the widths
+%% from the log file and changing the \tablewidth parameter to see how
+%% adjusting this value affects table formatting.
+
+%% The \dataset{} macro has also been applied to a few of the objects to
+%% show how many observations can be tagged in a table.
+
+
+%% Tables may also be prepared as separate files. See the accompanying
+%% sample file table.tex for an example of an external table file.
+%% To include an external file in your main document, use the \input
+%% command. Uncomment the line below to include table.tex in this
+%% sample file. (Note that you will need to comment out the \documentclass,
+%% \begin{document}, and \end{document} commands from table.tex if you want
+%% to include it in this document.)
+
+%% \input{table}
+
+%% The following command ends your manuscript. LaTeX will ignore any text
+%% that appears after it.
+
+\end{document}
+
+%%
+%% End of file `sample.tex'.
