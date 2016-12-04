@@ -1,45 +1,10 @@
-%%
-%% Beginning of file 'sample.tex'
-%%
-%% Modified 2005 December 5
-%%
-%% This is a sample manuscript marked up using the
-%% AASTeX v5.x LaTeX 2e macros.
-
-%% The first piece of markup in an AASTeX v5.x document
-%% is the \documentclass command. LaTeX will ignore
-%% any data that comes before this command.
-
-%% The command below calls the preprint style
-%% which will produce a one-column, single-spaced document.
-%% Examples of commands for other substyles follow. Use
-%% whichever is most appropriate for your purposes.
-%%
-%%\documentclass[12pt,preprint]{aastex}
-
-%% manuscript produces a one-column, double-spaced document:
-
-%\documentclass{article}
+% manuscript produces a one-column, double-spaced document:
+%\documentclass[12pt,preprint]{aastex}
 \documentclass[twocolumn]{aastex6}
 %\documentclass[iop]{emulateapj}
 
-%% preprint2 produces a double-column, single-spaced document:
+% preprint2 produces a double-column, single-spaced document:
 %\documentclass[preprint2]{aastex}
-
-%% Sometimes a paper's abstract is too long to fit on the
-%% title page in preprint2 mode. When that is the case,
-%% use the longabstract style option.
-
-%% \documentclass[preprint2,longabstract]{aastex}
-
-%% If you want to create your own macros, you can do so
-%% using \newcommand. Your macros should appear before
-%% the \begin{document} command.
-%%
-%% If you are submitting to a journal that translates manuscripts
-%% into SGML, you need to follow certain guidelines when preparing
-%% your macros. See the AASTeX v5.x Author Guide
-%% for information.
 
 %Packages
 %\usepackage[colorlinks=true,linkcolor=blue,citecolor=blue]{hyperref}
@@ -49,31 +14,33 @@
 \usepackage{amsmath,amssymb}
 \newcommand{\vdag}{(v)^\dagger}
 \newcommand{\degree}{$^\circ$}
+\newcommand{\vtan}{$V_{tan}$}
+\newcommand{\kms}{km~s$^{-1}$}
+\newcommand{\msun}{M$_{\sun}$}
+\newcommand{\rjup}{R$_{Jup}$}
+\newcommand{\ldl}{$\lambda/{\Delta}{\lambda}$}
+\newcommand{\lsun}{L$_{\sun}$}
+\newcommand{\lbol}{$\log_{10}{L_{bol}/L_{\sun}}$}
+\newcommand{\teff}{T$_{eff}$}
+\newcommand{\logg}{$\log{g}$}
+\newcommand{\fsed}{$f_{sed}$}
+\newcommand{\kzz}{$K_{zz}$}
+\newcommand{\meth}{CH$_4$}
+\newcommand{\wat}{H$_2$O}
+\newcommand{\sha}{2MASS~J0835$-$0819}
+\newcommand{\shb}{2MASS~J1812+1414}
 
-%% You can insert a short comment on the title page using the command below.
+\slugcomment{To be submitted to ApJ/AJ}
 
-%\slugcomment{DHS White Paper}
 
-%% If you wish, you may supply running head information, although
-%% this information may be modified by the editorial offices.
-%% The left head contains a list of authors,
-%% usually a maximum of three (otherwise use et al.).  The right
-%% head is a modified title of up to roughly 44 characters.
-%% Running heads will not print in the manuscript style.
-
-\shorttitle{IRTF BD Spectro-photometry}
+\shorttitle{Spectral Variability of L Dwarfs}
 \shortauthors{Schlawin et al.}
 
-%% This is the end of the preamble.  Indicate the beginning of the
-%% paper itself with \begin{document}.
 
 \begin{document}
 
-%% LaTeX will automatically break titles if they run longer than
-%% one line. However, you may use \\ to force a line break if
-%% you desire.
 
-\title{IRTF Spectro-Photometry of Two Rotating Brown Dwarfs: \\2MASS J08354256-0819237 and 2MASS J18212815+1414010}
+\title{Spectral Variability of Two Rapidly Rotating Brown Dwarfs: \\2MASS J08354256-0819237 and 2MASS J18212815+1414010}
 
 %% Use \author, \affil, and the \and command to format
 %% author and affiliation information.
@@ -82,154 +49,134 @@
 %% anywhere in the paper, not just in the front matter.
 %% As in the title, use \\ to force line breaks.
 
-\author{E. Schlawin, A. Burgasser, J. Teske, J. Gizis, T. Karalidi }
-\affil{Steward Observatory, Tucson AZ 85721, UCSD, DTM, University of Delaware}
-\email{eas342@email.arizona.edu}
+\author{E. Schlawin\altaffilmark{1,2}, Adam J.\ Burgasser\altaffilmark{2,3}, J. Teske\altaffilmark{4}, J. Gizis\altaffilmark{5} \and T. Karalidi\altaffilmark{1}}
 
+\altaffiltext{1}{Steward Observatory, Tucson AZ 85721 \email{eas342@email.arizona.edu}}
+\altaffiltext{2}{Visiting Astronomer at the Infrared Telescope Facility, which is operated by the University of Hawaii under contract NNH14CK55B with the National Aeronautics and Space Administration}
+\altaffiltext{3}{Center for Astrophysics and Space Science, University of California San Diego, La Jolla, CA 92093, USA}
+\altaffiltext{4}{Carnegie DTM, 5241 Broad Branch Road, NV, Washington, DC 20015, USA}
+\altaffiltext{5}{Department of Physics and Astronomy, University of Delaware, Newark, DE 19716, USA}
 
-%This is a test by Gizis
-
-%% Notice that each of these authors has alternate affiliations, which
-%% are identified by the \altaffilmark after each name.  Specify alternate
-%% affiliation information with \altaffiltext, with one command per each
-%% affiliation.
-
-%\altaffiltext{1}{Hubble Postdoctoral Fellow}
-
-%% Mark off your abstract in the ``abstract'' environment. In the manuscript
-%% style, abstract will output a Received/Accepted line after the
-%% title and affiliation information. No date will appear since the author
-%% does not have this information. The dates will be filled in by the
-%% editorial office after submission.
 
 \begin{abstract}
-L and T brown dwarfs show variability associated with the rotation of heterogeneous atmospheres. We present a high precision ground-based time series study of 2 brown dwarfs - 2MASS J08354256-0819237 and 2MASS J18212815+1414010, both of spectral type L4-L5 using the Infrared Telescope Facility (IRTF). 2MASS J0835 shows low level ($\lesssim 0.4\%$) spectral variability with no wavelength dependence from 0.8~$\mu$m to 2.4~$\mu$m. 2MASS J1821, by contrast, shows $\sim$2\%  variability in the shorter wavelengths that falls off toward 2.4~$\mu$m. The variability amplitude spectrum can be fit by Mie extinction of sub-micron dust particles. It can also be fit by a hot spots on the brown dwarf surface, but they require implausible temperature variations, so we prefer the Mie scattering model.
+Low-temperature L dwarfs exhibit low-level, rotationally-modulated photometric variability generally associated with heterogeneous, cloud-covered atmospheres. The spectral character of these variations yield insight into the composition and vertical structure of the clouds. Here we present the results of a high precision, ground-based, near-infrared, spectral monitoring study of two mid-type L dwarfs, 2MASS~J08354256$-$0819237 and 2MASS~J18212815+1414010, using the SpeX instrument on the Infrared Telescope Facility. By simultaneously observing a nearby visual companion, we achieve $<$0.15\% per-band sensitivity in relative brightness changes across the 0.9--2.4$\mu$m band. We find that 2MASS~J0835$-$0819 exhibits low-level ($\lesssim$ 0.4\% per band) variability with no spectral dependence, while 2MASS~J1821+1414 varies by up to $\pm$2\% at 1~$\mu$m and declines toward longer wavelengths. The latter result extends the variability trend observed in prior $HST$/WFC3 spectral monitoring of 2MASS~J1821+1414 over 1.1--1.6~$\mu$m. We reproduce the variability amplitude spectrum of 2MASS~J1821+1414 with Mie extinction of sub-micron dust particles, although this model becomes too strong at short wavelengths. An alternate model based on surface hot spots more accurately reproduces the variability amplitude spectrum, but requires implausibly large temperature variations. {\bf [phase variation? differences between 0835 and 1821?]}
 \end{abstract}
 
-%% Keywords should appear after the \end{abstract} command. The uncommented
-%% example has been keyed in ApJ style. See the instructions to authors
-%% for the journal to which you are submitting your paper to determine
-%% what keyword punctuation is appropriate.
 
-\keywords{Brown Dwarfs}
-
-%% From the front matter, we move on to the body of the paper.
-%% In the first two sections, notice the use of the natbib \citep
-%% and \citet commands to identify citations.  The citations are
-%% tied to the reference list via symbolic KEYs. The KEY corresponds
-%% to the KEY in the \bibitem in the reference list below. We have
-%% chosen the first three characters of the first author's name plus
-%% the last two numeral of the year of publication as our KEY for
-%% each reference.
+\keywords{techniques: spectroscopic -- stars: atmospheres -- stars: brown dwarfs -- stars: individual (\objectname{2MASS J08354256-0819237}, \objectname{2MASS J18212815+1414010}) -- stars: late-type -- stars: variables: general}
 
 
-%% Authors who wish to have the most important objects in their paper
-%% linked in the electronic edition to a data center may do so by tagging
-%% their objects with \objectname{} or \object{}.  Each macro takes the
-%% object name as its required argument. The optional, square-bracket 
-%% argument should be used in cases where the data center identification
-%% differs from what is to be printed in the paper.  The text appearing 
-%% in curly braces is what will appear in print in the published paper. 
-%% If the object name is recognized by the data centers, it will be linked
-%% in the electronic edition to the object data available at the data centers  
-%%
-%% Note that for sources with brackets in their names, e.g. [WEG2004] 14h-090,
-%% the brackets must be escaped with backslashes when used in the first
-%% square-bracket argument, for instance, \object[\[WEG2004\] 14h-090]{90}).
-%%  Otherwise, LaTeX will issue an error. 
 
 \section{Introduction}
 
-Brown dwarfs atmospheres are an intriguing environment to explore cloud composition, particle size and formation that also complement studies of exoplanet atmospheres.
-Their temperatures are cool enough that they span condensation points of many cloud-producing  compounds including H$_2$O, MgSiO$_3$, Mg$_2$SiO$_4$ and Fe \citep{marley2015rev}.
+The atmospheres of L-type stars and brown dwarfs (1300~K $\lesssim$ {\teff} $\lesssim$ 2200~K; \citealt{2015ApJ...810..158F}) are sufficiently cool that species of mineral and metal condensates form spontaneously in their atmospheres \citep{1996A&A...305L...1T,2010ApJ...716.1060V}.
+In addition to influencing spectral energy distributions (e.g., \citealt{2001ApJ...556..357A,2008ApJ...674..451B}) and photospheric chemistry (e.g., \citealt{2000ApJ...531..438B}), condensates can coalesce into large-scale cloud and haze structures \citep{1989ApJ...338..314L,2001ApJ...556..872A,2014Natur.505..654C}
+whose surface and vertical structure may produce rotationally-modulated brightness variations (e.g., \citealt{2012ApJ...750..105R}), and long-term variations from differential rotation and/or cloud structure evolution (e.g., \citealt{2009ApJ...701.1534A,2013A&A...555L...5G,2016ApJ...826....8Y}). Evidence of cloud-driven variability extends to the cooler T dwarfs (e.g., \citealt{2009ApJ...701.1534A,2012ApJ...760L..31B,2015ApJ...799..154M}), and virtually all L dwarfs and most T dwarfs likely have photospheric heterogeneities leading to infrared flux variations $\gtrsim$0.2\% in amplitude \citep{2015ApJ...799..154M}. Clouds and hazes are important constituents of exoplanetary atmospheres as well (e.g., \citealt{2011ApJ...733...65B,2014Natur.505...69K,2016Natur.529...59S}).
 
-The cloud layers may be studied from the direct spectroscopy of a populations of brown dwarf atmospheres \citep[e.g.][]{burgasser2006ltTrans,liu2006}.
-Brown dwarfs can also be observed over their rotation periods to understand the spatial cloud structure and composition, that can change rapidly with time \citep[e.g.][]{yang2016exStormsBD}.
-In the case where the targets are bright enough for high resolution spectroscopy, Doppler imaging can be used to map out the cloud structures on brown dwarfs \citep{crossfield2014dopplerimg}.
+Multi-wavelength monitoring of low-temperature stars and brown dwarfs allows the measurement of cloud vertical structure, as grey grain scattering opacity competes with strongly wavelength-dependent molecular gas opacity. The amplitude of variability as a function of wavelength samples the vertical depths of cloud layers \citep{2013ApJ...768..121A}, and amplitude spectra have been show to vary with effective temperature, ({\teff}; e.g., \citealt{2015ApJ...798L..13Y}) and surface gravity (e.g., \citealt{2016ApJ...829L..32L}). Wavelength-dependent phase variance in lightcurves has also been observed \citep{2012ApJ...760L..31B,2013ApJ...778L..10B,2016ApJ...826....8Y}. Since different wavelengths sample different photospheric depths in the highly structured spectra of L and T dwarfs, these phase variations have been interpreted as arising from the relative motion of distinct cloud layers or deep thermal pulsation \citep{2014ApJ...785..158R}. 
 
-L dwarfs are found to be variable with periods of 1-100 hours \citep{bailer-jones1999bdvar,bailer-jones1999varevo}.
-This variability is explained by a patchy clouds at the L/T transition \citep{marley2010patchyc}.
-Virtually all L dwarfs and most T dwarfs likely have photospheric heterogeneities that cause flux variations larger than 0.2\% in the near infrared \citep{metchev2015weatherII}
+Broad-band variability amplitudes are typically $<$1\% in L and T dwarfs, with some dramatic exceptions \citep{2009ApJ...701.1534A,2012ApJ...750..105R,2013A&A...555L...5G,2016ApJ...829L..32L}. 
+Ground-based spectral (e.g., CLOUDS; \citealt{2008A&A...487..277G}) and broad-band photometric monitoring surveys (e.g., \citealt{1999A&A...348..800B,2003MNRAS.346..473K,2014ApJ...793...75R,2014A&A...566A.111W}) are generally limited to $>$1-3\% relative precision due to telluric atmospheric instabilities (i.e., ``red noise'') and insufficient calibrators \citep{2003MNRAS.339..477B}.
+In contrast, the stability of space-based platforms $Hubble$ ($HST$), $Spitzer$ and $Kepler$ provide order-of-magnitude improvements in relative photometric and spectro-photometric precision, and have been responsible for the discovery of the majority of known L and T dwarf variables \citep{2013ApJ...768..121A,2013ApJ...779..172G,2015ApJ...799..154M}. However, these facilities are not suited, for building up robust statistical samples to assess the physical bases of surface heterogeneity or different variability modes.
 
-\citet{burgaser2014irtf} first demonstrated that the Infrared Telescope Facility (IRTF) is a useful tool for characterizing brown dwarf variability and that a simultaneous reference can be used to correct for common-mode variability, such as telluric transmission variations.
-\citet{burgaser2014irtf} observed the binary system Luhman 16 AB and used the more stable Luhman 16A as a simultaneous reference to measure spectral variability in Luhman 16B.
+High-precision, spectro-photometric monitoring from the ground has been demonstrated in a few specific cases. \citet{2014ApJ...783....5S} achieved $<$0.1\% per band variability precision for the planet-host star Corot-1 using the NASA Infrared Telescope Facility (IRTF) SpeX spectrograph \citep{2003PASP..115..362R}, by simultaneously monitoring the star and a nearby visual binary companion in a wide (3$\arcsec$) slit. This was sufficient to infer the presence of a cloud/haze layer in Corot-1b via transmission spectroscopy. A similar investigation of the disintegrating rocky exoplanet KIC 12557548b  enabled the characterization of the grain properties of its tidal debris tail \citep{2016ApJ...826..156S}. In a parallel effort, \citet{2014ApJ...785...48B} obtained $<$0.5\% per-band relative precision across the 1--2.5~$\mu$m band with IRTF/SpeX for the variable T dwarf Luhman 16B, by simultaneously observing it and its L dwarf companion. Both studies demonstrate that high-precision, near-infrared spectral monitoring observations can be achieved from the ground.
 
-We observed the two brown dwarfs as part of a pilot program to assess the efficacy of IRTF for measuring spectral variability in brown dwarf atmospheres with the exoplanet techniques of \citet{schlawin2014} to achieve high precision spectro-photometry.
-2MASS J18212815+1414010 is an L5 brown dwarf showing a triangular H-band spectrum \citep{looper2008peculiarLdwarfs}.
-The spectral type is peculiar and has also been designated as L4 \citep{gagne2015banyan7}.
-2MASS J1821's short rotation period (4.2 hr) allows for time series spectroscopy for all longitudes in a single ground based observation night.
-2MASS J08354256-0819237 \citep{cruz2003coolNeighbors} is also an L4-L5 brown dwarf known to be variable with a tentative period of 3.1 hr \citep{koen2004ibandBD}, which also permitted about 1.5 rotation periods.
-The basic properties of each system are listed in Table \ref{tab:bdProp}.
+This article reports the results of a pilot study adapting these methods to measuring the variability of two L-type dwarfs with nearby visual companions. We describe the target identification strategy and pilot targets in Section~\ref{sec:targets}.
+In Section~\ref{sec:obs}, we describe our monitoring observations and data reduction procedures to generate relative spectro-photometric time series.
+In Section~\ref{sec:ModelFits}, we analyze these time series using sinusoidal model fits over discrete spectral bands to generate individual light curves and amplitude spectra.
+We then fit the variability amplitude spectra to two different physical models, Mie scattering from clouds and heterogeneous temperature spots, to assess which more accurately reproduces the data.
+We summarize our results in Section~\ref{sec:conclusions}.
 
-Both brown dwarfs' effective temperatures in Table \ref{tab:bdProp} are near the condensation temperatures of MgSiO$_3$ (enstatite) and Mg$_2$SiO$_4$ (forsterite) \citep{marley2015rev} so these are viable candidates for clouds in their atmospheres.
 
-\begin{table*}
-\begin{center}
-\caption{Brown Dwarf Properties}\label{tab:bdProp}
-\begin{tabular}{cccccrr}
-Name & Rotation Period & Spectral Type & K magnitude  & $J$ - $K$ & T$_\mathrm{eff}$ &  $v$ sin($i$) \\
--- & (hr) & -- & -- & -- & (K) & (km/s) \\
-\hline \hline
-2MASS 1821 & 4.2\tablenotemark{a} & L4 Pec\tablenotemark{b} - L5 Pec\tablenotemark{c} & 11.14 & 1.78 & 1600 $\pm$ 100\tablenotemark{b} & 28.85 $\pm$ 0.16\tablenotemark{d}\\
-2MASS 0835 & 3.1\tablenotemark{e} & L4 Pec\tablenotemark{b} - L5\tablenotemark{f} & 11.65 & 2.03 & 1800 $\pm$ 100\tablenotemark{b} & 14.18 $\pm$ 0.43\tablenotemark{d} \\
-\end{tabular}
-\end{center}
-\tablenotetext{a}{\citet{metchev2015weatherII}.}
-\tablenotetext{b}{\citet{gagne2015banyan7}.}
-\tablenotetext{c}{\citet{looper2008peculiarLdwarfs}}
-\tablenotetext{d}{\citet{blake2010nirspecVS}}
-\tablenotetext{e}{Tentative period from \citet{koen2004ibandBD}}
-\tablenotetext{f}{\citet{cruz2003coolNeighbors}}
-\end{table*}
+\section{Target Selection}\label{sec:targets}
 
-In this paper, we describe time series observations of both 2MASS J1821 and 2MASS J0835 over one rotation period with spectral coverage from 0.8 to 2.4 $\mu$m.
-In Section \ref{sec:obs}, we describe our observations with the Infrared Telescope Facility (IRTF).
-In Section \ref{sec:ModelFits}, we describe how we fit the data with sinusoidal models to create an amplitude spectrum.
-We fit the variability amplitude spectra with two different physical models - Mie scattering from clouds and a heterogenous temperature distribution.
-We conclude in Section \ref{sec:conclusions}.
+We identified potential targets for relative spectro-photometry by selecting among the $\approx$200 known L dwarfs\footnote{We identified these sources from DwarfArchives,  \url{http://dwarfarchives.org}. The declination range corresponds to the visibility region of IRTF.} with $H$ $<$ 14 and $-$30{\degree}  $<$ $\delta$ $<$ +67{\degree} those sources that have comparable-brightness ($\Delta{H}$ $<$ 1) visual binary companions at apparent separations of 5$\arcsec$--30$\arcsec$. We identified 30 potential targets, and prioritized those with previously detected photometric variability or rotational $v\sin{i}$ measurements indicating periods $\leq$10~hr.  Two sources were identified as ideal initial targets (Table~\ref{tab:bdProp}).
+2MASS~J08354256$-$0819237 (hereafter {\sha}; \citealt{2003AJ....126.2421C} is a bright, nearby ($d$ = 8.5$\pm$0.8~pc; \citealt{2012ApJ...752...56F}) L5 dwarf that has been observed to vary in both optical and near-infrared bands with a period of 3.1~hr and an amplitude of $\sim$1\%  \citep{2004MNRAS.354..378K,2014A&A...566A.111W}. Its $v\sin{i}$ = 14.2$\pm$0.4~{\kms} \citep{2010ApJ...723..684B} suggests a near pole-on viewing angle assuming radius R = 1~{\rjup}. There is an $H$ = 12.3 star (2MASS~J08354383$-$0819212) at a separation of 19$\arcsec$ suitable for relative flux calibration (Figure~\ref{fig:images}). 
+2MASS J18212815+1414010 (hereafter {\shb}; \citealt{2008ApJ...686..528L}) is a similarly bright and nearby ($d$ = 9.38$\pm$0.03; \citealt{2016MNRAS.455..357S}) L4.5 dwarf, which exhibits a peculiar near-infrared spectrum attributed to thick clouds \citep{2008ApJ...686..528L,2015ApJS..219...33G}. This source is a photometric variable with a period of 4.2$\pm$0.1~hr \citep{2015ApJ...799..154M} and $v\sin{i}$ = 28.85$\pm$0.16~{\kms}, suggesting a near equator-on orientation.  \citet{2015ApJ...798L..13Y} measured 1--3\% spectral variability with $HST$/WFC3 over 1.1--1.6~$\micron$, with greater variabilty at shorter wavelengths. There are two suitably bright comparison stars within 20$\arcsec$ for relative calibration: 2MASS~J18212812+1414089 with $H$ = 12.6 at 7$\arcsec$ separation and 2MASS~J18212715+1413482 with $H$ = 12.0 at 29$\arcsec$ separation; we chose the latter for our monitoring observations.
+
+
+\begin{deluxetable*}{llcccccccl}
+\tablecaption{Brown Dwarf Properties}\label{tab:bdProp}
+\tablewidth{0pt}
+\tablehead{
+\colhead{Name} & 
+\colhead{SpT} & 
+\colhead{$d$} & 
+\colhead{2MASS $H$} & 
+\colhead{$J-K_s$} & 
+\colhead{\teff} & 
+\colhead{P$_{rot}$} &
+\colhead{$v\sin{i}$} & 
+\colhead{$i$\tablenotemark{a}} & 
+\colhead{Refs} \\
+ &  & \colhead{(pc)} & &  & \colhead{(K)} & \colhead{(hr)} & \colhead{(km/s)} & \colhead{($degree$)} \\
+ }
+\startdata
+{\sha} & L5 & 8.52$\pm$0.08 & 11.94$\pm$0.02 & 2.03$\pm$0.03 & 1754$\pm$112 & 3.1\tablenotemark{b} & 14.18$\pm$0.43 & 21 & 1-5 \\
+{\shb} & L4.5pec & 9.38$\pm$0.03 & 12.40$\pm$0.02 & 1.78$\pm$0.03 & 1600$\pm$100 & 4.2$\pm$0.1 & 28.85$\pm$0.16 & 83 & 5-10 \\
+\enddata
+\tablenotetext{a}{Estimated inclination angle $i$ assuming a radius = 1 Jupiter radius, so that $\sin{i}$ = 8.2$\times$10$^{-3}Pv\sin{i}$, where $P$ is in hours and $v\sin{i}$ is in km/s. A value of $i$ $\approx$ 0{\degree} is viewed pole-on, $i$ $\approx$ 90{\degree} is viewed equator-on.}
+\tablenotetext{b}{Tentative period.}
+\tablerefs{(1) \citet{2003AJ....126.2421C};
+(2) \citet{2012ApJ...752...56F}; 
+(3) \citet{2015ApJ...810..158F};
+(4) \citet{2004MNRAS.354..378K};
+(5) \citet{2010ApJ...723..684B};
+(6) \citet{2008ApJ...686..528L}; 
+(7) \citet{2016MNRAS.455..357S};
+(8) \citet{2015ApJ...798...73G};
+(9) \citet{2015ApJ...799..154M}
+(10) \citet{2015ApJ...798L..13Y}; 
+}
+\end{deluxetable*}
+
+
+\begin{figure*}
+\centering
+	\plottwo{image0835-0819.pdf}{image1821+1414.pdf}
+	\label{fig:image1821}
+	\caption{2MASS $JHK_s$ three-color images of the fields around our targets {\sha} (left) and {\shb} (right).  Each image is centered on the target, and span a 1$\arcmin\times\arcmin$ field of view oriented with North up and East the left. The comparison stars referred to in the text appear as blue sources in these images. }
+	\label{fig:images}
+	\vspace{0.1in}
+\end{figure*} 
 
 
 \section{Observations}\label{sec:obs}
 
-For 2MASS J0835, we observed a simultaneous reference - 2MASS 08354383-0819212, $J$=12.74, $H$=12.28, $K_S$=12.19 at a distance of 28 arcsec.
-We obtained spectrophotometry over 4.65 hours, covering 1.5 rotation periods for 2MASS J0835.
-%Using MORIS image for distance and plate scale in header of 0.1143 arcsec/px
+We observed {\sha} and {\shb} for one night each with the IRTF/SpeX (Table \ref{tab:obsParam}).
+{\sha} was observed for 4.65 hours, covering 1.5 rotation periods; {\shb} was observed for 7.47 hours, covering 1.8 rotation periods.
+Following \citet{2014ApJ...783....5S}, we used SpeX in its prism-dispersed mode, obtaining 0.9--2.4~$\micron$ spectra in a single order at low dispersion. The short-wavelength limit was set by the use of a 0.9~$\mu$m dichroic which deflected optical light into the MIT Optical Rapid Imaging System (MORIS) camera \citep{2011PASP..123..461G}, which was used for $i$-band guiding.
+For {\sha} our exposures were 15~sec, which was sufficient for guiding but not precision photometry. For {\shb}, we were able to guide on sources in the SpeX imaging channel, so we increased the $i$-band exposures to 60~sec to obtain a simultaneous $i$-band light-curve.
 
-We observed 2MASS J1821 and 2MASS J0835 for one night each with the IRTF.
-For 2MASS J1821, we observed a simultaneous reference - 2MASS 18212622+1414064, $J$=12.58, $H$=11.97, $K_S$=11.82  at a distance of 24\arcsec.
-We were able to measure spectrophotometry over 7.47 hours, which was 1.8 rotations at the 4.2 rotation period from \citet{metchev2015weatherII}.
-%Using SpeX Guider image for distance of 241px  and plate scale in header of 0.116 arcsec/px
-
-As visible in Figure \ref{fig:specphot1821}, the light curves for 2MASS J1821 repeat the same fluctuations after one rotation period.
-Assuming the brown dwarfs cloud structure was relatively unchanged in one rotation, this enabled confirmation that the signal was astrophysical as opposed to the systematics affecting the same instrument telescope for observations of the  KIC 12557548 system \citep{schlawin2016kic1255}.
-
-We observed 2MASS J1821 and J0835 each for one night as part of a pilot program to explore a variety of brown dwarfs with different variability levels and atmospheric temperatures.
-The program also included WISE J1906+4011, but weather prevented successful observations of this brown dwarf.
-Table \ref{tab:obsParam} shows the observing parameters for each of the two observed targets including the integration time, number of integrations and reference star.
-
-We use the same method as \citet{schlawin2014} to obtain high precision spectrophotometry which employs a large 3\arcsec $\times$ 60\arcsec\ slit.
-We used a 0.9~$\mu$m dichroic to split the optical wavelengths to the MORIS imager \citep{Gulbis2011}.
-For guiding, we use the MORIS imager in the SDSS $i$ band.
-For 2MASS J0835, we used short (<15 sec) integrations as is standard for guiding, so the source was too faint for photometry in $i$ band.
-For 2MASS J1821, we extended the integration time to 60 seconds in order to obtain simultaneous $i$ band photometry.
-
-\begin{table*}
-\begin{center}
-\caption{Observing Parameters}\label{tab:obsParam}
-\begin{tabular}{cccccc}
-Target & Observing Date & N$_{int}$ & t$_{int}$ & Duration & Reference Star \\
--- & UT Start & -- & (s) & (hr) &  -- \\
-\hline
-2MASS J1821 & 2015-12-31 & 363 & 45 & 4.65 &  2MASS 18212622+1414064 \\
-2MASS J0835 & 2016-06-25 & 352 & 60 & 7.47 &  2MASS 08354383-0819212 \\
-\end{tabular}
-\end{center}
-\tablenotetext{}{N$_{int}$ is the number of integrations and t$_{int}$ is the effective integration time for the 32 non-destructive reads up the ramp. The duration is the total time from start to end of the observations including the reset times and overheads.}
-\end{table*}
+\begin{deluxetable*}{lcccccccll}
+\tablecaption{Observations}\label{tab:obsParam}
+\tablewidth{0pt}
+\tablehead{
+ & \multicolumn{3}{c}{Observation Epoch (UT)} \\
+ \cline{2-4}
+\colhead{Target} & 
+\colhead{Date} & 
+\colhead{Start} & 
+\colhead{End} & 
+\colhead{$N_{int}$} & 
+\colhead{$t_{int}$} & 
+\colhead{Duration} & 
+\colhead{Airmass} & 
+\colhead{Reference Star} & 
+\colhead{Conditions} \\
+ & &  &  & & \colhead{(s)} & \colhead{(hr)} & \colhead{Range} }
+\startdata
+{\sha} & 2016-06-25 & XXX & XXX & 352 & 60 & 7.47 & XXX-XXX & J08354383-0819212 & XXX \\
+{\shb} & 2015-12-31 & XXX & XXX & 363 & 45 & 4.65 & XXX-XXX & J18212622+1414064 & XXX \\
+\enddata
+\tablecomments{N$_{int}$ is the number of integrations and t$_{int}$ is the effective integration time for the 32 non-destructive reads up the ramp. The duration is the total time from start to end of the observations including the reset times and overheads.}
+\end{deluxetable*}
 
 
-Wavelength calibrations were performed with a 0.3$\times$60\arcsec\ slit and an argon emission lamp while science data was taken with a 3$\times$60\arcsec\ slit to minimized slit losses.
-We performed calibrations sequences of argon emission lamp spectra and flat fielding with the 3$\times$60\arcsec\ slit both before and after the brown dwarf time series to obtain information on the flat field and any flexure in the instrument with telescope orientation.
+Wavelength calibrations were performed using observations of ThAr  emission lamps with the 0.3$\times$60$\arcsec$.
+We also obtained calibration sequences of ThAr and flat-field lamps with the 3$\times$60$\arcsec$ slit  before and after the brown dwarf time series to obtain information on the flat field and any flexure in the instrument with telescope orientation.
+
+[ADAM STOPPED HERE]
 
 For 2MASS J0835, we use a combination of an incandescent lamp and a sky frame to construct a flat.
 Due to flexure and motion with thin the system, we use a sky frame to get the structure of the background with low order polynomials fits in the horizontal direction.
@@ -247,6 +194,8 @@ We use optimal extraction \citep{horne1986optimalE} to maximize the signal to no
 The spatial profiles are fit with low order polynomials with 20$\sigma$ rejection to remove cosmic rays and bad pixels.
 These spatial profiles are then used to calculate a weighted sum spectrum.
 
+
+
 \subsection{Light Curves}
 
 \begin{figure*}[!t]
@@ -259,15 +208,15 @@ These spatial profiles are then used to calculate a weighted sum spectrum.
 	\includegraphics[width=0.5\textwidth]{specphot_j1821.pdf}
 	\label{fig:specphot1821}
 	}
-	\caption{Top Panels: The target stars' median raw spectrum compared with the reference star. The areas near 1.4 and 1.8 $\mu$m are contaminated by telluric water absorption. The reference stars have significantly bluer spectra than the brown dwarfs. Bottom Panels: Dynamic spectra of each brown dwarf system.}
+	\caption{Top Panels: Normalized median raw spectra of {\sha} (left) and {\shb} (right) in black, compared with the respective reference stars (blue) and background emission (red; mostly telluric OH emission and thermal background). These spectra have not been corrected for telluric absorption or instrumental spectral response. The reference stars have significantly bluer spectra than the brown dwarfs. Bottom Panels: Dynamic spectra of each brown dwarf system. [MORE DESCRIPTION] {\bf [y-axis in hours not days, change top normalization or y-range so full spectrum is visible, and remove labels]}}
 	\label{fig:specphot}
 	\vspace{0.1in}
 \end{figure*} 
 
-Figure \ref{fig:specphot} shows the dynamic spectra for both brown dwarfs with the individual spectra of the target and reference stars on the upper panels.
-At the $\lesssim 1$\% level, 2MASS J0835 shows no variations or systematics.
-2MASS J1821 on the other hand, shows a periodic signal that is strongest at the short wavelength and gradually gets smaller toward longer wavelengths.
-2MASS J1821 also exhibits systematic trends near strong slopes in the raw spectra due to telluric absorption bands at 1.4 and 1.8~$\mu$m.
+Figure \ref{fig:specphot} shows the dynamic spectra of both targets, as well as the median spectra of the target and reference stars.
+{\sha} shows no variations or systematics at the $\lesssim1$\% level, while {\shb} shows a clear periodic signal that is strongest at the shortest wavelengths and declines in amplitude toward the longest wavelengths. The periodic signal is coincident with the 4.2~hr period measured by \citet{2015ApJ...799..154M}, enabling confirmation that the signal is astrophysical rather than arising from systematic effects (see \citealt{2016ApJ...826..156S}).
+{\shb} does exhibits some systematic features near the strong telluric absorption bands at 1.4 and 1.8~$\mu$m, likely caused by slight wavelength drifts and lower signals-to-noise.
+
 
 \begin{figure*}[!t]
 \centering
@@ -279,25 +228,20 @@ At the $\lesssim 1$\% level, 2MASS J0835 shows no variations or systematics.
 	\includegraphics[width=0.5\textwidth]{2mass_1821_t_series.pdf}
 	\label{fig:tserPhase1821}
 	}
-	\caption{Time series for each system with an offset added for clarity. Each wavelength bin is labeled on the right side. Alternating colors are used to distinguished the light curves with offsets.}
+	\caption{Time series for each system with an offset added for clarity. Each wavelength bin is labeled on the right side. Alternating colors are used to distinguished the light curves with offsets. {\bf [increased vertical scale so fluctuations are visible; replace diamonds with vertical bars (unc) or smaller symbols]}}
 	\label{fig:tserPfold}
 \end{figure*} 
-
-2MASS J0835 exhibits very little variability over our 4.7 hr whereas 2MASS 1821 shows large variability at the 4.2 hr rotation period, shown in Figure \ref{fig:tserPfold}.
-For 2MASS 1821, the variations are mostly sinusoidal and repeat over multiple rotations of the brown dwarf - the exception is wavelengths near telluric features, such as 1.43~$\mu$m and 1.79~$\mu$m.
 
 
 \section{Sinusoidal Model Fits}\label{sec:ModelFits}
 
-We fit the time series of each brown dwarf in 25 spectral bins each to assess the wavelength-dependent nature of their variations.
-The simple model can be described as 
+We extracted separate lightcurves for each target in 25 spectral bins of width XXX~$\mu$m, as shown in Figure~\ref{fig:tserPfold}. Each of these were fit to a simple sinusoidal model {\bf [NOTE: CHANGE TO COSINE FOR SIMPLER INTERPRETATION OF TO]}:
 \begin{equation}
-F(t) = A * \sin(2 \pi (t - t_0)/\tau) + B t + C
+F(t) = A * \cos(2 \pi (t - t_0)/\tau) + B t + C
 \end{equation}
-where $F$ is the flux as a function of time ($t$), A is the amplitude of the variations, $t_0$ is the time offset of the variations, $\tau$ is period of the variations and B and C are linear terms describing the baseline trend.
-For the fits, we let $A$, $t_0$, $B$ and $C$ be free parameters.
-We fixed the sinusoidal period $\tau$ at the literature value of rotation period (Table \ref{tab:bdProp}) because there are trends (with a period of $\sim$24 hr) due to uncorrected telluric variations that that are not relevant to the brown dwarf system.
-We imposed a prior that $A \geq 0$ so that a solution with a $\pi$ phase offset and negative amplitude isn't found.
+Here, $F(t)$ is the flux as a function of time $t$, $A$ is the amplitude of periodic variations, $t_0$ is the time of maximum periodic flux, $\tau$ is period of the variations, and $B$ and $C$ are linear terms describing any baseline trend.
+For the fits, we let $A$, $t_0$, $B$ and $C$ be free parameters, but fixed $\tau$ at the literature value of rotation period due to systematic trends (with a period of $\sim$24 hr) caused by uncorrected telluric variations.
+We also imposed a prior that $A \geq 0$ so that solutions with a $\pi$ phase offset and negative amplitude were ignored.
 
 \begin{figure*}[!]
 \centering
@@ -318,7 +262,7 @@ We use the standard deviation of points near minimum to estimate the noise in th
 The Levenberg-Marquardt chi-squared minimization code \texttt{mpfit} is used to fit each wavelength bin independently and propagate the errors in the flux time series to amplitude uncertainty.
 The amplitude spectrum ($A$ as a function of wavelength) of 2MASS J0835, (Figure \ref{fig:ampspec0835}), shows small ($\lesssim 0.4\%$) amplitudes with a flat trend as a function of wavelength.
 2MASS J1821, on the other hand, shows a clear decreasing trend as function of wavelength.
-This was is the same trend observed for 2MASS J1821 by HST over a shorter wavelength range (1.1 to 1.7~$\mu$m) by \citet{yang2016exStormsBD}.
+This is the same trend observed for 2MASS J1821 by HST over a shorter wavelength range (1.1 to 1.7~$\mu$m) by \citet{yang2016exStormsBD}.
 We shade the regions from 1.32 to 1.5~$\mu$m and 1.78 to 1.95~$\mu$m in Figure \ref{fig:ampSpec} because these wavelength ranges are affected by telluric water vapor absorption not fully removed by the simultaneous reference star.
 
 %    \begin{figure}[!ht]
