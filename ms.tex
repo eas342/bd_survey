@@ -235,9 +235,9 @@ Figure \ref{fig:specphot} shows the dynamic spectra of both targets, as well as 
 
 \section{Sinusoidal Model Fits}\label{sec:ModelFits}
 
-We extracted separate lightcurves for each target in 25 spectral bins of width XXX~$\mu$m, as shown in Figure~\ref{fig:tserPfold}. Each of these were fit to a simple sinusoidal model {\bf [NOTE: CHANGE TO COSINE FOR SIMPLER INTERPRETATION OF TO]}:
+We extracted separate light curves for each target in 25 spectral bins of width 0.060~$\mu$m, as shown in Figure~\ref{fig:tserPfold}. Each of these were fit to a simple sinusoidal model:
 \begin{equation}
-F(t) = A * \cos(2 \pi (t - t_0)/\tau) + B t + C
+F(t) = A \cos(2 \pi (t - t_0)/\tau) + B t + C
 \end{equation}
 Here, $F(t)$ is the flux as a function of time $t$, $A$ is the amplitude of periodic variations, $t_0$ is the time of maximum periodic flux, $\tau$ is period of the variations, and $B$ and $C$ are linear terms describing any baseline trend.
 For the fits, we let $A$, $t_0$, $B$ and $C$ be free parameters, but fixed $\tau$ at the literature value of rotation period due to systematic trends (with a period of $\sim$24 hr) caused by uncorrected telluric variations.
