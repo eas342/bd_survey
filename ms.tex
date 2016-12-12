@@ -236,7 +236,7 @@ Figure \ref{fig:specphot} shows the dynamic spectra of both targets, as well as 
 \section{Sinusoidal Model Fits}\label{sec:ModelFits}
 
 We extracted separate light curves for each target in 25 spectral bins of width 0.060~$\mu$m, as shown in Figure~\ref{fig:tserPfold}. Each of these were fit to a simple sinusoidal model:
-\begin{equation}
+\begin{equation}\label{eq:cosfit}
 F(t) = A \cos(2 \pi (t - t_0)/\tau) + B t + C
 \end{equation}
 Here, $F(t)$ is the flux as a function of time $t$, $A$ is the amplitude of periodic variations, $t_0$ is the time of maximum periodic flux, $\tau$ is period of the variations, and $B$ and $C$ are linear terms describing any baseline trend.
@@ -390,6 +390,14 @@ This research made use of the \texttt{astropy} package \citep{astropy2013}.
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{color_mag.pdf}
 \caption{Color-Magnitude diagram from \citet{dupuy2012ltparallax}. We added 2MASS J1821 and 2MASS J0835 using Simbad magnitudes and parallaxes.}\label{fig:CMD}
+\end{centering}
+\end{figure}
+
+\section{Example Posterior Distributions}
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{corner_example.pdf}
+\caption{Example posterior distributions for an MCMC fit to the time series using Equation \ref{eq:cosfit} for the wavelength bin 1.08~$\mu$m.}\label{fig:postCosfit}
 \end{centering}
 \end{figure}
 
