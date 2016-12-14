@@ -404,6 +404,28 @@ This research made use of the \texttt{astropy} package \citep{astropy2013}.
 \end{centering}
 \end{figure}
 
+We also explore a 2 term sinusoidal fit:
+
+\begin{equation}\label{eq:cosfit2term}
+F(t) = A_1 \cos(2 \pi (t - t_1)/\tau) + A_2 \cos(4 \pi (t - t_2)/\tau) +  B t + C
+\end{equation}
+
+The 2 term fit works better on the light curves that show the variations at a high signal to noise ratio
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{best_fit_2term.pdf}
+\caption{Best fit model to time series at 1.08~$\mu$m using Equation \ref{eq:cosfit2term}.}\label{fig:model2Cosfit}
+\end{centering}
+\end{figure}
+
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{corner_example.pdf}
+\caption{Example posterior distributions for an MCMC fit to the time series using Equation \ref{eq:cosfit} for the wavelength bin 1.08~$\mu$m.}\label{fig:post2Cosfit}
+\end{centering}
+\end{figure}
+
 %If  used, this work made use of the \texttt{astropy} package \citep{astropy2013}.
 %If used, some data was collected from the Open Exoplanet Catalogue \citep{rein2012openExoCat}.
 
