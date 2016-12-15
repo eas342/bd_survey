@@ -389,14 +389,24 @@ This research made use of the \texttt{astropy} package \citep{astropy2013}.
 \pagebreak
 
 \section{Color-Magnitude Diagram}
+
+Figure \ref{fig:CMD} shows the color magnitude diagram from the sample of brown dwarfs in \citet{dupuy2012ltparallax}, which includes 2MASS J0835-0819 but not 2MASS J1812+1414.
+We highlight these two brown dwarfs to be contrasted with the rest of the population.
+
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{color_mag.pdf}
-\caption{Color-Magnitude diagram from \citet{dupuy2012ltparallax}. We added 2MASS J1821 and 2MASS J0835 using Simbad magnitudes and parallaxes.}\label{fig:CMD}
+\caption{Color-Magnitude diagram from \citet{dupuy2012ltparallax}. We added 2MASS J1821-0819 and 2MASS J0835+1414 using Simbad magnitudes and parallaxes.}\label{fig:CMD}
 \end{centering}
 \end{figure}
 
 \section{Example Posterior Distributions}
+
+In Figure \ref{fig:postCosfit}, we show the posterior distributions of a sinusoidal model (Equation \ref{eq:cosfit}) fit to the data using \texttt{emcee} \citep{foreman-mackey2013emcee} for an example wavelength bin of 1.08~$\mu$m.
+This wavelength bin is one of the high amplitude fits that is relatively unaffected by telluric contamination.
+We impose priors on the amplitude $A_1$ so that it would be positive, $t_1$ would be less than the observation windows (to avoid multiple periodic solutions) and that the period $\tau$ would be between 0 and the observation window length.
+The model parameters are close to Gaussian and the only visible correlation is between the time offset, $t_1$, and the rotation period $\tau$.
+
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{corner_example.pdf}
@@ -404,11 +414,16 @@ This research made use of the \texttt{astropy} package \citep{astropy2013}.
 \end{centering}
 \end{figure}
 
-We also explore a 2 term sinusoidal fit:
-
+We also explore a 2 term sinusoidal fit with a second cosine function at twice the frequency:
 \begin{equation}\label{eq:cosfit2term}
 F(t) = A_1 \cos(2 \pi (t - t_1)/\tau) + A_2 \cos(4 \pi (t - t_2)/\tau) +  B t + C
 \end{equation}
+Now there are two amplitude parameters $A_1$ and $A_2$ and two time offset parameters $t_1$ and $t_2$.
+Figure \ref{fig:model2Cosfit} shows the best fit compared to the data for this 2 term sinusoidal fit.
+We assume the same priors as the 1 term sinusoidal fit with both $A_1$ and $A_2 > 0$.
+The two term model appears visually to fit the data well.
+The $\chi^2$ per degree of freedom is still 7.9, so it is not the expected 1.0.
+However, the error bars are likely underestimated when using photon and read noise limits.
 
 The 2 term fit works better on the light curves that show the variations at a high signal to noise ratio
 \begin{figure}
@@ -421,7 +436,7 @@ The 2 term fit works better on the light curves that show the variations at a hi
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=0.5\textwidth]{corner_example.pdf}
+\includegraphics[width=0.5\textwidth]{corner_fit_2term.pdf}
 \caption{Example posterior distributions for an MCMC fit to the time series using Equation \ref{eq:cosfit} for the wavelength bin 1.08~$\mu$m.}\label{fig:post2Cosfit}
 \end{centering}
 \end{figure}
