@@ -334,6 +334,12 @@ If we ignore projection effects for small area coverage, the effective temperatu
 \end{equation}
 where $\sigma$ is the Stephan-Boltzmann constant.
 
+In the model fitting, we found a strong correlation between $\alpha_1$ and $\alpha_2$.
+There-fore we re-parameterized with $\beta = \alpha_1 - \alpha_2$, so that $\alpha_2 = \alpha_1 - \beta$.
+\begin{equation}
+A_\lambda = \frac{\beta \left(B_\lambda(T_1) - B_\lambda(T_2) \right)}{\left(2 \alpha_1 - \beta \right) B_\lambda(T_1) + \left(2 - 2 \alpha_1 + \beta \right) B_\lambda(T_2)}.
+\end{equation}
+
 We start by considering a two-faced model where $\alpha_1$ = 1 and $\alpha_2$ = 0, so that the two halves of the brown dwarf are different temperatures.
 To be close to the effective temperature of the brown dwarf, we fix $T_1$ to be 1600 K and only vary $T_2$.
 This model is a poor match to the data, also shown in Figure \ref{fig:ampspec1821tdiff} with a reduced chi-squared, $\bar{\chi}^2$ = 15.
