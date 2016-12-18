@@ -336,7 +336,7 @@ where $\sigma$ is the Stephan-Boltzmann constant.
 
 In the model fitting, we found a strong correlation between $\alpha_1$ and $\alpha_2$.
 There-fore we re-parameterized with $\beta = \alpha_1 - \alpha_2$, so that $\alpha_2 = \alpha_1 - \beta$.
-\begin{equation}
+\begin{equation}\label{eq:2tempAdiff}
 A_\lambda = \frac{\beta \left(B_\lambda(T_1) - B_\lambda(T_2) \right)}{\left(2 \alpha_1 - \beta \right) B_\lambda(T_1) + \left(2 - 2 \alpha_1 + \beta \right) B_\lambda(T_2)}.
 \end{equation}
 
@@ -444,6 +444,13 @@ The 2 term fit works better on the light curves that show the variations at a hi
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{corner_fit_2term.pdf}
 \caption{Example posterior distributions for an MCMC fit to the time series using Equation \ref{eq:cosfit} for the wavelength bin 1.08~$\mu$m.}\label{fig:post2Cosfit}
+\end{centering}
+\end{figure}
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{corner_fit_2temp.pdf}
+\caption{Example posterior distributions for an MCMC fit to the spectra using Equation \ref{eq:2tempAdiff}.}\label{fig:post2Tempfit}
 \end{centering}
 \end{figure}
 
