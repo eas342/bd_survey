@@ -406,8 +406,10 @@ We highlight these two brown dwarfs to be contrasted with the rest of the popula
 \end{centering}
 \end{figure}
 
+\pagebreak
 \section{Example Posterior Distributions}
 
+\subsection{Time Series}
 In Figure \ref{fig:postCosfit}, we show the posterior distributions of a sinusoidal model (Equation \ref{eq:cosfit}) fit to the data using \texttt{emcee} \citep{foreman-mackey2013emcee} for an example wavelength bin of 1.08~$\mu$m.
 This wavelength bin is one of the high amplitude fits that is relatively unaffected by telluric contamination.
 We impose priors on the amplitude $A_1$ so that it would be positive, $t_1$ would be less than the observation windows (to avoid multiple periodic solutions) and that the period $\tau$ would be between 0 and the observation window length.
@@ -444,6 +446,17 @@ The 2 term fit works better on the light curves that show the variations at a hi
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{corner_fit_2term.pdf}
 \caption{Example posterior distributions for an MCMC fit to the time series using Equation \ref{eq:cosfit} for the wavelength bin 1.08~$\mu$m.}\label{fig:post2Cosfit}
+\end{centering}
+\end{figure}
+
+\clearpage
+\pagebreak
+\subsection{Amplitude Spectrum}
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{best_fit_spec_2temp.pdf}
+\caption{Maximum likelihood spectrum using an MCMC fit to the amplitude spectrum of 2MASS 1821.}\label{fig:ML2Tempfit}
 \end{centering}
 \end{figure}
 
