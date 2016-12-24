@@ -350,7 +350,7 @@ With these loose constraints, the model fits the data with $\bar{\chi}^2$ = 1.3,
 The $\alpha$ values,  $\alpha_i <<$ 1 indicating that the model fits with dark patches on a small fraction of the surface.
 
 The temperature contrasts in these models (with the exception of the two-faced model which poorly matches the data) are significantly larger than the expected 50 K horizontal temperature variations expected in circulation models \citep{showman2013bdgpDynamics}.
-Therefore, we suspect that hot or cold spots on the surface are a less plausible explanation of the variability of 2MASS 1821 than a heterogenous temperature distribution.
+Therefore, we suspect that hot or cold spots on the surface are a less plausible explanation of the variability of 2MASS J1821 than a heterogenous temperature distribution.
 
 \begin{figure}
 \begin{centering}
@@ -396,13 +396,13 @@ This research made use of the \texttt{astropy} package \citep{astropy2013}.
 
 \section{Color-Magnitude Diagram}
 
-Figure \ref{fig:CMD} shows the color magnitude diagram from the sample of brown dwarfs in \citet{dupuy2012ltparallax}, which includes 2MASS J0835-0819 but not 2MASS J1812+1414.
+Figure \ref{fig:CMD} shows the color magnitude diagram from the sample of brown dwarfs in \citet{dupuy2012ltparallax}, which includes 2MASS J0835 but not 2MASS J1821.
 We highlight these two brown dwarfs to be contrasted with the rest of the population.
 
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{color_mag.pdf}
-\caption{Color-Magnitude diagram from \citet{dupuy2012ltparallax}. We added 2MASS J1821-0819 and 2MASS J0835+1414 using Simbad magnitudes and parallaxes.}\label{fig:CMD}
+\caption{Color-Magnitude diagram from \citet{dupuy2012ltparallax}. We added 2MASS J0835 and 2MASS J1821 using Simbad magnitudes and parallaxes.}\label{fig:CMD}
 \end{centering}
 \end{figure}
 
@@ -422,9 +422,10 @@ The model parameters are close to Gaussian and the only visible correlation is b
 \end{centering}
 \end{figure}
 
-We also explore a 2 term sinusoidal fit with a second cosine function at twice the frequency:
+Since Equation \ref{eq:cosfit} is a poor fit to the data, as visible in Figure \ref{fig:model2Cosfit}, we also fit a two term cosine model.
+In the two term model, we add a second cosine function at twice the frequency:
 \begin{equation}\label{eq:cosfit2term}
-F(t) = A_1 \cos(2 \pi (t - t_1)/\tau) + A_2 \cos(4 \pi (t - t_2)/\tau) +  B t + C
+F(t) = A_1 \cos(2 \pi (t - t_1)/\tau) + A_2 \cos(4 \pi (t - t_2)/\tau) +  B t + C.
 \end{equation}
 Now there are two amplitude parameters $A_1$ and $A_2$ and two time offset parameters $t_1$ and $t_2$.
 Figure \ref{fig:model2Cosfit} shows the best fit compared to the data for this 2 term sinusoidal fit.
@@ -433,19 +434,18 @@ The two term model appears visually to fit the data well.
 The $\chi^2$ per degree of freedom is still 7.9, so it is not the expected 1.0.
 However, the error bars are likely underestimated when using photon and read noise limits.
 
-The 2 term fit works better on the light curves that show the variations at a high signal to noise ratio
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{best_fit_2term.pdf}
-\caption{Best fit model to time series at 1.08~$\mu$m using Equation \ref{eq:cosfit2term}.}\label{fig:model2Cosfit}
+\caption{A zoom-in on on the time series of 2MASS J1821 in Figure \ref{fig:tserPhase1821} for the wavelength bin 1.08~$\mu$m. Error bars are shown for photon and read noise. We show two best-fit models using a single cosine term (green) and a 2 cosine term fit (red) which is a better match to the data.}\label{fig:model2Cosfit}
 \end{centering}
 \end{figure}
 
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=0.5\textwidth]{corner_fit_2term.pdf}
-\caption{Example posterior distributions for an MCMC fit to the time series using Equation \ref{eq:cosfit} for the wavelength bin 1.08~$\mu$m.}\label{fig:post2Cosfit}
+\includegraphics[width=0.7\textwidth]{corner_fit_2term.pdf}
+\caption{Example posterior distributions for an MCMC fit to the time series using Equation \ref{eq:cosfit2term} }\label{fig:post2Cosfit}
 \end{centering}
 \end{figure}
 
@@ -453,10 +453,12 @@ The 2 term fit works better on the light curves that show the variations at a hi
 \pagebreak
 \subsection{Amplitude Spectrum}
 
+We also use \texttt{emcee} to fit the amplitude spectrum of 2MASS J1821 using the two temperature surface model 
+
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{best_fit_spec_2temp.pdf}
-\caption{Maximum likelihood spectrum using an MCMC fit to the amplitude spectrum of 2MASS 1821.}\label{fig:ML2Tempfit}
+\caption{Maximum likelihood spectrum using an MCMC fit to the amplitude spectrum of 2MASS J1821.}\label{fig:ML2Tempfit}
 \end{centering}
 \end{figure}
 
