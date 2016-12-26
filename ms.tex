@@ -412,8 +412,9 @@ We highlight these two brown dwarfs to be contrasted with the rest of the popula
 \subsection{Time Series}
 In Figure \ref{fig:postCosfit}, we show the posterior distributions of a sinusoidal model (Equation \ref{eq:cosfit}) fit to the data using \texttt{emcee} \citep{foreman-mackey2013emcee} for an example wavelength bin of 1.08~$\mu$m.
 This wavelength bin is one of the high amplitude fits that is relatively unaffected by telluric contamination.
-We impose priors on the amplitude $A_1$ so that it would be positive, $t_1$ would be less than the observation windows (to avoid multiple periodic solutions) and that the period $\tau$ would be between 0 and the observation window length.
+We impose priors on the amplitude $A_1 > 0$, $|t_t| < 6 hr$ (to avoid multiple periodic solutions) and that the period $0 < \tau < 6 hr$ so that the periodicity is shorter than the observation window length.
 The model parameters are close to Gaussian and the only visible correlation is between the time offset, $t_1$, and the rotation period $\tau$.
+The maximum likelihood solution is shown in Figure \ref{fig:model2Cosfit} and has a $\chi^2$ per degree of freedom of 12.1
 
 \begin{figure}
 \begin{centering}
