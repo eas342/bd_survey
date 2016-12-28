@@ -412,6 +412,7 @@ We highlight these two brown dwarfs to be contrasted with the rest of the popula
 \subsection{Time Series}
 In Figure \ref{fig:postCosfit}, we show the posterior distributions of a sinusoidal model (Equation \ref{eq:cosfit}) fit to the data using \texttt{emcee} \citep{foreman-mackey2013emcee} for an example wavelength bin of 1.08~$\mu$m.
 This wavelength bin is one of the high amplitude fits that is relatively unaffected by telluric contamination.
+In this example, we input photon noise only.
 We impose priors on the amplitude $A_1 > 0$, $|t_t| < 6 hr$ (to avoid multiple periodic solutions) and that the period $0 < \tau < 6 hr$ so that the periodicity is shorter than the observation window length.
 The model parameters are close to Gaussian and the only visible correlation is between the time offset, $t_1$, and the rotation period $\tau$.
 The maximum likelihood solution is shown in Figure \ref{fig:model2Cosfit} and has a $\chi^2$ per degree of freedom of 12.1
@@ -419,7 +420,9 @@ The maximum likelihood solution is shown in Figure \ref{fig:model2Cosfit} and ha
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{corner_example.pdf}
-\caption{Example posterior distributions for an MCMC fit to the time series using Equation \ref{eq:cosfit} for the wavelength bin 1.08~$\mu$m.}\label{fig:postCosfit}
+\caption{Example posterior distributions for an MCMC fit to the time series using Equation \ref{eq:cosfit} for the wavelength bin 1.08~$\mu$m.
+Amplitude, $A_1$ is in percent, the time offset $t_1$ is in hours, the period of oscillation, $\tau$, is in units of hours, B is in units of percent per hour and C is the offset constant in fraction (not percent).
+}\label{fig:postCosfit}
 \end{centering}
 \end{figure}
 
