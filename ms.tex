@@ -304,7 +304,7 @@ The WFC3 spectrum is not affected by the telluric absorption the way the SpeX da
 A similar amplitude versus wavelength trend was recently observed for WISEP J004701.06+680352.1 \citep{2016ApJ...829L..32L}, which has very red ($J-K$ = 2.55) spectral energy distribution thought to be caused by a high altitude haze layer.
 In WISEP J0047, the wavelength trend could be fit by $\sim 0.4~\mu$m forsterite grains, similar to our characteristic particle size.
 
-\subsection{Spot Model Fit}
+\subsection{Spot Model Fit}\label{sec:spotModel}
 
 \begin{figure}
 \begin{centering}
@@ -324,7 +324,7 @@ f_{R,\lambda} = \frac{\alpha_1 B_\lambda(T_1) + (1-\alpha_1) B_\lambda(T_2)}{\al
 where $\alpha_1$ and $\alpha_2$ are the areal fractions of the first ($T_1$ and second ($T_2$) regions respectively, $B_\lambda$ is the Planck function, and $T_1$ and $T_2$ are the temperatures of the two levels.
 $\alpha_1$ and $\alpha_2$ are limited to [0,1].
 Using equation \ref{eq:ampFromRatio}, the amplitude then becomes
-\begin{equation}
+\begin{equation}\label{eq:twoTempAmpAlphas}
 A_\lambda = \frac{\left(\alpha_1 - \alpha_2 \right) \left(B_\lambda(T_1) - B_\lambda(T_2) \right)}{\left(\alpha_1 + \alpha_2\right) B_\lambda(T_1) + \left(2 - \alpha_1 - \alpha_2\right) B_\lambda(T_2)}.
 \end{equation}
 If the temperature difference is significant so that one Planck function is in the Wien's limit while the other is in the Rayleigh Jeans tail, the cooler temperature essentially becomes black and the contrast approaches a constant for short wavelengths.
@@ -336,7 +336,7 @@ where $\sigma$ is the Stephan-Boltzmann constant.
 
 In the model fitting, we found a strong correlation between $\alpha_1$ and $\alpha_2$.
 There-fore we re-parameterized with $\beta = \alpha_1 - \alpha_2$, so that $\alpha_2 = \alpha_1 - \beta$.
-\begin{equation}\label{eq:2tempAdiff}
+\begin{equation}\label{eq:twoTempAmp}
 A_\lambda = \frac{\beta \left(B_\lambda(T_1) - B_\lambda(T_2) \right)}{\left(2 \alpha_1 - \beta \right) B_\lambda(T_1) + \left(2 - 2 \alpha_1 + \beta \right) B_\lambda(T_2)}.
 \end{equation}
 
@@ -402,7 +402,7 @@ We highlight these two brown dwarfs to be contrasted with the rest of the popula
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{color_mag.pdf}
-\caption{Color-Magnitude diagram from \citet{dupuy2012ltparallax}. We added 2MASS J0835 and 2MASS J1821 using Simbad magnitudes and parallaxes.}\label{fig:CMD}
+\caption{Color-Magnitude diagram from \citet{dupuy2012ltparallax}. We added 2MASS J1821 using Simbad magnitudes and parallaxes.}\label{fig:CMD}
 \end{centering}
 \end{figure}
 
@@ -415,13 +415,15 @@ This wavelength bin is one of the high amplitude fits that is relatively unaffec
 In this example, we input photon noise only.
 We impose priors on the amplitude $A_1 > 0$, $|t_t| < 6 hr$ (to avoid multiple periodic solutions) and that the period $0 < \tau < 6 hr$ so that the periodicity is shorter than the observation window length.
 The model parameters are close to Gaussian and the only visible correlation is between the time offset, $t_1$, and the rotation period $\tau$.
-The maximum likelihood solution is shown in Figure \ref{fig:model2Cosfit} and has a $\chi^2$ per degree of freedom of 12.1
+The maximum likelihood solution is shown in Figure \ref{fig:model2Cosfit} and has a chi-squared per degree of freedom ($\bar{\chi^2}$) of 12.1
 
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{corner_example.pdf}
 \caption{Example posterior distributions for an MCMC fit to the time series using Equation \ref{eq:cosfit} for the wavelength bin 1.08~$\mu$m.
 Amplitude, $A_1$ is in percent, the time offset $t_1$ is in hours, the period of oscillation, $\tau$, is in units of hours, B is in units of percent per hour and C is the offset constant in fraction (not percent).
+We only input photon counting and read noise statistics for the errors.
+This is likely and underestimate for the uncertainty in the time series.
 }\label{fig:postCosfit}
 \end{centering}
 \end{figure}
@@ -435,13 +437,14 @@ Now there are two amplitude parameters $A_1$ and $A_2$ and two time offset param
 Figure \ref{fig:model2Cosfit} shows the best fit compared to the data for this 2 term sinusoidal fit.
 We assume the same priors as the 1 term sinusoidal fit with both $A_1$ and $A_2 > 0$.
 The two term model appears visually to fit the data well.
-The $\chi^2$ per degree of freedom is still 7.9, so it is not the expected 1.0.
-However, the error bars are likely underestimated when using photon and read noise limits.
+The $\bar{\chi^2}$ is still 7.9, so it is not the expected 1.0.
+However, the error bars are underestimated when only including photon and read noise components.
+With exoplanet light curves, the standard deviation of the out-of-transit baseline flux can be used as an estimate for errors. With the brown dwarf rotation light curves, there is not flat baseline over which to measure error levels.
 
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{best_fit_2term.pdf}
-\caption{A zoom-in on on the time series of 2MASS J1821 in Figure \ref{fig:tserPhase1821} for the wavelength bin 1.08~$\mu$m. Error bars are shown for photon and read noise. We show two best-fit models using a single cosine term (green) and a 2 cosine term fit (red) which is a better match to the data.}\label{fig:model2Cosfit}
+\caption{A zoom-in on on the time series of 2MASS J1821 in Figure \ref{fig:tserPhase1821} for the wavelength bin 1.08~$\mu$m. Error bars are shown for photon and read noise. We show two best-fit models using a single cosine term (green, $\bar{\chi^2}$ = 12.1) and a 2 cosine term fit (red, $\bar{\chi^2}$) which is a better match to the data.}\label{fig:model2Cosfit}
 \end{centering}
 \end{figure}
 
@@ -449,7 +452,9 @@ However, the error bars are likely underestimated when using photon and read noi
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.7\textwidth]{corner_fit_2term.pdf}
-\caption{Example posterior distributions for an MCMC fit to the time series using Equation \ref{eq:cosfit2term} }\label{fig:post2Cosfit}
+\caption{Example posterior distributions for an MCMC fit to the time series using Equation \ref{eq:cosfit2term}.
+Again, there is little correlation between the posteriors for the different parameters.
+The offset parameter for second time offset $t_1$, has multiple solutions at a period of 1.95 hours.}\label{fig:post2Cosfit}
 \end{centering}
 \end{figure}
 
@@ -465,7 +470,7 @@ However, the error bars are likely underestimated when using photon and read noi
 \pagebreak
 \subsection{Amplitude Spectrum}
 
-We also use \texttt{emcee} to fit the amplitude spectrum of 2MASS J1821 using the two temperature surface model 
+We also use \texttt{emcee} to fit the amplitude spectrum of 2MASS J1821 using the two temperature surface model in Section \label{sec:spotModel} with Equation \ref{eq:twoTempAmp}.
 
 \begin{figure}
 \begin{centering}
@@ -477,7 +482,7 @@ We also use \texttt{emcee} to fit the amplitude spectrum of 2MASS J1821 using th
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{corner_fit_2temp.pdf}
-\caption{Example posterior distributions for an MCMC fit to the spectra using Equation \ref{eq:2tempAdiff}.}\label{fig:post2Tempfit}
+\caption{Example posterior distributions for an MCMC fit to the spectra using Equation \ref{eq:twoTempAmp}.}\label{fig:post2Tempfit}
 \end{centering}
 \end{figure}
 
