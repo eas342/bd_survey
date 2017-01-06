@@ -421,31 +421,31 @@ The maximum likelihood solution is shown in Figure \ref{fig:model2Cosfit} and ha
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{corner_example.pdf}
 \caption{Example posterior distributions for an MCMC fit to the time series using Equation \ref{eq:cosfit} for the wavelength bin 1.08~$\mu$m.
-Amplitude, $A_1$ is in percent, the time offset $t_1$ is in hours, the period of oscillation, $\tau$, is in units of hours, B is in units of percent per hour and C is the offset constant in fraction (not percent).
+Amplitude, $A_1$ is in percent, the time offset $t_1$ is in hours, the period of oscillation, $\tau$, is in units of hours, B is in units of fraction of flux per hour and C is the offset constant in fraction (not percent).
 We only input photon counting and read noise statistics for the errors.
 This is likely and underestimate for the uncertainty in the time series.
 }\label{fig:postCosfit}
 \end{centering}
 \end{figure}
 
-Since Equation \ref{eq:cosfit} is a poor fit to the data, as visible in Figure \ref{fig:model2Cosfit}, we also fit a two term cosine model.
-In the two term model, we add a second cosine function at twice the frequency:
-\begin{equation}\label{eq:cosfit2term}
-F(t) = A_1 \cos(2 \pi (t - t_1)/\tau) + A_2 \cos(4 \pi (t - t_2)/\tau) +  B t + C.
+Since Equation \ref{eq:cosfit} is a poor fit to the data, as visible in Figure \ref{fig:model2Cosfit}, we also explore models with additional sinusoidal frequencies.
+In the multiple term model, we add cosine functions at $n$ times the frequency:
+\begin{equation}\label{eq:cosfitMultiTerm}
+F(t) = B t + C + A_1 \cos(2 \pi (t - t_1)/\tau) + A_2 \cos(4 \pi (t - t_2)/\tau) + A_n \cos(2 n \pi (t - t_n)/(\tau)) +  ...
 \end{equation}
-Now there are two amplitude parameters $A_1$ and $A_2$ and two time offset parameters $t_1$ and $t_2$.
-Figure \ref{fig:model2Cosfit} shows the best fit compared to the data for this 2 term sinusoidal fit.
-We assume the same priors as the 1 term sinusoidal fit with both $A_1$ and $A_2 > 0$.
-For the time offsets, we 
-The two term model appears visually to fit the data well.
-The $\bar{\chi^2}$ is still 7.9, so it is not the expected 1.0.
+Now there are $n$ amplitude parameters $A_n$ and $n$ time offset parameters $t_n$.
+Figure \ref{fig:model2Cosfit} shows the best fit compared to the data for 2 term and 3 term sinusoidal fits.
+We assume the same priors as the 1 term sinusoidal fit with  $A_n > 0$.
+For the time offsets, we restrict the range to be $\pm$ 4 hr / $n$.
+The multiple term model appear visually to fit the data well.
+However, the $\bar{\chi^2}$ are still 7.9 and 7.4, so it is not the expected 1.0.
 However, the error bars are underestimated when only including photon and read noise components.
-With exoplanet light curves, the standard deviation of the out-of-transit baseline flux can be used as an estimate for errors. With the brown dwarf rotation light curves, there is not flat baseline over which to measure error levels.
+With exoplanet light curves, the standard deviation of the out-of-transit baseline flux can be used as an estimate for errors. With the brown dwarf rotation light curves, there is no flat baseline over which to measure error levels.
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=0.5\textwidth]{best_fit_2term.pdf}
-\caption{A zoom-in on on the time series of 2MASS J1821 in Figure \ref{fig:tserPhase1821} for the wavelength bin 1.08~$\mu$m. Error bars are shown for photon and read noise. We show two best-fit models using a single cosine term (green, $\bar{\chi^2}$ = 12.1) and a 2 cosine term fit (red, $\bar{\chi^2}$ =7.9) which is a better match to the data.}\label{fig:model2Cosfit}
+\includegraphics[width=0.5\textwidth]{best_fit_multi_terms.pdf}
+\caption{A zoom-in on on the time series of 2MASS J1821 in Figure \ref{fig:tserPhase1821} for the wavelength bin 1.08~$\mu$m. Error bars are shown for photon and read noise. We a best-fit models using a single cosine term (green, $\bar{\chi^2}$ = 12.1). Additional terms improve the fits to the data and the $\bar{\chi^2}$.}\label{fig:model2Cosfit}
 \end{centering}
 \end{figure}
 
@@ -453,7 +453,7 @@ With exoplanet light curves, the standard deviation of the out-of-transit baseli
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.7\textwidth]{corner_fit_2term.pdf}
-\caption{Example posterior distributions for an MCMC fit to the time series using Equation \ref{eq:cosfit2term}.
+\caption{Example posterior distributions for an MCMC fit to the time series using Equation \ref{eq:cosfitMultiTerm} for 2 terms.
 Again, there is little correlation between the posteriors for the different parameters.}\label{fig:post2Cosfit}
 \end{centering}
 \end{figure}
@@ -462,7 +462,7 @@ Again, there is little correlation between the posteriors for the different para
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{residual_ML.pdf}
-\caption{Residuals after subtracting the maximum likelihood model from Equation \ref{eq:cosfit2term} from the data. The standard deviation of the residuals is 0.6\% whereas the error from photon counting statistics is 0.2\%.}\label{fig:resid2Cosfit}
+\caption{Residuals after subtracting the maximum likelihood model from Equation \ref{eq:cosfitMultiTerm} from the data. The standard deviation of the residuals is 0.6\% whereas the error from photon counting statistics is 0.2\%.}\label{fig:resid2Cosfit}
 \end{centering}
 \end{figure}
 
@@ -470,7 +470,7 @@ Again, there is little correlation between the posteriors for the different para
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{histo_resids.pdf}
-\caption{Histogram of residuals after subtracting the maximum likelihood model from Equation \ref{eq:cosfit2term} from the data.}\label{fig:histoResid2Cosfit}
+\caption{Histogram of residuals after subtracting the maximum likelihood model from Equation \ref{eq:cosfitMultiTerm} from the data with 2 terms.}\label{fig:histoResid2Cosfit}
 \end{centering}
 \end{figure}
 
