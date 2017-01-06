@@ -436,6 +436,7 @@ F(t) = A_1 \cos(2 \pi (t - t_1)/\tau) + A_2 \cos(4 \pi (t - t_2)/\tau) +  B t + 
 Now there are two amplitude parameters $A_1$ and $A_2$ and two time offset parameters $t_1$ and $t_2$.
 Figure \ref{fig:model2Cosfit} shows the best fit compared to the data for this 2 term sinusoidal fit.
 We assume the same priors as the 1 term sinusoidal fit with both $A_1$ and $A_2 > 0$.
+For the time offsets, we 
 The two term model appears visually to fit the data well.
 The $\bar{\chi^2}$ is still 7.9, so it is not the expected 1.0.
 However, the error bars are underestimated when only including photon and read noise components.
@@ -453,8 +454,7 @@ With exoplanet light curves, the standard deviation of the out-of-transit baseli
 \begin{centering}
 \includegraphics[width=0.7\textwidth]{corner_fit_2term.pdf}
 \caption{Example posterior distributions for an MCMC fit to the time series using Equation \ref{eq:cosfit2term}.
-Again, there is little correlation between the posteriors for the different parameters.
-The offset parameter for second time offset $t_1$, has multiple solutions at a period of 1.95 hours.}\label{fig:post2Cosfit}
+Again, there is little correlation between the posteriors for the different parameters.}\label{fig:post2Cosfit}
 \end{centering}
 \end{figure}
 
@@ -473,6 +473,8 @@ The offset parameter for second time offset $t_1$, has multiple solutions at a p
 \caption{Histogram of residuals after subtracting the maximum likelihood model from Equation \ref{eq:cosfit2term} from the data.}\label{fig:histoResid2Cosfit}
 \end{centering}
 \end{figure}
+
+
 
 \clearpage
 \pagebreak
