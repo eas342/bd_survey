@@ -431,7 +431,7 @@ This is likely and underestimate for the uncertainty in the time series.
 Since Equation \ref{eq:cosfit} is a poor fit to the data, as visible in Figure \ref{fig:model2Cosfit}, we also explore models with additional sinusoidal frequencies.
 In the multiple term model, we add cosine functions at $n$ times the frequency:
 \begin{equation}\label{eq:cosfitMultiTerm}
-F(t) = B t + C + A_1 \cos(2 \pi (t - t_1)/\tau) + A_2 \cos(4 \pi (t - t_2)/\tau) + A_n \cos(2 n \pi (t - t_n)/(\tau)) +  ...
+F(t) = B t + C + A_1 \cos(2 \pi (t - t_1)/\tau) + A_2 \cos(4 \pi (t - t_2)/\tau) + A_n \cos(2 n \pi (t - t_n)/\tau) +  ...
 \end{equation}
 Now there are $n$ amplitude parameters $A_n$ and $n$ time offset parameters $t_n$.
 Figure \ref{fig:model2Cosfit} shows the best fit compared to the data for 2 term and 3 term sinusoidal fits.
@@ -445,7 +445,7 @@ With exoplanet light curves, the standard deviation of the out-of-transit baseli
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{best_fit_multi_terms.pdf}
-\caption{A zoom-in on on the time series of 2MASS J1821 in Figure \ref{fig:tserPhase1821} for the wavelength bin 1.08~$\mu$m. Error bars are shown for photon and read noise. We a best-fit models using a single cosine term (green, $\bar{\chi^2}$ = 12.1). Additional terms improve the fits to the data and the $\bar{\chi^2}$.}\label{fig:model2Cosfit}
+\caption{A zoom-in on on the time series of 2MASS J1821 in Figure \ref{fig:tserPhase1821} for the wavelength bin 1.08~$\mu$m. Error bars are shown for photon and read noise. We plot a best-fit models using a single cosine term (green, $\bar{\chi^2}$ = 12.1). Additional terms improve the fits to the data and the $\bar{\chi^2}$.}\label{fig:model2Cosfit}
 \end{centering}
 \end{figure}
 
@@ -486,7 +486,8 @@ We also use \texttt{emcee} to fit the amplitude spectrum of 2MASS J1821 using th
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{best_fit_spec_2temp.pdf}
-\caption{Maximum likelihood spectrum using an MCMC fit to the amplitude spectrum of 2MASS J1821.}\label{fig:ML2Tempfit}
+\caption{We repeat the amplitude spectrum of 2MASS J1821 from Figure \ref{fig:ampspec1821tdiff}, which excludes the wavelengths contaminated by telluric absorption.
+We show a maximum likelihood model spectrum, which has a $\chi^2$ per degree of freedom of 1.16.}\label{fig:ML2Tempfit}
 \end{centering}
 \end{figure}
 
