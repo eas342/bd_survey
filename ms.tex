@@ -192,6 +192,8 @@ For {\sha} our MORIS exposures were 15~sec, which was sufficient for guiding but
 
 
 Wavelength calibrations were performed using observations of ThAr emission lamps with the 0$\farcs$3$\times$60$\arcsec$.
+The images were rectified by shifting each row to match a center row in between the two sources.
+This was achieved by cross correlating the reference row with all other detector rows (which have the same background spectrum) and fitting a smooth function over the sources as in \citealt{2016ApJ...826..156S}.
 We also obtained calibration sequences of ThAr and flat-field incadescent lamps with the 3$\arcsec$$\times$60$\arcsec$ slit  before and after the brown dwarf time series.
 % to measure pixel response and assess flexure in the instrument with telescope orientation.
 For {\sha}, we used a combination of the flat-field lamp and a sky frame to construct a pixel response map, removing large-scale ($\gtrsim$ 30 pixels) structure with low order polynomial fits along spatial and spectral axes, and normalizing to the median response. 
@@ -202,8 +204,10 @@ For {\shb}, we did not have sufficient sky frames so we used our incandescent la
 
 As described in \citet{2016ApJ...826..156S}, we performed spatial background subtraction over the entire slit using a 4th-order polynomial fit to points more than 30 pixels away from the center of the source dispersion traces.  Spectra were optimally extracted \citep{1986ApJ...302..757H}, with spatial profiles fit to low order polynomials along the spectral direction one row at a time with 20$\sigma$ rejection to remove cosmic rays and bad pixels.
 These spatial profiles were then used to calculate a weighted sum spectrum across the illuminated detector for each source and exposure. 
-Typical signals-to-noise of the extracted spectra were {\bf [WHAT?]}. 
-Relative spectra (source/reference) were then computed for each exposure. {\bf [DID YOU HAVE TO TAKE INTO ACCOUNT RELATIVE WAVELENGTH SHIFTS BETWEEN SOURCE AND REFERENCE STAR? I DON'T THINK DISPERSION IS STRICTLY ALIGNED WITH PIXEL AXES AND MAY HAVE SOME CURVATURE]}.
+Typical signals-to-noise of the extracted spectra were 40 - 100 per spectral pixel (unbinned).
+Relative spectra (source/reference) were then computed for each exposure.
+Our image rectification process described above ensures that the wavelength solution is the same for each row if the image.
+However, there are small additional shifts of the sources within the slit so another cross-correlation is performed between the sources to ensure they match before dividing the two spectra.
 
 {\bf [MORIS REDUCTION FOR 1821?]}
 
