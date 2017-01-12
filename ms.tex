@@ -152,7 +152,7 @@ where $I_{\lambda,obs}$ and $I_{\lambda,abs}$ are the observed and absolute flux
 
 \begin{figure*}
 \centering
-	\plottwo{tbright0835.pdf}{tbright1821.pdf}
+	\plottwo{tbright0835.png}{tbright1821.png}
 	\caption{Calculated brightness temperature of {\sha} (left) and {\shb} (right) as a function of wavelength. The faint lines represent individual calculations assuming a Monte Carlo realization of spectral flux, absolute magnitude, {\teff} and radius uncertainties; the dark lines represent the median of these realizations. For {\sha}, we calculate separately for young single (black) and binary (blue) models, the latter scaling the observed absolute fluxes by a factor of two. }
 	\label{fig:tbright}
 	\vspace{0.1in}
@@ -195,10 +195,12 @@ Wavelength calibrations were performed using observations of ThAr emission lamps
 We also obtained calibration sequences of ThAr and flat-field incadescent lamps with the 3$\arcsec$$\times$60$\arcsec$ slit  before and after the brown dwarf time series.
 % to measure pixel response and assess flexure in the instrument with telescope orientation.
 For {\sha}, we used a combination of the flat-field lamp and a sky frame to construct a pixel response map, removing large-scale ($\gtrsim$ 30 pixels) structure with low order polynomial fits along spatial and spectral axes, and normalizing to the median response. 
-To correct for instrument flexure, we also cross-correlated the sky frame with each science image to measure spatial shifts {\bf [WHAT ORDER OF SHIFT DID YOU FIND]}. These shifts were used to apply a custom flat field for every image.
-For {\shb}, we did not have sufficient sky frames so we used our incandescent lamp image for both flat fielding and flexure analysis. {\bf [IS THIS TRUE FOR 1821?]}
+To correct for instrument flexure, we also cross-correlated the sky frame with each science image to measure linear spatial shifts, which were $\pm$5~pixels or 0.5\arcsec\ for \sha\ and $\pm$1.5~pixels or 0.15\arcsec\ for \shb.
+These shifts were used to apply a custom flat field for every image.
 
-As described in \citet{2016ApJ...826..156S}, we performed spatial background subtraction over the entire slit using a 4th-order polynomial fit to points more than 30 pixels away from the center of the source dispersion traces.  Spectra were optimally extracted \citep{1986ApJ...302..757H}, with spatial profiles fit to low order polynomials {\bf [REALLY? NOT A MEDIAN PROFILE? OR A MODIFIED GAUSSIAN? LOW ORDER POLY WOULDN'T CAPTURE PSF SHAPE I THINK]} with 20$\sigma$ rejection to remove cosmic rays and bad pixels.
+For {\shb}, we did not have sufficient sky frames so we used our incandescent lamp image for both flat fielding and flexure analysis. {\bf [IS THIS TRUE FOR 1821?- \color{red}{YES, there were only 5 good sky frames at the end and 3 at the beginning.}]}
+
+As described in \citet{2016ApJ...826..156S}, we performed spatial background subtraction over the entire slit using a 4th-order polynomial fit to points more than 30 pixels away from the center of the source dispersion traces.  Spectra were optimally extracted \citep{1986ApJ...302..757H}, with spatial profiles fit to low order polynomials along the spectral direction one row at a time with 20$\sigma$ rejection to remove cosmic rays and bad pixels.
 These spatial profiles were then used to calculate a weighted sum spectrum across the illuminated detector for each source and exposure. 
 Typical signals-to-noise of the extracted spectra were {\bf [WHAT?]}. 
 Relative spectra (source/reference) were then computed for each exposure. {\bf [DID YOU HAVE TO TAKE INTO ACCOUNT RELATIVE WAVELENGTH SHIFTS BETWEEN SOURCE AND REFERENCE STAR? I DON'T THINK DISPERSION IS STRICTLY ALIGNED WITH PIXEL AXES AND MAY HAVE SOME CURVATURE]}.
