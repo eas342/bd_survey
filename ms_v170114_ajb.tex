@@ -1,4 +1,4 @@
-    % manuscript produces a one-column, double-spaced document:
+% manuscript produces a one-column, double-spaced document:
 %\documentclass[12pt,preprint]{aastex}
 \documentclass[twocolumn]{aastex6}
 %\documentclass[iop]{emulateapj}
@@ -91,8 +91,8 @@ We summarize our results in Section~\ref{sec:conclusions}.
 \section{Target Selection and Characterization}\label{sec:targets}
 
 We identified potential targets for relative spectro-photometry by selecting among the $\approx$200 known L dwarfs\footnote{We identified these sources from DwarfArchives,  \url{http://dwarfarchives.org}. The declination range corresponds to the visibility region of IRTF.} with $H$ $<$ 14 and $-$30{\degree}  $<$ $\delta$ $<$ +67{\degree} those sources that have comparable-brightness ($\Delta{H}$ $<$ 1) visual binary companions at apparent separations of 5$\arcsec$--30$\arcsec$. We identified 30 potential targets, and prioritized those with previously detected photometric variability or rotational $v\sin{i}$ measurements indicating periods $\leq$10~hr.  Two sources were identified as ideal initial targets (Table~\ref{tab:bdProp}).
-2MASS~J08354256$-$0819237 (hereafter {\sha}; \citealt{2003AJ....126.2421C} is a bright, nearby ($d$ = 8.5$\pm$0.8~pc; \citealt{2012ApJ...752...56F}) L5 dwarf that has been reported to vary in both optical and near-infrared bands with a period of 3.1~hr and an amplitude of $\sim$1\%  \citep{2004MNRAS.354..378K,2014A&A...566A.111W}. Its $v\sin{i}$ = 14.2$\pm$0.4~{\kms} \citep{2010ApJ...723..684B} suggests a near pole-on viewing angle assuming a radius R = 1~{\rjup}. There is an $H$ = 12.3 source (2MASS~J08354383$-$0819212) at a separation of 19$\arcsec$ suitable for relative flux calibration (Figure~\ref{fig:images}). 
-2MASS J18212815+1414010 (hereafter {\shb}; \citealt{2008ApJ...686..528L}) is a similarly bright and nearby ($d$ = 9.38$\pm$0.03; \citealt{2016MNRAS.455..357S}) L4.5 dwarf, which exhibits a peculiar near-infrared spectrum attributed to thick clouds \citep{2008ApJ...686..528L,2015ApJS..219...33G}. This source is a photometric variable with a period of 4.2$\pm$0.1~hr \citep{2015ApJ...799..154M} and $v\sin{i}$ = 28.85$\pm$0.16~{\kms}, suggesting a near equator-on orientation.  \citet{2015ApJ...798L..13Y} measured 1--3\% spectral variability with $HST$/WFC3 over 1.1--1.6~$\micron$, with greater variabilty at shorter wavelengths. There are two suitably bright comparison stars within 20$\arcsec$ for relative calibration: 2MASS~J18212812+1414089 with $H$ = 12.6 at 7$\arcsec$ separation and 2MASS~J18212715+1413482 with $H$ = 12.0 at 29$\arcsec$ separation; we chose the latter for our monitoring observations.
+2MASS~J08354256$-$0819237 (hereafter {\sha}; \citealt{2003AJ....126.2421C} is a bright, nearby ($d$ = 8.5$\pm$0.8~pc; \citealt{2012ApJ...752...56F}) L5 dwarf that shows signatures of low surface gravity \citep{2016ApJ...833...96L}. This source has been reported to vary in both optical and near-infrared bands with a period of 3.1~hr and an amplitude of $\sim$1\%  \citep{2004MNRAS.354..378K,2014A&A...566A.111W}. Its $v\sin{i}$ = 14.2$\pm$0.4~{\kms} \citep{2010ApJ...723..684B} suggests a near pole-on viewing angle assuming a radius R = 1~{\rjup}. There is an $H$ = 12.3 source (2MASS~J08354383$-$0819212) at a separation of 19$\arcsec$ suitable for relative flux calibration (Figure~\ref{fig:images}). 
+2MASS J18212815+1414010 (hereafter {\shb}; \citealt{2008ApJ...686..528L}) is a similarly bright and nearby ($d$ = 9.38$\pm$0.03; \citealt{2016MNRAS.455..357S}) L4.5 dwarf, which exhibits a peculiar near-infrared spectrum attributed to youth and/or thick clouds \citep{2008ApJ...686..528L,2015ApJS..219...33G,2016ApJ...833...96L}. This source is a photometric variable with a period of 4.2$\pm$0.1~hr \citep{2015ApJ...799..154M} and $v\sin{i}$ = 28.85$\pm$0.16~{\kms}, suggesting a near equator-on orientation.  \citet{2015ApJ...798L..13Y} measured 1--3\% spectral variability with $HST$/WFC3 over 1.1--1.6~$\micron$, with greater variabilty at shorter wavelengths. There are two suitably bright comparison stars within 20$\arcsec$ for relative calibration: 2MASS~J18212812+1414089 with $H$ = 12.6 at 7$\arcsec$ separation and 2MASS~J18212715+1413482 with $H$ = 12.0 at 29$\arcsec$ separation; we chose the latter for our monitoring observations.
 
 
 \begin{deluxetable*}{lllcccccccl}[t]
@@ -115,10 +115,11 @@ We identified potential targets for relative spectro-photometry by selecting amo
  }
 \startdata
 2MASS~J08354256$-$0819237 & L5 & L7 & 8.52$\pm$0.08 & 11.94$\pm$0.02 & 2.03$\pm$0.03 & 1754$\pm$112 & 3.1\tablenotemark{b} & 14.18$\pm$0.43 & 21 & 1-5 \\
-2MASS~J18212815+14140101 & L4.5p & L5 & 9.38$\pm$0.03 & 12.40$\pm$0.02 & 1.78$\pm$0.03 & 1600$\pm$100 & 4.2$\pm$0.1 & 28.85$\pm$0.16 & 83 & 5-10 \\
+2MASS~J18212815+14140101 & L4.5p & L5 & 9.38$\pm$0.03 & 12.40$\pm$0.02 & 1.78$\pm$0.03 & 1614$\pm$100\tablenotemark{c} & 4.2$\pm$0.1 & 28.85$\pm$0.16 & 83 & 5-10 \\
 \enddata
 \tablenotetext{a}{Estimated inclination angle $i$ assuming a radius = 1 Jupiter radius, so that $\sin{i}$ = 8.2$\times$10$^{-3}Pv\sin{i}$, where $P$ is in hours and $v\sin{i}$ is in km/s. A value of $i$ $\approx$ 0{\degree} is viewed pole-on, $i$ $\approx$ 90{\degree} is viewed equator-on.}
 \tablenotetext{b}{Tentative period.}
+\tablenotetext{c}{Estimated from the \citet{2015ApJ...810..158F} {\teff}/spectral type relation.}
 \tablerefs{(1) \citet{2003AJ....126.2421C};
 (2) \citet{2012ApJ...752...56F}; 
 (3) \citet{2015ApJ...810..158F};
@@ -145,7 +146,7 @@ We identified potential targets for relative spectro-photometry by selecting amo
 To characterize the atmospheric regions probed by our observations, we analyzed previously 
 obtained IRTF/SpeX data for these sources \citep{2008ApJ...686..528L,2010ApJ...710.1142B}.
 Direct comparison to spectral standards following the convention of \citet{2010ApJS..190..100K} indicate near-infrared
-classifications of L7 for {\sha} and L5 for {\shb} (Figure~\ref{fig:tbright}). The former is considerably later than the L5 optical classification previously reported by \citet{2003AJ....126.2421C}. We confirm the intermediate low surface gravity classification (INT-G) reported by \citet{2016ApJ...833...96L} based on the indices of \citet{2013ApJ...772...79A} using an L7 classification. The discrepancy between the optical and near-infrared classifications of this source is likely related to surface gravity effects.
+classifications of L7 for {\sha} and L5 for {\shb} (Figure~\ref{fig:tbright}). The former is considerably later than the L5 optical classification previously reported by \citet{2003AJ....126.2421C}. We confirm the intermediate low surface gravity classification (INT-G) reported by \citet{2016ApJ...833...96L} based on the indices of \citet{2013ApJ...772...79A} using an L7 classification. The discrepancy between the optical and near-infrared classifications of this source is likely related to surface gravity effects. {\shb}, on the other hand, is a good match to the L5 spectral standard and has a field dwarf gravity classification.
 
 We computed brightness temperature spectra from these data as
 \begin{equation}
@@ -156,11 +157,10 @@ where the surface flux density $I_{\lambda,surf}$ is computed as
 I_{\lambda,surf} = {\pi}B_{\lambda} = I_{\lambda,obs}\left(\frac{d}{R}\right)^2 = I_{\lambda,abs}\left(\frac{10~{\rm pc}}{R}\right)^2
 \end{equation}
 $I_{\lambda,obs}$ and $I_{\lambda,abs}$ are the observed and absolute flux densities, $d$ the source distance and $R$ the source radius.  Both spectra were normalized to absolute flux densities using their 2MASS $H$ magnitudes and measured parallaxes \citep{2016MNRAS.455..357S,2016AJ....152...24W}. We adopted radii from the evolutionary models of \citet{2003A&A...402..701B} assuming effective temperatures ({\teff}s) from \citet{2015ApJ...810..158F} based on these sources' bolometric luminosity measurements (Table~\ref{tab:bdProp}). Uncertainties in the spectral fluxes, absolute photometric calibration, adopted {\teff} and radius were propagated by Monte Carlo simulation.  For {\sha} we considered two cases: radii corresponding to an age of 50--200~Myr, the age range estimated for INT-G sources by \citet{2013ApJ...772...79A}, for which the evolutionary models predict radii of 0.147~R$_{\odot}$ to 0.115~R$_{\odot}$; and an age range of 1--5~Gyr for which the evolutionary models predict radii of 0.092~R$_{\odot}$ to 0.084~R$_{\odot}$.
-For {\shb}, we assumed an age range of 1--5~Gyr, for which the evolutionary models predict radii of 0.092~R$_{\odot}$ to 0.082~R$_{\odot}$.  
+For {\shb}, we assumed a lower age limit of 200~Myr based on its FLD-G classification, and an upper limit of 700~Myr based on the analysis of \citet{2016MNRAS.455..357S} range of 1--5~Gyr; evolutionary models predict radii of 0.120~R$_{\odot}$ to 0.097~R$_{\odot}$ for these ages.  
 
 Figure~\ref{fig:tbright} shows the resulting brightness temperature spectra and their uncertainties from these calculations.  The spectral peaks for {\sha} are roughly constant at {\teff} = 1900$\pm$50~K in the field surface gravity case, and declines from 1700$\pm$20~K at the $J$-band peak to 1570$\pm$60~K at the $K$-band peak in the low surface gravity case. Spectra models (e.g., \citealt{2012RSPTA.370.2765A}) predict brightness temperatures closer to the effective temperature at the $JHK$ flux peaks, so these data suggest {\sha} has an intermediate age/radius compared the assumptions made here. For {\shb}, 
-brightness temperatures range from 2000$\pm$20~K at the $J$-band peak to 1870$\pm$40~K at the $K$-band peak,  considerably hotter than the {\teff} = 1600$\pm$100~K determined by \citet{2015ApJ...810..158F}, but relatively consistent this source's earlier spectral type as compared to {\sha}. We conjecture that the Filippazzo et al.\ temperature is underestimated, possibly due to this source's unusually dusty spectral energy distribution \citep{2008ApJ...686..528L}.
-
+brightness temperatures range from 1880$\pm$30~K at the $J$-band peak to 1700$\pm$40~K at the $K$-band peak. These values are notably warmer than the {\teff} = 1614$\pm$100~K estimated from \citet{2015ApJ...810..158F} {\teff}/spectral type relation, but relatively consistent this source's earlier spectral type as compared to {\sha}. We conjecture that the Filippazzo et al.\ relation underestimates the {\teff} of this source due to its unusually dusty spectral energy distribution.
 
 \begin{figure*}
 \centering
@@ -170,7 +170,6 @@ brightness temperatures range from 2000$\pm$20~K at the $J$-band peak to 1870$\p
 	\label{fig:tbright}
 	\vspace{0.1in}
 \end{figure*} 
-
 
 \section{Observations}\label{sec:obs}
 
