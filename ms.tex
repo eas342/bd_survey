@@ -276,8 +276,13 @@ Both sources exhibit some systematic features in the strong telluric absorption 
 
 
 Individual narrow-band light curves for extracted for each target in 25 spectral bins of width 0.060~$\mu$m; these are shown in Figure~\ref{fig:tserPfold}.
-The uncertainties in these curves are 0.2\% to 0.6\% from photon and read noise contributions per exposure.
-{\bf [WHAT? HOW DETERMINED?]}. Again, we see minimal variation in the lightcurves of {\sha}, but pronounced variation in {\shb}, particular in bands $<$1.8~$\mu$m.  These variations are approximately sinusoidal, although we detect ``double-hump'' structures with slight downturns in flux at peak amplitudes around -3~hr and +1~hr. In the regions of strong telluric absorption, the variability pattern changes, with a U-shaped profile minimized at $-$1~hr. As this pattern aligns with the airmass trend over the sequence of observations, we attribute this pattern to systematic effects and ignore these regions in our subsequent analysis.
+The uncertainties in these curves are 0.2\% in high throughput regions of the spectrum and 0.6\% per exposure.
+The lower values are areas of high throughput and flux whereas the low values are near telluric absorption features or the edges of the spectrum.
+We measure the standard deviations of the time series for wavelength regions that have no significant variations near the rotation period of the brown dwarfs and compare it to the expected photon + read noise.
+In these wavelength bins, the standard deviations of the points is about 2$\times$ the expected read noise and photon noise.
+We attribute this to correlated errors between wavelengths. {\bf [WHAT? HOW DETERMINED?]}
+
+As seen in Figure~\ref{fig:tserPfold}, we see minimal variation in the lightcurves of {\sha}, but pronounced variation in {\shb}, particular in bands $<$1.8~$\mu$m.  These variations are approximately sinusoidal, although we detect ``double-hump'' structures with slight downturns in flux at peak amplitudes around -3~hr and +1~hr. In the regions of strong telluric absorption, the variability pattern changes, with a U-shaped profile minimized at $-$1~hr. As this pattern aligns with the airmass trend over the sequence of observations, we attribute this pattern to systematic effects and ignore these regions in our subsequent analysis.
 {\bf [WE SHOULD VERIFY THIS]}
 
 Each of the light curves were fit to a simple sinusoidal model:
@@ -543,6 +548,11 @@ We show a maximum likelihood model spectrum, which has a $\chi^2$ per degree of 
 \caption{Example posterior distributions for an MCMC fit to the spectra using Equation \ref{eq:twoTempAmp}.}\label{fig:post2Tempfit}
 \end{centering}
 \end{figure}
+
+\clearpage
+\pagebreak
+\subsection{2MASS 1821 Amplitude Fits}
+
 
 %If  used, this work made use of the \texttt{astropy} package \citep{astropy2013}.
 %If used, some data was collected from the Open Exoplanet Catalogue \citep{rein2012openExoCat}.
