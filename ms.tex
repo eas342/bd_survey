@@ -553,28 +553,29 @@ We show a maximum likelihood model spectrum, which has a $\chi^2$ per degree of 
 \pagebreak
 \subsection{Manual Shifting}
 
-The trends near 1.4 $\mu$m and 1.8 $\mu$m could probably be reduced by better wavelength shifting.
+The trends near 1.4 $\mu$m and 1.8 $\mu$m in \shb\ could probably be reduced by better wavelength shifting.
 I wrote a GUI that let me control the shifts for each spectrum and plot the ratio spectrum.
 I minimized the residuals and ran a test case for \sha.
-As seen in Figure \ref{fig:manualVsAutoShift0835}, the manual shifting could reduce some of the trends in the dynamics spectra.
+As seen in Figure \ref{fig:manualVsAutoShift0835}, the manual shifting dramatically reduces the systematic linear trends in the dynamic spectra.
 In contrast to Figure \ref{fig:specphot}, not linear de-trending has been applied to columns so the systematic linear trends are visible in both cases.
-Two iterations were used in the manuals shifting: (1) minimizing the residuals of the target divided by reference and (2) minimizing the residuals of the target divided by the middle spectrum.
 The automatic shifting finds the peak in the cross correlation.
 It does this by cross-correlating a portion of the spectrum (excluding the endpoints) and zeroed on the wings. 
 The automatic method then fits the cross-correlation pattern with a parabola to find the peak.
+The manual method is where we use keystrokes to shift one spectrum back in forth until the ratio of another spectrum has the smallest residuals.
+Two iterations were used in the manuals shifting: (1) minimizing the residuals of the target divided by reference and (2) minimizing the residuals of the target divided by the target middle spectrum.
 
 \begin{figure*}[!t]
 \centering
-\subfloat[2MASS J0835 - Manual shifting ]{
-	\includegraphics[width=0.5\textwidth]{specphot_0835_manual_noremovel.pdf}
-	\label{fig:specphot0835manualS}
-	}
 \subfloat[2MASS J1821- Automatic Shifting]{
 	\includegraphics[width=0.5\textwidth]{specphot_0835_auto_noremovel.pdf}
 	\label{fig:specphot0835autoS}
 	}
-	\caption{Dynamic spectra of {\sha} using manual wavelength shifting(left) and automatic cross correlation wavelength shifting (right).
-	The manual method shows some decreased linear trends in these dynamic spectra which have no fits along columns to remove trends.}
+\subfloat[2MASS J0835 - Manual shifting ]{
+	\includegraphics[width=0.5\textwidth]{specphot_0835_manual_noremovel.pdf}
+	\label{fig:specphot0835manualS}
+	}
+	\caption{Dynamic spectra of {\sha} using automatic cross correlation wavelength shifting (left) and manual wavelength shifting(right).
+	The manual method shows dramatically better systematics in these dynamic spectra which have no fits along columns to remove trends.}
 	\label{fig:manualVsAutoShift0835}
 	\vspace{0.1in}
 \end{figure*} 
