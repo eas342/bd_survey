@@ -49,17 +49,16 @@
 %% anywhere in the paper, not just in the front matter.
 %% As in the title, use \\ to force line breaks.
 
-\author{E. Schlawin\altaffilmark{1,2}, Adam J.\ Burgasser\altaffilmark{2,3}, J. Teske\altaffilmark{4}, J. Gizis\altaffilmark{5} \and T. Karalidi\altaffilmark{1}}
+\author{E. Schlawin\altaffilmark{1,2}, Adam J.\ Burgasser\altaffilmark{2,3}, J. Gizis\altaffilmark{4}, T. Karalidi\altaffilmark{1}, \and J. Teske\altaffilmark{5}}
 
 \altaffiltext{1}{Steward Observatory, Tucson AZ 85721 \email{eas342@email.arizona.edu}}
 \altaffiltext{2}{Visiting Astronomer at the Infrared Telescope Facility, which is operated by the University of Hawaii under contract NNH14CK55B with the National Aeronautics and Space Administration}
 \altaffiltext{3}{Center for Astrophysics and Space Science, University of California San Diego, La Jolla, CA 92093, USA}
-\altaffiltext{4}{Carnegie DTM, 5241 Broad Branch Road, NV, Washington, DC 20015, USA}
-\altaffiltext{5}{Department of Physics and Astronomy, University of Delaware, Newark, DE 19716, USA}
-
+\altaffiltext{4}{Department of Physics and Astronomy, University of Delaware, Newark, DE 19716, USA}
+\altaffiltext{5}{Carnegie Observatories, 813 Santa Barbara Street, Pasadena, CA 91101, USA}
 
 \begin{abstract}
-Low-temperature L dwarfs exhibit low-level, rotationally-modulated photometric variability generally associated with heterogeneous, cloud-covered atmospheres. The spectral character of these variations yield insight into the particle sizes and vertical structure of the clouds. Here we present the results of a high precision, ground-based, near-infrared, spectral monitoring study of two mid-type L dwarfs, 2MASS~J08354256$-$0819237 and 2MASS~J18212815+1414010, using the SpeX instrument on the Infrared Telescope Facility. By simultaneously observing a nearby visual companion, we achieve $<$0.15\% per-band sensitivity in relative brightness changes across the 0.9--2.4$\mu$m bandwidth. We find that 2MASS~J0835$-$0819 exhibits marginal ($\lesssim$ 0.4\% per band) variability with no spectral dependence {\bf [THIS NEEDS TO BE CHECKED]}, while 2MASS~J1821+1414 varies by up to $\pm$2\% at 1~$\mu$m, the variability amplitude declining toward longer wavelengths.  {\bf [PHASE VARIATION]}. The latter result extends the variability trend observed in prior $HST$/WFC3 spectral monitoring of 2MASS~J1821+1414, and we show that the full 1--2.5~$\mu$m variability amplitude spectrum can be reproduced by Mie extinction of sub-micron dust particles, although this model becomes too strong at short wavelengths. An alternate model based on surface hot spots requires implausibly large temperature variations. The different variability behaviors of 2MASS~J0835$-$0819 and  2MASS~J1821+1414 suggests dependencies on viewing angle and/or overall cloud content, underlying factors that can be examined through a broader variability survey.
+Low-temperature L dwarfs exhibit low-level, rotationally-modulated photometric variability generally associated with heterogeneous, cloud-covered atmospheres. The spectral character of these variations yield insight into the particle sizes and vertical structure of the clouds. Here we present the results of a high precision, ground-based, near-infrared, spectral monitoring study of two mid-type L dwarfs, 2MASS~J08354256$-$0819237 and 2MASS~J18212815+1414010, using the SpeX instrument on the Infrared Telescope Facility. By simultaneously observing a nearby visual companion, we achieve $<$0.15\% per-band sensitivity in relative brightness changes across the 0.9--2.4$\mu$m bandwidth. We find that 2MASS~J0835$-$0819 exhibits marginal ($\lesssim$ 0.4\% per band) variability with no spectral dependence {\bf [THIS NEEDS TO BE CHECKED]}, while 2MASS~J1821+1414 varies by up to $\pm$2\% at 1~$\mu$m, with the variability amplitude declining toward longer wavelengths.  {\bf [PHASE VARIATION]}. The latter result extends the variability trend observed in prior $HST$/WFC3 spectral monitoring of 2MASS~J1821+1414, and we show that the full 1--2.5~$\mu$m variability amplitude spectrum can be reproduced by Mie extinction of sub-micron dust particles, although this model becomes too strong at short wavelengths. An alternate model based on surface hot spots requires implausibly large temperature variations. The different variability behaviors of 2MASS~J0835$-$0819 and  2MASS~J1821+1414 suggests dependencies on viewing angle and/or overall cloud content, underlying factors that can be examined through a broader variability survey.
 \end{abstract}
 
 
@@ -144,9 +143,10 @@ There are two suitably bright comparison stars within 20$\arcsec$ for relative c
 \centering
 	\plottwo{image0835-0819.pdf}{image1821+1414.pdf}
 	\label{fig:image1821}
+	\vspace{-.9in}
 	\caption{2MASS $JHK_s$ three-color images of the fields around our targets {\sha} (left) and {\shb} (right).  Each image is centered on the target, and span a 1$\arcmin\times\arcmin$ field of view oriented with North up and East the left. The comparison stars referred to in the text appear as blue sources in these images. }
 	\label{fig:images}
-	\vspace{0.1in}
+	\vspace{0.17in}
 \end{figure*} 
 
 To characterize the atmospheric regions probed by our observations, we analyzed previously 
@@ -247,7 +247,7 @@ For MORIS reduction, we used the raw files and performed aperture photometry wit
 	\includegraphics[width=0.5\textwidth]{specphot_j1821.pdf}
 	\label{fig:specphot1821}
 	}
-	\caption{Top Panels: Normalized median raw spectra of {\sha} (left) and {\shb} (right) in black, compared with the respective reference stars (blue) and background emission (red; mostly telluric OH emission and thermal background). These spectra have not been corrected for telluric absorption or instrumental spectral response. The reference stars have significantly bluer spectra than the brown dwarfs. Bottom Panels: Dynamic spectra of each brown dwarf system. [MORE DESCRIPTION]}
+	\caption{Top Panels: Normalized median raw spectra of {\sha} (left) and {\shb} (right) in black, compared with the respective reference stars (blue) and background emission (red; mostly telluric OH emission and thermal background). These spectra have not been corrected for telluric absorption or instrumental spectral response. The reference stars have significantly bluer spectra than the brown dwarfs. Bottom Panels: Dynamic spectra of each brown dwarf system. [MORE DESCRIPTION -- How should the reader interpret these dynamic spectra?]}
 	\label{fig:specphot}
 	\vspace{0.1in}
 \end{figure*} 
@@ -328,7 +328,7 @@ For the particle size distribution we assume a log-normal distribution around a 
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821_mie_sc.pdf}
-\caption{Sine fit amplitude versus wavelength excluding the wavelength regions contaminated by telluric absorption. with simple Mie scattering models with a log-normal particle size distribution centered at 0.1 and 0.2~$\mu$m. Also shown in the figure is the WFC3 amplitude from \citet{2015ApJ...798L..13Y}. The WFC3 observations were from a different epoch, with different cloud coverage.}\label{fig:ampspec1821mie}
+\caption{Sine fit amplitude versus wavelength excluding the wavelength regions contaminated by telluric absorption. [SOMETHING HERE? like, The data are fit] with simple Mie scattering models with a log-normal particle size distribution centered at 0.1 and 0.2~$\mu$m. Also shown in the figure is the WFC3 amplitude from \citet{2015ApJ...798L..13Y}. The WFC3 observations were from a different epoch, with different cloud coverage.}\label{fig:ampspec1821mie}
 \end{centering}
 \end{figure}
 
@@ -344,11 +344,11 @@ where $f_R$ is the flux ratio of the maximum over minimum flux.
 
 The WFC3 amplitude spectrum is shown with the data in Figure \ref{fig:ampspec1821mie}.
 There is a multiplicative offset between the IRTF and WFC3 spectrum because they were taken at different epochs and therefore different spatial cloud and temperature distributions.
-The WFC3 spectrum is not affected by the telluric absorption the way the SpeX data is.
-\citet{2015ApJ...798L..13Y} find that the WFC3 spectrum has no significant water vapor absorption which indicates a high haze layer in 2MASS J1821 and consistent with our Mie scattering fit.
+The WFC3 spectrum is not affected by the telluric absorption, unlike the SpeX data.
+\citet{2015ApJ...798L..13Y} find that the WFC3 spectrum has no significant water vapor absorption which indicates a high haze layer in 2MASS J1821 and is consistent with our Mie scattering fit.
 
 A similar amplitude versus wavelength trend was recently observed for WISEP J004701.06+680352.1 \citep{2016ApJ...829L..32L}, which has very red ($J-K$ = 2.55) spectral energy distribution thought to be caused by a high altitude haze layer.
-In WISEP J0047, the wavelength trend could be fit by $\sim 0.4~\mu$m forsterite grains, similar to our characteristic particle size.
+In WISEP J0047, the wavelength trend could be fit by $\sim 0.4~\mu$m forsterite grains [WHY DO WE USE PYROXENE INSTEAD OF FORSTERITE?], similar to our characteristic particle size.
 
 \subsection{Spot Model Fit}\label{sec:spotModel}
 
@@ -359,15 +359,15 @@ In WISEP J0047, the wavelength trend could be fit by $\sim 0.4~\mu$m forsterite 
 \end{centering}
 \end{figure}
 
-Another simple model we attempt is a spot model - that the brown dwarf spectral variability has to do with a non-uniform temperature distribution on the brown dwarf in the same way that starspots modulate the brightness of hydrogen burning stars as they spin.
+Another simple model we attempt assumes  that the brown dwarf spectral variability has to do with a non-uniform temperature distribution on the brown dwarf in the same way that starspots modulate the brightness of hydrogen burning stars as they spin.
 In Figure \ref{fig:ampspec1821tdiff}, we fit the same amplitude spectrum as in Figure \ref{fig:ampspec1821mie}.
-This time we model the data with two temperature regions as shown in Figure \ref{fig:tdiffschem} with two opposite longitudes of the planet at the brightness minimum and maximum.
+This time we model the data with two temperature regions as shown in Figure \ref{fig:tdiffschem}, with two opposite longitudes of the planet at the brightness minimum and maximum.
 We assume that are each in local thermodynamic equilibrium (LTE) so that the flux is proportional to the Planck function times the areal coverage.
 The flux ratio between maximum and minimum flux is then
 \begin{equation}
 f_{R,\lambda} = \frac{\alpha_1 B_\lambda(T_1) + (1-\alpha_1) B_\lambda(T_2)}{\alpha_2 B_\lambda(T_1) + (1-\alpha_2) B_\lambda(T_2)}
 \end{equation}
-where $\alpha_1$ and $\alpha_2$ are the areal fractions of the first ($T_1$ and second ($T_2$) regions respectively, $B_\lambda$ is the Planck function, and $T_1$ and $T_2$ are the temperatures of the two levels.
+where $\alpha_1$ and $\alpha_2$ are the areal fractions of the first ($T_1$ and second ($T_2$) regions respectively, $B_\lambda$ is the Planck function, and $T_1$ and $T_2$ are the temperatures of the two regions.
 $\alpha_1$ and $\alpha_2$ are limited to [0,1].
 Using equation \ref{eq:ampFromRatio}, the amplitude then becomes
 \begin{equation}\label{eq:twoTempAmpAlphas}
@@ -381,7 +381,7 @@ If we ignore projection effects for small area coverage, the effective temperatu
 where $\sigma$ is the Stephan-Boltzmann constant.
 
 In the model fitting, we found a strong correlation between $\alpha_1$ and $\alpha_2$.
-There-fore we re-parameterized with $\beta = \alpha_1 - \alpha_2$, so that $\alpha_2 = \alpha_1 - \beta$.
+Therefore we re-parameterized with $\beta = \alpha_1 - \alpha_2$, so that $\alpha_2 = \alpha_1 - \beta$.
 \begin{equation}\label{eq:twoTempAmp}
 A_\lambda = \frac{\beta \left(B_\lambda(T_1) - B_\lambda(T_2) \right)}{\left(2 \alpha_1 - \beta \right) B_\lambda(T_1) + \left(2 - 2 \alpha_1 + \beta \right) B_\lambda(T_2)}.
 \end{equation}
@@ -393,7 +393,7 @@ Next, we attempt a model where we allow $\alpha_1$ and $\alpha_2$ to be free par
 The best fit model has $T_{eff} \approx $1590 K and $\bar{\chi}^2$=2.1, but pushes to the edges of our prior with $T_1$ = 2500 K and $T_2$ = 1300 K.
 Finally, we consider a model where all four parameters, $\alpha_1$, $\alpha_2$, $T_1$ and $T_2$ are all free.
 With these loose constraints, the model fits the data with $\bar{\chi}^2$ = 1.3, consistent with the data, but not with the effective temperature ($T_{eff}$ = 850 K).
-The $\alpha$ values,  $\alpha_i <<$ 1 indicating that the model fits with dark patches on a small fraction of the surface.
+The $\alpha$ values are both $<<1$, indicating that the model fits with dark patches on a small fraction of the surface. [I MODIFIED THIS SENTENCE; IS IT CORRECT? I'm a little confused about how both $\alpha$ values can be $<<1$; if one is small doesn't the other have to be large?]
 
 The temperature contrasts in these models (with the exception of the two-faced model which poorly matches the data) are significantly larger than the expected 50 K horizontal temperature variations expected in circulation models \citep{showman2013bdgpDynamics}.
 Therefore, we suspect that hot or cold spots on the surface are a less plausible explanation of the variability of 2MASS J1821 than a heterogenous temperature distribution.
@@ -433,7 +433,7 @@ CHIMERA retrieval makes use of \texttt{emcee} \citep{foreman-mackey2013emcee} an
 Thanks to Vivien Parmentier for useful discussions on cloud versus a spotted temperature model.
 Funding for the E Schlawin is provided by NASA Goddard Spaceflight Center.
 This research has made use of the Exoplanet Orbit Database and the Exoplanet Data Explorer at exoplanets.org.
-This research made use of the \texttt{astropy} package \citep{astropy2013}.
+This research made use of the \texttt{astropy} package \citep{astropy2013}. The authors wish to recognize and acknowledge the very significant cultural role and reverence that the summit of Mauna Kea has always had within the indigenous Hawaiian community. We are most fortunate to have the opportunity to conduct observations from this mountain.
 
 
 \appendix
@@ -454,7 +454,7 @@ We highlight these two brown dwarfs to be contrasted with the rest of the popula
 
 \pagebreak
 \section{Example Posterior Distributions}
-
+[DO WE NEED MORE TEXT IN THIS SECTION EXPLAINING EACH FIGURE?]
 \subsection{Time Series}
 In Figure \ref{fig:postCosfit}, we show the posterior distributions of a sinusoidal model (Equation \ref{eq:cosfit}) fit to the data using \texttt{emcee} \citep{foreman-mackey2013emcee} for an example wavelength bin of 1.08~$\mu$m.
 This wavelength bin is one of the high amplitude fits that is relatively unaffected by telluric contamination.
