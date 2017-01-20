@@ -561,12 +561,12 @@ In contrast to Figure \ref{fig:specphot}, not linear de-trending has been applie
 The automatic shifting finds the peak in the cross correlation.
 It does this by cross-correlating a portion of the spectrum (excluding the endpoints) and zeroed on the wings. 
 The automatic method then fits the cross-correlation pattern with a parabola to find the peak.
-The manual method is where we use keystrokes to shift one spectrum back in forth until the ratio of another spectrum has the smallest residuals.
+The manual method is where we use keystrokes to shift one spectrum by 0.333 px back in forth until the ratio of another spectrum has the smallest residuals.
 Two iterations were used in the manuals shifting: (1) minimizing the residuals of the target divided by reference and (2) minimizing the residuals of the target divided by the target middle spectrum.
 
 \begin{figure*}[!t]
 \centering
-\subfloat[2MASS J1821- Automatic Shifting]{
+\subfloat[2MASS J0835- Automatic Shifting]{
 	\includegraphics[width=0.5\textwidth]{specphot_0835_auto_noremovel.pdf}
 	\label{fig:specphot0835autoS}
 	}
@@ -580,6 +580,22 @@ Two iterations were used in the manuals shifting: (1) minimizing the residuals o
 	\vspace{0.1in}
 \end{figure*} 
 
+
+\begin{figure*}[!t]
+\centering
+\subfloat[2MASS J1821- Automatic Shifting]{
+	\includegraphics[width=0.5\textwidth]{specphot_1821_auto_noremovel.pdf}
+	\label{fig:specphot1821autoS}
+	}
+\subfloat[2MASS J1821 - Manual shifting ]{
+	\includegraphics[width=0.5\textwidth]{specphot_1821_manual_noremovel.pdf}
+	\label{fig:specphot1821manualS}
+	}
+	\caption{Dynamic spectra of {\shb} using automatic cross correlation wavelength shifting (left) and manual wavelength shifting(right).
+	The manual method shows better systematics but higher frequency noise.}
+	\label{fig:manualVsAutoShift1821}
+	\vspace{0.1in}
+\end{figure*} 
 %If  used, this work made use of the \texttt{astropy} package \citep{astropy2013}.
 %If used, some data was collected from the Open Exoplanet Catalogue \citep{rein2012openExoCat}.
 
