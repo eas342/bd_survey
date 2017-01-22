@@ -604,12 +604,20 @@ Two iterations were used in the manuals shifting: (1) minimizing the residuals o
 Fitting all light curves to \sha\ with MCMC methods and without the A$_1$ > 0 prior results in more non-detections, but an unusual pattern to the spectra.
 As with other MCMC fits, error bars are from photon and read noise, so they're likely under-estimated.
 
-\begin{figure}
-\begin{centering}
-\includegraphics[width=0.5\textwidth]{mcmc_spectrum_2mass_0835.pdf}
-\caption{Spectrum of \sha\ using all MCMC fits with 1 cosine term .}\label{fig:mcmcSpec0835}
-\end{centering}
-\end{figure}
+\begin{figure*}[!t]
+\centering
+\subfloat[2MASS J0835 - Manual Shifting]{
+	\includegraphics[width=0.5\textwidth]{mcmc_spectrum_2mass_0835.pdf}
+	\label{fig:ampSpec0835ManualS}
+	}
+\subfloat[2MASS J1821 - Manual shifting ]{
+	\includegraphics[width=0.5\textwidth]{mcmc_spectrum_2mass_1821.pdf}
+	\label{fig:ampSpec0835ManualS}
+	}
+	\caption{Amplitude spectrum of {\sha} (left)  and {\shb} (right) using manual wavelength shifting, 1 cosine term fit and MCMC fitting with error bars from photon and read noise.}
+	\label{fig:ampSpecManualS}
+	\vspace{0.1in}
+\end{figure*} 
 
 
 %If  used, this work made use of the \texttt{astropy} package \citep{astropy2013}.
