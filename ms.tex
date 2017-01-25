@@ -599,9 +599,9 @@ Two iterations were used in the manuals shifting: (1) minimizing the residuals o
 
 \clearpage
 \pagebreak
-\subsection{MCMC Time Series Fits}
+\subsection{MCMC Time Series Fits - first try}
 
-Fitting all light curves to \sha\ with MCMC methods and without the A$_1$ > 0 prior results in more non-detections, but an unusual pattern to the spectra.
+Fitting all light curves to \sha\ with MCMC methods and without the A$_1 >$ 0 prior results in more non-detections, but an unusual pattern to the spectra.
 As with other MCMC fits, error bars are from photon and read noise, so they're likely under-estimated.
 
 \begin{figure*}[!t]
@@ -631,6 +631,31 @@ As with other MCMC fits, error bars are from photon and read noise, so they're l
 	}
 	\caption{As an experiment, I remade the amplitude spectra of Figure \ref{fig:ampSpecManualS} but scaled all error bars up by a factor of 4 for all points to account for some systematic errors. IE, Amplitude spectrum of {\sha} (left)  and {\shb} (right) using manual wavelength shifting, 1 cosine term fit and MCMC fitting with error bars from 4$\times$ photon and read noise.}
 	\label{fig:ampSpecManualSfourTimesErr}
+	\vspace{0.1in}
+\end{figure*} 
+
+\clearpage
+\pagebreak
+\subsection{MCMC Time Series Fits - second try}
+
+As with my \texttt{IDL} code, I found that I had to impose a tight prior on the rotation period (I actually fixed it at the literature value of 4.1 hr) in order to avoid fitting the systematics at the telluric wavelengths.
+When I do this, the MCMC code produces a very smooth amplitude spectrum for 2MASS 1821, as visible in Figure \ref{fig:ampSpecManualSTauRestrict}.
+I experimented with the restriction that $3.8 < \tau < 4.0$ based on the multi-term Fourier series fits.
+I used two different error scalings - 2.5 $\sigma$ and 4 $\sigma$.
+2.5 $\sigma$ give the expected $\bar{\chi^2} \approx 1$, whereas 4 $\sigma$ gives around 0.4.
+
+\begin{figure*}[!t]
+\centering
+\subfloat[2MASS J1821 - 2.5$\times \sigma$]{
+	\includegraphics[width=0.5\textwidth]{2mass_1821_spectrum_0250perc_err_taurestrict.pdf}
+	\label{fig:ampSpec0835times2p5ErrTauRest}
+	}
+\subfloat[2MASS J1821 - 4$\times \sigma$ ]{
+	\includegraphics[width=0.5\textwidth]{2mass_1821_spectrum_0400perc_err_taurestrict.pdf}
+	\label{fig:ampSpec1821fourTimesErr}
+	}
+	\caption{Restricting the $\tau$ parameter to, $3.8 < \tau < 4.0$ significantly reduces the long term quadratic terms' contribution to the sinusoidal fit. In this case, there were MCMC fits for \shb, one with error bars scaled by 2.5$\sigma$ and the other by 4.0$\sigma$.}
+	\label{fig:ampSpecManualSTauRestrict}
 	\vspace{0.1in}
 \end{figure*} 
 
@@ -734,7 +759,7 @@ As with other MCMC fits, error bars are from photon and read noise, so they're l
 %% The equation counter will reset when it encounters the \appendix
 %% command and will number appendix equations (A1), (A2), etc.
 
-\appendix
+%\appendix
 
 
 %% The reference list follows the main body and any appendices.
