@@ -648,26 +648,49 @@ I used two different error scalings - 2.5 $\sigma$ and 4 $\sigma$.
 \begin{figure*}[!t]
 \centering
 \subfloat[2MASS J1821 - 2.5$\times \sigma$]{
-	\includegraphics[width=0.5\textwidth]{2mass_0835_spectrum_0250perc_err_taurestric.pdf}
-	\label{fig:ampSpec0835times2p5ErrTauRest}
+	\includegraphics[width=0.5\textwidth]{2mass_1821_spectrum_0250perc_err_taurestrict.pdf}
+	\label{fig:ampSpec1821times2p5ErrTauRest}
 	}
 \subfloat[2MASS J1821 - 4$\times \sigma$ ]{
 	\includegraphics[width=0.5\textwidth]{2mass_1821_spectrum_0400perc_err_taurestrict.pdf}
-	\label{fig:ampSpec1821fourTimesErr}
+	\label{fig:ampSpec1821fourTimesErrTauRest}
 	}
 	\caption{Restricting the $\tau$ parameter to, $3.8 < \tau < 4.0$ significantly reduces the long term quadratic terms' contribution to the sinusoidal fit. In this case, there were MCMC fits for \shb, one with error bars scaled by 2.5$\sigma$ and the other by 4.0$\sigma$.}
 	\label{fig:ampSpecManualSTauRestrict}
 	\vspace{0.1in}
 \end{figure*} 
 
-As with \shb\ I imposed a tight prior on $\tau$ such that $3.0 < \tau < 3.2$ for \sha. This now gives an average amplitude of zero -- see Figure \ref{fig:amp2mass08352p5ErrTauRest}.
+As with \shb\ I imposed a tight prior on $\tau$ such that $3.0 < \tau < 3.2$ for \sha. This now gives an average amplitude of zero -- see Figure \ref{fig:ampSpec0835TauRestrict}.
 
-\begin{figure}
-\begin{centering}
-\includegraphics[width=0.5\textwidth]{2mass_0835_spectrum_0250perc_err_taurestric.pdf}
-\caption{Amplitude spectrum for \sha\ with error bars scaled by 2.5$\sigma$. The average amplitude is zero.}\label{fig:amp2mass08352p5ErrTauRest}
-\end{centering}
-\end{figure}
+\begin{figure*}[!t]
+\centering
+\subfloat[2MASS J1821 - 2.5$\times \sigma$]{
+	\includegraphics[width=0.5\textwidth]{2mass_1821_spectrum_0250perc_err_taurestrict.pdf}
+	\label{fig:ampSpec1821times2p5ErrTauRest}
+	}
+\subfloat[2MASS J1821 - 4$\times \sigma$ ]{
+	\includegraphics[width=0.5\textwidth]{2mass_1821_spectrum_0400perc_err_taurestrict.pdf}
+	\label{fig:ampSpec1821fourTimesErrTauRest}
+	}
+	\caption{Restricting the $\tau$ parameter to, $3.8 < \tau < 4.0$ significantly reduces the long term quadratic terms' contribution to the sinusoidal fit. In this case, there were two MCMC fits for \shb, one with error bars scaled by 2.5$\sigma$ and the other by 4.0$\sigma$.}
+	\label{fig:ampSpec1821TauRestrict}
+	\vspace{0.1in}
+\end{figure*} 
+
+\begin{figure*}[!t]
+\centering
+\subfloat[2MASS J0835 - 2.5$\times \sigma$]{
+	\includegraphics[width=0.5\textwidth]{2mass_0835_spectrum_0250perc_err_taurestrict.pdf}
+	\label{fig:ampSpec0835times2p5ErrTauRest}
+	}
+\subfloat[2MASS J0835 - 4$\times \sigma$ ]{
+	\includegraphics[width=0.5\textwidth]{2mass_0835_spectrum_0400perc_err_taurestrict.pdf}
+	\label{fig:ampSpec0835fourTimesErrTauRest}
+	}
+	\caption{Restricting the $\tau$ parameter to, $3.0 < \tau < 3.2$ results in a spectrum that is on average near 0\% amplitude for \sha. We show the amplitude spectra for error bars scaled by 2.5$\sigma$ and 4.0$\sigma$.}
+	\label{fig:ampSpec0835TauRestrict}
+	\vspace{0.1in}
+\end{figure*} 
 
 
 %If  used, this work made use of the \texttt{astropy} package \citep{astropy2013}.
