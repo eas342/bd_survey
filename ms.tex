@@ -704,6 +704,19 @@ I'm finding the trend is marginal when using 4$\sigma$ noise scaling.
 
 
 
+\clearpage
+\pagebreak
+\subsection{Mie scattering}
+
+My old Mie scattering code was in IDL and would be more work to incorporate into MCMC fitting, so I found python package \texttt{miescatter} and did a comparison with my IDL code.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{python_vs_IDL_example.pdf}
+\caption{Example Mie scattering extinction cross sections $Q_{ext}$ for a spherical particle with a radius of 0.5~$\mu$m and a complex index of refraction of n=1.825 - 0.001 $i$. The IDL and python code's are in excellent agreement.}\label{fig:IDLvsPython}
+\end{centering}
+\end{figure}
+
 %If  used, this work made use of the \texttt{astropy} package \citep{astropy2013}.
 %If used, some data was collected from the Open Exoplanet Catalogue \citep{rein2012openExoCat}.
 
