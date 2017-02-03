@@ -717,6 +717,29 @@ My old Mie scattering code was in IDL and would be more work to incorporate into
 \end{centering}
 \end{figure}
 
+I did an initial MCMC fit where I plugged in these same index of refraction (n=1.825 - 0.001 $i$ for all wavelengths) and fit the spectrum that I found in IDL.
+The best fit matches the data well with a $\bar{\chi^2}$ of 1.3, visible in Figure \ref{fig:mcmcMieBest1particle}.
+However, there are many solutions at different resonances in the Mie extinction curve visible in Figure \ref{fig:mcmcMieCorner1particle}.
+A better way to handle this is a log-normal distribution of particles as in \citet{schlawin2016}.
+
+\begin{figure*}[!t]
+\centering
+\subfloat[Single Particle Best fit for \shb]{
+	\includegraphics[width=0.5\textwidth]{best_fit_single_particle_mie.pdf}
+	\label{fig:mcmcMieBest1particle}
+	}
+\subfloat[Single Particle Histograms for \shb]{
+	\includegraphics[width=0.5\textwidth]{corner_single_particle_mie.pdf}
+	\label{fig:mcmcMieCorner1particle}
+	}
+	\caption{An initial fit to the amplitude spectrum when using a single particle.
+	The best fit nicely matches the data but has multiple solutions at the Mie scattering resonances.}
+	\label{fig:mcmcMieCorner1particle}s
+	\vspace{0.1in}
+\end{figure*} 
+
+
+
 %If  used, this work made use of the \texttt{astropy} package \citep{astropy2013}.
 %If used, some data was collected from the Open Exoplanet Catalogue \citep{rein2012openExoCat}.
 
