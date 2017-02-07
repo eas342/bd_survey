@@ -720,7 +720,7 @@ My old Mie scattering code was in IDL and would be more work to incorporate into
 I did an initial MCMC fit where I plugged in these same index of refraction (n=1.825 - 0.001 $i$ for all wavelengths) and fit the spectrum that I found in IDL.
 The best fit matches the data well with a $\bar{\chi^2}$ of 1.3, visible in Figure \ref{fig:mcmcMieBest1particle}.
 However, there are many solutions at different resonances in the Mie extinction curve visible in Figure \ref{fig:mcmcMieCorner1particle}.
-A better way to handle this is a log-normal distribution of particles as in \citet{schlawin2016}.
+A better way to handle this is a log-normal distribution of particles as in \citet{2016ApJ...826..156S}.
 
 \begin{figure*}[!t]
 \centering
@@ -728,7 +728,7 @@ A better way to handle this is a log-normal distribution of particles as in \cit
 	\includegraphics[width=0.5\textwidth]{best_fit_single_particle_mie.pdf}
 	\label{fig:mcmcMieBest1particle}
 	}
-\subfloat[Single Particle Histograms for \shb]{
+\subfloat[Single Particle Posterios for \shb]{
 	\includegraphics[width=0.5\textwidth]{corner_single_particle_mie.pdf}
 	\label{fig:mcmcMieCorner1particle}
 	}
@@ -738,7 +738,25 @@ A better way to handle this is a log-normal distribution of particles as in \cit
 	\vspace{0.1in}
 \end{figure*} 
 
+I manually created a log-normal distribution of particles in Python and added up their cross sections weighted by number of particles.
+This process is slow, so I calculated it once and found  a 15th order polynomial fit to $Q_{ext}$ and evaluated this in the model.
+The resulting MCMC distribution is shown in Figure \ref{fig:mcmcMieCornerLogNorm}.
 
+\begin{figure*}[!t]
+\centering
+\subfloat[Log-Normal Best fit for \shb]{
+	\includegraphics[width=0.5\textwidth]{best_fit_lognormal_mie.pdf}
+	\label{fig:mcmcMieBestLogNorm}
+	}
+\subfloat[Log-Normal Posteriors for \shb]{
+	\includegraphics[width=0.5\textwidth]{corner_lognormal_mie.pdf}
+	\label{fig:mcmcMieCornerLogNorm}
+	}
+	\caption{An initial fit to the amplitude spectrum when using a log-normal size distribution with a $\sigma=0.5$.
+	Again, there are a few ``walkers'' that stay at large radii.}
+	\label{fig:mcmcMieCornerLogNorm}
+	\vspace{0.1in}
+\end{figure*} 
 
 %If  used, this work made use of the \texttt{astropy} package \citep{astropy2013}.
 %If used, some data was collected from the Open Exoplanet Catalogue \citep{rein2012openExoCat}.
