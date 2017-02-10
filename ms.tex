@@ -758,6 +758,26 @@ The resulting MCMC distribution is shown in Figure \ref{fig:mcmcMieCornerLogNorm
 	\vspace{0.1in}
 \end{figure*} 
 
+On closer inspection, I see that there is a local minimum for large particle radii where the $\chi^2$ begins to increase from 3~$\mu$m to 2$\mu$m.
+This is illustrated in Figure \ref{fig:localMinLargeRadii}.
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{local_min_illustration.pdf}
+\caption{A set of example Mie scattering models for example parameters for the Amplitude offset and median particle radius written as [A,r]. The model at 2~$\mu$m is slightly worse than at 3~$\mu$m, so it traps a few walkers in the MCMC run.}\label{fig:localMinLargeRadii}
+\end{centering}
+\end{figure}
+
+When I discard walkers with very low likelihood, as done in CHIMERA, the local minima are not included since their so low probability.
+The resulting MCMC run is shown in Figure \ref{fig:localMinExcludeCorner}.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{corner_lognormal_mie_no_lmin.pdf}
+\caption{MCMC fit when discarding points with a $\chi^2$ more than 5 times the minimum to exclude walkers that were trapped at local minima.}\label{fig:localMinExcludeCorner}
+\end{centering}
+\end{figure}
+
+
 %If  used, this work made use of the \texttt{astropy} package \citep{astropy2013}.
 %If used, some data was collected from the Open Exoplanet Catalogue \citep{rein2012openExoCat}.
 
