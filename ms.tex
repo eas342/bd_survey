@@ -719,7 +719,7 @@ I'm finding the trend is marginal when using 4$\sigma$ noise scaling.
 
 \clearpage
 \pagebreak
-\subsection{Mie scattering}
+\subsection{Mie scattering MCMC}
 
 My old Mie scattering code was in IDL and would be more work to incorporate into MCMC fitting, so I found python package \texttt{miescatter} and did a comparison with my IDL code.
 
@@ -789,6 +789,29 @@ The resulting MCMC run is shown in Figure \ref{fig:localMinExcludeCorner}.
 \caption{MCMC fit when discarding points with a $\chi^2$ more than 5 times the minimum to exclude walkers that were trapped at local minima.}\label{fig:localMinExcludeCorner}
 \end{centering}
 \end{figure}
+
+\clearpage
+\pagebreak
+\subsection{MORIS Data}
+
+I made a time series of my photometry to see if it would help with the spectrum fit.
+
+The SNR is so low that's it hard to see any clear pattern.
+The photometry adds very little to the spectrum, as seen in Figure \ref{fig:morisPhotometryAndSpec}.
+
+\begin{figure*}[!t]
+\centering
+\subfloat[MORIS $i$ Band Photometry for \shb]{
+	\includegraphics[width=0.5\textwidth]{2mass_1821_moris_tser_best_fit.pdf}
+	\label{fig:morisTSerBestFit}
+	}
+\subfloat[Amplitude spectrum for \shb\ when adding MORIS photometry]{
+	\includegraphics[width=0.5\textwidth]{2mass_1821_a1_spec_w_moris.pdf}
+	\label{fig:spectrum1821WMoris}
+	}
+	\caption{MORIS photometry does not significantly improve the constraints on the spectrum.}
+	\label{fig:morisPhotometryAndSpec}
+\end{figure*} 
 
 
 %If  used, this work made use of the \texttt{astropy} package \citep{astropy2013}.
