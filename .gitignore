@@ -8,8 +8,8 @@
 *.tui
 *-mpgraph.mp
 *.DS_Store
-supplement*.pdf
+ms*.pdf
 image_backups/*
 sync_bib.sh
-supplementNotes.bib
+msNotes.bib
 *~
