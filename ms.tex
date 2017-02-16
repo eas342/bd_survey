@@ -216,27 +216,24 @@ Both target and reference star were observed simultaneously by orienting the 3$\
 \end{deluxetable*}
 
 
-Wavelength calibrations were performed using observations of ThAr emission lamps with the 0$\farcs$3$\times$60$\arcsec$.
-
 The images were rectified by shifting each row to match a center row in between the two sources.
 This was achieved by cross correlating the reference row with all other detector rows (which have the same background spectrum) and fitting a smooth function over the sources as in \citealt{2016ApJ...826..156S}.
 We also obtained calibration sequences of ThAr and flat-field incadescent lamps with the 3$\arcsec$$\times$60$\arcsec$ slit  before and after the brown dwarf time series.
+An additional set of ThAr emission lamp spectra were taken at the beginning and end of the observations (preceding and following the 3$\arcsec \times 60 \arcsec$ lamp spectra) with a 0.3$\arcsec\times60\arcsec$ slit for wavelength calibration.
 % to measure pixel response and assess flexure in the instrument with telescope orientation.
 For {\sha}, we used a combination of the flat-field lamp and a sky frame to construct a pixel response map, removing large-scale ($\gtrsim$ 30 pixels) structure with low order polynomial fits along spatial and spectral axes, and normalizing to the median response. 
 To correct for instrument flexure, we also cross-correlated the sky frame with each science image to measure linear spatial shifts, which were $\pm$5~pixels or 0.5\arcsec\ for \sha\ and $\pm$1.5~pixels or 0.15\arcsec\ for \shb.
 These shifts were used to apply a custom flat field for every image.
-
-For {\shb}, we did not have sufficient sky frames so we used our incandescent lamp image for both flat fielding and flexure analysis. {\bf [IS THIS TRUE FOR 1821?- \color{red}{YES, there were only 5 good sky frames at the end and 3 at the beginning.}]}
+For {\shb}, we did not have sufficient sky frames so we used our incandescent lamp image for both flat fielding and flexure analysis.
 
 As described in \citet{2016ApJ...826..156S}, we performed spatial background subtraction over the entire slit using a 4th-order polynomial fit to points more than 30 pixels away from the center of the source dispersion traces.  Spectra were optimally extracted \citep{1986ApJ...302..757H}, with spatial profiles fit to low order polynomials along the spectral direction one row at a time with 20$\sigma$ rejection to remove cosmic rays and bad pixels.
 These spatial profiles were then used to calculate a weighted sum spectrum across the illuminated detector for each source and exposure. 
 Typical signals-to-noise of the extracted spectra were 40 - 100 per spectral pixel (unbinned).
 Relative spectra (source/reference) were then computed for each exposure.
 Our image rectification process described above ensures that the wavelength solution is the same for each row if the image.
-However, there are small additional shifts of the sources within the slit so another cross-correlation is performed between the sources to ensure they match before dividing the two spectra.
+However, there are small additional shifts of the sources within the slit so another shift is performed between the sources to ensure the telluric features removed when dividing the two spectra.
 
-For MORIS reduction, we used the raw files and performed aperture photometry with the IDL \texttt{aper} procedure using an aperture size of 6 pixels and a sky annulus of 8-11 pixels.
-{\bf [MORIS REDUCTION FOR 1821?]}
+%For MORIS reduction, we used the raw files and performed aperture photometry with the IDL \texttt{aper} procedure using an aperture size of 6 pixels and a sky annulus of 8-11 pixels.
 
 \section{Analysis}\label{sec:analysis}
 
@@ -252,18 +249,21 @@ For MORIS reduction, we used the raw files and performed aperture photometry wit
 	\includegraphics[width=0.5\textwidth]{specphot_j1821.pdf}
 	\label{fig:specphot1821}
 	}
-	\caption{Top Panels: Normalized median raw spectra of {\sha} (left) and {\shb} (right) in black, compared with the respective reference stars (blue) and background emission (red; mostly telluric OH emission and thermal background). These spectra have not been corrected for telluric absorption or instrumental spectral response. The reference stars have significantly bluer spectra than the brown dwarfs. Bottom Panels: Dynamic spectra of each brown dwarf system. The dynamic spectrum for \sha\ shows no significant variability whereas there is a periodic modulation for \shb\ that decrease toward longer wavelengths. [MORE DESCRIPTION -- How should the reader interpret these dynamic spectra?]}
+	\caption{Top Panels: Normalized median raw spectra of {\sha} (left) and {\shb} (right) in black, compared with the respective reference stars (blue) and background emission (red; mostly telluric OH emission and thermal background).  Bottom Panels: Dynamic spectra of each brown dwarf system. The dynamic spectrum for \sha\ shows no significant variability in the spatial or spectral direction whereas \shb\ shows significant repeated modulations with a period near 4 hours.
+The variability in \shb\ is prominent at the short wavelengths with a magnitude of ~$\sim$2\% peak-to-trough at short wavelengths but $\lesssim 0.5\%$ toward 2~$\mu$m.}
 	\label{fig:specphot}
 	\vspace{0.1in}
 \end{figure*} 
 
-Figure \ref{fig:specphot} shows the dynamic spectra (relative source brightness as a function of wavelength and time) for both targets, as well as the median spectra of the target and reference stars.  
-{\sha} shows a relative flat response with shows no obvious variations at the $\lesssim1$\% level.
-{\shb}, on the other hand, shows a clear periodic signal that is strongest at the shortest wavelengths and declines in amplitude toward the longest wavelengths. The periodic signal is coincident with the 4.2~hr period measured by \citet{2015ApJ...799..154M}, enabling confirmation that the signal is astrophysical rather than systematic (see \citealt{2016ApJ...826..156S}).
+Figure \ref{fig:specphot} shows the raw spectra of the two brown dwarfs, their reference spectra and the background spectra.
+Neither the reference spectra nor the brown dwarfs spectra have any corrections applied for telluric absorption or instrumental spectral response.
+The reference stars have significantly bluer spectra than the brown dwarfs, but nonetheless contain the same telluric absorption signatures.
+The regions near 1.37~$\mu$m and 1.83~$\mu$m have significantly lower flux due to telluric water vapor absorption.
+
+Figure \ref{fig:specphot} also shows the dynamic spectra (relative source brightness as a function of wavelength and time.
+{\sha} has a dynamic spectra resembling white noise with no significant variations in either the spectral or spatial direction at the $\lesssim1$\% level.
+{\shb}, on the other hand, shows a clear periodic signal that is strongest at the shortest wavelengths and declines in amplitude toward the longest wavelengths. The periodic signal is nearly coincident with the 4.2~hr period measured by \citet{2015ApJ...799..154M}, enabling confirmation that the signal is astrophysical rather than systematic (see \citealt{2016ApJ...826..156S}).
 Both sources exhibit some systematic features in the strong telluric absorption bands at 1.4 and 1.8~$\mu$m, likely caused by residual wavelength drifts from flexure and lower signals-to-noise.
-
-{\bf [MORIS ANALYSIS FOR 1821?]}
-
 
 \begin{figure*}[!t]
 \centering
