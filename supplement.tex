@@ -116,7 +116,7 @@ With exoplanet light curves, the standard deviation of the out-of-transit baseli
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{best_fit_multi_terms.pdf}
-\caption{A zoom-in on on the time series of 2MASS J1821 in Figure \ref{fig:tserPhase1821} for the wavelength bin 1.08~$\mu$m. Error bars are shown for photon and read noise. We plot a best-fit models using a single cosine term (green, $\bar{\chi^2}$ = 12.1). Additional terms improve the fits to the data and the $\bar{\chi^2}$.}\label{fig:model2Cosfit}
+\caption{A zoom-in on on the time series of 2MASS J1821 for the wavelength bin 1.08~$\mu$m. Error bars are shown for photon and read noise. We plot a best-fit models using a single cosine term (green, $\bar{\chi^2}$ = 12.1). Additional terms improve the fits to the data and the $\bar{\chi^2}$.}\label{fig:model2Cosfit}
 \end{centering}
 \end{figure}
 
@@ -424,6 +424,17 @@ However, the photometry can put upper limits to the spectrum, as seen in Figure 
 	\caption{MORIS photometry can put an upper limit on the short wavelength end of the spectrum spectrum.}
 	\label{fig:morisPhotometryAndSpec}
 \end{figure*} 
+
+
+\clearpage{Airmass Correlation}
+One thing to check is that the U shaped light curves near the telluric water bands are correlated to airmass. As I start, I used my code to look at the residuals of the single sinusoid model simultaneously with airmass.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{images/airmass/residuals_1p38_airmass.pdf}
+\caption{Residuals of a sinusoidal fit (with hard priors to ensure fitting out the BD modulation). The magnitude of the residuals is about 5$\times$ what it should be, likely an error in the code.}\label{fig:residAirmass1p38on1821}
+\end{centering}
+\end{figure}
 
 
 %If  used, this work made use of the \texttt{astropy} package \citep{astropy2013}.
