@@ -275,7 +275,7 @@ Both sources exhibit some systematic features in the strong telluric absorption 
 	\includegraphics[width=0.5\textwidth]{2mass_1821_t_series.png}
 	\label{fig:tserPhase1821}
 	}
-	\caption{Time series for each system with an offset added for clarity. Each wavelength bin is labeled on the right side. Alternating colors are used to distinguished the light curves with offsets.}
+	\caption{Time series for each system with an offset added for clarity. Each wavelength bin is labeled on the right side. Alternating colors are used to distinguished the light curves with offsets. \sha\ shows relatively flat light curves whereas \shb\ has large amplitude double-peaked oscillations at short wavelengths and flat light curves at long wavelengths.}
 	\label{fig:tserPfold}
 \end{figure*} 
 
@@ -302,7 +302,7 @@ The Levenberg-Marquardt chi-squared minimization code \texttt{mpfit} is used to 
 
 \begin{figure*}
 \centering
-\subfloat[2MASS J0835 - \colorbox{red}{fit might need more work} ]{
+\subfloat[2MASS J0835]{
 	\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j0835.pdf}
 	\label{fig:ampspec0835}
 	}
@@ -310,7 +310,8 @@ The Levenberg-Marquardt chi-squared minimization code \texttt{mpfit} is used to 
 	\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821.pdf}
 	\label{fig:ampspec1821}
 	}
-	\caption{Sine fit amplitude versus wavelength for each brown dwarf. The regions at 1.4~$\mu$m and 1.9~$\mu$m (shaded with a salmon color) are contaminated by telluric absorption so the variations can likely be due to telluric variability not corrected by the reference star. 2MASS J0835 shows no clear trend in wavelength, while 2MASS J1821 has a strong slope indicative of Mie-scattering particles.}
+	\caption{Sine fit amplitude versus wavelength for each brown dwarf. \sha\ shows no clear trend in wavelength, while \shb\ has a strong slope indicative of Mie-scattering particles.
+	 Also shown in the figure for \shb\ is the WFC3 amplitude from \citet{2015ApJ...798L..13Y}. The WFC3 observations were from a different epoch, with different cloud coverage, but show a similar slope.}
 	\label{fig:ampSpec}
 \end{figure*} 
 
@@ -339,7 +340,7 @@ For the particle size distribution we assume a log-normal distribution around a 
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821_mie_sc.pdf}
-\caption{Sine fit amplitude versus wavelength excluding the wavelength regions contaminated by telluric absorption. [SOMETHING HERE? like, The data are fit] with simple Mie scattering models with a log-normal particle size distribution centered at 0.1 and 0.2~$\mu$m. Also shown in the figure is the WFC3 amplitude from \citet{2015ApJ...798L..13Y}. The WFC3 observations were from a different epoch, with different cloud coverage.}\label{fig:ampspec1821mie}
+\caption{Sine fit amplitude versus wavelength excluding the wavelength regions contaminated by telluric absorption. [SOMETHING HERE? like, The data are fit] with simple Mie scattering models with a log-normal particle size distribution centered at 0.1 and 0.2~$\mu$m.}\label{fig:ampspec1821mie}
 \end{centering}
 \end{figure}
 
