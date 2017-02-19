@@ -426,13 +426,35 @@ However, the photometry can put upper limits to the spectrum, as seen in Figure 
 \end{figure*} 
 
 
-\clearpage{Airmass Correlation}
-One thing to check is that the U shaped light curves near the telluric water bands are correlated to airmass. As I start, I used my code to look at the residuals of the single sinusoid model simultaneously with airmass.
+\clearpage
+\section{Airmass Correlation}
+One thing to check is that the U shaped light curves near the telluric water bands are correlated to airmass.
+As I start, I took a time series at 1.26~$\mu$m to remove find a trend-line for brown dwarf modulations.
+This is shown in Figure \ref{fig:1p26umFluxTrendFit}.
+I then remove this polynomial trend from the 1.38~$\mu$m time series to remove the brown dwarf oscillations from it.
+The residual light curve has a U shape similar to the airmass trend shown in Figure \ref{fig:1p38residAndAirmass}.
+A direct correlation plot is shown in Figure \ref{fig:residAirmass1p38corr}.
+
+\begin{figure*}[!t]
+\centering
+\subfloat[Flux at 1.26~$\mu$m for the Trend-line]{
+	\includegraphics[width=0.5\textwidth]{images/airmass/trendline_1p26um.pdf}
+	\label{fig:1p26umFluxTrendFit}
+	}
+\subfloat[Flux at 1.38~$\mu$m and Airmass]{
+	\includegraphics[width=0.5\textwidth]{images/airmass/airmass_1p38um_resid_simult.pdf}
+	\label{fig:1p38residAndAirmass}
+	}
+	\caption{In order to investigate correlations with airmass at 1.38~$\mu$m, I first fit the 1.26~$\mu$m time series with a 10th order polynomial fit.
+	I then use the polynomial fit to remove most of the brown dwarf related oscillations in the time series at 1.38$\mu$m. The residuals show a U shape similar to the airmass table.}
+	\label{fig:airmassTimeSer1p38}
+\end{figure*} 
+
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=0.5\textwidth]{images/airmass/residuals_1p38_airmass.pdf}
-\caption{Residuals of a sinusoidal fit (with hard priors to ensure fitting out the BD modulation). The magnitude of the residuals is about 5$\times$ what it should be, likely an error in the code.}\label{fig:residAirmass1p38on1821}
+\includegraphics[width=0.5\textwidth]{images/airmass/airmass_flux_correlation.pdf}
+\caption{Time series at 1.38$\mu$m as a function of airmass, where the brown dwarf oscillations are mostly removed as described in Figure \ref{fig:airmassTimeSer1p38}.}\label{fig:residAirmass1p38corr}
 \end{centering}
 \end{figure}
 
