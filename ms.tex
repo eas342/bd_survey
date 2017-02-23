@@ -282,12 +282,12 @@ Both sources exhibit some systematic features in the strong telluric absorption 
 
 Individual narrow-band light curves for extracted for each target in 25 spectral bins of width 0.060~$\mu$m; these are shown in Figure~\ref{fig:tserPfold}.
 The uncertainties in these curves due to photon and read noise range from 0.2\% to 0.6\% per exposure.
-We measure the standard deviations of the time series for wavelength regions that have no significant variations near the rotation period of the brown dwarfs and compare it to the expected photon + read noise.
+We measure the standard deviations of the time series for wavelength regions that have no significant variations near the rotation period of the brown dwarfs and compare it to the expected photon and read noise.
 In these wavelength bins, the standard deviations of the points is about 4$\times$ the expected read noise and photon noise.
 We attribute this to correlated errors between wavelengths and as a simple approximation multiply all error bars by a factor of 4 to account for these systematics.
 
 As seen in Figure~\ref{fig:tserPfold}, we see minimal variation in the lightcurves of {\sha}, but pronounced variation in {\shb}, particular in bands $<$1.8~$\mu$m. 
-These variations are approximately sinusoidal, although we detect ``double-hump'' structures with slight downturns in flux at peak amplitudes around -3~hr and +1~hr.
+These variations are approximately sinusoidal, although we detect ``double-hump'' structures with slight downturns in flux at peak amplitudes around -2.7~hr and +1.3~hr.
 In the regions of strong telluric absorption, the variability pattern changes, with a U-shaped profile minimized at $-$1~hr.
 As this pattern aligns with the airmass trend over the sequence of observations, we attribute this pattern to systematic effects and handle it with priors on the rotational period of the brown dwarfs.
 
@@ -296,9 +296,9 @@ Each of the light curves were fit to a simple sinusoidal model:
 F(t) = A \cos(2 \pi (t - t_t)/\tau) + B t + C
 \end{equation}
 where $F(t)$ is the relative flux as a function of time $t$, $A$ is the amplitude of periodic variations, $t_t$ is the time of maximum periodic flux, $\tau$ is period of the variations, and $B$ and $C$ are linear terms describing any baseline trend.
-Since some wavelengths are affected by telluric contamination and we wish to avoid fitting harminics, we impose a prior on the rotational period $\tau$ from literature values of the period \citep{2004MNRAS.354..378K,2015ApJ...799..154M}.
-For \sha\ we use a prior 3.0 $< \tau < $3.2 hr and for \shb\ we use 3.8 $< \tau <$ 4.0 hr.
-The prior for \shb\ is slightly different from the value from \citet{2004MNRAS.354..378K} because it came from a fit in a clear region of the time series (at 1.08~$\mu$m) where a double sinusoidal fit resulted in a period of 3.9 $\pm$ 0.01 hr.
+Since some wavelengths are affected by telluric contamination and we wish to avoid fitting harmonics, we impose a prior on the rotational period $\tau$.
+For \sha\ we use a prior 3.0 $< \tau < $3.2 hr from \citet{2004MNRAS.354..378K} and for \shb\ we use 3.8 $< \tau <$ 4.0 hr.
+The prior for \shb\ is slightly different from the value from \citet{2015ApJ...799..154M}(4.2 hr) because it came from a fit in a clear region of the time series (at 1.08~$\mu$m) where a double sinusoidal fit resulted in a period of 3.9 $\pm$ 0.01 hr.
 Secondly, we restrict the time of maximum periodic flux such that $-\tau/2 < t_1 < \tau/2$ to make sure there are no 2$\pi$ degeneracies in the fit.
 
 \begin{figure*}
@@ -312,14 +312,21 @@ Secondly, we restrict the time of maximum periodic flux such that $-\tau/2 < t_1
 	\label{fig:ampspec1821}
 	}
 	\caption{Sine fit amplitude versus wavelength for each brown dwarf. \sha\ shows no clear trend in wavelength, while \shb\ has a strong slope indicative of Mie-scattering particles.
-	 Also shown in the figure for \shb\ is the WFC3 amplitude from \citet{2015ApJ...798L..13Y}. The WFC3 observations were from a different epoch, with different cloud coverage, but show a similar slope.}
+	 Also shown in the figure for \shb\ is the WFC3 amplitude from \citet{2015ApJ...798L..13Y}. The WFC3 observations were from a different epoch, with different cloud coverage, but show a similar slope.
+	 The amplitude spectrum for \shb\ is fit with a simple Mie scattering models for a log-normal particle size distribution of spherical forsterite grains with a best-fit radius of 0.17 $\pm$ 0.01 grains.}
 	\label{fig:ampSpec}
 \end{figure*} 
 
-Figure \ref{fig:ampSpec} shows the best fit periodic amplitudes as a function of wavelength.
+Figure \ref{fig:ampSpec} shows the MCMC posterior constraints for periodic amplitudes as a function of wavelength.
 For {\sha} (Figure \ref{fig:ampspec0835}) we find small ($\lesssim 0.5\%$) amplitudes with a flat trend as a function of wavelength.
+There is low level variability but it is not seen at a constant phase.
 \shb, on the other hand, shows a clear decreasing trend as function of wavelength.
 This is the same trend observed for 2MASS J1821 by HST over a shorter wavelength range (1.1 to 1.7~$\mu$m) by \citet{2015ApJ...798L..13Y}, also shown in Figure \ref{fig:ampspec1821}.
+Their maximum over minimum flux spectrum is converted to an amplitude spectrum by assuming that the amplitude is half the difference in maximum and minimum flux, which can be shown to be 
+\begin{equation}
+A  = \frac{f_R - 1}{f_R + 1}
+\end{equation}\label{eq:ampFromRatio}
+where $f_R$ is the flux ratio of the maximum over minimum flux.
 
 \subsection{Mie Scattering Fit}
 
@@ -331,28 +338,16 @@ For the particle size distribution we assume a log-normal distribution around a 
 
 \begin{figure}
 \begin{centering}
-\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821_mie_sc.pdf}
-\caption{The amplitude spectrum for \shb\ is fit with a simple Mie scattering models for a log-normal particle size distribution of spherical forsterite grains with a best-fit radius of 0.17 $\pm$ 0.01 grains.}\label{fig:ampspec1821mie}
-\end{centering}
-\end{figure}
-
-\begin{figure}
-\begin{centering}
 \includegraphics[width=0.5\textwidth]{corner_j1821_mie_sc.pdf}
 \caption{Posterior distributions to the simple Mie scattering fit to the amplitude spectrum for \shb.
-The model includes an amplitude offset, $B$, (to account for areal coverage) and a median particle radius, $r$.}\label{fig:ampspec1821mie}
+The model includes an amplitude offset, $B$, (to account for areal coverage) and a median particle radius, $r$.}\label{fig:corner1821mie}
 \end{centering}
 \end{figure}
 
-Figure \ref{fig:ampspec1821mie} shows the simple Mie scattering model as compared to the data for two example particle sizes of 0.1~$\mu$m and 0.2~$\mu$m.
+Figure \ref{fig:ampspec1821} shows the simple Mie scattering model as compared to the data for two example particle sizes of 0.1~$\mu$m and 0.2~$\mu$m.
 In these cases the reduced chi-squared values are 9.6 and 2.5 respectively, when ignoring the points within the shaded telluric contamination regions.
 
-\citet{2015ApJ...798L..13Y} also observe wavelength-dependent variability of 2MASS J1821 with the Hubble Space Telescope's (HST's) Wide Field Camera (WFC3) over 2 visits of 3 orbits each.
-Their maximum over minimum flux spectrum is converted to an amplitude spectrum by assuming that the amplitude is half the difference in maximum and minimum flux, which can be shown to be 
-\begin{equation}
-A  = \frac{f_R - 1}{f_R + 1}
-\end{equation}\label{eq:ampFromRatio}
-where $f_R$ is the flux ratio of the maximum over minimum flux.
+
 
 The WFC3 amplitude spectrum is shown with the data in Figure \ref{fig:ampspec1821mie}.
 There is a multiplicative offset between the IRTF and WFC3 spectrum because they were taken at different epochs and therefore different spatial cloud and temperature distributions.
@@ -372,7 +367,7 @@ In WISEP J0047, the wavelength trend could be fit by $\sim0.4~\mu$m forsterite g
 \end{figure}
 
 Another simple model we attempt assumes  that the brown dwarf spectral variability has to do with a non-uniform temperature distribution on the brown dwarf in the same way that starspots modulate the brightness of hydrogen burning stars as they spin.
-In Figure \ref{fig:ampspec1821tdiff}, we fit the same amplitude spectrum as in Figure \ref{fig:ampspec1821mie}.
+In Figure \ref{fig:ampspec1821tdiff}, we fit the same amplitude spectrum as in Figure \ref{fig:ampspec1821}.
 This time we model the data with two temperature regions as shown in Figure \ref{fig:tdiffschem}, with two opposite longitudes of the planet at the brightness minimum and maximum.
 We assume that are each in local thermodynamic equilibrium (LTE) so that the flux is proportional to the Planck function times the areal coverage.
 The flux ratio between maximum and minimum flux is then
