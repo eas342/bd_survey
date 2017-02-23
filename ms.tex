@@ -300,7 +300,6 @@ Figure \ref{fig:specphot} also shows the dynamic spectra (relative source bright
 {\shb}, on the other hand, shows a clear periodic signal that is strongest at the shortest wavelengths and declines in amplitude toward the longest wavelengths. The periodic signal is nearly coincident with the 4.2~hr period measured by \citet{2015ApJ...799..154M}, enabling confirmation that the signal is astrophysical rather than systematic (see \citealt{2016ApJ...826..156S}).
 Both sources exhibit some systematic features in the strong telluric absorption bands at 1.4 and 1.8~$\mu$m, likely caused by residual wavelength drifts from flexure and lower signals-to-noise.
 
-
 Individual narrow-band light curves are extracted for each target in 25 spectral bins of width 0.060~$\mu$m; these are shown in Figure~\ref{fig:tserPfold}.
 The uncertainties in these curves due to photon and read noise range from 0.2\% to 0.6\% per exposure.
 We measure the standard deviations of the time series for wavelength regions that have no significant variations near the rotation period of the brown dwarfs and compare it to the expected photon and read noise.
@@ -310,7 +309,7 @@ We attribute this to correlated errors between wavelengths and as a simple appro
 As seen in Figure~\ref{fig:tserPfold}, we see minimal variation in the lightcurves of {\sha}, but pronounced variation in {\shb}, particular in bands $<$1.8~$\mu$m. 
 These variations are approximately sinusoidal, although we detect ``double-hump'' structures with slight downturns in flux at peak amplitudes around -2.7~hr and +1.3~hr.
 In the regions of strong telluric absorption, the variability pattern changes, with a U-shaped profile minimized at $-$1~hr.
-As this pattern aligns with the airmass trend over the sequence of observations, we attribute this pattern to systematic effects and handle it with priors on the rotational period of the brown dwarfs.
+As this pattern aligns with the airmass trend over the sequence of observations, we attribute this pattern to systematic effects and impose priors on the rotational period of the brown dwarfs to ensure the sinusoidal fits do not fit the airmass trend.
 
 Each of the light curves were fit to a simple sinusoidal model:
 \begin{equation}\label{eq:cosfit}
@@ -319,7 +318,7 @@ F(t) = A \cos(2 \pi (t - t_t)/\tau) + B t + C
 where $F(t)$ is the relative flux as a function of time $t$, $A$ is the amplitude of periodic variations, $t_t$ is the time of maximum periodic flux, $\tau$ is period of the variations, and $B$ and $C$ are linear terms describing any baseline trend.
 Since some wavelengths are affected by telluric contamination and we wish to avoid fitting harmonics, we impose a prior on the rotational period $\tau$.
 For \sha\ we use a prior 3.0 $< \tau < $3.2 hr from \citet{2004MNRAS.354..378K} and for \shb\ we use 3.8 $< \tau <$ 4.0 hr.
-The prior for \shb\ is slightly different from the value from \citet{2015ApJ...799..154M}(4.2 hr) because it came from a fit in a clear region of the time series (at 1.08~$\mu$m) where a double sinusoidal fit resulted in a period of 3.9 $\pm$ 0.01 hr.
+The prior for \shb\ is slightly different from the value from \citet{2015ApJ...799..154M}(4.2 hr) because it came from a fit in a clear region of the time series (at 1.08~$\mu$m) where a double sinusoidal fit resulted in a period of 3.90 $\pm$ 0.01 hr.
 Secondly, we restrict the time of maximum periodic flux such that $-\tau/2 < t_1 < \tau/2$ to make sure there are no 2$\pi$ degeneracies in the fit.
 
 
@@ -338,9 +337,7 @@ A  = \frac{f_R - 1}{f_R + 1}
 \end{equation}\label{eq:ampFromRatio}
 where $f_R$ is the flux ratio of the maximum over minimum flux.
 There is a multiplicative offset between the IRTF and WFC3 spectrum because they were taken at different epochs and therefore different spatial cloud and temperature distributions.
-The WFC3 spectrum is not affected by the telluric absorption, unlike the SpeX data.
-\citet{2015ApJ...798L..13Y} find that the WFC3 spectrum has no significant water vapor absorption which indicates a high haze layer in 2MASS J1821 and is consistent with our Mie scattering fit.
-
+\citet{2015ApJ...798L..13Y} find that the WFC3 spectrum has no significant water vapor absorption which indicates a high haze layer in 2MASS J1821 and is consistent with our gradually decreasing slope from 1.1 to 1.7~$\mu$m.
 
 \subsection{Mie Scattering Fit}
 
@@ -353,22 +350,22 @@ The model includes an amplitude offset, $B$, (to account for areal coverage) and
 \end{figure}
 
 We model the wavelength dependence of 2MASS 1821 as an optically thin cloud layer consisting of a log-normal distribution of particle sizes.
-If we assume the cloud covers one hemisphere of the brown dwarf, the amplitude of the variability is directly proportional to the opacity or $Q_{ext}$ of the particles.
-We model the extinction coefficient, $Q_{ext}$ from the \texttt{Python} Mie theory code \texttt{miescatter} \citep{bohren1983mie} to calculate the extinction as a function of wavelength.
+If we assume the cloud covers one hemisphere of the brown dwarf, the amplitude of the variability ($A$) is directly proportional to the opacity of the particles.
+We model the single particle extinction coefficient, $Q_{ext}$ from the \texttt{Python} Mie theory code \texttt{miescatter} \citep{bohren1983mie} to calculate the opacity as a function of wavelength.
 We assume that the particles are spherical forsterite grains (Mg$_2$SiO$_4$).
 We use a constant n=1.67 - 0.006 $j$ index of refraction because the real and imaginary parts of the index of refraction are relatively constant across the optical and near infrared \citep{scott1996forsterite}.
 
 For the particle size distribution we assume a log-normal distribution around a characteristic size, $s$ and a standard deviation of the logarithm (scale parameter), $\sigma$ =0.5.
 The spectral dependence is therefore modeled as 
 \begin{equation}
-A_1 = B \bar{Q_{avg}}(r)
+A = B \bar{Q_{avg}}(r)
 \end{equation}
 where $A_1$ is the amplitude, $B$ is a constant encapsulating the area and column density and $\bar{Q_{avg}}(r)$ is the average extinction coefficient averaged over all particles in the log-normal distribution with a median radius of $r$.
 
 Figure \ref{fig:ampspec1821} shows the best-fit model which has a median particle radius of 0.16~$\mu$m grains.
-This model has a reduced $\chi^2$ of 0.99 and is thus consistent with the data.
+This model has a reduced $\chi^2$ of 0.99 and is consistent with the measured amplitude spectrum.
 Figure \ref{fig:corner1821mie} shows the posterior distribution for the $B$ and $r$ parameters.
-The derived median particle radius of 0.164 $^{+0.012}_{-0.007}$~$\mu$m is a vary tight constraint for particle size median.
+The derived median particle radius of $r$=0.164 $^{+0.012}_{-0.007}$~$\mu$m is a vary tight constraint for particle size median.
 Considering the large number of possible grain geometries and compositions, this is an underestimate for the true uncertainty in median particle size.
 
 
@@ -387,7 +384,7 @@ In WISEP J0047, the wavelength trend could be fit by $\sim0.4~\mu$m forsterite g
 Another simple model we attempt assumes  that the brown dwarf spectral variability has to do with a non-uniform temperature distribution on the brown dwarf in the same way that starspots modulate the brightness of hydrogen burning stars as they spin.
 In Figure \ref{fig:ampspec1821tdiff}, we fit the same amplitude spectrum as in Figure \ref{fig:ampspec1821}.
 This time we model the data with two temperature regions as shown in Figure \ref{fig:tdiffschem}, with two opposite longitudes of the planet at the brightness minimum and maximum.
-We assume that are each in local thermodynamic equilibrium (LTE) so that the flux is proportional to the Planck function times the areal coverage.
+We assume for the purposes of variability that each hemisphere and layer is in local thermodynamic equilibrium (LTE) so that the flux is proportional to the Planck function times the areal coverage.
 The flux ratio between maximum and minimum flux is then
 \begin{equation}
 f_{R,\lambda} = \frac{\alpha_1 B_\lambda(T_1) + (1-\alpha_1) B_\lambda(T_2)}{\alpha_2 B_\lambda(T_1) + (1-\alpha_2) B_\lambda(T_2)}
