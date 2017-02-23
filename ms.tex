@@ -321,20 +321,37 @@ Figure \ref{fig:ampSpec} shows the MCMC posterior constraints for periodic ampli
 For {\sha} (Figure \ref{fig:ampspec0835}) we find small ($\lesssim 0.5\%$) amplitudes with a flat trend as a function of wavelength.
 There is low level variability but it is not seen at a constant phase.
 \shb, on the other hand, shows a clear decreasing trend as function of wavelength.
-This is the same trend observed for 2MASS J1821 by HST over a shorter wavelength range (1.1 to 1.7~$\mu$m) by \citet{2015ApJ...798L..13Y}, also shown in Figure \ref{fig:ampspec1821}.
-Their maximum over minimum flux spectrum is converted to an amplitude spectrum by assuming that the amplitude is half the difference in maximum and minimum flux, which can be shown to be 
+
+The same trend of decreasing variability amplitude for \shb\ was observed by HST's WFC3 grism over a shorter wavelength range (1.1 to 1.7~$\mu$m) by \citet{2015ApJ...798L..13Y}, also shown in Figure \ref{fig:ampspec1821}.
+The HST WFC3 maximum over minimum flux spectrum is converted to an amplitude spectrum by assuming that the amplitude is half the difference in maximum and minimum flux, which can be shown to be 
 \begin{equation}
 A  = \frac{f_R - 1}{f_R + 1}
 \end{equation}\label{eq:ampFromRatio}
 where $f_R$ is the flux ratio of the maximum over minimum flux.
+There is a multiplicative offset between the IRTF and WFC3 spectrum because they were taken at different epochs and therefore different spatial cloud and temperature distributions.
+The WFC3 spectrum is not affected by the telluric absorption, unlike the SpeX data.
+\citet{2015ApJ...798L..13Y} find that the WFC3 spectrum has no significant water vapor absorption which indicates a high haze layer in 2MASS J1821 and is consistent with our Mie scattering fit.
 
 \subsection{Mie Scattering Fit}
 
 We model the wavelength dependence of 2MASS 1821 as an optically thin cloud layer consisting of a log-normal distribution of particle sizes.
-In this simple model, the amplitude of the variability is directly proportional to the opacity or $Q_{ext}$ of the particles.
-We model the extinction coefficient, $Q_{ext}$ from the \texttt{IDL} Mie theory code \texttt{mie\_single.pro} \citep{grainger04} to calculate the extinction as a function of wavelength.
-We use the complex indices of refraction from \citet{dorschner95pyrox} for Mg-rich pyroxene grains (MgSiO$_3$).
+If we assume the cloud covers one hemisphere of the brown dwarf, the amplitude of the variability is directly proportional to the opacity or $Q_{ext}$ of the particles.
+We model the extinction coefficient, $Q_{ext}$ from the \texttt{Python} Mie theory code \texttt{miescatter} \citep{bohren1983mie} to calculate the extinction as a function of wavelength.
+We assume that the particles are spherical forsterite grains (Mg$_2$SiO$_4$).
+We use a constant n=1.67 - 0.006 $j$ index of refraction because the real and imaginary parts of the index of refraction are relatively constant across the optical and near infrared \citep{scott1996forsterite}.
+
 For the particle size distribution we assume a log-normal distribution around a characteristic size, $s$ and a standard deviation of the logarithm (scale parameter), $\sigma$ =0.5.
+The spectral dependence is therefore modeled as 
+\begin{equation}
+A_1 = B \bar{Q_{avg}}(r)
+\end{equation}
+where $A_1$ is the amplitude, $B$ is a constant encapsulating the area and column density and $\bar{Q_{avg}}(r)$ is the average extinction coefficient averaged over all particles in the log-normal distribution with a median radius of $r$.
+
+Figure \ref{fig:ampspec1821} shows the best-fit model which has a median particle radius of 0.16~$\mu$m grains.
+This model has a reduced $\chi^2$ of 0.99 and is thus consistent with the data.
+Figure \ref{fig:corner1821mie} shows the posterior distribution for the $B$ and $r$ parameters.
+The derived median particle radius of 0.164 $^{+0.012}_{-0.007}$~$\mu$m is a vary tight constraint for particle size median.
+Considering the large number of possible grain geometries and compositions, this is an underestimate for the true uncertainty in median particle size.
 
 \begin{figure}
 \begin{centering}
@@ -344,18 +361,8 @@ The model includes an amplitude offset, $B$, (to account for areal coverage) and
 \end{centering}
 \end{figure}
 
-Figure \ref{fig:ampspec1821} shows the simple Mie scattering model as compared to the data for two example particle sizes of 0.1~$\mu$m and 0.2~$\mu$m.
-In these cases the reduced chi-squared values are 9.6 and 2.5 respectively, when ignoring the points within the shaded telluric contamination regions.
-
-
-
-The WFC3 amplitude spectrum is shown with the data in Figure \ref{fig:ampspec1821mie}.
-There is a multiplicative offset between the IRTF and WFC3 spectrum because they were taken at different epochs and therefore different spatial cloud and temperature distributions.
-The WFC3 spectrum is not affected by the telluric absorption, unlike the SpeX data.
-\citet{2015ApJ...798L..13Y} find that the WFC3 spectrum has no significant water vapor absorption which indicates a high haze layer in 2MASS J1821 and is consistent with our Mie scattering fit.
-
 A similar amplitude versus wavelength trend was recently observed for WISEP J004701.06+680352.1 \citep{2016ApJ...829L..32L}, which has very red ($J-K$ = 2.55) spectral energy distribution thought to be caused by a high altitude haze layer.
-In WISEP J0047, the wavelength trend could be fit by $\sim0.4~\mu$m forsterite grains, similar to our characteristic particle size.
+In WISEP J0047, the wavelength trend could be fit by $\sim0.4~\mu$m forsterite grains, a few times large than our characteristic particle size.
 
 \subsection{Spot Model Fit}\label{sec:spotModel}
 
@@ -409,7 +416,7 @@ Therefore, we suspect that hot or cold spots on the surface are a less plausible
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821_t_diff.pdf}
-\caption{The same data as in Figure \ref{fig:ampspec1821mie}. We fit the data with a two region model that assumes the effective temperature of the brown dwarf and a cooler temperature.}\label{fig:ampspec1821tdiff}
+\caption{The same data as in Figure \ref{fig:ampspec1821}. We fit the data with a two region model that assumes the effective temperature of the brown dwarf and a cooler temperature.}\label{fig:ampspec1821tdiff}
 \end{centering}
 \end{figure}
 % Command used:
@@ -431,7 +438,6 @@ This is consistent with HST measurements for the system that show a gradual decr
 The lack of the water vapor band gives evidence of a high altitude aerosol layer in the atmosphere.
 
 We fit the variability amplitude spectrum with an optically thin Mie scattering model and find it is consistent with forsterite (Mg$_2$SiO$_4$) grains with sub-micron sized particles.
-We use a constant n=1.67 - 0.006 $j$ index of refraction because the real and imaginary parts of the index of refraction are relatively unchanged across the optical and near infrared \citep{scott1996forsterite}.
 A log-normal particle size distribution with a median of 0.2$\mu$m fits the data with a $\bar{\chi^2}$ of 2.5.
 We also model the wavelength dependence with a spotted surface model with two different Planck functions covering different spatial regions.
 The two temperature region model can fit variability amplitude spectrum well within errors, but gives implausible temperature differences.
