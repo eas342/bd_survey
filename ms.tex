@@ -82,26 +82,6 @@ In contrast, the stability of space-based platforms such as $Hubble$ $Space$ $Te
 
 Ground-based Multi-Object Spectroscopy (MOS) with a multi-object or long slit spectrograph, in which references stars are simultaneously observed to correct for telluric effects  (e.g., \citealt{bean10,bean2013,gibson13clouds,stevenson2016hatp26}) can significantly improve the precision of ground-based spectro-photometry. \citet{2014ApJ...783....5S} achieved $<$0.1\% per band variability precision for the planet-host star Corot-1 using the NASA Infrared Telescope Facility (IRTF) SpeX spectrograph \citep{2003PASP..115..362R}, by simultaneously monitoring the star and a nearby visual binary companion in a wide (3$\arcsec$) slit. This was sufficient to infer the presence of a cloud/haze layer in Corot-1b via transmission spectroscopy. A similar investigation of the disintegrating rocky exoplanet KIC 12557548b  enabled the characterization of the grain properties of its tidal debris tail \citep{2016ApJ...826..156S}. In a parallel effort, \citet{2014ApJ...785...48B} obtained $<$0.5\% per-band relative precision across the 1--2.5~$\mu$m band with IRTF/SpeX for the variable T dwarf Luhman 16B, by simultaneously observing it and its L dwarf companion. These studies demonstrate that high-precision, near-infrared spectral monitoring observations can be achieved from the ground.
 
-This article reports the results of a pilot study adapting these methods to measuring the variability of two L-type dwarfs with nearby visual companions. We describe our target selection process and pilot target properties in Section~\ref{sec:targets}.
-In Section~\ref{sec:obs}, we describe our monitoring observations and data reduction procedures to generate relative spectro-photometric time series.
-In Section~\ref{sec:analysis}, we analyze these time series using sinusoidal model fits over discrete spectral bands to generate individual light curves and amplitude spectra.
-We then fit the variability amplitude spectra to two different physical models, Mie scattering from clouds and heterogeneous temperature spots, to assess which more accurately reproduces the data.
-We summarize our results in Section~\ref{sec:conclusions}.
-
-
-\section{Target Selection and Characterization}\label{sec:targets}
-
-We identified potential targets for relative spectro-photometry by selecting among the $\approx$200 known L dwarfs\footnote{We identified these sources from DwarfArchives,  \url{http://dwarfarchives.org}. The declination range corresponds to the visibility region of IRTF.} with $H$ $<$ 14 and $-$30{\degree}  $<$ $\delta$ $<$ +67{\degree} those sources that have comparable-brightness ($\Delta{H}$ $<$ 1) visual binary companions at apparent separations of 5$\arcsec$--30$\arcsec$. We identified 30 potential targets, and prioritized those with previously detected photometric variability or rotational $v\sin{i}$ measurements indicating periods $\leq$10~hr.  Two sources were identified as ideal initial targets (Table~\ref{tab:bdProp}).
-
-2MASS~J08354256$-$0819237 (hereafter {\sha}; \citealt{2003AJ....126.2421C} is a bright, nearby ($d$ = 8.5$\pm$0.8~pc; \citealt{2012ApJ...752...56F}) L5 dwarf that shows signatures of low surface gravity \citep{2016ApJ...833...96L}. 
-This source has been reported to vary in both optical and near-infrared bands with a period of 3.1~hr and an amplitude of $\sim$1\%  \citep{2004MNRAS.354..378K,2014A&A...566A.111W}.
-Its $v\sin{i}$ = 14.2$\pm$0.4~{\kms} \citep{2010ApJ...723..684B} suggests a near pole-on viewing angle assuming a radius R = 1~{\rjup}.
-There is an $H$ = 12.3 source (2MASS~J08354383$-$0819212) at a separation of 19$\arcsec$ suitable for relative flux calibration (Figure~\ref{fig:images}). 
-2MASS J18212815+1414010 (hereafter {\shb}; \citealt{2008ApJ...686..528L}) is a similarly bright and nearby ($d$ = 9.38$\pm$0.03; \citealt{2016MNRAS.455..357S}) L4.5 dwarf, which exhibits a peculiar near-infrared spectrum attributed to youth and/or thick clouds \citep{2008ApJ...686..528L,2015ApJS..219...33G,2016ApJ...833...96L}.
-This source is a photometric variable with a period of 4.2$\pm$0.1~hr \citep{2015ApJ...799..154M} and $v\sin{i}$ = 28.85$\pm$0.16~{\kms}, suggesting a near equator-on orientation.  \citet{2015ApJ...798L..13Y} measured 1--3\% spectral variability with $HST$/WFC3 over 1.1--1.6~$\micron$, with greater variabilty at shorter wavelengths.
-There are two suitably bright comparison stars within 20$\arcsec$ for relative calibration: 2MASS~J18212812+1414089 with $H$ = 12.6 at 7$\arcsec$ separation and 2MASS~J18212715+1413482 with $H$ = 12.0 at 29$\arcsec$ separation; we chose the latter for our monitoring observations.
-
-
 \begin{deluxetable*}{lllcccccccl}
 \tablecaption{Brown Dwarf Properties}\label{tab:bdProp}
 \tablewidth{0pt}
@@ -141,6 +121,7 @@ There are two suitably bright comparison stars within 20$\arcsec$ for relative c
 \end{deluxetable*}
 
 
+
 \begin{figure*}
 \centering
 	\plottwo{image0835-0819.pdf}{image1821+1414.pdf}
@@ -150,6 +131,27 @@ There are two suitably bright comparison stars within 20$\arcsec$ for relative c
 	\label{fig:images}
 	\vspace{0.17in}
 \end{figure*} 
+
+This article reports the results of a pilot study adapting these methods to measuring the variability of two L-type dwarfs with nearby visual companions. We describe our target selection process and pilot target properties in Section~\ref{sec:targets}.
+In Section~\ref{sec:obs}, we describe our monitoring observations and data reduction procedures to generate relative spectro-photometric time series.
+In Section~\ref{sec:analysis}, we analyze these time series using sinusoidal model fits over discrete spectral bands to generate individual light curves and amplitude spectra.
+We then fit the variability amplitude spectra to two different physical models, Mie scattering from clouds and heterogeneous temperature spots, to assess which more accurately reproduces the data.
+We summarize our results in Section~\ref{sec:conclusions}.
+
+
+\section{Target Selection and Characterization}\label{sec:targets}
+
+We identified potential targets for relative spectro-photometry by selecting among the $\approx$200 known L dwarfs\footnote{We identified these sources from DwarfArchives,  \url{http://dwarfarchives.org}. The declination range corresponds to the visibility region of IRTF.} with $H$ $<$ 14 and $-$30{\degree}  $<$ $\delta$ $<$ +67{\degree} those sources that have comparable-brightness ($\Delta{H}$ $<$ 1) visual binary companions at apparent separations of 5$\arcsec$--30$\arcsec$. We identified 30 potential targets, and prioritized those with previously detected photometric variability or rotational $v\sin{i}$ measurements indicating periods $\leq$10~hr.  Two sources were identified as ideal initial targets (Table~\ref{tab:bdProp}).
+
+2MASS~J08354256$-$0819237 (hereafter {\sha}; \citealt{2003AJ....126.2421C} is a bright, nearby ($d$ = 8.5$\pm$0.8~pc; \citealt{2012ApJ...752...56F}) L5 dwarf that shows signatures of low surface gravity \citep{2016ApJ...833...96L}. 
+This source has been reported to vary in both optical and near-infrared bands with a period of 3.1~hr and an amplitude of $\sim$1\%  \citep{2004MNRAS.354..378K,2014A&A...566A.111W}.
+Its $v\sin{i}$ = 14.2$\pm$0.4~{\kms} \citep{2010ApJ...723..684B} suggests a near pole-on viewing angle assuming a radius R = 1~{\rjup}.
+There is an $H$ = 12.3 source (2MASS~J08354383$-$0819212) at a separation of 19$\arcsec$ suitable for relative flux calibration (Figure~\ref{fig:images}). 
+2MASS J18212815+1414010 (hereafter {\shb}; \citealt{2008ApJ...686..528L}) is a similarly bright and nearby ($d$ = 9.38$\pm$0.03; \citealt{2016MNRAS.455..357S}) L4.5 dwarf, which exhibits a peculiar near-infrared spectrum attributed to youth and/or thick clouds \citep{2008ApJ...686..528L,2015ApJS..219...33G,2016ApJ...833...96L}.
+This source is a photometric variable with a period of 4.2$\pm$0.1~hr \citep{2015ApJ...799..154M} and $v\sin{i}$ = 28.85$\pm$0.16~{\kms}, suggesting a near equator-on orientation.  \citet{2015ApJ...798L..13Y} measured 1--3\% spectral variability with $HST$/WFC3 over 1.1--1.6~$\micron$, with greater variabilty at shorter wavelengths.
+There are two suitably bright comparison stars within 20$\arcsec$ for relative calibration: 2MASS~J18212812+1414089 with $H$ = 12.6 at 7$\arcsec$ separation and 2MASS~J18212715+1413482 with $H$ = 12.0 at 29$\arcsec$ separation; we chose the latter for our monitoring observations.
+
+
 
 To characterize the atmospheric regions probed by our observations, we analyzed previously 
 obtained IRTF/SpeX data for these sources \citep{2008ApJ...686..528L,2010ApJ...710.1142B}.
@@ -168,7 +170,7 @@ $I_{\lambda,obs}$ and $I_{\lambda,abs}$ are the observed and absolute flux densi
 For {\shb}, we assumed a lower age limit of 200~Myr based on its FLD-G classification, and an upper limit of 700~Myr based on the analysis of \citet{2016MNRAS.455..357S} range of 1--5~Gyr; evolutionary models predict radii of 0.120~R$_{\odot}$ to 0.097~R$_{\odot}$ for these ages.  
 
 Figure~\ref{fig:tbright} shows the resulting brightness temperature spectra and their uncertainties from these calculations.  The spectral peaks for {\sha} are roughly constant at {\teff} = 1900$\pm$50~K in the field surface gravity case, and declines from 1700$\pm$20~K at the $J$-band peak to 1570$\pm$60~K at the $K$-band peak in the low surface gravity case.
-{\bf [Are these Numbers still true? Also, should it be T$_b$ instead of T$_{eff}$?]}
+{\bf [Adam, Are these Numbers still true? Also, should it be T$_b$ instead of T$_{eff}$?]}
 Spectra models (e.g., \citealt{2012RSPTA.370.2765A}) predict brightness temperatures closer to the effective temperature at the $JHK$ flux peaks, so these data suggest {\sha} has an intermediate age/radius compared the assumptions made here. For {\shb}, 
 brightness temperatures range from 1880$\pm$30~K at the $J$-band peak to 1700$\pm$40~K at the $K$-band peak.
 These values are notably warmer than the {\teff} = 1614$\pm$100~K estimated from \citet{2015ApJ...810..158F} {\teff}/spectral type relation, but relatively consistent this source's earlier spectral type as compared to {\sha}. We conjecture that the Filippazzo et al.\ relation underestimates the {\teff} of this source due to its unusually dusty spectral energy distribution.
@@ -182,17 +184,8 @@ These values are notably warmer than the {\teff} = 1614$\pm$100~K estimated from
 	\vspace{0.1in}
 \end{figure*} 
 
-\section{Observations}\label{sec:obs}
-
-We observed {\sha} and {\shb} for one night each with the IRTF/SpeX (Table \ref{tab:obsParam}).
-{\sha} was observed for 4.65 hours, covering 1.5 rotation periods; {\shb} was observed for 7.47 hours, covering 1.8 rotation periods.
-Following \citet{2014ApJ...783....5S}, we used SpeX in its prism-dispersed mode, obtaining 0.9--2.4~$\micron$ spectra in a single order at low dispersion. 
-Both target and reference star were observed simultaneously by orienting the 3$\arcsec$$\times$60$\arcsec$ slit to align with the visual binary axis. This orientation is generally misaligned with the parallactic angle, but the good seeing (0$\farcs$5 at $H$-band) and wide slit minimizes differental color refraction. The effective resolution of the spectral data, set by seeing and pointing errors, are $\lambda$/$\Delta\lambda$ $\approx$ 50. Integration times were 60~s and 45~s for {\sha} and {\shb}, respectively. The short-wavelength limit of our spectral coverage was set by the use of a 0.9~$\mu$m dichroic which deflected optical light into the MIT Optical Rapid Imaging System (MORIS) camera \citep{2011PASP..123..461G}, which was used for $i$-band guiding.
-
-%For {\sha} our MORIS exposures were 15~sec, which was sufficient for guiding but not precision photometry. For {\shb}, we were able to guide on sources in the SpeX imaging channel, so we increased the $i$-band exposures to 60~sec to obtain a simultaneous $i$-band light-curve.
-
 \begin{deluxetable*}{lccccccccc}
-\tablecaption{Observations}\label{tab:obsParam}
+\tablecaption{Observations\label{tab:obsParam}}
 \tablewidth{0pt}
 \tablehead{
  & \multicolumn{3}{c}{Observation Epoch (UT)} \\
@@ -215,6 +208,33 @@ Both target and reference star were observed simultaneously by orienting the 3$\
 \tablecomments{N$_{int}$ is the number of integrations and t$_{int}$ is the effective integration time for the 32 non-destructive reads up the ramp. The duration is the total time from start to end of the observations including the reset times and overheads. The FWHM is the measured median value of the time series around 1.6$\mu$m.}
 \end{deluxetable*}
 
+\section{Observations}\label{sec:obs}
+
+We observed {\sha} and {\shb} for one night each with the IRTF/SpeX (Table \ref{tab:obsParam}).
+{\sha} was observed for 4.65 hours, covering 1.5 rotation periods; {\shb} was observed for 7.47 hours, covering 1.8 rotation periods.
+Following \citet{2014ApJ...783....5S}, we used SpeX in its prism-dispersed mode, obtaining 0.9--2.4~$\micron$ spectra in a single order at low dispersion. 
+Both target and reference star were observed simultaneously by orienting the 3$\arcsec$$\times$60$\arcsec$ slit to align with the visual binary axis. This orientation is generally misaligned with the parallactic angle, but the good seeing (0$\farcs$5 at $H$-band) and wide slit minimizes differental color refraction. The effective resolution of the spectral data, set by seeing and pointing errors, are $\lambda$/$\Delta\lambda$ $\approx$ 50. Integration times were 60~s and 45~s for {\sha} and {\shb}, respectively. The short-wavelength limit of our spectral coverage was set by the use of a 0.9~$\mu$m dichroic which deflected optical light into the MIT Optical Rapid Imaging System (MORIS) camera \citep{2011PASP..123..461G}, which was used for $i$-band guiding.
+
+
+
+%For {\sha} our MORIS exposures were 15~sec, which was sufficient for guiding but not precision photometry. For {\shb}, we were able to guide on sources in the SpeX imaging channel, so we increased the $i$-band exposures to 60~sec to obtain a simultaneous $i$-band light-curve.
+
+\begin{figure*}[!t]
+\centering
+\subfloat[2MASS J0835]{
+	\includegraphics[width=0.5\textwidth]{specphot_j0835.pdf}
+	\label{fig:specphot0835}
+	}
+\subfloat[2MASS J1821]{
+	\includegraphics[width=0.5\textwidth]{specphot_j1821.pdf}
+	\label{fig:specphot1821}
+	}
+	\caption{Top Panels: Normalized median raw spectra of {\sha} (left) and {\shb} (right) in black, compared with the respective reference stars (blue) and background emission (red; mostly telluric OH emission and thermal background).  Bottom Panels: Dynamic spectra of each brown dwarf system. The dynamic spectrum for \sha\ shows no significant variability in the spatial or spectral direction whereas \shb\ shows significant repeated modulations with a period near 4 hours.
+The variability in \shb\ is prominent at the short wavelengths with a magnitude of ~$\sim$2\% peak-to-trough at short wavelengths but $\lesssim 0.5\%$ toward 2~$\mu$m.}
+	\label{fig:specphot}
+	\vspace{0.1in}
+\end{figure*} 
+
 
 The images were rectified by shifting each row to match a center row in between the two sources.
 This was achieved by cross correlating the reference row with all other detector rows (which have the same background spectrum) and fitting a smooth function over the sources as in \citealt{2016ApJ...826..156S}.
@@ -235,36 +255,6 @@ However, there are small additional shifts of the sources within the slit so ano
 
 %For MORIS reduction, we used the raw files and performed aperture photometry with the IDL \texttt{aper} procedure using an aperture size of 6 pixels and a sky annulus of 8-11 pixels.
 
-\section{Analysis}\label{sec:analysis}
-
-\subsection{Light Curves}
-
-\begin{figure*}[!t]
-\centering
-\subfloat[2MASS J0835]{
-	\includegraphics[width=0.5\textwidth]{specphot_j0835.pdf}
-	\label{fig:specphot0835}
-	}
-\subfloat[2MASS J1821]{
-	\includegraphics[width=0.5\textwidth]{specphot_j1821.pdf}
-	\label{fig:specphot1821}
-	}
-	\caption{Top Panels: Normalized median raw spectra of {\sha} (left) and {\shb} (right) in black, compared with the respective reference stars (blue) and background emission (red; mostly telluric OH emission and thermal background).  Bottom Panels: Dynamic spectra of each brown dwarf system. The dynamic spectrum for \sha\ shows no significant variability in the spatial or spectral direction whereas \shb\ shows significant repeated modulations with a period near 4 hours.
-The variability in \shb\ is prominent at the short wavelengths with a magnitude of ~$\sim$2\% peak-to-trough at short wavelengths but $\lesssim 0.5\%$ toward 2~$\mu$m.}
-	\label{fig:specphot}
-	\vspace{0.1in}
-\end{figure*} 
-
-Figure \ref{fig:specphot} shows the raw spectra of the two brown dwarfs, their reference spectra and the background spectra.
-Neither the reference spectra nor the brown dwarfs spectra have any corrections applied for telluric absorption or instrumental spectral response.
-The reference stars have significantly bluer spectra than the brown dwarfs, but nonetheless contain the same telluric absorption signatures.
-The regions near 1.37~$\mu$m and 1.83~$\mu$m have significantly lower flux due to telluric water vapor absorption.
-
-Figure \ref{fig:specphot} also shows the dynamic spectra (relative source brightness as a function of wavelength and time.
-{\sha} has a dynamic spectra resembling white noise with no significant variations in either the spectral or spatial direction at the $\lesssim$0.5\% level.
-{\shb}, on the other hand, shows a clear periodic signal that is strongest at the shortest wavelengths and declines in amplitude toward the longest wavelengths. The periodic signal is nearly coincident with the 4.2~hr period measured by \citet{2015ApJ...799..154M}, enabling confirmation that the signal is astrophysical rather than systematic (see \citealt{2016ApJ...826..156S}).
-Both sources exhibit some systematic features in the strong telluric absorption bands at 1.4 and 1.8~$\mu$m, likely caused by residual wavelength drifts from flexure and lower signals-to-noise.
-
 \begin{figure*}[!t]
 \centering
 \subfloat[2MASS J0835]{
@@ -280,7 +270,38 @@ Both sources exhibit some systematic features in the strong telluric absorption 
 \end{figure*} 
 
 
-Individual narrow-band light curves for extracted for each target in 25 spectral bins of width 0.060~$\mu$m; these are shown in Figure~\ref{fig:tserPfold}.
+\begin{figure*}
+\centering
+\subfloat[2MASS J0835]{
+	\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j0835.pdf}
+	\label{fig:ampspec0835}
+	}
+\subfloat[2MASS J1821]{
+	\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821.pdf}
+	\label{fig:ampspec1821}
+	}
+	\caption{Sine fit amplitude versus wavelength for each brown dwarf. \sha\ shows no clear trend in wavelength, while \shb\ has a strong slope indicative of Mie-scattering particles.
+	 Also shown in the figure for \shb\ is the WFC3 amplitude from \citet{2015ApJ...798L..13Y}. The WFC3 observations were from a different epoch, with different cloud coverage, but show a similar slope.
+	 The amplitude spectrum for \shb\ is fit with a simple Mie scattering models for a log-normal particle size distribution of spherical forsterite grains with a best-fit radius of 0.17 $\pm$ 0.01 grains.}
+	\label{fig:ampSpec}
+\end{figure*} 
+
+\section{Analysis}\label{sec:analysis}
+
+\subsection{Light Curves}
+
+Figure \ref{fig:specphot} shows the raw spectra of the two brown dwarfs, their reference spectra and the background spectra.
+Neither the reference spectra nor the brown dwarfs spectra have any corrections applied for telluric absorption or instrumental spectral response.
+The reference stars have significantly bluer spectra than the brown dwarfs, but nonetheless contain the same telluric absorption signatures.
+The regions near 1.37~$\mu$m and 1.83~$\mu$m have significantly lower flux due to telluric water vapor absorption.
+
+Figure \ref{fig:specphot} also shows the dynamic spectra (relative source brightness as a function of wavelength and time.
+{\sha} has a dynamic spectra resembling white noise with no significant variations in either the spectral or spatial direction at the $\lesssim$0.5\% level.
+{\shb}, on the other hand, shows a clear periodic signal that is strongest at the shortest wavelengths and declines in amplitude toward the longest wavelengths. The periodic signal is nearly coincident with the 4.2~hr period measured by \citet{2015ApJ...799..154M}, enabling confirmation that the signal is astrophysical rather than systematic (see \citealt{2016ApJ...826..156S}).
+Both sources exhibit some systematic features in the strong telluric absorption bands at 1.4 and 1.8~$\mu$m, likely caused by residual wavelength drifts from flexure and lower signals-to-noise.
+
+
+Individual narrow-band light curves are extracted for each target in 25 spectral bins of width 0.060~$\mu$m; these are shown in Figure~\ref{fig:tserPfold}.
 The uncertainties in these curves due to photon and read noise range from 0.2\% to 0.6\% per exposure.
 We measure the standard deviations of the time series for wavelength regions that have no significant variations near the rotation period of the brown dwarfs and compare it to the expected photon and read noise.
 In these wavelength bins, the standard deviations of the points is about 4$\times$ the expected read noise and photon noise.
@@ -301,26 +322,14 @@ For \sha\ we use a prior 3.0 $< \tau < $3.2 hr from \citet{2004MNRAS.354..378K} 
 The prior for \shb\ is slightly different from the value from \citet{2015ApJ...799..154M}(4.2 hr) because it came from a fit in a clear region of the time series (at 1.08~$\mu$m) where a double sinusoidal fit resulted in a period of 3.9 $\pm$ 0.01 hr.
 Secondly, we restrict the time of maximum periodic flux such that $-\tau/2 < t_1 < \tau/2$ to make sure there are no 2$\pi$ degeneracies in the fit.
 
-\begin{figure*}
-\centering
-\subfloat[2MASS J0835]{
-	\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j0835.pdf}
-	\label{fig:ampspec0835}
-	}
-\subfloat[2MASS J1821]{
-	\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821.pdf}
-	\label{fig:ampspec1821}
-	}
-	\caption{Sine fit amplitude versus wavelength for each brown dwarf. \sha\ shows no clear trend in wavelength, while \shb\ has a strong slope indicative of Mie-scattering particles.
-	 Also shown in the figure for \shb\ is the WFC3 amplitude from \citet{2015ApJ...798L..13Y}. The WFC3 observations were from a different epoch, with different cloud coverage, but show a similar slope.
-	 The amplitude spectrum for \shb\ is fit with a simple Mie scattering models for a log-normal particle size distribution of spherical forsterite grains with a best-fit radius of 0.17 $\pm$ 0.01 grains.}
-	\label{fig:ampSpec}
-\end{figure*} 
 
 Figure \ref{fig:ampSpec} shows the MCMC posterior constraints for periodic amplitudes as a function of wavelength.
 For {\sha} (Figure \ref{fig:ampspec0835}) we find small ($\lesssim 0.5\%$) amplitudes with a flat trend as a function of wavelength.
 There is low level variability but it is not seen at a constant phase.
 \shb, on the other hand, shows a clear decreasing trend as function of wavelength.
+
+
+
 
 The same trend of decreasing variability amplitude for \shb\ was observed by HST's WFC3 grism over a shorter wavelength range (1.1 to 1.7~$\mu$m) by \citet{2015ApJ...798L..13Y}, also shown in Figure \ref{fig:ampspec1821}.
 The HST WFC3 maximum over minimum flux spectrum is converted to an amplitude spectrum by assuming that the amplitude is half the difference in maximum and minimum flux, which can be shown to be 
@@ -332,7 +341,16 @@ There is a multiplicative offset between the IRTF and WFC3 spectrum because they
 The WFC3 spectrum is not affected by the telluric absorption, unlike the SpeX data.
 \citet{2015ApJ...798L..13Y} find that the WFC3 spectrum has no significant water vapor absorption which indicates a high haze layer in 2MASS J1821 and is consistent with our Mie scattering fit.
 
+
 \subsection{Mie Scattering Fit}
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{corner_j1821_mie_sc.pdf}
+\caption{Posterior distributions to the simple Mie scattering fit to the amplitude spectrum for \shb.
+The model includes an amplitude offset, $B$, (to account for areal coverage) and a median particle radius, $r$.}\label{fig:corner1821mie}
+\end{centering}
+\end{figure}
 
 We model the wavelength dependence of 2MASS 1821 as an optically thin cloud layer consisting of a log-normal distribution of particle sizes.
 If we assume the cloud covers one hemisphere of the brown dwarf, the amplitude of the variability is directly proportional to the opacity or $Q_{ext}$ of the particles.
@@ -353,13 +371,6 @@ Figure \ref{fig:corner1821mie} shows the posterior distribution for the $B$ and 
 The derived median particle radius of 0.164 $^{+0.012}_{-0.007}$~$\mu$m is a vary tight constraint for particle size median.
 Considering the large number of possible grain geometries and compositions, this is an underestimate for the true uncertainty in median particle size.
 
-\begin{figure}
-\begin{centering}
-\includegraphics[width=0.5\textwidth]{corner_j1821_mie_sc.pdf}
-\caption{Posterior distributions to the simple Mie scattering fit to the amplitude spectrum for \shb.
-The model includes an amplitude offset, $B$, (to account for areal coverage) and a median particle radius, $r$.}\label{fig:corner1821mie}
-\end{centering}
-\end{figure}
 
 A similar amplitude versus wavelength trend was recently observed for WISEP J004701.06+680352.1 \citep{2016ApJ...829L..32L}, which has very red ($J-K$ = 2.55) spectral energy distribution thought to be caused by a high altitude haze layer.
 In WISEP J0047, the wavelength trend could be fit by $\sim0.4~\mu$m forsterite grains, a few times large than our characteristic particle size.
