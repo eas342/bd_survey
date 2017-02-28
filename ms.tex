@@ -311,12 +311,14 @@ These variations are approximately sinusoidal, although we detect ``double-hump'
 In the regions of strong telluric absorption, the variability pattern changes, with a U-shaped profile minimized at $-$1~hr.
 As this pattern aligns with the airmass trend over the sequence of observations, we attribute this pattern to systematic effects and impose priors on the rotational period of the brown dwarfs to ensure the sinusoidal fits do not fit the airmass trend.
 
-Each of the light curves were fit to a simple sinusoidal model:
+Each of the light curves were fit to a double sinusoidal model:
 \begin{equation}\label{eq:cosfit}
-F(t) = A \cos(2 \pi (t - t_t)/\tau) + B t + C
+\begin{split}
+F(t) = A_1 \cos(2 \pi (t - t_1)/\tau) + A_2 \cos(4 \pi (t - t_2)/\tau) + \\
+B t + C + D a(t)
+\end{split}
 \end{equation}
-where $F(t)$ is the relative flux as a function of time $t$, $A$ is the amplitude of periodic variations\footnote{The total amplitude is 2$A$ in our convention.
-Some other conventions describe $A$ as a ``semi-amplitude''}, $t_t$ is the time of maximum periodic flux, $\tau$ is period of the variations, and $B$ and $C$ are linear terms describing any baseline trend.
+where $F(t)$ is the flux as a function of time $t$, $A_1$ and $A_2$ are the amplitudes of the two terms, $t_1$ and $t_2$ is the time of maximum periodic flux for each cosine term, $\tau$ is period of the variations, and $B$, $C$ and $D$ are terms describing the baseline trend and $a(t)$ is the airmass as a function of time.
 Since some wavelengths are affected by telluric contamination and we wish to avoid fitting harmonics, we impose a prior on the rotational period $\tau$.
 For \sha\ we use a prior 3.0 $< \tau < $3.2 hr from \citet{2004MNRAS.354..378K} and for \shb\ we use 3.8 $< \tau <$ 4.0 hr.
 The prior for \shb\ is slightly different from the value from \citet{2015ApJ...799..154M}(4.2 hr) because it came from a fit in a clear region of the time series (at 1.08~$\mu$m) where a double sinusoidal fit resulted in a period of 3.90 $\pm$ 0.01 hr.
