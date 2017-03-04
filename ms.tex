@@ -282,7 +282,9 @@ However, there are small additional shifts of the sources within the slit so ano
 	}
 	\caption{Sine fit amplitude versus wavelength for each brown dwarf. \sha\ shows no clear trend in wavelength, while \shb\ has a strong slope indicative of Mie-scattering particles.
 	 Also shown in the figure for \shb\ is the WFC3 amplitude from \citet{2015ApJ...798L..13Y}. The WFC3 observations were from a different epoch, with different cloud coverage, but show a similar slope.
-	 The amplitude spectrum for \shb\ is fit with a simple Mie scattering models for a log-normal particle size distribution of spherical forsterite grains with a best-fit radius of 0.17 grains.}
+	 The amplitude spectrum for each system is fit a simple Mie scattering model for a log-normal particle size distribution of spherical forsterite grains.
+	 \sha\ is consistent with a zero amplitude flat amplitude model which essentially puts no constraints on the particle size distribution.
+	 \shb\ is shown with the best fit median particle size of 0.17 $\mu$m grains.}
 	\label{fig:ampSpec}
 \end{figure*} 
 
@@ -352,8 +354,8 @@ The model includes an amplitude offset, $B$, (to account for areal coverage) and
 \end{centering}
 \end{figure}
 
-We model the wavelength dependence of 2MASS 1821 as an optically thin cloud layer consisting of a log-normal distribution of particle sizes.
-If we assume the cloud covers one hemisphere of the brown dwarf, the amplitude of the variability ($A$) is directly proportional to the opacity of the particles.
+We model the wavelength dependence of \sha\ and \shb\ with a simple cloud model: an optically thin cloud layer consisting of a log-normal distribution of particle sizes.
+If we assume the cloud covers one longitudinal hemisphere of the brown dwarf, the amplitude of the variability ($A$) is directly proportional to the opacity of the particles.
 We model the single particle extinction coefficient, $Q_{ext}$ from the \texttt{Python} Mie theory code \texttt{miescatter} \citep{bohren1983mie} to calculate the opacity as a function of wavelength.
 We assume that the particles are spherical forsterite grains (Mg$_2$SiO$_4$).
 We use a constant n=1.67 - 0.006 $j$ index of refraction because the real and imaginary parts of the index of refraction are relatively constant across the optical and near infrared \citep{scott1996forsterite}.
@@ -364,7 +366,10 @@ The spectral dependence is therefore modeled as
 A = B \bar{Q_{avg}}(r)
 \end{equation}
 where $A_1$ is the amplitude, $B$ is a constant encapsulating the area and column density and $\bar{Q_{avg}}(r)$ is the average extinction coefficient averaged over all particles in the log-normal distribution with a median radius of $r$.
+When fitting the amplitude spectra to our Mie model, we impose a prior on the maximum median particle size radius ($0 \mu m < r < 5 \mu m$).
 
+For \sha\ we find that since no significant variability is detected that the particle size is unconstrained over the prior of $0 \mu < r < 5 \mu m$).
+We show the maximum likelihood particle radius of 2.3 $\mu$m
 Figure \ref{fig:ampspec1821} shows the best-fit model which has a median particle radius of 0.16~$\mu$m grains.
 This model has a reduced $\chi^2$ of 0.99 and is consistent with the measured amplitude spectrum.
 Figure \ref{fig:corner1821mie} shows the posterior distribution for the $B$ and $r$ parameters.
