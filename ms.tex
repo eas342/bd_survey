@@ -316,8 +316,8 @@ As this pattern aligns with the airmass trend over the sequence of observations,
 Each of the light curves were fit to a double sinusoidal model:
 \begin{equation}\label{eq:cosfit}
 \begin{split}
-F(t) = A_1 \cos(2 \pi (t - t_1)/\tau) + A_2 \cos(4 \pi (t - t_2)/\tau) + \\
-B t + C + D a(t)
+F(t) = \left( A_1 \cos(2 \pi (t - t_1)/\tau) + A_2 \cos(4 \pi (t - t_2)/\tau) + 1\right) \\
+\times (B t + C + D a(t))
 \end{split}
 \end{equation}
 where $F(t)$ is the flux as a function of time $t$, $A_1$ and $A_2$ are the amplitudes of the two terms, $t_1$ and $t_2$ is the time of maximum periodic flux for each cosine term, $\tau$ is period of the variations, and $B$, $C$ and $D$ are terms describing the baseline trend and $a(t)$ is the airmass as a function of time.
