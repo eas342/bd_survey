@@ -284,7 +284,7 @@ However, there are small additional shifts of the sources within the slit so ano
 	\caption{Sine fit amplitude versus wavelength for each brown dwarf. \sha\ shows no clear trend in wavelength, while \shb\ has a strong slope indicative of Mie-scattering particles.
 	 Also shown in the figure for \shb\ is the WFC3 amplitude from \citet{2015ApJ...798L..13Y}. The WFC3 observations were from a different epoch, with different cloud coverage, but show a similar slope.
 	 The amplitude spectrum for each system is fit a simple Mie scattering model for a log-normal particle size distribution of spherical forsterite grains.
-	 \sha\ is consistent with a zero amplitude flat amplitude model which essentially puts no constraints on the particle size distribution.
+	 \sha\ is consistent with a zero amplitude model which puts no constraints on the particle size distribution.
 	 \shb\ is shown with the best fit median particle size of 0.17 $\mu$m grains.}
 	\label{fig:ampSpec}
 \end{figure*} 
@@ -323,8 +323,8 @@ F(t) = \left( A_1 \cos(2 \pi (t - t_1)/\tau) + A_2 \cos(4 \pi (t - t_2)/\tau) + 
 \end{equation}
 where $F(t)$ is the flux as a function of time $t$, $A_1$ and $A_2$ are the amplitudes of the two terms, $t_1$ and $t_2$ is the time of maximum periodic flux for each cosine term, $\tau$ is period of the variations, and $B$, $C$ and $D$ are terms describing the baseline trend and $a(t)$ is the airmass as a function of time.
 Since some wavelengths are affected by telluric contamination and we wish to avoid fitting harmonics, we impose a prior on the rotational period $\tau$.
-For \sha\ we use a prior 3.0 $< \tau < $3.2 hr from \citet{2004MNRAS.354..378K} and for \shb\ we use 3.8 $< \tau <$ 4.0 hr.
-The prior for \shb\ is slightly different from the value from \citet{2015ApJ...799..154M}(4.2 hr) because it came from a fit in a clear region of the time series (at 1.08~$\mu$m) where a double sinusoidal fit resulted in a period of 3.90 $\pm$ 0.01 hr.
+For \sha\ we use a prior 2.6 $< \tau < $3.6 hr from \citet{2004MNRAS.354..378K} and for \shb\ we use 3.7 $< \tau <$ 4.7 hr from \citet{2015ApJ...799..154M}, using wide 0.5 hr priors around the measured values.
+These priors are used to ensure that the sinusoidal fits to not fit the airmass trends with time.
 Secondly, we restrict the time of maximum periodic flux such that $-\tau/2 < t_1 < \tau/2$ to make sure there are no 2$\pi$ degeneracies in the fit.
 
 
