@@ -311,8 +311,8 @@ In these wavelength bins, the standard deviations of the points is about 4$\time
 We attribute this to correlated errors between wavelengths and as a simple approximation multiply all error bars by a factor of 4 to account for these systematics.
 
 As seen in Figure~\ref{fig:tserDetrend}, we see minimal variation in the lightcurves of {\sha}, but pronounced variation in {\shb}, particular in bands $<$1.8~$\mu$m. 
-These variations are approximately sinusoidal, although we detect ``double-hump'' structures with slight downturns in flux at peak amplitudes around -2.7~hr and +1.3~hr.
-As this pattern aligns with the airmass trend over the sequence of observations, we attribute this pattern to systematic effects and impose priors on the rotational period of the brown dwarfs to ensure the sinusoidal fits do not fit the airmass trend.
+These variations are periodic with ``double-hump'' structures at peak amplitudes around -2.7~hr and +1.3~hr.
+The amplitude of these variations is strongly wavelength-dependent with $\sim$3.0\% peak-to-trough variations at short wavelengths and near-zero amplitude at the longest wavelengths.
 
 Each of the light curves were fit to a double sinusoidal model:
 \begin{equation}\label{eq:cosfit}
@@ -321,18 +321,19 @@ F(t) = \left( A_1 \cos(2 \pi (t - t_1)/\tau) + A_2 \cos(4 \pi (t - t_2)/\tau) + 
 \times (B t + C + D a(t))
 \end{split}
 \end{equation}
-where $F(t)$ is the flux as a function of time $t$, $A_1$ and $A_2$ are the amplitudes of the two terms, $t_1$ and $t_2$ is the time of maximum periodic flux for each cosine term, $\tau$ is period of the variations, and $B$, $C$ and $D$ are terms describing the baseline trend and $a(t)$ is the airmass as a function of time.
+where $F(t)$ is the flux as a function of time $t$, $A_1$ and $A_2$ are the amplitudes of the two terms, $t_1$ and $t_2$ are the time of maximum periodic flux for each cosine term, $\tau$ is period of the variations, $a(t)$ is the airmass as a function of time and $B$, $C$ and $D$ are terms describing the baseline trend.
 Since some wavelengths are affected by telluric contamination and we wish to avoid fitting harmonics, we impose a prior on the rotational period $\tau$.
-For \sha\ we use a prior 2.6 $< \tau < $3.6 hr from \citet{2004MNRAS.354..378K} and for \shb\ we use 3.7 $< \tau <$ 4.7 hr from \citet{2015ApJ...799..154M}, using wide 0.5 hr priors around the measured values.
-These priors are used to ensure that the sinusoidal fits to not fit the airmass trends with time.
-Secondly, we restrict the time of maximum periodic flux such that $-\tau/2 < t_1 < \tau/2$ to make sure there are no 2$\pi$ degeneracies in the fit.
+For \sha\ we use a prior 2.6 $< \tau < $3.6 hr and for \shb\ we use 3.7 $< \tau <$ 4.7 hr.
+Each of these ranges are $\pm$0.5 hr from the literature values \citep[3.1,4.2][]{2004MNRAS.354..378K,2015ApJ...799..154M}.
+These priors are wide enough they don't drive the constraints on $\tau$ at short wavelengths for \shb\ but narrow enough to ensure that the sinusoidal fits do not fit the airmass trends with time.
+Secondly, we restrict the time of maximum periodic flux such that $-\tau/2 < t_1 < \tau/2$ and $-\tau/4 < t_2 < \tau/4$ to make sure there are no 2$\pi$ degeneracies in the fit.
 
 
 Figure \ref{fig:ampSpec} shows the MCMC posterior constraints for periodic amplitudes as a function of wavelength.
 For {\sha} (Figure \ref{fig:ampspec0835}) we find small ($\lesssim 0.5\%$) amplitudes with a flat trend as a function of wavelength.
-There is low level variability but it is not seen at a constant phase.
+There is possible low level variability for the wavelengths long than 2.1$\mu$m.
 \shb, on the other hand, shows a clear decreasing trend as function of wavelength.
-
+In neither case, is there any statistically significant wavelength dependence to the time of maximum variation $t_1$.
 
 
 
