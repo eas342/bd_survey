@@ -285,7 +285,7 @@ However, there are small additional shifts of the sources within the slit so ano
 	 Also shown in the figure for \shb\ is the WFC3 amplitude from \citet{2015ApJ...798L..13Y}. The WFC3 observations were from a different epoch, with different cloud coverage, but show a similar slope.
 	 The amplitude spectrum for each system is fit a simple Mie scattering model for a log-normal particle size distribution of spherical forsterite grains.
 	 \sha\ is consistent with a zero amplitude model which puts no constraints on the particle size distribution.
-	 \shb\ is shown with the best fit median particle size of 0.17 $\mu$m grains.}
+	 \shb\ is shown with the best fit median particle size of 0.28 $\mu$m grains.}
 	\label{fig:ampSpec}
 \end{figure*} 
 
@@ -351,8 +351,10 @@ There is a multiplicative offset between the IRTF and WFC3 spectrum because they
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{corner_j1821_mie_sc.pdf}
-\caption{Posterior distributions to the simple Mie scattering fit to the amplitude spectrum for \shb.
-The model includes an amplitude offset, $B$, (to account for areal coverage) and a median particle radius, $r$.}\label{fig:corner1821mie}
+\caption{Posterior distributions to the simple Mie scattering fit to the amplitude spectrum for \shb\ assuming a forsterite composition.
+The model includes an amplitude offset, $B$, (to account for areal coverage), a median particle radius, $r$ and a scale parameter $\sigma$.
+The upper right inset plot shows the log-normal particle size distribution in blue for samples drawn from the MCMC results.
+The red curve is the maximum likelihood log-normal particle size distribution.}\label{fig:corner1821mie}
 \end{centering}
 \end{figure}
 
@@ -365,25 +367,24 @@ We use a constant n=1.67 - 0.006 $j$ index of refraction because the real and im
 For the particle size distribution we assume a log-normal distribution around a characteristic size, $s$ and a standard deviation of the logarithm (scale parameter), $\sigma$ =0.5.
 The spectral dependence is therefore modeled as 
 \begin{equation}
-A = B \bar{Q_{avg}}(r)
+A_1 = B \bar{Q_{avg}}(r)
 \end{equation}
 where $A_1$ is the amplitude, $B$ is a constant encapsulating the area and column density and $\bar{Q_{avg}}(r)$ is the average extinction coefficient averaged over all particles in the log-normal distribution with a median radius of $r$.
-When fitting the amplitude spectra to our Mie model, we impose a prior on the maximum median particle size radius ($0 \mu m < r < 5 \mu m$).
+When fitting the amplitude spectra to our Mie model, we impose a prior on the median particle size radius ($0 \mu m < r < 5 \mu m$).
 Beyond 5~$\mu$m the models are essentially unchanged with median particle radius.
 
 For \sha\ we find that since no significant variability is detected that the particle size is unconstrained over the prior of $0~\mu m < r < 5~\mu m$.
 We show the maximum likelihood model which has a near-zero amplitude.
-For \shb\ we find that the median particle radius is better constrained.
-Figure \ref{fig:ampspec1821} shows the best-fit model which has a median particle radius of 0.16~$\mu$m grains.
-This model has a reduced $\chi^2$ of 0.99 and is consistent with the measured amplitude spectrum.
-Figure \ref{fig:corner1821mie} shows the posterior distribution for the $B$ and $r$ parameters.
-The derived median particle radius of $r$=0.164 $^{+0.012}_{-0.007}$~$\mu$m is a vary tight constraint for particle size median.
+For \shb\ we find that the amplitude spectrum is well fit by a Mie scattering model and the median particle radius is better constrained.
+Figure \ref{fig:ampspec1821} shows the best-fit model which has a median particle radius of 0.28~$\mu$m grains.
+This model has a reduced $\chi^2$ of 1.08 and is consistent with the measured amplitude spectrum.
+Figure \ref{fig:corner1821mie} shows the posterior distribution for the $B$, $r$ and $\sigma$ parameters.
+The derived median particle radius is $r$=0.24 $^{+0.05}_{-0.07}$~$\mu$m for our assumptions of optically thin clouds and a log-normal particle size distribution.
 Considering the large number of possible grain geometries and compositions, this is an underestimate for the true uncertainty in median particle size.
-
+Future work could include full modeling of atmospheres with more complex spatial distributions and compositions.
 
 A similar amplitude versus wavelength trend was recently observed for WISEP J004701.06+680352.1 \citep{2016ApJ...829L..32L}, which has very red ($J-K$ = 2.55) spectral energy distribution thought to be caused by a high altitude haze layer.
 In WISEP J0047, the wavelength trend could be fit by $\sim0.4~\mu$m forsterite grains, a few times large than our characteristic particle size.
-
 
 \begin{figure}
 \begin{centering}
