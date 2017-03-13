@@ -324,7 +324,7 @@ F(t) = \left( A_1 \cos(2 \pi (t - t_1)/\tau) + A_2 \cos(4 \pi (t - t_2)/\tau) + 
 where $F(t)$ is the flux as a function of time $t$, $A_1$ and $A_2$ are the amplitudes of the two terms, $t_1$ and $t_2$ are the time of maximum periodic flux for each cosine term, $\tau$ is period of the variations, $a(t)$ is the airmass as a function of time and $B$, $C$ and $D$ are terms describing the baseline trend.
 Since some wavelengths are affected by telluric contamination and we wish to avoid fitting harmonics, we impose a prior on the rotational period $\tau$.
 For \sha\ we use a prior 2.6 $< \tau < $3.6 hr and for \shb\ we use 3.7 $< \tau <$ 4.7 hr.
-Each of these ranges are $\pm$0.5 hr from the literature values \citep[3.1,4.2][]{2004MNRAS.354..378K,2015ApJ...799..154M}.
+Each of these ranges are $\pm$0.5 hr from the literature values \citep[3.1,4.2hr][]{2004MNRAS.354..378K,2015ApJ...799..154M}.
 These priors are wide enough they don't drive the constraints on $\tau$ at short wavelengths for \shb\ but narrow enough to ensure that the sinusoidal fits do not fit the airmass trends with time.
 Secondly, we restrict the time of maximum periodic flux such that $-\tau/2 < t_1 < \tau/2$ and $-\tau/4 < t_2 < \tau/4$ to make sure there are no 2$\pi$ degeneracies in the fit.
 
@@ -334,8 +334,6 @@ For {\sha} (Figure \ref{fig:ampspec0835}) we find small ($\lesssim 0.5\%$) ampli
 There is possible low level variability for the wavelengths long than 2.1$\mu$m.
 \shb, on the other hand, shows a clear decreasing trend as function of wavelength.
 In neither case, is there any statistically significant wavelength dependence to the time of maximum variation $t_1$.
-
-
 
 The same trend of decreasing variability amplitude for \shb\ was observed by HST's WFC3 grism over a shorter wavelength range (1.1 to 1.7~$\mu$m) by \citet{2015ApJ...798L..13Y}, also shown in Figure \ref{fig:ampspec1821}.
 The HST WFC3 maximum over minimum flux spectrum is converted to an amplitude spectrum by assuming that the amplitude is half the difference in maximum and minimum flux, which can be shown to be 
@@ -359,7 +357,7 @@ The red curve is the maximum likelihood log-normal particle size distribution.}\
 \end{figure}
 
 We model the wavelength dependence of \sha\ and \shb\ with a simple cloud model: an optically thin cloud layer consisting of a log-normal distribution of particle sizes.
-If we assume the cloud is confined to one hemisphere of the brown dwarf, the amplitude of the variability ($A$) is directly proportional to the opacity of the particles.
+If we assume the cloud is confined to one hemisphere of the brown dwarf, the amplitude of the variability ($A_1$) is directly proportional to the opacity of the particles.
 We model the single particle extinction coefficient, $Q_{ext}$ from the \texttt{Python} Mie theory code \texttt{miescatter} \citep{bohren1983mie} to calculate the opacity as a function of wavelength.
 We assume that the particles are spherical forsterite grains (Mg$_2$SiO$_4$).
 We use a constant n=1.67 - 0.006 $j$ index of refraction because the real and imaginary parts of the index of refraction are relatively constant across the optical and near infrared \citep{scott1996forsterite}.
@@ -367,9 +365,9 @@ We use a constant n=1.67 - 0.006 $j$ index of refraction because the real and im
 For the particle size distribution we assume a log-normal distribution around a characteristic size, $s$ and a standard deviation of the logarithm (scale parameter), $\sigma$ =0.5.
 The spectral dependence is therefore modeled as 
 \begin{equation}
-A_1 = B \bar{Q_{avg}}(r)
+A_1 = B \bar{Q_{avg}}(r,\sigma)
 \end{equation}
-where $A_1$ is the amplitude, $B$ is a constant encapsulating the area and column density and $\bar{Q_{avg}}(r)$ is the average extinction coefficient averaged over all particles in the log-normal distribution with a median radius of $r$.
+where $A_1$ is the amplitude, $B$ is a constant encapsulating the area and column density and $\bar{Q_{avg}}(r,\sigma)$ is the average extinction coefficient averaged over all particles in the log-normal distribution with a median radius of $r$ and scale parameter $\sigma$.
 When fitting the amplitude spectra to our Mie model, we impose a prior on the median particle size radius ($0 \mu m < r < 5 \mu m$).
 Beyond 5~$\mu$m the models are essentially unchanged with median particle radius.
 
@@ -378,13 +376,15 @@ We show the maximum likelihood model which has a near-zero amplitude.
 For \shb\ we find that the amplitude spectrum is well fit by a Mie scattering model and the median particle radius is better constrained.
 Figure \ref{fig:ampspec1821} shows the best-fit model which has a median particle radius of 0.28~$\mu$m grains.
 This model has a reduced $\chi^2$ of 1.08 and is consistent with the measured amplitude spectrum.
+
 Figure \ref{fig:corner1821mie} shows the posterior distribution for the $B$, $r$ and $\sigma$ parameters.
 The derived median particle radius is $r$=0.24 $^{+0.05}_{-0.07}$~$\mu$m for our assumptions of optically thin clouds and a log-normal particle size distribution.
-Considering the large number of possible grain geometries and compositions, this is an underestimate for the true uncertainty in median particle size.
+We show the maximum likelihood particle size distribution in the inset of Figure \ref{fig:corner1821mie} as well as a series of other possible distributions from the MCMC fitting.
+Considering the large number of possible grain geometries and compositions, this is an underestimate for the true uncertainty in particle sizes.
 Future work could include full modeling of atmospheres with more complex spatial distributions, grain geometries and compositions.
 
 A similar amplitude versus wavelength trend was recently observed for WISEP J004701.06+680352.1 \citep{2016ApJ...829L..32L}, which has very red ($J-K$ = 2.55) spectral energy distribution thought to be caused by a high altitude haze layer.
-In WISEP J0047, the wavelength trend could be fit by $\sim0.4~\mu$m forsterite grains, a few times large than our characteristic particle size.
+In WISEP J0047, the wavelength trend could be fit by $\sim0.4~\mu$m forsterite grains, which is close to our characteristic particle size.
 
 \begin{figure}
 \begin{centering}
