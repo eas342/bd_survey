@@ -365,6 +365,16 @@ We model the single particle extinction coefficient, $Q_{ext}$ from the \texttt{
 We assume that the particles are spherical forsterite grains (Mg$_2$SiO$_4$).
 We use a constant n=1.67 - 0.006 $j$ index of refraction because the real and imaginary parts of the index of refraction are relatively constant across the optical and near infrared \citep{scott1996forsterite}.
 
+\begin{figure*}
+\begin{centering}
+\includegraphics[width=0.45\textwidth]{e_1821_096_map.png}\\
+\includegraphics[width=0.45\textwidth]{e_1821_120_map.png}
+\hspace{0.2in}
+\includegraphics[width=0.45\textwidth]{e_1821_126_map.png}
+\caption{{\it Aeolus} maps of the light curves at 0.96$\mu$m, 1.20$\mu$m and 1.26 $\mu$m.}\label{fig:spotModel}
+\end{centering}
+\end{figure*}
+
 For the particle size distribution we assume a log-normal distribution around a characteristic size, $s$ and a standard deviation of the logarithm (scale parameter), $\sigma$ =0.5.
 The spectral dependence is therefore modeled as 
 \begin{equation}
@@ -393,14 +403,17 @@ In WISEP J0047+6803, the wavelength trend could be fit by $\sim0.4~\mu$m forster
 They find typical mean particle radii of 0.15 to 0.35 $\mu$m for a sample of L dwarf stars.
 Our median particle radius of $r$=0.24 $\mu$m for \shb\ is consistent with this range and may represent a partially cloudy version of the reddened stars in \citet{hiranaka2016subMicronDust} or WISEP J0047+6803.
 
+\section{Spot Distribution}
+\newcommand{\maxSpots}{\#?}
+We also fit our light curves to an {\it Aeolus} spot model \citep{2015ApJ...814...65K,2016ApJ...825...90K}.
+We allow up to \maxSpots\ across the sphere of the brown dwarf, all with a constant temperature contrast.
+We set the ``background'' at the measured effective temperature of 1614 K.
 
-\begin{figure}
-\begin{centering}
-\includegraphics[width=0.4\textwidth]{temperature_drawing.pdf}
-\caption{A simple two region model with two different temperatures and different areal fractions for longitudes 0\degree\ and 180\degree.}\label{fig:tdiffschem}
-\end{centering}
-\end{figure}
-
+Figure \ref{fig:spotModel} shows the spot models fit to the light curve at 0.96$\mu$m, 1.20$\mu$m and 1.26 $\mu$m.
+At all three wavelengths, the fitted brightness temperature contrast is around 50 K above the background.
+These higher temperature spots are indicative of either holes in clouds or regions of elevated temperature.
+The distribution of spots changes with wavelength, suggesting that the distribution of clouds or temperatures is complex.
+The low amplitude and signal to noise of the light curves makes it difficult to put tight constraints on the spot distribution.
 
 \section{Conclusions}\label{sec:conclusions}
 
