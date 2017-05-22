@@ -509,6 +509,148 @@ Some other conventions describe $A$ as a ``semi-amplitude''}, $t_t$ is the time 
 	\label{fig:tserPfold}
 \end{figure*} 
 
+In the regions of strong telluric absorption, the variability pattern changes, with a U-shaped profile minimized at $-$1~hr.
+
+\subsection{Old Time Series and Fits}
+
+These sinusoidal fits had very tight priors on the rotation period (3.0 to 3.2 hr) and (3.8 to 4.0 hr), not quite consistent with \citep[][4.2hr]{2015ApJ...799..154M}.
+\begin{figure*}[!t]
+\centering
+\subfloat[2MASS J0835]{
+	\includegraphics[width=0.5\textwidth]{images/tser/2mass_0835_t_series.pdf}
+	\label{fig:tserPhase0835}
+	}
+\subfloat[2MASS J1821]{
+	\includegraphics[width=0.5\textwidth]{images/tser/2mass_1821_t_series.pdf}
+	\label{fig:tserPhase1821}
+	}
+	\caption{Time series for each system with an offset added for clarity.
+	Each wavelength bin is labeled on the right side. Changing colors are used to distinguished the light curves with offsets. \sha\ shows relatively flat light curves whereas \shb\ has large amplitude double-peaked oscillations at short wavelengths and flat light curves at long wavelengths.}
+	\label{fig:tserDetrend}
+\end{figure*} 
+
+\begin{figure*}
+\centering
+\subfloat[2MASS J0835]{
+	\includegraphics[width=0.5\textwidth]{images/old_tight_period_constraints/amp_vs_wavl_j0835.pdf}
+	\label{fig:ampspec0835}
+	}
+\subfloat[2MASS J1821]{
+	\includegraphics[width=0.5\textwidth]{images/old_tight_period_constraints/amp_vs_wavl_j1821.pdf}
+	\label{fig:ampspec1821}
+	}
+	\caption{Sine fit amplitude versus wavelength for each brown dwarf. \sha\ shows no clear trend in wavelength, while \shb\ has a strong slope indicative of Mie-scattering particles.
+	 Also shown in the figure for \shb\ is the WFC3 amplitude from \citet{2015ApJ...798L..13Y}. The WFC3 observations were from a different epoch, with different cloud coverage, but show a similar slope.
+	 The amplitude spectrum for each system is fit a simple Mie scattering model for a log-normal particle size distribution of spherical forsterite grains.
+	 \sha\ is consistent with a zero amplitude model which puts no constraints on the particle size distribution.
+	 \shb\ is shown with the best fit median particle size of 0.17 $\mu$m grains.}
+	\label{fig:ampSpec}
+\end{figure*} 
+
+As this pattern aligns with the airmass trend over the sequence of observations, we attribute this pattern to systematic effects and impose priors on the rotational period of the brown dwarfs to ensure the sinusoidal fits do not fit the airmass trend.
+
+\section{Spot Model Fit}\label{sec:spotModel}
+
+Another simple model we attempt assumes  that the brown dwarf spectral variability has to do with a non-uniform temperature distribution on the brown dwarf in the same way that starspots modulate the brightness of hydrogen burning stars as they spin.
+In Figure \ref{fig:ampspec1821tdiff}, we fit the same amplitude spectrum as in Figure \ref{fig:ampspec1821}.
+This time we model the data with two temperature regions as shown in Figure \ref{fig:tdiffschem}, with two opposite longitudes of the planet at the brightness minimum and maximum.
+We assume for the purposes of variability that each hemisphere and layer is in local thermodynamic equilibrium (LTE) so that the flux is proportional to the Planck function times the areal coverage.
+The flux ratio between maximum and minimum flux is then
+\begin{equation}
+f_{R,\lambda} = \frac{\alpha_1 B_\lambda(T_1) + (1-\alpha_1) B_\lambda(T_2)}{\alpha_2 B_\lambda(T_1) + (1-\alpha_2) B_\lambda(T_2)}
+\end{equation}
+where $\alpha_1$ and $\alpha_2$ are the areal fractions of the first temperature ($T_1$) for the first and second hemispheres respectively, $B_\lambda$ is the Planck function, and $T_1$ and $T_2$ are the temperatures of the two regions.
+$\alpha_1$ and $\alpha_2$ are limited to [0,1].
+Using equation \ref{eq:ampFromRatio}, the amplitude then becomes
+\begin{equation}\label{eq:twoTempAmpAlphas}
+A_\lambda = \frac{\left(\alpha_1 - \alpha_2 \right) \left(B_\lambda(T_1) - B_\lambda(T_2) \right)}{\left(\alpha_1 + \alpha_2\right) B_\lambda(T_1) + \left(2 - \alpha_1 - \alpha_2\right) B_\lambda(T_2)}.
+\end{equation}
+If the temperature difference is significant so that one Planck function is in the Wien's limit while the other is in the Rayleigh Jeans tail, the cooler temperature essentially becomes black and the contrast approaches a constant for short wavelengths.
+If we ignore projection effects for small area coverage, the effective temperature is 
+\begin{equation}
+\sigma T_{eff}^4 \approx (\alpha_1 + \alpha_2) \sigma T_1^4 + (2 - \alpha_1 - \alpha_2) \sigma T_2^4
+\end{equation}
+where $\sigma$ is the Stephan-Boltzmann constant.
+
+In the model fitting, we found a strong correlation between $\alpha_1$ and $\alpha_2$.
+Therefore we re-parameterized with $\beta = \alpha_1 - \alpha_2$, so that $\alpha_2 = \alpha_1 - \beta$.
+\begin{equation}\label{eq:twoTempAmp}
+A_\lambda = \frac{\beta \left(B_\lambda(T_1) - B_\lambda(T_2) \right)}{\left(2 \alpha_1 - \beta \right) B_\lambda(T_1) + \left(2 - 2 \alpha_1 + \beta \right) B_\lambda(T_2)}.
+\end{equation}
+
+We start by considering a two-faced model where $\alpha_1$ = 1 and $\alpha_2$ = 0, so that the two halves of the brown dwarf are different temperatures.
+To be close to the effective temperature of the brown dwarf, we fix $T_1$ to be 1600 K and only vary $T_2$.
+This model is a poor match to the data, also shown in Figure \ref{fig:ampspec1821tdiff} with a reduced chi-squared, $\bar{\chi}^2$ = 15.
+Next, we attempt a model where we allow $\alpha_1$ and $\alpha_2$ to be free parameters and restrict the temperature limits of the two regions to [1300,2500] to ensure that the final effective temperature is close to the measured 1600 K \citep{gagne2015banyan7}.
+The best fit model has $T_{eff} \approx $1590 K and $\bar{\chi}^2$=2.1, but pushes to the edges of our prior with $T_1$ = 2500 K and $T_2$ = 1300 K.
+Finally, we consider a model where all four parameters, $\alpha_1$, $\alpha_2$, $T_1$ and $T_2$ are all free.
+With these loose constraints, the model fits the data with $\bar{\chi}^2$ = 1.3, consistent with the data, but not with the effective temperature ($T_{eff}$ = 850 K).
+The $\alpha$ values are both $<<1$, indicating that the model fits with bright patches on a small fraction of the surface.
+The maximum to minimum contrast in this spot model is sensitive to the relative areas of these bright patches so a small difference in areas controls the maximum over minimum flux.
+
+The temperature contrasts in these models (with the exception of the two-faced model which poorly matches the data) are significantly larger than the expected 50 K horizontal temperature variations expected in circulation models \citep{showman2013bdgpDynamics}.
+Therefore, we suspect that hot or cold spots on the surface are a less plausible explanation of the variability of 2MASS J1821 than a heterogenous temperature distribution.
+
+\vspace{0.2in}
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821_t_diff.pdf}
+\caption{The same data as in Figure \ref{fig:ampspec1821}. We fit the data with a two region model that assumes the effective temperature of the brown dwarf and a cooler temperature.}\label{fig:ampspec1821tdiff}
+\end{centering}
+\end{figure}
+% Command used:
+% plot_rad_vs_wavl,/amp,/shadetell,custxrange=[0.8,2.5],custyrange=[-0.1,1.9],/showYang,/twoTreg
+
+
+\section{Old Conclusions}
+These brown dwarfs have temperatures near the condensation temperatures of MgSiO$_3$ and Mg$_2$SiO$_4$.
+
+We also model the wavelength dependence with a spotted surface model with two different Planck functions covering different spatial regions.
+The two temperature region model can fit variability amplitude spectrum well within errors, but gives implausible temperature differences.
+Therefore, we favor the Mie scattering model as a better explanation for the variability amplitude spectrum.
+
+\section{Re-visiting The $\Delta$ T models}
+
+After Theodora's questions, I decided to re-visit the spot models. I went back to Equation \ref{eq:twoTempAmp} and just plotted some example models as a function of different parameters. 
+
+\begin{figure*}[!t]
+\centering
+\subfloat[T$_1$ Parameter]{
+	\includegraphics[width=0.5\textwidth]{images/two_temp_models/temp_varied.pdf}
+	\label{fig:twoTempModelTvar}
+	}
+\subfloat[$\beta$ Parameter]{
+	\includegraphics[width=0.5\textwidth]{images/two_temp_models/beta_varied.pdf}
+	\label{fig:twoTempModelBetavar}
+	}\\
+\subfloat[$\alpha_1$ Parameter]{
+	\includegraphics[width=0.5\textwidth]{images/two_temp_models/alpha_1_varied.pdf}
+	\label{fig:twoTempModelAlphavar}
+	}
+	\caption{Variations in model parameters compared to the data, with points near the expected spot coverages and temperature contrasts.}
+	\label{fig:twoTempModelParamsVar}
+	\vspace{0.1in}
+\end{figure*} 
+
+
+\begin{figure*}[!t]
+\centering
+\subfloat[T$_1$ Parameter]{
+	\includegraphics[width=0.5\textwidth]{images/two_temp_models/extreme_temp_varied.pdf}
+	\label{fig:twoTempModelTvarE}
+	}
+\subfloat[$\beta$ Parameter]{
+	\includegraphics[width=0.5\textwidth]{images/two_temp_models/extreme_beta_varied.pdf}
+	\label{fig:twoTempModelBetavarE}
+	}\\
+\subfloat[$\alpha_1$ Parameter]{
+	\includegraphics[width=0.5\textwidth]{images/two_temp_models/extreme_alpha_1_varied.pdf}
+	\label{fig:twoTempModelAlphavarE}
+	}
+	\caption{Variations in model parameters compared to the data, with more extreme parameters that best-fit the data.}
+	\label{fig:twoTempModelParamsVarE}
+	\vspace{0.1in}
+\end{figure*} 
 
 %If  used, this work made use of the \texttt{astropy} package \citep{astropy2013}.
 %If used, some data was collected from the Open Exoplanet Catalogue \citep{rein2012openExoCat}.
