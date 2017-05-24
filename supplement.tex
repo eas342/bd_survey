@@ -652,6 +652,48 @@ After Theodora's questions, I decided to re-visit the spot models. I went back t
 	\vspace{0.1in}
 \end{figure*} 
 
+\clearpage
+\section{Optical Depth of Possible Haze Clouds}
+
+\subsection{Lower limit Optical Depth}
+Let's assume that there is a haze layer that covers 50\% of \shb's surface (ie. one hemisphere).
+This will give us a lower limit on the optical depth to explain the variability amplitudes.
+The flux after extinction is 
+\begin{equation}
+F_\mathrm{obs} = F_\mathrm{d} e^{-\tau}
+\end{equation}
+where $F_\mathrm{obs}$ is the observed flux, $F_\mathrm{d} $ is the flux from a deep layer underneath the haze and $\tau$ is the optical depth of the haze.
+Under our assumption that the haze covers one hemisphere, the brighter hemisphere will have a flux $F_\mathrm{obs}  = F_\mathrm{d}$ so the maximum to minimum flux ratio is
+\begin{equation}
+f_R = e^{\tau}
+\end{equation}
+or
+\begin{equation}
+\tau = \ln{(f_R)}
+\end{equation}
+From the main paper, the relationship between variability amplitude and $f_R$ is
+\begin{equation}\label{eq:ampFromRatio}
+A  = \frac{f_R - 1}{f_R + 1}
+\end{equation}
+so
+\begin{equation}
+f_R = \frac{A + 1}{1 - A}.
+\end{equation}
+so
+\begin{equation}
+\tau = \ln{\left(\frac{A+1}{1 - A}\right)}
+\end{equation}
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{images/optical_depth/tau_plot_lower.pdf}
+\caption{Optical depth if the haze layer is assumed to cover a full hemisphere to explain the flux variations.}\label{fig:opticalDepthLower}
+\end{centering}
+\end{figure}
+
+\subsection{Optical Depth for Assumed Spot Contrast}
+
+
 %If  used, this work made use of the \texttt{astropy} package \citep{astropy2013}.
 %If used, some data was collected from the Open Exoplanet Catalogue \citep{rein2012openExoCat}.
 
