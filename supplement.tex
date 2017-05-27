@@ -655,8 +655,8 @@ After Theodora's questions, I decided to re-visit the spot models. I went back t
 \clearpage
 \section{Optical Depth of Possible Haze Clouds}
 
-\subsection{Lower limit Optical Depth}
-Let's assume that there is a haze layer that covers 50\% of \shb's surface (ie. one hemisphere).
+\subsection{Hemispheric Coverage Assumption}\label{sec:hemisphOpticalDepth}
+Let's assume that there is a haze layer that covers 50\% of \shb's surface (ie. one hemisphere) and that the maximum and minimum fluxes represent when this cloudy hemisphere is facing towards or away from our observed line of sight.
 This will give us a lower limit on the optical depth to explain the variability amplitudes.
 The flux after extinction is 
 \begin{equation}
@@ -691,7 +691,32 @@ so
 \end{centering}
 \end{figure}
 
+\clearpage
 \subsection{Optical Depth for Assumed Spot Contrast}
+
+While section \ref{sec:hemisphOpticalDepth} represents a lower limit estimate for the optical depth needed to explain the variability amplitudes, smaller spots/clouds will produce higher contrasts and therefore will need higher optical depths.
+In this section, we also include an estimate based on the spot coverage maps.
+The {\it Aeolus} code \citep{2015ApJ...814...65K} finds a near-constant spot brightness contrast for all wavelengths of around 50 K.
+We start by calculating the flux constrast for a brightness temperature difference of 50 K in the opt panel of Figure \ref{fig:opticalDepthAeolusSpot}.
+
+If we assume that this spot contrast is due to extinction by dust, then the optical depth is, as before $\tau = \ln{(f_R)}$.
+The resulting $\tau$ is plotted in the bottom panel of \ref{fig:opticalDepthAeolusSpot}.
+We can calculate the column density of the dust if we assume a particle radius.
+As found in the paper the radius of the particles $r_p$ is $\sim$ 0.3 $\mu$m.
+Then, the column density is:
+\begin{equation}
+N_{dust} = \frac{\tau} {\pi * r_p^2 Q_{ext}}.
+\end{equation}
+Assuming $Q_{ext} \sim 1$, then $N_{dust} = 1.2 \times 10^{12}$~m$^{-2}$.
+If we assume a density of 0.2 g cm$^{-3}$, this corresponds to a mass column density of 2.7 $\times 10^{-5}$ kg m$^{-2}$.
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{images/optical_depth/tau_plot_spot_constrast.pdf}
+\caption{{\it Top Panel} The flux contrast for a 50 K brightness temperature difference. {\it Bottom Panel} Optical depth of a haze layer if this 50 K spot contrast is due to dust extinction.}\label{fig:opticalDepthAeolusSpot}
+\end{centering}
+\end{figure}
+
 
 
 %If  used, this work made use of the \texttt{astropy} package \citep{astropy2013}.
