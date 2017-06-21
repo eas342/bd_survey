@@ -283,14 +283,14 @@ However, there are small additional shifts of the sources within the slit so ano
 	\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821.pdf}
 	\label{fig:ampspec1821}
 	}
-	\caption{(Top panels) Sine fit amplitude versus wavelength for each brown dwarf. \sha\ shows no clear trend in wavelength, while \shb\ has a strong slope indicative of Mie-scattering particles.
+	\caption{(Top panels) Sine fit amplitude versus wavelength for each brown dwarf. \sha\ shows no significant variability nor trends with wavelength, while \shb\ has a strong slope indicative of Mie-scattering particles.
 	 Also shown in the figure for \shb\ is the WFC3 amplitude from \citet{2015ApJ...798L..13Y}. The WFC3 observations were from a different epoch, with different cloud coverage, but show a similar slope.
 	 The amplitude spectrum for each system is fit a simple Mie scattering model for a log-normal particle size distribution of spherical forsterite grains.
 	 \sha\ is consistent with a zero amplitude model which puts no constraints on the particle size distribution.
 	 \shb\ is shown with the best fit median particle size of 0.28 $\mu$m grains.
-	 {\it Bottom Panels:} The time of maximum variation $t_1$ for each brown dwarf shows no clear trend with wavelength.
-	 For wavelengths with small variability amplitudes, $t_1$ becomes as wide as the prior window $-\tau/2 < t_1 < \tau/2$.
- [{\bf bottom panels need to be explained; what are y-axis units? why is t1 centered at 0? is this relative to some assumed peak time? what is that time? what about t2?}]}
+	 {\it Bottom Panels:} The time of maximum variation $t_1$ (in hours) is shown for each brown dwarf relative to the reference epoch (BJD 2457388.0 and BJD 2457565 for \sha\ and \shb\ respectively).
+	 Neither $t_1$ spectrum shows a clear trend with wavelength indicating no significant spot offsets.
+	 For wavelengths with small variability amplitudes, $t_1$ becomes as wide as the prior window $-\tau/2 < t_1 < \tau/2$. $t_2$ (not shown) also shows no trend with wavelength.}
 	\label{fig:ampSpec}
 \end{figure*} 
 
@@ -335,8 +335,7 @@ For \sha\ we use a prior 2.6 $< \tau < $3.6 hr and for \shb\ we use 3.7 $< \tau 
 Each of these ranges are $\pm$0.5 hr from the literature values.
 These priors are wide enough they don't drive the constraints on $\tau$ at short wavelengths for \shb\ but narrow enough to ensure that the sinusoidal fits do not just fit the airmass trends with time.
 We also restrict the time of maximum periodic flux such that $-\tau/2 < t_1 < \tau/2$ and $-\tau/4 < t_2 < \tau/4$ to assure there are no 2$\pi$ degeneracies in the fit.
-{\bf [do you also constraint A1 $>$ A2?]}
-
+We do not put any constraints on A$_1$ relative to A$_2$.
 
 Figure \ref{fig:ampSpec} shows the MCMC posterior constraints for periodic amplitudes as a function of wavelength.
 For {\sha} (Figure \ref{fig:ampspec0835}) we find at most small amplitude variability ($\lesssim 0.5\%$), marginally significant at 1.7~$\mu$m and 2.1--2.35~$\mu$m, with a flat trend as a function of wavelength.
@@ -349,9 +348,7 @@ The HST WFC3 maximum over minimum flux spectrum is converted to an amplitude spe
 A  = \frac{f_R - 1}{f_R + 1}
 \end{equation}
 where $f_R$ is the flux ratio of the maximum over minimum flux.
-There is a multiplicative offset 
-{\bf [what is the value?]}
-between the IRTF and WFC3 spectrum, presumably because they were taken at different epochs and therefore different spatial cloud and temperature distributions.
+There is a multiplicative offset of 25\% between the IRTF and WFC3 spectrum, presumably because they were taken at different epochs and therefore different spatial cloud and temperature distributions.
 \citet{2015ApJ...798L..13Y} find that the WFC3 spectrum has no significant water vapor absorption which indicates a high haze layer in 2MASS J1821 and is consistent with our gradually decreasing slope from 1.1 to 1.7~$\mu$m.
 
 \subsection{Mie Scattering Fit}
