@@ -288,7 +288,7 @@ However, there are small additional shifts of the sources within the slit so ano
 	 The amplitude spectrum for each system is fit a simple Mie scattering model for a log-normal particle size distribution of spherical forsterite grains.
 	 \sha\ is consistent with a zero amplitude model which puts no constraints on the particle size distribution.
 	 \shb\ is shown with the best fit median particle size of 0.28 $\mu$m grains.
-	 {\it Bottom Panels:} The time of maximum variation $t_1$ (in hours) is shown for each brown dwarf relative to the reference epoch (BJD 2457388.0 and BJD 2457565 for \sha\ and \shb\ respectively).
+	 {\it Bottom Panels:} The time of maximum variation $t_1$ (in hours) is shown for each brown dwarf relative to the reference epoch (JD 2457388.0 and JD 2457565 for \sha\ and \shb\ respectively).
 	 Neither $t_1$ spectrum shows a clear trend with wavelength indicating no significant spot offsets.
 	 For wavelengths with small variability amplitudes, $t_1$ becomes as wide as the prior window $-\tau/2 < t_1 < \tau/2$. $t_2$ (not shown) also shows no trend with wavelength.}
 	\label{fig:ampSpec}
@@ -406,22 +406,6 @@ In WISEP J0047+6803, the wavelength trend could be fit by $\sim0.4~\mu$m forster
 They find typical mean particle radii of 0.15 to 0.35 $\mu$m for a sample of L dwarf stars.
 Our median particle radius of $r$=0.24 $\mu$m for \shb\ is consistent with this range and may represent a partially cloudy version of the reddened stars in \citet{hiranaka2016subMicronDust} or WISEP J0047+6803.
 
-\section{Spot Distribution}
-\newcommand{\maxSpots}{6}
-
-{\bf AJB has some concerns over this section: it is extremely terse with no clear conclusions, and no discussion on the uniqueness of the spot solutions shown. The same temperature is used for each of the wavelengths, when the underlying brightness temperature actually changes; suggest using background temperature of for 1795 K for 0.96$\mu$m, 1788 K for 1.20$\mu$m, and 1853 K for 1.26$\mu$m based on the brightness temperature analysis. I would naively assume that the spot structures would be at the same location at each wavelength but vary in temperature offset - can a prior be applied so that each map has the same structure but different spot temperature (with Tspot = Tback as a possibility)?}
-
->>>>>>> remotes/origin/sharelatex-2017-06-21-0322
-We also fit our light curves to an {\it Aeolus} spot model \citep{2015ApJ...814...65K,2016ApJ...825...90K}.
-We allow up to \maxSpots\ {\bf [please fill in]} across the sphere of the brown dwarf, all with a constant temperature contrast.
-We set the ``background'' at the measured effective temperature of 1614 K.
-
-Figure \ref{fig:spotModel} shows the spot models fit to the light curve at 0.96$\mu$m, 1.20$\mu$m and 1.26 $\mu$m.
-At all three wavelengths, the fitted brightness temperature contrast is around 50 K above the background.
-These higher temperature spots are indicative of either holes in clouds or regions of elevated temperature.
-The distribution of spots changes with wavelength, suggesting that the distribution of clouds or temperatures is complex.
-The low amplitude and signal to noise of the light curves makes it difficult to put tight constraints on the spot distribution.
-
 \section{Conclusions}\label{sec:conclusions}
 
 We observed two brown dwarfs of spectral type L4-L5: 2MASS 1821 and 2MASS 0835.
@@ -436,7 +420,6 @@ We find no statistically significant phase offsets in the light curves for \sha\
  
 We fit the variability amplitude spectrum with an optically thin Mie scattering model and find it is consistent with forsterite grains with sub-micron sized particles.
 A log-normal particle size distribution fits the data with a median grain radius of 0.24 $^{+0.05}_{-0.07}$ $\mu$m.
-{\bf [need summary of AEOLUS results]}
 
 Using ground-based facilities such as SpeX on IRTF allows us to expand our monitoring of cloud-bearing ultracool dwarfs, both in sample size and long-term tracking. The former can provide powerful constraints on how dust particle sizes may depend on differing pressure-temperature profiles, rotation rates, composition and viewing orientations; while the latter allows us to study weather-related changes to cloud structures over multiple rotation periods. We are currently pursuing a larger monitoring sample that will be reported in future publications.
 
