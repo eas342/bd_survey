@@ -87,7 +87,7 @@ Ground-based Multi-Object Spectroscopy (MOS) with a multi-object or long slit sp
 \tablewidth{0pt}
 \tabletypesize{\footnotesize}
 \tablehead{
- colhead{Name} & 
+\colhead{Name} & 
 \multicolumn{2}{c}{Spectral Type} & 
 \colhead{$d$} & 
 \colhead{2MASS $H$} & 
@@ -151,9 +151,7 @@ There is an $H$ = 12.3 source (2MASS~J08354383$-$0819212) at a separation of 19$
 
 2MASS J18212815+1414010 (hereafter {\shb}; \citealt{2008ApJ...686..528L}) is a similarly bright and nearby ($d$ = 9.38$\pm$0.03; \citealt{2016MNRAS.455..357S}) L4.5 dwarf, which exhibits a peculiar near-infrared spectrum attributed to youth and/or thick clouds \citep{2008ApJ...686..528L,2015ApJS..219...33G,2016ApJ...833...96L}.
 This source is a photometric variable with a period of 4.2$\pm$0.1~hr \citep{2015ApJ...799..154M} and $v\sin{i}$ = 28.85$\pm$0.16~{\kms}, suggesting a near equator-on orientation.  \citet{2015ApJ...798L..13Y} measured 1--3\% spectral variability with $HST$/WFC3 over 1.1--1.6~$\micron$, with greater variabilty at shorter wavelengths.
-There are two suitably bright comparison stars within 20$\arcsec$ for relative calibration: 2MASS~J18212812+1414089 with $H$ = 12.6 at 7$\arcsec$ separation and 2MASS~J18212715+1413482 with $H$ = 12.0 at 29$\arcsec$ separation; we chose the latter for our monitoring observations.
-
-
+There are two suitably bright comparison stars within 20$\arcsec$ for relative calibration: 2MASS~J18212812+1414089 with $H$ = 12.6 at 7$\arcsec$ separation and 2MASS~J18212715+1413482 with $H$ = 12.0 at 19$\arcsec$ separation; we chose the latter for our monitoring observations.
 
 To characterize the atmospheric regions probed by our observations, we analyzed previously 
 obtained IRTF/SpeX data for these sources \citep{2008ApJ...686..528L,2010ApJ...710.1142B}.
@@ -171,10 +169,6 @@ I_{\lambda,surf} = {\pi}B_{\lambda} = I_{\lambda,obs}\left(\frac{d}{R}\right)^2 
 $I_{\lambda,obs}$ and $I_{\lambda,abs}$ are the observed and absolute flux densities, $d$ the source distance and $R$ the source radius.  Both spectra were calibrated to absolute flux densities using their 2MASS $H$ magnitudes and measured parallaxes \citep{2016MNRAS.455..357S,2016AJ....152...24W}. We adopted radii from the evolutionary models of \citet{2003A&A...402..701B} assuming bolometric luminosities from \citet{2015ApJ...810..158F} for {\sha} and from\footnote{The parameters reported for {\shb} in \citet{2016ApJS..225...10F} are in error, but have been updated here based on a forthcoming erratum (J.\ Faherty, 2017, priv.\ comm.).}  \citet{2016ApJS..225...10F} for {\shb} (Table~\ref{tab:bdProp}). Uncertainties in the spectral fluxes, absolute photometric calibration, adopted {\lbol} and radius were propagated by Monte Carlo simulation.  For {\sha} we considered two cases: radii of 0.114--0.137~R$_{\odot}$ for ages of 50--200~Myr, the age range estimated for INT-G sources by \citet{2013ApJ...772...79A}; and radii of 0.088--0.101~R$_{\odot}$ for ages of 0.5--3~Gyr; i.e., a field dwarf age.
 For {\shb}, we assumed an lower age limit of 200~Myr based on its field gravity classification, and an upper limit of 700~Myr based on the analysis of \citet{2016MNRAS.455..357S}. The Baraffe et al.\ evolutionary models predict radii of 0.097--0.114~R$_{\odot}$ for these ages and the luminosity of {\shb}.  
 
-Figure~\ref{fig:tbright} shows the resulting brightness temperature spectra and their uncertainties from these calculations.  The spectral peaks for {\sha} are around 1800--1850~K in the field surface gravity case, and decline from 1700~K at $J$-band (1.2~$\micron$) to 1580~K at $K$-band (2.2~$\micron$) in the low surface gravity case.
-We compared these two cases to solar-metallicity BT-Settl spectral models from \citet{2012RSPTA.370.2765A}, with {\teff} and {\logg} parameters consistent with the bolometric luminosity of {\sha} and the adopted ages (again based on the \citealt{2003A&A...402..701B} evolutionary models). Both models overlap the data to some degree, although the young model shows an increasing brightness temperature with wavelength rather than a decreasing temperature.  These comparisons slightly favor the field surface gravity case, although differences in the properties of dust between source and models likely play a significant role. For {\shb}, 
-brightness temperatures range from 1850~K at $J$-band to 1670~K at $K$-band, again overlapping but declining more strongly with wavelength than the equivalent spectral model, which has a {\teff} similar to that inferred by \citet{2016ApJS..225...10F} and the  \citet{2015ApJ...810..158F} {\teff}/spectral type relation.
-
 \begin{figure*}
 \centering
 	\plottwo{classify0835.pdf}{classify1821.pdf}
@@ -185,6 +179,11 @@ brightness temperatures range from 1850~K at $J$-band to 1670~K at $K$-band, aga
 	\label{fig:tbright}
 	\vspace{0.1in}
 \end{figure*} 
+
+Figure~\ref{fig:tbright} shows the resulting brightness temperature spectra and their uncertainties from these calculations.  The spectral peaks for {\sha} are around 1800--1850~K in the field surface gravity case, and decline from 1700~K at $J$-band (1.2~$\micron$) to 1580~K at $K$-band (2.2~$\micron$) in the low surface gravity case.
+We compared these two cases to solar-metallicity BT-Settl spectral models from \citet{2012RSPTA.370.2765A}, with {\teff} and {\logg} parameters consistent with the bolometric luminosity of {\sha} and the adopted ages (again based on the \citealt{2003A&A...402..701B} evolutionary models). Both models overlap the data to some degree, although the young model shows an increasing brightness temperature with wavelength rather than a decreasing temperature.  These comparisons slightly favor the field surface gravity case, although differences in the properties of dust between source and models likely play a significant role. For {\shb}, 
+brightness temperatures range from 1850~K at $J$-band to 1670~K at $K$-band, again overlapping but declining more strongly with wavelength than the equivalent spectral model, which has a {\teff} similar to that inferred by \citet{2016ApJS..225...10F} and the  \citet{2015ApJ...810..158F} {\teff}/spectral type relation.
+
 
 \begin{deluxetable*}{lccccccccc}
 \tablecaption{Observations\label{tab:obsParam}}
