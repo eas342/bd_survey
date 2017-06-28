@@ -128,7 +128,8 @@ Ground-based Multi-Object Spectroscopy (MOS) with a multi-object or long slit sp
 	\label{fig:image1821}
 	\vspace{-.9in}
 	\caption{2MASS $JHK_s$ three-color images of the fields around our targets {\sha} (left) and {\shb} (right)
-	from the IRSA Finderchart service (\url{http://irsa.ipac.caltech.edu/applications/finderchart/}).  Each image is centered on the target, and span a 1$\arcmin\times\arcmin$ field of view oriented with North up and East the left. The comparison stars referred to in the text appear as blue sources in these images. }
+	from the IRSA Finderchart service (\url{http://irsa.ipac.caltech.edu/applications/finderchart/}).  Each image is centered on the target, and span a 1$\arcmin\times\arcmin$ field of view oriented with North up and East the left. The comparison stars referred to in the text appear as blue sources in these images.
+	For \sha\, we use the comparison star to the left and for \shb\ the lower right.}
 	\label{fig:images}
 	\vspace{0.17in}
 \end{figure*} 
@@ -136,9 +137,8 @@ Ground-based Multi-Object Spectroscopy (MOS) with a multi-object or long slit sp
 This article reports the results of a pilot study adapting these methods to measuring the variability of two L-type dwarfs with nearby visual companions. We describe our target selection process and pilot target properties in Section~\ref{sec:targets}.
 In Section~\ref{sec:obs}, we describe our monitoring observations and data reduction procedures to generate relative spectro-photometric time series.
 In Section~\ref{sec:analysis}, we analyze these time series using sinusoidal model fits over discrete spectral bands to generate individual light curves and amplitude spectra.
-We then fit the variability amplitude spectra to two different physical models, Mie scattering from clouds and heterogeneous temperature spots, to assess which more accurately reproduces the data.
+We then fit the variability amplitude spectra with a Mie extinction model for the clouds and constrain the particle size distribution.
 We summarize our results in Section~\ref{sec:conclusions}.
-
 
 \section{Target Selection and Characterization}\label{sec:targets}
 
@@ -160,13 +160,13 @@ classifications of L7 for {\sha} and L5 for {\shb} (Figure~\ref{fig:tbright}). T
 
 We computed brightness temperature spectra from these data as
 \begin{equation}
-T_{\lambda,surf} = \frac{hc}{k\lambda}\left[\ln\left(1+\frac{2\pi{hc^2}}{I_{\lambda,surf}\lambda^5}\right)\right]^{-1}
+T_{\lambda,surf} = \frac{hc}{k\lambda}\left[\ln\left(1+\frac{2\pi{hc^2}}{F_{\lambda,surf}\lambda^5}\right)\right]^{-1}
 \end{equation}
-where the surface flux density $I_{\lambda,surf}$ is computed as
+where the surface flux density $F_{\lambda,surf}$ is computed as
 \begin{equation}
-I_{\lambda,surf} = {\pi}B_{\lambda} = I_{\lambda,obs}\left(\frac{d}{R}\right)^2 = I_{\lambda,abs}\left(\frac{10~{\rm pc}}{R}\right)^2
+F_{\lambda,surf} = {\pi}B_{\lambda} = F_{\lambda,obs}\left(\frac{d}{R}\right)^2 = F_{\lambda,abs}\left(\frac{10~{\rm pc}}{R}\right)^2
 \end{equation}
-$I_{\lambda,obs}$ and $I_{\lambda,abs}$ are the observed and absolute flux densities, $d$ the source distance and $R$ the source radius.  Both spectra were calibrated to absolute flux densities using their 2MASS $H$ magnitudes and measured parallaxes \citep{2016MNRAS.455..357S,2016AJ....152...24W}. We adopted radii from the evolutionary models of \citet{2003A&A...402..701B} assuming bolometric luminosities from \citet{2015ApJ...810..158F} for {\sha} and from\footnote{The parameters reported for {\shb} in \citet{2016ApJS..225...10F} are in error, but have been updated here based on a forthcoming erratum (J.\ Faherty, 2017, priv.\ comm.).}  \citet{2016ApJS..225...10F} for {\shb} (Table~\ref{tab:bdProp}). Uncertainties in the spectral fluxes, absolute photometric calibration, adopted {\lbol} and radius were propagated by Monte Carlo simulation.  For {\sha} we considered two cases: radii of 0.114--0.137~R$_{\odot}$ for ages of 50--200~Myr, the age range estimated for INT-G sources by \citet{2013ApJ...772...79A}; and radii of 0.088--0.101~R$_{\odot}$ for ages of 0.5--3~Gyr; i.e., a field dwarf age.
+$F_{\lambda,obs}$ and $F_{\lambda,abs}$ are the observed and absolute flux densities, $B_\lambda$ is the Planck function, $d$ the source distance and $R$ the source radius.  Both spectra were calibrated to absolute flux densities using their 2MASS $H$ magnitudes and measured parallaxes \citep{2016MNRAS.455..357S,2016AJ....152...24W}. We adopted radii from the evolutionary models of \citet{2003A&A...402..701B} assuming bolometric luminosities from \citet{2015ApJ...810..158F} for {\sha} and from\footnote{The parameters reported for {\shb} in \citet{2016ApJS..225...10F} are in error, but have been updated here based on a forthcoming erratum (J.\ Faherty, 2017, priv.\ comm.).}  \citet{2016ApJS..225...10F} for {\shb} (Table~\ref{tab:bdProp}). Uncertainties in the spectral fluxes, absolute photometric calibration, adopted {\lbol} and radius were propagated by Monte Carlo simulation.  For {\sha} we considered two cases: radii of 0.114--0.137~R$_{\odot}$ for ages of 50--200~Myr, the age range estimated for INT-G sources by \citet{2013ApJ...772...79A}; and radii of 0.088--0.101~R$_{\odot}$ for ages of 0.5--3~Gyr; i.e., a field dwarf age.
 For {\shb}, we assumed an lower age limit of 200~Myr based on its field gravity classification, and an upper limit of 700~Myr based on the analysis of \citet{2016MNRAS.455..357S}. The Baraffe et al.\ evolutionary models predict radii of 0.097--0.114~R$_{\odot}$ for these ages and the luminosity of {\shb}.  
 
 \begin{figure*}
@@ -315,7 +315,7 @@ In these wavelength bins, the standard deviations of the points is about 4$\time
 We attribute this to correlated errors between wavelengths and as a simple approximation multiply all error bars by a factor of 4 to account for these systematics.
 
 As seen in Figure~\ref{fig:tserDetrend}, we see minimal variation in the lightcurves of {\sha}, but pronounced variation in {\shb}, particularly in bands $<$1.8~$\mu$m. 
-These variations are periodic with ``double-hump'' structures at peak amplitudes around -2.7~hr and +1.3~hr. {\bf [relative to what time?]}
+These variations are periodic with ``double-hump'' structures at peak amplitudes around -2.7~hr and +1.3~hr relative to JD 2457565.00.
 The amplitude of these variations is strongly wavelength-dependent with $\sim$3.0\% peak-to-trough variations at short 
 wavelengths and near-zero amplitude at the longest wavelengths.
 A possible difference between the two brown dwarfs is the viewing geometry with \sha\ closer to pole-on and \shb\ closer to equator-on as shown in Table \ref{tab:bdProp}.
