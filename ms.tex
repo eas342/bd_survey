@@ -253,7 +253,7 @@ For {\shb}, we did not have sufficient sky frames so we used our incandescent la
 
 As described in \citet{2016ApJ...826..156S}, we performed spatial background subtraction over the entire slit using a 4th-order polynomial fit to points more than 30 pixels away from the center of the source dispersion traces.  Spectra were optimally extracted \citep{1986ApJ...302..757H}, with spatial profiles fit to low order polynomials along the spectral direction one row at a time with 20$\sigma$ rejection to remove cosmic rays and bad pixels.
 These spatial profiles were then used to calculate a weighted sum spectrum across the illuminated detector for each source and exposure. 
-Typical signals-to-noise of the extracted spectra were 40 - 100 per spectral pixel (unbinned).
+Typical signal-to-noise of the extracted spectra were 40 - 100 per spectral pixel (unbinned).
 Relative spectra (source/reference) were then computed for each exposure.
 Our image rectification process described above ensures that the wavelength solution is the same for each row of the image.
 However, there are small additional shifts of the sources within the slit so another shift was performed between the sources to ensure that telluric features were removed when dividing the two spectra.
@@ -351,7 +351,7 @@ The HST WFC3 maximum over minimum flux spectrum is converted to an amplitude spe
 A  = \frac{f_R - 1}{f_R + 1}
 \end{equation}
 where $f_R$ is the flux ratio of the maximum over minimum flux.
-There is a multiplicative offset of 25\% between the IRTF and WFC3 spectrum, presumably because they were taken at different epochs and therefore different spatial cloud and temperature distributions.
+There is a multiplicative offset of 25\% between the IRTF and WFC3 spectrum because they were taken at different epochs and presumably have different spatial cloud and temperature distributions.
 \citet{2015ApJ...798L..13Y} find that the WFC3 spectrum has no significant water vapor absorption which indicates a high haze layer in 2MASS J1821 and is consistent with our gradually decreasing slope from 1.1 to 1.7~$\mu$m.
 
 \subsection{Mie Scattering Fit}
@@ -398,7 +398,7 @@ In WISEP J0047+6803, the wavelength trend could be fit by $\sim0.4~\mu$m forster
 
 \citet{hiranaka2016subMicronDust} find that the observed spectra of reddened L dwarfs can be explained by extinction from a haze layer of sub-micron forsterite grains.
 They find typical mean particle radii of 0.15 to 0.35 $\mu$m for a sample of L dwarf stars.
-Our median particle radius of $r$=0.24 $\mu$m for \shb\ is consistent with this range and may represent a partially cloudy version of the reddened stars in \citet{hiranaka2016subMicronDust} or WISEP J0047+6803.
+Our median particle radius of $r$=0.24 $^{+0.05}_{-0.07}$~$\mu$m for \shb\ is consistent with this range and may represent a partially cloudy version of the reddened stars in \citet{hiranaka2016subMicronDust} or WISEP J0047+6803.
 
 \section{Conclusions}\label{sec:conclusions}
 
@@ -407,13 +407,14 @@ These brown dwarfs have temperatures near the condensation temperature of forste
 We obtained high precision ground-based spectrophotometry of both systems to measure the variability spectra of these systems with the IRTF.
 After fitting sinusoids to both of the time series, we find that 2MASS 0835 has low levels of variability and no significant wavelength dependence.
 
-2MASS J1821 shows significant variability up to the 1.5\% amplitude (3.0\% peak-to-valley) at short wavelengths (0.9$\mu$m) which decreases towards the near infrared (2.4$\mu$m).
-This is consistent with HST measurements for the system that show a gradual decrease in variability amplitude with wavelength \citep{2016ApJ...826....8Y} from 1.1$\mu$m to 1.7 $\mu$m with no decrease in the water vapor band.
+2MASS J1821 shows significant variability up to the 1.5\% amplitude (3.0\% peak-to-valley) at short wavelengths (0.9~$\mu$m) which decreases towards the near infrared (2.4$~\mu$m).
+This is consistent with HST measurements for the system that show a gradual decrease in variability amplitude with wavelength \citep{2016ApJ...826....8Y} from 1.1~$\mu$m to 1.7 $\mu$m with no decrease in the water vapor band.
 The lack of the variability in the water vapor bands gives evidence of a high altitude aerosol layer in the atmosphere.
 We find no statistically significant phase offsets in the light curves for \sha\ nor \shb\ from wavelength to wavelength.
  
 We fit the variability amplitude spectrum with an optically thin Mie scattering model and find it is consistent with forsterite grains with sub-micron sized particles.
 A log-normal particle size distribution fits the data with a median grain radius of 0.24 $^{+0.05}_{-0.07}$ $\mu$m.
+However, considering different particle compositions and grain geometries can widen the allowed range of particle sizes.
 
 Using ground-based facilities such as SpeX on IRTF allows us to expand our monitoring of cloud-bearing ultracool dwarfs, both in sample size and long-term tracking. The former can provide powerful constraints on how dust particle sizes may depend on differing pressure-temperature profiles, rotation rates, composition and viewing orientations; while the latter allows us to study weather-related changes to cloud structures over multiple rotation periods. We are currently pursuing a larger monitoring sample that will be reported in future publications.
 
@@ -428,7 +429,7 @@ This research made use of the \texttt{astropy} package \citep{astropy2013}. The 
 \acknowledgments
 
 
-{\it Facilities:} \facility{IRTF (SpeX)}.
+\facility{IRTF (SpeX)}.
 
 \appendix
 
