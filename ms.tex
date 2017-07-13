@@ -58,7 +58,7 @@
 \altaffiltext{5}{Carnegie Observatories, 813 Santa Barbara Street, Pasadena, CA 91101, USA}
 
 \begin{abstract}
-Low-temperature L dwarfs exhibit low-level, rotationally-modulated photometric variability generally associated with heterogeneous, cloud-covered atmospheres. The spectral character of these variations yield insight into the particle sizes and vertical structure of the clouds. Here we present the results of a high precision, ground-based, near-infrared, spectral monitoring study of two mid-type L dwarfs, 2MASS~J08354256$-$0819237 and 2MASS~J18212815+1414010, using the SpeX instrument on the Infrared Telescope Facility. By simultaneously observing a nearby visual companion, we achieve $<$0.15\% per-band sensitivity in relative brightness changes across the 0.9--2.4$\mu$m bandwidth. We find that 2MASS~J0835$-$0819 exhibits marginal ($\lesssim$ 0.5\% per band) variability with no spectral dependence while 2MASS~J1821+1414 varies by up to $\pm$1.5\% at 0.9~$\mu$m, with the variability amplitude declining toward longer wavelengths. The latter result extends the variability trend observed in prior $HST$/WFC3 spectral monitoring of 2MASS~J1821+1414, and we show that the full 0.9--2.4~$\mu$m variability amplitude spectrum can be reproduced by Mie extinction from dust particles with a log-normal particle size distribution with a median radius of 0.24 $\mu$m. We detect no statistically significant phase variations with wavelength. The different variability behaviors of 2MASS~J0835$-$0819 and  2MASS~J1821+1414 suggests dependencies on viewing angle and/or overall cloud content, underlying factors that can be examined through a broader variability survey.
+Low-temperature L dwarfs exhibit low-level, rotationally-modulated photometric variability generally associated with heterogeneous, cloud-covered atmospheres. The spectral character of these variations yield insight into the particle sizes and vertical structure of the clouds. Here we present the results of a high precision, ground-based, near-infrared, spectral monitoring study of two mid-type L dwarfs, 2MASS~J08354256$-$0819237 and 2MASS~J18212815+1414010, using the SpeX instrument on the Infrared Telescope Facility. By simultaneously observing a nearby visual companion, we achieve $<$0.15\% per-band sensitivity in relative brightness changes across the 0.9--2.4$\mu$m bandwidth. We find that 2MASS~J0835$-$0819 exhibits marginal ($\lesssim$ 0.5\% per band) variability with no clear spectral dependence while 2MASS~J1821+1414 varies by up to $\pm$1.5\% at 0.9~$\mu$m, with the variability amplitude declining toward longer wavelengths. The latter result extends the variability trend observed in prior $HST$/WFC3 spectral monitoring of 2MASS~J1821+1414, and we show that the full 0.9--2.4~$\mu$m variability amplitude spectrum can be reproduced by Mie extinction from dust particles with a log-normal particle size distribution with a median radius of 0.24 $\mu$m. We detect no statistically significant phase variations with wavelength. The different variability behaviors of 2MASS~J0835$-$0819 and  2MASS~J1821+1414 suggests dependencies on viewing angle and/or overall cloud content, underlying factors that can be examined through a broader variability survey.
 \end{abstract}
 
 
@@ -290,9 +290,23 @@ However, there are small additional shifts of the sources within the slit so ano
 	 In all plots the regions potentially contaminated by telluric absorption are shaded in light green.
 	 {\it Bottom Panels:} The time of maximum variation $t_1$ (in hours) is shown for each brown dwarf relative to the reference epoch (JD 2457388.0 and JD 2457565.0 for \sha\ and \shb\ respectively).
 	 Neither $t_1$ spectrum shows a clear trend with wavelength indicating no significant spot offsets.
-	 For wavelengths with small variability amplitudes, $t_1$ becomes as wide as the prior window $-\tau/2 < t_1 < \tau/2$. $t_2$ (not shown) also shows no trend with wavelength.}
+	 For wavelengths with small variability amplitudes, $t_1$ becomes as wide as the prior window $-\tau/2 < t_1 < \tau/2$.}
 	\label{fig:ampSpec}
 \end{figure*} 
+
+\begin{figure}
+\begin{centering}
+\includegraphics[width=0.5\textwidth]{amp_vs_wavl_j1821_a2_t2.pdf}
+\caption{Secondary sinusoidal amplitude ($A_2$) as a function of wavelength for \shb.
+As in Figure \ref{fig:ampSpec}, the regions potentially contaminated by telluric absorption are shown in green.
+The secondary amplitude $A_2$ shows a gradual decrease as a function of wavelength as with $A_1$, indicative of Mie scattering grains.
+{\it Bottom Panel:} The time of maximum variation $t_2$ shows no clear phase shift trend.
+The constraints approach the prior $\pm \tau$/4 when no significant variability is detected.
+The $A_2$ constraints for \sha\ (not shown) are all consistent with zero.}\label{fig:amp2Spec}
+\end{centering}
+\end{figure}
+
+
 
 \section{Analysis}\label{sec:analysis}
 
@@ -344,6 +358,10 @@ In both cases, we find no statistically significant wavelength dependence on the
 The period of \shb\ is found to be consistent with that of \citet{2015ApJ...799..154M}.
 If we optimistically assume all wavelengths are statistically independent, the weighted average rotation period is 4.10 $\pm$ 0.03 hours.
 
+Figure \ref{fig:amp2Spec} shows the posterior constraints on the secondary sinusoidal term.
+As with $A_1$, the amplitude spectrum decreases as a function of wavelength, indicating Mie scattering grains and that the higher frequency term is likely just smaller scale cloud structures with similar properties as the longer timescale variability.
+As with Figure \ref{fig:ampSpec}, we find no strong phase shift for the second time of maximum variation $t_2$ as a function of wavelength.
+
 The same trend of decreasing variability amplitude for \shb\ was observed by HST's WFC3 grism over a shorter wavelength range (1.1 to 1.7~$\mu$m) by \citet{2015ApJ...798L..13Y}, also shown in Figure \ref{fig:ampspec1821}.
 The HST WFC3 maximum over minimum flux spectrum is converted to an amplitude spectrum by assuming that the amplitude is half the difference in maximum and minimum flux, which can be shown to be 
 \begin{equation}\label{eq:ampFromRatio}
@@ -358,7 +376,7 @@ There is a multiplicative offset of 25\% between the IRTF and WFC3 spectrum beca
 \begin{figure}
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{corner_j1821_mie_sc.pdf}
-\caption{Posterior distributions to the simple Mie scattering fit to the amplitude spectrum for \shb\ assuming a forsterite composition.
+\caption{Posterior distributions to the simple Mie scattering fit to the $A_1$ amplitude spectrum for \shb\ assuming a forsterite composition.
 The model includes an amplitude offset $B$ to account for areal coverage, a median particle radius $r$, and a scale parameter $\sigma$.
 The upper right inset plot shows the log-normal particle size distribution in blue for samples drawn from the posterior distribution.
 The red curve is the maximum likelihood log-normal particle size distribution.}\label{fig:corner1821mie}
