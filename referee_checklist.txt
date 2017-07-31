@@ -16,15 +16,15 @@ Also, as the authors know, late Ms can be young brown dwarfs, but that's irrelev
 
 Abstract:
 
-"Low-temperature L dwarfs..." This wording suggests that the authors are studying late-L dwarfs, since those are the low temperature L dwarfs (as opposed to high temperature L dwarfs). But this study concerns mid-L dwarfs. I think the authors are trying to describe all L dwarfs in general using the term "low-temperature". In scientific writing, adjectives should only be used to describe a subset of the noun, otherwise things get very confusing especially for non-native English speakers. I suggest the authors just say "L dwarfs". If it is important to point out that L dwarfs are low temperature, I suggest "L dwarfs, objects with surface temperatures between xxxx and xxxx K, exhibit..." or something similar. 
+D "Low-temperature L dwarfs..." This wording suggests that the authors are studying late-L dwarfs, since those are the low temperature L dwarfs (as opposed to high temperature L dwarfs). But this study concerns mid-L dwarfs. I think the authors are trying to describe all L dwarfs in general using the term "low-temperature". In scientific writing, adjectives should only be used to describe a subset of the noun, otherwise things get very confusing especially for non-native English speakers. I suggest the authors just say "L dwarfs". If it is important to point out that L dwarfs are low temperature, I suggest "L dwarfs, objects with surface temperatures between xxxx and xxxx K, exhibit..." or something similar. 
 
-"We find that 2MASS J0835−0819 exhibits marginal ( 0.5% per band) variability..." Without reading the full paper, I'm confused. Why was this object studied if it doesn't have high variability? I thought these were both rapidly rotating. How was it known to be rapidly rotating if it has undetectable variability? I suspect I will learn more from reading the paper, but since the abstract is the first thing the reader sees, I encourage the authors to explain this briefly with a short sentence. What it variable before, but not now?
+D "We find that 2MASS J0835−0819 exhibits marginal ( 0.5% per band) variability..." Without reading the full paper, I'm confused. Why was this object studied if it doesn't have high variability? I thought these were both rapidly rotating. How was it known to be rapidly rotating if it has undetectable variability? I suspect I will learn more from reading the paper, but since the abstract is the first thing the reader sees, I encourage the authors to explain this briefly with a short sentence. What it variable before, but not now?
 
-"The different variability behaviors of 2MASS J0835−0819 and 2MASS J1821+1414 suggests dependencies on viewing angle and/or overall cloud content, underlying factors that can be examined through a broader survey." Subject-verb agreement. Subject is plural (behaviors), verb is singular (suggests).
+D "The different variability behaviors of 2MASS J0835−0819 and 2MASS J1821+1414 suggests dependencies on viewing angle and/or overall cloud content, underlying factors that can be examined through a broader survey." Subject-verb agreement. Subject is plural (behaviors), verb is singular (suggests).
 
-"We detect no statistically significant phase variations with wavelength." Is this the same as saying:
+D "We detect no statistically significant phase variations with wavelength." Is this the same as saying:
 
-"We do not detect statistically significant phase variations with wavelength." ? If so, I would do the latter. It's clearer. Even better would be to quantify significant (e.g. "more than x percent across the ranges probed").
+D "We do not detect statistically significant phase variations with wavelength." ? If so, I would do the latter. It's clearer. Even better would be to quantify significant (e.g. "more than x percent across the ranges probed").
 
 Commas are often incorrectly placed. Usually there is a comma before "which" or "whose", but not in between two nouns separated by "and" or "or." For example:
 
