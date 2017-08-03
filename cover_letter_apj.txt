@@ -11,5 +11,6 @@ Dear Dr. Steven Kawaler and Anonymous Referee,
     
     We replaced our uses of "calibrator" and "comparison star" with reference star to be consistent.
     
+    We labeled the target and reference stars in the 2MASS 3-color images to clarify which ones are used.
     
     

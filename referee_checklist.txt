@@ -50,7 +50,7 @@ D "in which references stars are simultaneously observed to correct for telluric
 
 D "in a wide (3′′) slit" I would also state the length of the slit, since that is relevant.
 
-Figure 1 Caption: "and for 2MASS J1821+1414 to the right on the edge of this image." There two objects to the right of the J1821 in the image. Which one was used as the reference?
+D Figure 1 Caption: "and for 2MASS J1821+1414 to the right on the edge of this image." There two objects to the right of the J1821 in the image. Which one was used as the reference?
 
 Section 2:
 
