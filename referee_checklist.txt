@@ -10,9 +10,9 @@ Less-major (but still important) comments:
 
 Title:
 
-Perhaps this betrays my ignorance, but are these objects definitely brown dwarfs? As I understand it, a brown dwarf is a gas ball that is cooling via Kelvin-Helmholtz contraction, but never begins nor sustains hydrogen fusion in their cores (which would make it a star). Stellar evolutionary models can make hydrogen-burning stars with mid-L spectral types. So, some L dwarfs are likely bona fide stars, and therefore not brown dwarfs. The transition from M to L is based on molecular lines seen in their spectra as a consequence of photospheric temperature, not whether they are burning hydrogen in their cores. 
+D Perhaps this betrays my ignorance, but are these objects definitely brown dwarfs? As I understand it, a brown dwarf is a gas ball that is cooling via Kelvin-Helmholtz contraction, but never begins nor sustains hydrogen fusion in their cores (which would make it a star). Stellar evolutionary models can make hydrogen-burning stars with mid-L spectral types. So, some L dwarfs are likely bona fide stars, and therefore not brown dwarfs. The transition from M to L is based on molecular lines seen in their spectra as a consequence of photospheric temperature, not whether they are burning hydrogen in their cores. 
 
-Also, as the authors know, late Ms can be young brown dwarfs, but that's irrelevant here. Often astronomers use the term "ultra-cool dwarf" when describing late M and L dwarfs, since these could either be young brown dwarfs or main-sequence stars. If the authors have evidence that neither of these stars are burning hydrogen, nor that they never will burn hydrogen in their cores, I am ok with the term "brown dwarf." But it would be nice for if this could be addressed in a sentence or short paragraph, for the sake of the reader.
+D Also, as the authors know, late Ms can be young brown dwarfs, but that's irrelevant here. Often astronomers use the term "ultra-cool dwarf" when describing late M and L dwarfs, since these could either be young brown dwarfs or main-sequence stars. If the authors have evidence that neither of these stars are burning hydrogen, nor that they never will burn hydrogen in their cores, I am ok with the term "brown dwarf." But it would be nice for if this could be addressed in a sentence or short paragraph, for the sake of the reader.
 
 Abstract:
 
@@ -28,27 +28,27 @@ D "We do not detect statistically significant phase variations with wavelength."
 
 Commas are often incorrectly placed. Usually there is a comma before "which" or "whose", but not in between two nouns separated by "and" or "or." For example:
 
-"condensates can coalesce into large-scale cloud and haze structures (Lunine et al. 1989; Ackerman & Marley 2001; Crossfield et al. 2014) whose surface" Should have a comma before "whose"
+D "condensates can coalesce into large-scale cloud and haze structures (Lunine et al. 1989; Ackerman & Marley 2001; Crossfield et al. 2014) whose surface" Should have a comma before "whose"
 
-"and vertical structure may produce rotationally- modulated brightness variations (e.g., Radigan et al. 2012), and long-term variatiations." Shouldn't have a comma before and.
+D "and vertical structure may produce rotationally- modulated brightness variations (e.g., Radigan et al. 2012), and long-term variatiations." Shouldn't have a comma before and.
 
-"and amplitude spectra have been shown to vary with effective temperature, (Teff ; e.g., Yang et al. 2015) and surface gravity (e.g., Lew et al. 2016). Shouldn't have a comma after temperature.
+D "and amplitude spectra have been shown to vary with effective temperature, (Teff ; e.g., Yang et al. 2015) and surface gravity (e.g., Lew et al. 2016). Shouldn't have a comma after temperature.
 
-"in relative photometric and spectro-photometric precision, and have been responsible for the discovery of the majority" Since both clauses share a subject, there shouldn't be a comma after precision.
+D "in relative photometric and spectro-photometric precision, and have been responsible for the discovery of the majority" Since both clauses share a subject, there shouldn't be a comma after precision.
 
-"surface heterogeneity, or evolution in variability modes." Two nouns separated by "or" -> no comma.
+D "surface heterogeneity, or evolution in variability modes." Two nouns separated by "or" -> no comma.
 
-"Multi-wavelength monitoring of low-temperature stars and brown dwarfs allows FOR the measurement." Add "for"
+D "Multi-wavelength monitoring of low-temperature stars and brown dwarfs allows FOR the measurement." Add "for"
 
-"but may interact wiht clouds to produce" Typo, wiht to with.
+D "but may interact wiht clouds to produce" Typo, wiht to with.
 
-"insufficient calibrators" I would say "insufficient numbers of field stars for photometric calibration." Otherwise unclear what calibrators refers to. 
+D "insufficient calibrators" I would say "insufficient numbers of field stars for photometric calibration." Otherwise unclear what calibrators refers to. 
 
-"in which references stars" typo. Reference not references. Also, previously these were referred to as calibrators, not reference stars. Pick one term and stay consistent?
+D "in which references stars" typo. Reference not references. Also, previously these were referred to as calibrators, not reference stars. Pick one term and stay consistent?
 
-"in which references stars are simultaneously observed to correct for telluric effects can significantly improve the precision of ground-based spectro-photometry" This introduces the idea of reference stars, which is needed to understand "calibrators" in the previous paragraph. Introduce the idea when "calibrators" is first mentioned.?
+D "in which references stars are simultaneously observed to correct for telluric effects can significantly improve the precision of ground-based spectro-photometry" This introduces the idea of reference stars, which is needed to understand "calibrators" in the previous paragraph. Introduce the idea when "calibrators" is first mentioned.?
 
-"in a wide (3′′) slit" I would also state the length of the slit, since that is relevant.
+D "in a wide (3′′) slit" I would also state the length of the slit, since that is relevant.
 
 Figure 1 Caption: "and for 2MASS J1821+1414 to the right on the edge of this image." There two objects to the right of the J1821 in the image. Which one was used as the reference?
 

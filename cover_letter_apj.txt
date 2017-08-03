@@ -7,6 +7,9 @@ Dear Dr. Steven Kawaler and Anonymous Referee,
     
     > Perhaps this betrays my ignorance, but are these objects definitely brown dwarfs? As I understand it, a brown dwarf is a gas ball that is cooling via Kelvin-Helmholtz contraction, but never begins nor sustains hydrogen fusion in their cores (which would make it a star). Stellar evolutionary models can make hydrogen-burning stars with mid-L spectral types. So, some L dwarfs are likely bona fide stars, and therefore not brown dwarfs. The transition from M to L is based on molecular lines seen in their spectra as a consequence of photospheric temperature, not whether they are burning hydrogen in their cores. 
 
-    We have added 1 sentence justifications for each brown dwarf that they are below the hydrogen burning limit.
+    We have added 1 sentence justifications for each brown dwarf that they are likely below the hydrogen burning limit.
+    
+    We replaced our uses of "calibrator" and "comparison star" with reference star to be consistent.
+    
     
     
