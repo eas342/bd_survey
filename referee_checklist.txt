@@ -67,7 +67,7 @@ It was not clear how the authors computed BT-Settl models with such specific tem
 
 Section 3:
 
-"differental color refraction" typo: differential.
+D "differental color refraction" typo: differential.
 
 "The images were rectified by shifting each row to match a center row in between the two sources. This was achieved by cross correlating the reference row with all other detector rows (which have the same back- ground spectrum) and fitting a smooth function over the sources as in Schlawin et al. 2016." This part is very confusing. Are the "rows" in the dispersion or spatial direction? Is the reference row the center row, or the row(s?) with the reference/calibration star? Is the "smooth function" 1d or 2d? Is it polynomial? I sense this section should be longer for clarification and reproducibility. I realize I could look to Schlawin et al. (2016), but it would be nice if this had more description in this paper since it's such a new technique.
 

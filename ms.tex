@@ -219,7 +219,7 @@ brightness temperatures range from 1850~K at $J$-band to 1670~K at $K$-band, aga
 We observed {\sha} and {\shb} for one night each with the IRTF/SpeX (Table \ref{tab:obsParam}).
 {\sha} was observed for 4.65 hours, covering 1.5 rotation periods; {\shb} was observed for 7.47 hours, covering 1.8 rotation periods.
 Following \citet{2014ApJ...783....5S}, we used SpeX in its prism-dispersed mode, obtaining 0.9--2.4~$\micron$ spectra in a single order at low dispersion. 
-Both target and reference star were observed simultaneously by orienting the 3$\arcsec$$\times$60$\arcsec$ slit to align with the visual binary axis. This orientation is generally misaligned with the parallactic angle, but the good seeing (0$\farcs$5 at $H$-band) and wide slit minimizes differental color refraction. The effective resolution of the spectral data, set by seeing and pointing errors, are $\lambda$/$\Delta\lambda$ $\approx$ 50. Integration times were 45~s and 60~s for {\sha} and {\shb}, respectively. The short-wavelength limit of our spectral coverage was set by the use of a 0.9~$\mu$m dichroic which deflected optical light into the MIT Optical Rapid Imaging System (MORIS) camera \citep{2011PASP..123..461G}, which was used for $i$-band guiding.
+Both target and reference star were observed simultaneously by orienting the 3$\arcsec$$\times$60$\arcsec$ slit to align with the visual binary axis. This orientation is generally misaligned with the parallactic angle, but the good seeing (0$\farcs$5 at $H$-band) and wide slit minimizes \textbf{differential} color refraction. The effective resolution of the spectral data, set by seeing and pointing errors, are $\lambda$/$\Delta\lambda$ $\approx$ 50. Integration times were 45~s and 60~s for {\sha} and {\shb}, respectively. The short-wavelength limit of our spectral coverage was set by the use of a 0.9~$\mu$m dichroic which deflected optical light into the MIT Optical Rapid Imaging System (MORIS) camera \citep{2011PASP..123..461G}, which was used for $i$-band guiding.
 
 
 
@@ -241,8 +241,12 @@ The variability in \shb\ is prominent at the short wavelengths with a magnitude 
 	\vspace{0.1in}
 \end{figure*} 
 
-The images were rectified by shifting each row to match a center row in between the two sources.
-This was achieved by cross correlating the reference row with all other detector rows (which have the same background spectrum) and fitting a smooth function over the sources as in \citealt{2016ApJ...826..156S}.
+\textbf{The 2D images were rectified so that the X coordinates of all background spectra corresponded to the same wavelength.
+This was achieved by selecting a reference row between the sources and then cross-correlating this reference spectrum with all other illuminated detector rows.
+A third order polynomial was fit to the cross correlation peaks (masking out the sources) to determine a smooth X (spectral) shift function as a function of Y (spatial) position  \citep{2016ApJ...826..156S}.
+Once the 2D spectral images were rectified, the background is subtracted along the Y (spatial) direction with a 15th order polynomial.
+The reduction software is available online\footnote{https://github.com/eas342/iraf\_and\_idl\_processing}.}
+ 
 We also obtained calibration sequences of ThAr and flat-field incadescent lamps with the 3$\arcsec$$\times$60$\arcsec$ slit  before and after the brown dwarf time series.
 An additional set of ThAr emission lamp spectra were taken at the beginning and end of the observations (preceding and following the 3$\arcsec \times 60 \arcsec$ lamp spectra) with a 0.3$\arcsec\times60\arcsec$ slit for wavelength calibration.
 % to measure pixel response and assess flexure in the instrument with telescope orientation.
