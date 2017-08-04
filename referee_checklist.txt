@@ -54,9 +54,9 @@ D Figure 1 Caption: "and for 2MASS J1821+1414 to the right on the edge of this i
 
 Section 2:
 
-First sentence has some grammatical issues. Split into two sentences? "those sources that have" comes out of nowhere.
+D First sentence has some grammatical issues. Split into two sentences? "those sources that have" comes out of nowhere.
 
-"We identified 30 potential targets, and prioritized" 2nd clause shares subject with first clause -> no comma.
+D "We identified 30 potential targets, and prioritized" 2nd clause shares subject with first clause -> no comma.
 
 Figure 2: Y-axis should say "Brightness Temperature" not "Surface Brightness." Although related by the Planck function, surface brightness has different units. Also, see if you can't replace "microns" with $\mu m$ in the x-axis label to bring it up to AAS Journal standards. And make the y and x axis label font size in the bottom plots similar to the top plots. Very small in the bottom plots.
 
@@ -127,6 +127,6 @@ Comments from Data Editor:
 
 1) The authors might want to provide the SpeX spectra as the Data behind the Figure (DbF) with Figure 2. Ditto for the light curve data shown in Figure A1.
 
-2) Per the new AAS software policy, http://journals.aas.org/policy/software.html, the authors should modify their AASTeX v6.1 manuscript to highlight the code they used (both cited and unmentioned in the current text) with the new \software command, e.g.
+D 2) Per the new AAS software policy, http://journals.aas.org/policy/software.html, the authors should modify their AASTeX v6.1 manuscript to highlight the code they used (both cited and unmentioned in the current text) with the new \software command, e.g.
 
-\software{emcee (Foreman-Mackey et al. 2013, corner.py (Foreman-Mackey et al. 2016), Astropy (The Astropy Collaboration 2013)}
+D \software{emcee (Foreman-Mackey et al. 2013, corner.py (Foreman-Mackey et al. 2016), Astropy (The Astropy Collaboration 2013)}

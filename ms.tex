@@ -140,7 +140,9 @@ We summarize our results in Section~\ref{sec:conclusions}.
 
 \section{Target Selection and Characterization}\label{sec:targets}
 
-We identified potential targets for relative spectro-photometry by selecting among the $\approx$200 known L dwarfs\footnote{We identified these sources from DwarfArchives,  \url{http://dwarfarchives.org}. The declination range corresponds to the visibility region of IRTF.} with $H$ $<$ 14 and $-$30{\degree}  $<$ $\delta$ $<$ +67{\degree} those sources that have comparable-brightness ($\Delta{H}$ $<$ 1) visual binary companions at apparent separations of 5$\arcsec$--30$\arcsec$. We identified 30 potential targets, and prioritized those with previously detected photometric variability or rotational $v\sin{i}$ measurements indicating periods $\leq$10~hr.  Two sources were identified as ideal initial targets (Table~\ref{tab:bdProp}).
+We identified potential targets for relative spectro-photometry by selecting among the $\approx$200 known L dwarfs\footnote{We identified these sources from DwarfArchives,  \url{http://dwarfarchives.org}. The declination range corresponds to the visibility region of IRTF.} with $H$ $<$ 14 and $-$30{\degree}  $<$ $\delta$ $<$ +67{\degree}.
+\textbf{We downselected} those sources that have comparable-brightness ($\Delta{H}$ $<$ 1) \textbf{reference stars} at apparent separations of 5$\arcsec$--30$\arcsec$.
+We identified 30 potential targets \textbf{and} prioritized those with previously detected photometric variability or rotational $v\sin{i}$ measurements indicating periods $\leq$10~hr.  Two sources were identified as ideal initial targets (Table~\ref{tab:bdProp}).
 
 2MASS~J08354256$-$0819237 (hereafter {\sha}; \citealt{2003AJ....126.2421C}) is a bright, nearby ($d$ = 7.27$\pm$0.02~pc; \citealt{2016AJ....152...24W}) L5 dwarf that shows signatures of \textbf{low surface gravity \citep[][however, see \citet{2015ApJS..219...33G}]{2016ApJ...833...96L}. 
 There is no Li I absorption reported for this source \citep{2003AJ....126.2421C,2015ApJS..220...18B}; however its low temperature \citep[T$_{eff}$=1800~K][]{2015ApJS..219...33G} and likely youth ($<$1 Gyr) is consistent with a mass below the hydrogen-burning mass limit \citep{2003A&A...402..701B,2000ApJ...531..438B}.}
@@ -438,24 +440,24 @@ Using ground-based facilities such as SpeX on IRTF allows us to expand our monit
 
 
 \section{Acknowledgements}
-MCMC fitting makes use of \texttt{emcee} \citep{foreman-mackey2013emcee} and the covariance plot was made with \texttt{corner.py} \citep{foremanCorner}.
-Thanks to Vivien Parmentier for useful discussions on cloud versus a spotted temperature model.
+Thanks to Vivien Parmentier for useful discussions on cloud versus a spotted temperature models.
 Funding for the E Schlawin is provided by NASA Goddard Spaceflight Center.
 The material is based upon work supported by
 the National Aeronautics and Space Administration under
 Grant No.~NNX15AI75G. 
 This research has made
 use of the SIMBAD database, operated at CDS, Strasbourg,
-France; NASA'��s Astrophysics Data System Bibliographic
+France; NASA's Astrophysics Data System Bibliographic
 Services; the M, L, T, and Y dwarf compendium
 housed at \url{http://DwarfArchives.org}; the SpeX Prism
-Libraries at \url{http://www.browndwarfs.org/spexprism}; and the \texttt{astropy} package \citep{astropy2013}. 
+Libraries at \url{http://www.browndwarfs.org/spexprism}.
 The authors wish to recognize and acknowledge the very significant cultural role and reverence that the summit of Mauna Kea has always had within the indigenous Hawaiian community. We are most fortunate to have the opportunity to conduct observations from this mountain.
 
 \acknowledgments
 
-
 \facility{IRTF (SpeX)}.
+
+\textbf{\software{\texttt{emcee} \citep{foreman-mackey2013emcee}, \texttt{corner.py} \citep{foremanCorner}. SpeX Prism Library Analysis Toolkit \citep{2017arXiv170700062B}, \texttt{astropy} \citep{astropy2013}.}}
 
 \appendix
 
