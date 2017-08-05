@@ -69,18 +69,18 @@ Section 3:
 
 D "differental color refraction" typo: differential.
 
-"The images were rectified by shifting each row to match a center row in between the two sources. This was achieved by cross correlating the reference row with all other detector rows (which have the same back- ground spectrum) and fitting a smooth function over the sources as in Schlawin et al. 2016." This part is very confusing. Are the "rows" in the dispersion or spatial direction? Is the reference row the center row, or the row(s?) with the reference/calibration star? Is the "smooth function" 1d or 2d? Is it polynomial? I sense this section should be longer for clarification and reproducibility. I realize I could look to Schlawin et al. (2016), but it would be nice if this had more description in this paper since it's such a new technique.
+D "The images were rectified by shifting each row to match a center row in between the two sources. This was achieved by cross correlating the reference row with all other detector rows (which have the same back- ground spectrum) and fitting a smooth function over the sources as in Schlawin et al. 2016." This part is very confusing. Are the "rows" in the dispersion or spatial direction? Is the reference row the center row, or the row(s?) with the reference/calibration star? Is the "smooth function" 1d or 2d? Is it polynomial? I sense this section should be longer for clarification and reproducibility. I realize I could look to Schlawin et al. (2016), but it would be nice if this had more description in this paper since it's such a new technique.
 
-"ThAr emission lamp spectra were taken at the begin- ning and end of the observations (preceding and follow- ing the 3′′ × 60′′ lamp spectra) with a 0.3′′ × 60′′ slit for wavelength calibration." This sentence could use rewording for clarity.
+D "ThAr emission lamp spectra were taken at the begin- ning and end of the observations (preceding and follow- ing the 3′′ × 60′′ lamp spectra) with a 0.3′′ × 60′′ slit for wavelength calibration." This sentence could use rewording for clarity.
 
-"To correct for instrument flexure, we also cross-correlated the sky frame with each science image to measure linear spatial shifts..." "Also" is necessary here since you haven't talked about correcting for flexure prior to this sentence.
+D "To correct for instrument flexure, we also cross-correlated the sky frame with each science image to measure linear spatial shifts..." "Also" is necessary here since you haven't talked about correcting for flexure prior to this sentence.
 
-"However, there are small additional shifts of the sources within the slit so another shift was performed between the sources to ensure that telluric features were removed when dividing the two spectra." Two independent clauses, comma in between (before "so").
+D "However, there are small additional shifts of the sources within the slit so another shift was performed between the sources to ensure that telluric features were removed when dividing the two spectra." Two independent clauses, comma in between (before "so").
 
 
 Section 4:
 
-"Neither the reference spectra nor the brown dwarf spectra have any corrections..." "Have" should be "have had"
+D "Neither the reference spectra nor the brown dwarf spectra have any corrections..." "Have" should be "have had"
 
 "We measure the standard deviations of the time series for wavelength regions that have no significant variations near the rotation period of the brown dwarfs and compare it to the expected photon and read noise." Did you do this for both brown dwarfs, or just one? If both, should be "rotation periods", if one, should be "brown dwarf"
 

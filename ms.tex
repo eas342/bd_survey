@@ -243,24 +243,26 @@ The variability in \shb\ is prominent at the short wavelengths with a magnitude 
 
 \textbf{The 2D images were rectified so that the X coordinates of all background spectra corresponded to the same wavelength.
 This was achieved by selecting a reference row between the sources and then cross-correlating this reference spectrum with all other illuminated detector rows.
-A third order polynomial was fit to the cross correlation peaks (masking out the sources) to determine a smooth X (spectral) shift function as a function of Y (spatial) position  \citep{2016ApJ...826..156S}.
-Once the 2D spectral images were rectified, the background is subtracted along the Y (spatial) direction with a 15th order polynomial.
-The reduction software is available online\footnote{https://github.com/eas342/iraf\_and\_idl\_processing}.}
+A third order polynomial was fit to the cross correlation peaks (masking out the sources) to determine a one dimensional smooth X (spectral) shift function as a function of Y (spatial) position  \citep{2016ApJ...826..156S}.
+Once the 2D spectral images were rectified, the background is subtracted along the Y (spatial) direction with a 4th order polynomial.
+The reduction software is available online\footnote{https://github.com/eas342/spectral\_pipeline\_and\_scripts}.}
  
-We also obtained calibration sequences of ThAr and flat-field incadescent lamps with the 3$\arcsec$$\times$60$\arcsec$ slit  before and after the brown dwarf time series.
-An additional set of ThAr emission lamp spectra were taken at the beginning and end of the observations (preceding and following the 3$\arcsec \times 60 \arcsec$ lamp spectra) with a 0.3$\arcsec\times60\arcsec$ slit for wavelength calibration.
-% to measure pixel response and assess flexure in the instrument with telescope orientation.
+\textbf{We obtained ThAr arc lamp spectra, dark frames and flat field data for calibration.
+The ThAr data is taken for wavelength calibration with the 0.3$\arcsec\times60\arcsec$ slit since it has a resolving power high enough to separate the ThAr lines and identify them.
+This wavelength calibration data is taken at the very beginning and very end of the sequence to ensure the 3$\arcsec \times 60 \arcsec$ slit is unmoved during the rest of the calibration and science data.
+Dark frames are taken with the same exposure time as the science images and with the order sorting filter set to the closed position.
+We take flat field field data with an incandescent lamp to correct for high frequency, pixel-to-pixel variations.
 For {\sha}, we used a combination of the flat-field lamp and a sky frame to construct a pixel response map, removing large-scale ($\gtrsim$ 30 pixels) structure with low order polynomial fits along spatial and spectral axes, and normalizing to the median response. 
-To correct for instrument flexure, we also cross-correlated the sky frame with each science image to measure linear spatial shifts, which were $\pm$5~pixels or 0.5\arcsec\ for \sha\ and $\pm$1.5~pixels or 0.15\arcsec\ for \shb.
+To correct for instrument flexure, we cross-correlated the sky frame with each science image to measure linear spatial shifts, which were $\pm$5~pixels or 0.5\arcsec\ for \sha\ and $\pm$1.5~pixels or 0.15\arcsec\ for \shb.}
 These shifts were used to apply a custom flat field for every image.
 For {\shb}, we did not have sufficient sky frames so we used our incandescent lamp image for both flat fielding and flexure analysis.
 
-As described in \citet{2016ApJ...826..156S}, we performed spatial background subtraction over the entire slit using a 4th-order polynomial fit to points more than 30 pixels away from the center of the source dispersion traces.  Spectra were optimally extracted \citep{1986ApJ...302..757H}, with spatial profiles fit to low order polynomials along the spectral direction one row at a time with 20$\sigma$ rejection to remove cosmic rays and bad pixels.
+As described in \citet{2016ApJ...826..156S}, we performed spatial background subtraction over the entire slit using a 4th-order polynomial fit \textbf{(described above)} to points more than 30 pixels away from the center of the source dispersion traces.  Spectra were optimally extracted \citep{1986ApJ...302..757H}, with spatial profiles fit to low order polynomials along the spectral direction one row at a time with 20$\sigma$ rejection to remove cosmic rays and bad pixels.
 These spatial profiles were then used to calculate a weighted sum spectrum across the illuminated detector for each source and exposure. 
 Typical signal-to-noise of the extracted spectra were 40 - 100 per spectral pixel (unbinned).
 Relative spectra (source/reference) were then computed for each exposure.
 Our image rectification process described above ensures that the wavelength solution is the same for each row of the image.
-However, there are small additional shifts of the sources within the slit so another shift was performed between the sources to ensure that telluric features were removed when dividing the two spectra.
+However, there are small additional shifts of the sources within the \textbf{slit, so} another shift was performed between the sources to ensure that telluric features were removed when dividing the two spectra.
 
 %For MORIS reduction, we used the raw files and performed aperture photometry with the IDL \texttt{aper} procedure using an aperture size of 6 pixels and a sky annulus of 8-11 pixels.
 
@@ -320,7 +322,7 @@ The $A_2$ constraints for \sha\ (not shown) are all consistent with zero.}\label
 \subsection{Light Curves}
 
 Figure \ref{fig:specphot} shows the raw spectra of the two brown dwarfs, their reference spectra and the background spectra.
-Neither the reference spectra nor the brown dwarf spectra have any corrections applied for telluric absorption or instrumental spectral response.
+Neither the reference spectra nor the brown dwarf spectra have \textbf{had} any corrections applied for telluric absorption or instrumental spectral response.
 The reference stars have significantly bluer spectra than the brown dwarfs, but nonetheless contain the same telluric water absorption signatures
 near 1.37~$\mu$m and 1.83~$\mu$m, resulting in significantly lower flux.
 
