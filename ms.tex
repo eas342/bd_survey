@@ -334,11 +334,11 @@ Both sources exhibit some systematic features in the strong telluric absorption 
 Individual narrow-band light curves are extracted for each target in 25 spectral bins of width 0.060~$\mu$m; these are shown in Figure~\ref{fig:tserDetrend}.
 The baseline trends (which scale linearly with time and linearly with airmass) have been removed from Figure~\ref{fig:tserDetrend}, but the original light curves can be viewed in Figure \ref{fig:tserNoDetrend}.
 The uncertainties in these curves due to photon and read noise range from 0.2\% to 0.6\% per exposure.
-We measure the standard deviations of the time series for wavelength regions that have no significant variations near the rotation period of the brown dwarfs and compare it to the expected photon and read noise.
+We measure the standard deviations of the time series for wavelength regions that have no significant variations near the rotation period \textbf{for each brown dwarf} and compare it to the expected photon and read noise.
 In these wavelength bins, the standard deviations of the points is about 4$\times$ the expected read noise and photon noise.
 We attribute this to correlated errors between wavelengths and as a simple approximation multiply all error bars by a factor of 4 to account for these systematics.
 
-We find minimal variation in the lightcurves of {\sha}, but pronounced variation in {\shb}, particularly in bands $<$1.8~$\mu$m. 
+We find minimal variation in the lightcurves of {\sha} \textbf{but} pronounced variation in {\shb}, particularly in bands $<$1.8~$\mu$m. 
 These variations are periodic with ``double-hump'' structures at peak amplitudes around -2.7~hr and +1.3~hr relative to JD 2457565.00.
 The amplitude of these variations is strongly wavelength-dependent with $\sim$3.0\% peak-to-trough variations at short 
 wavelengths and near-zero amplitude at the longest wavelengths.
@@ -352,13 +352,16 @@ F(t) = \left( A_1 \cos(2 \pi (t - t_1)/\tau) + A_2 \cos(4 \pi (t - t_2)/\tau) + 
 \end{equation}
 where $F(t)$ is the relative flux as a function of time $t$, $A_1$ and $A_2$ are the amplitudes of the two sinusoid terms, $t_1$ and $t_2$ are the time of maximum periodic flux for each sinusoid term, $\tau$ is period of the variations, $a(t)$ is the airmass as a function of time and $B$, $C$ and $D$ are constants quantifying baseline (i.e., non-astrophysical) trends.
 Since some wavelengths are affected by telluric contamination and we wish to avoid fitting harmonics, we impose a prior on the rotational period $\tau$.
-of 2.6 $< \tau < $3.6 hr for \sha]\ and 3.7 $< \tau <$ 4.7 hr for {\shb}, $\pm$0.5 hr around the literature values.
+of 2.6 $< \tau < $3.6 hr for \sha\ and 3.7 $< \tau <$ 4.7 hr for {\shb}, $\pm$0.5 hr around the literature values.
 These priors are wide enough they don't drive the constraints on $\tau$ at short wavelengths for {\shb}, but narrow enough to ensure that the sinusoidal fits do not just fit the airmass trends with time.
 We also restrict the time of maximum periodic flux such that $-\tau/2 < t_1 < \tau/2$ and $-\tau/4 < t_2 < \tau/4$ to assure there are no 2$\pi$ degeneracies in the fit.
 We do not put any constraints on A$_1$ relative to A$_2$.
+\textbf{The co-variance between A$_1$ and A$_2$ is very small (resulting in ``round'' MCMC 2D posterior distributions between the two parameters) since they are essentially different Fourier parameters for the time series.}
 
 Figure \ref{fig:ampSpec} shows the MCMC posterior constraints for periodic amplitudes as a function of wavelength.
 For {\sha} (Figure \ref{fig:ampspec0835}) we find at most small amplitude variability ($\lesssim 0.5\%$), marginally significant at 1.7~$\mu$m and 2.1--2.35~$\mu$m, with a flat trend as a function of wavelength.
+\textbf{If one were to average all of these K-band points together, they are consistent with a 3.4 $\pm$ 0.1 hr rotation period, though this is somewhat driven by the prior 2.6 $< \tau < $3.6 hr.}
+
 \shb, on the other hand, shows highly significant variability with a decreasing trend in amplitude as function of wavelength.
 In both cases, we find no statistically significant wavelength dependence on the time of maximum variation $t_1$, and hence no phase variation.
 The period of \shb\ is found to be consistent with that of \citet{2015ApJ...799..154M}.
