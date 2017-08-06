@@ -82,13 +82,13 @@ Section 4:
 
 D "Neither the reference spectra nor the brown dwarf spectra have any corrections..." "Have" should be "have had"
 
-"We measure the standard deviations of the time series for wavelength regions that have no significant variations near the rotation period of the brown dwarfs and compare it to the expected photon and read noise." Did you do this for both brown dwarfs, or just one? If both, should be "rotation periods", if one, should be "brown dwarf"
+D "We measure the standard deviations of the time series for wavelength regions that have no significant variations near the rotation period of the brown dwarfs and compare it to the expected photon and read noise." Did you do this for both brown dwarfs, or just one? If both, should be "rotation periods", if one, should be "brown dwarf"
 
-"We find minimal variation in the lightcurves of 2MASS J0835−0819, but pronounced variation..." Clauses share a subject, no comma.
+D "We find minimal variation in the lightcurves of 2MASS J0835−0819, but pronounced variation..." Clauses share a subject, no comma.
 
-I believe A1 and A2 in the double sinusoid model are uncorrelated parameters, since they are basically the amplitudes of the first two Fourier series for a box of length tau. It would be good to state that the two sinusoids are orthogonal and that A1 and A2 should not have significant co-variance in a fit.
+D I believe A1 and A2 in the double sinusoid model are uncorrelated parameters, since they are basically the amplitudes of the first two Fourier series for a box of length tau. It would be good to state that the two sinusoids are orthogonal and that A1 and A2 should not have significant co-variance in a fit.
 
-Figure 5: The variation in J0835 in K band looks more than marginal. If you take all the points in K band together, there is a statistically significant detection of variation, correct? I do not see any interpretation of this variation in the manuscript. Is that consistent with the 3.1 hr variation detected in the past?
+D Figure 5: The variation in J0835 in K band looks more than marginal. If you take all the points in K band together, there is a statistically significant detection of variation, correct? I do not see any interpretation of this variation in the manuscript. Is that consistent with the 3.1 hr variation detected in the past?
 
 "There is a multiplicative offset of 25% between the IRTF and WFC3 spectrum that may be due to different spatial cloud and temperature distributions AT different epochs." Typo, add "at."
 
