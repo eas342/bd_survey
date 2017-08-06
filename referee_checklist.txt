@@ -114,19 +114,19 @@ D "which has A very red" Need an "a" in there. Also, I'm not a fan of "very" in 
 
 Section 5:
 
-"two brown dwarfs of spectral types L4- L5:" change "type" to plural "types"
+D "two brown dwarfs of spectral types L4- L5:" change "type" to plural "types"
 
-"We find that 2MASS J0835−0819 has marginal variabil- ity and no significant wavelength dependence" How do you reconcile this with previous studies showing a 3.1 hour variability signature?
+D "We find that 2MASS J0835−0819 has marginal variabil- ity and no significant wavelength dependence" How do you reconcile this with previous studies showing a 3.1 hour variability signature?
 
-"viewing orientations; while the latter allows us to study weather-related changes to cloud structures over multi- ple rotation periods." "while" is a subordinating conjunction, so remove the semi-colon (and don't put a comma in!).
+D "viewing orientations; while the latter allows us to study weather-related changes to cloud structures over multi- ple rotation periods." "while" is a subordinating conjunction, so remove the semi-colon (and don't put a comma in!).
 
-Add AAS software keywords for emcee, corner and miescatter after facilities.
+D Add AAS software keywords for emcee, corner and miescatter after facilities.
 
 ---------
 Comments from Data Editor:
 
 1) The authors might want to provide the SpeX spectra as the Data behind the Figure (DbF) with Figure 2. Ditto for the light curve data shown in Figure A1.
 
-D 2) Per the new AAS software policy, http://journals.aas.org/policy/software.html, the authors should modify their AASTeX v6.1 manuscript to highlight the code they used (both cited and unmentioned in the current text) with the new \software command, e.g.
+D D 2) Per the new AAS software policy, http://journals.aas.org/policy/software.html, the authors should modify their AASTeX v6.1 manuscript to highlight the code they used (both cited and unmentioned in the current text) with the new \software command, e.g.
 
 D \software{emcee (Foreman-Mackey et al. 2013, corner.py (Foreman-Mackey et al. 2016), Astropy (The Astropy Collaboration 2013)}
