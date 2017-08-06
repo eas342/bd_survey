@@ -90,27 +90,27 @@ D I believe A1 and A2 in the double sinusoid model are uncorrelated parameters, 
 
 D Figure 5: The variation in J0835 in K band looks more than marginal. If you take all the points in K band together, there is a statistically significant detection of variation, correct? I do not see any interpretation of this variation in the manuscript. Is that consistent with the 3.1 hr variation detected in the past?
 
-"There is a multiplicative offset of 25% between the IRTF and WFC3 spectrum that may be due to different spatial cloud and temperature distributions AT different epochs." Typo, add "at."
+D "There is a multiplicative offset of 25% between the IRTF and WFC3 spectrum that may be due to different spatial cloud and temperature distributions AT different epochs." Typo, add "at."
 
-"Yang et al. (2015) FOUND that the..." Change find to found, past tense.
+D "Yang et al. (2015) FOUND that the..." Change find to found, past tense.
 
-"water vapor absorption which in- dicates a high haze layer in 2MASS J1821+1414" comma before "which."
+D "water vapor absorption which in- dicates a high haze layer in 2MASS J1821+1414" comma before "which."
 
-"If we assume the cloud is confined to one hemisphere of the brown dwarf (i.e., maximum surface heterogeneity)..." I assume you mean East/West hemisphere and not North/South? Not entirely clear. Could write it as longitudes: "confined to surface longitudes between 0 and 180 degrees" for example.
+D "If we assume the cloud is confined to one hemisphere of the brown dwarf (i.e., maximum surface heterogeneity)..." I assume you mean East/West hemisphere and not North/South? Not entirely clear. Could write it as longitudes: "confined to surface longitudes between 0 and 180 degrees" for example.
 
-Also, that sentence needs an "then" before "the amplitude" to complete the "If then" structure.
+D Also, that sentence needs an "then" before "the amplitude" to complete the "If then" structure.
 
-"n=1.67 - 0.006 j COMPLEX index of refraction" add "complex" for clarity. And do people usually use j here instead of i?
+D "n=1.67 - 0.006 j COMPLEX index of refraction" add "complex" for clarity. And do people usually use j here instead of i?
 
-"For 2MASS J1821+1414, we find that the amplitude spectrum is well-fit by a Mie scattering model and the median particle radius is reasonably constrained." 2 independent clauses, separate with comma.
+D "For 2MASS J1821+1414, we find that the amplitude spectrum is well-fit by a Mie scattering model and the median particle radius is reasonably constrained." 2 independent clauses, separate with comma.
 
-"best-fit model which has a" comma before which.
+D "best-fit model which has a" comma before which.
 
-"has a median particle radius of 0.28 μm and σ = 0.3." Remove "grains," out of place noun.
+D "has a median particle radius of 0.28 μm and σ = 0.3." Remove "grains," out of place noun.
 
-Can the authors add a subscript to sigma here, to distinguish it from standard deviation (for which they used sigma earlier in the manuscript)?
+D Can the authors add a subscript to sigma here, to distinguish it from standard deviation (for which they used sigma earlier in the manuscript)?
 
-"which has A very red" Need an "a" in there. Also, I'm not a fan of "very" in scientific writing, since it's not quantitative. 
+D "which has A very red" Need an "a" in there. Also, I'm not a fan of "very" in scientific writing, since it's not quantitative. 
 
 Section 5:
 

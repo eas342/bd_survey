@@ -13,4 +13,7 @@ Dear Dr. Steven Kawaler and Anonymous Referee,
     
     We labeled the target and reference stars in the 2MASS 3-color images to clarify which ones are used.
     
+    > "n=1.67 - 0.006 j COMPLEX index of refraction" add "complex" for clarity. And do people usually use j here instead of i?
+    
+    We have instead used n=1.67 and k=0.006, which is more consistent with the literature conventions.
     

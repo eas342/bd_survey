@@ -376,8 +376,8 @@ The HST WFC3 maximum over minimum flux spectrum ($f_R$) is converted to an ampli
 \begin{equation}\label{eq:ampFromRatio}
 A  = \frac{f_R - 1}{f_R + 1}
 \end{equation}
-There is a multiplicative offset of 25\% between the IRTF and WFC3 spectrum that may be due to different spatial cloud and temperature distributions  different epochs.
-\citet{2015ApJ...798L..13Y} find that the WFC3 amplitude spectrum has no significant water vapor absorption which indicates a high haze layer in {\shb}. This is consistent with our gradually decreasing slope from 1.1 to 1.7~$\mu$m.
+There is a multiplicative offset of 25\% between the IRTF and WFC3 spectrum that may be due to different spatial cloud and temperature distributions \textbf{at} different epochs.
+\citet{2015ApJ...798L..13Y} \textbf{found} that the WFC3 amplitude spectrum has no significant water vapor \textbf{absorption, which} indicates a high haze layer in {\shb}. This is consistent with our gradually decreasing slope from 1.1 to 1.7~$\mu$m.
 
 \subsection{Mie Scattering Fit}
 
@@ -385,40 +385,40 @@ There is a multiplicative offset of 25\% between the IRTF and WFC3 spectrum that
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{corner_j1821_mie_sc.pdf}
 \caption{Posterior distributions to the simple Mie scattering fit to the $A_1$ amplitude spectrum for \shb\ assuming a forsterite composition.
-The model includes an amplitude offset $B$ to account for areal coverage, a median particle radius $r$, and a scale parameter $\sigma$.
+The model includes an amplitude offset $B$ to account for areal coverage, a median particle radius $r$, and a scale parameter $\sigma_s$.
 The upper right inset plot shows the log-normal particle size distribution in blue for samples drawn from the posterior distribution.
 The red curve is the maximum likelihood log-normal particle size distribution.}\label{fig:corner1821mie}
 \end{centering}
 \end{figure}
 
 We model the wavelength dependence of variability amplitudes for \shb\ with a simple cloud model: an optically thin cloud layer consisting of a log-normal distribution of particle sizes.
-If we assume the cloud is confined to one hemisphere of the brown dwarf (i.e., maximum surface heterogeneity), the amplitude of the variability is directly proportional to the opacity of the particles.
+If we assume the cloud is confined to one \textbf{East/West hemisphere of the brown dwarf (i.e., confined to longitudes between 0\degree\ and 180\degree, which produces maximum surface heterogeneity), then} the amplitude of the variability is directly proportional to the opacity of the particles.
 We model the single particle extinction coefficient, $Q_{ext}$ from the \texttt{Python} Mie theory code \texttt{miescatter} \citep{bohren1983mie} to calculate the opacity as a function of wavelength.
 We assume that the particles are spherical forsterite grains (Mg$_2$SiO$_4$).
-We use a constant n=1.67 - 0.006 $j$ index of refraction because the real and imaginary parts of the index of refraction are relatively constant across the optical and near infrared \citep{scott1996forsterite}.
+We use a constant n=1.67 \textbf{and k=0.006 complex} index of refraction because the real and imaginary parts of the index of refraction are relatively constant across the optical and near infrared \citep{scott1996forsterite}.
 
 
-For the particle size distribution we assume a log-normal distribution with a median radius $r$ and width (scale parameter) $\sigma$.
+For the particle size distribution we assume a log-normal distribution with a median radius $r$ and width (scale parameter) $\sigma_s$.
 The spectral dependence is modeled as 
 \begin{equation}
-A = B \bar{Q_{avg}}(r,\sigma)
+A = B \bar{Q_{avg}}(r,\sigma_s)
 \end{equation}
-where $A$ is the variability amplitude, $B$ is a constant encapsulating the area and column density and $\bar{Q_{avg}}(r,\sigma)$ is the average extinction coefficient averaged over all particles in the log-normal distribution.
+where $A$ is the variability amplitude, $B$ is a constant encapsulating the area and column density and $\bar{Q_{avg}}(r,\sigma_s)$ is the average extinction coefficient averaged over all particles in the log-normal distribution.
 When fitting the amplitude spectra to our Mie model, we imposed a prior of $r < 5 \mu m$; beyond this scale, the models are essentially unchanged with median particle radius.
 
 %For \sha\ we find that since no significant variability is detected that the particle size is unconstrained over the prior of $0~\mu m < r < 5~\mu m$. We show the maximum likelihood model which has a near-zero amplitude.
-For \shb, we find that the amplitude spectrum is well-fit by a Mie scattering model and the median particle radius is reasonably constrained.
-Figure \ref{fig:ampspec1821} shows the best-fit model which has a median particle radius of 0.28~$\mu$m grains and $\sigma$ = 0.3.
+For \shb, we find that the amplitude spectrum is well-fit by a Mie scattering model and \textbf{that} the median particle radius is reasonably constrained.
+Figure \ref{fig:ampspec1821} shows the best-fit model\textbf{, which} has a median particle radius of 0.28~$\mu$m and $\sigma_s$ = 0.3.
 This model has a reduced $\chi^2$ of 1.08 and is thus consistent with the measured amplitude spectrum.
 
-Figure \ref{fig:corner1821mie} shows the posterior distribution for the $B$, $r$ and $\sigma$ parameters.
+Figure \ref{fig:corner1821mie} shows the posterior distribution for the $B$, $r$ and $\sigma_s$ parameters.
 The derived median particle radius is $r$ = 0.24$^{+0.05}_{-0.07}$~$\mu$m 
-and $\sigma$ = 0.32$^{+0.15}_{-0.12}$.
+and $\sigma_s$ = 0.32$^{+0.15}_{-0.12}$.
 We show the maximum likelihood particle size distribution in the inset of Figure \ref{fig:corner1821mie} as well as a series of other possible distributions from the MCMC fitting.
 Considering the large number of possible grain geometries and compositions, this is an underestimate for the true uncertainty in particle sizes.
 Future work could include full modeling of the atmosphere with more complex spatial distributions, grain geometries and compositions (e.g., \citealt{2008ApJ...675L.105H}).
 
-A similar amplitude versus wavelength trend was recently observed for WISEP J004701.06+680352.1 \citep{2016ApJ...829L..32L}, which has very red ($J-K$ = 2.55) spectral energy distribution thought to be caused by a high altitude haze layer.
+A similar amplitude versus wavelength trend was recently observed for WISEP J004701.06+680352.1 \citep{2016ApJ...829L..32L}, which has \textbf{a redder than average} ($J-K$ = 2.55) spectral energy distribution thought to be caused by a high altitude haze layer.
 In WISEP J0047+6803, the wavelength trend could be fit by $\sim0.4~\mu$m forsterite grains, which is close to our characteristic particle size.
 
 \citet{hiranaka2016subMicronDust} find that the observed spectra of reddened L dwarfs can be explained by extinction from a haze layer of sub-micron forsterite grains.
