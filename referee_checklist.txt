@@ -62,7 +62,7 @@ Figure 2: Y-axis should say "Brightness Temperature" not "Surface Brightness." A
 
 Is there a reference for how the authors computed the brightness temperature (Equations 1 and 2)? I see they did not include limb-darkening in that calculation. If they are choosing to ignore limb-darkening, but other refereed literature takes the same approach, that's fine, just provide a citation and explain why they can ignore limb darkening.
 
-It was not clear how the authors computed BT-Settl models with such specific temperatures and gravities. Did the run the PHOENIX code for those specific parameters? Or did they interpolate between pre-computed models? Interpolating between spectral models can lead to spectra representing unphysical atmospheres not in local thermal equilibrium. Whatever was chosen should be included in the manuscript.
+D It was not clear how the authors computed BT-Settl models with such specific temperatures and gravities. Did the run the PHOENIX code for those specific parameters? Or did they interpolate between pre-computed models? Interpolating between spectral models can lead to spectra representing unphysical atmospheres not in local thermal equilibrium. Whatever was chosen should be included in the manuscript.
 
 
 Section 3:
