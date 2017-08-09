@@ -16,3 +16,7 @@ Dear Dr. Steven Kawaler and Anonymous Referee,
     
     We have instead used n=1.67 and k=0.006, which is more consistent with the literature conventions.
     
+    > Is there a reference for how the authors computed the brightness temperature (Equations 1 and 2)? I see they did not include limb-darkening in that calculation. If they are choosing to ignore limb-darkening, but other refereed literature takes the same approach, that's fine, just provide a citation and explain why they can ignore limb darkening.
+    
+    We calculate the brightness temperature with linear limb darkening in order to assess the accuracy of this assumption.
+    
