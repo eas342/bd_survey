@@ -18,5 +18,6 @@ Dear Dr. Steven Kawaler and Anonymous Referee,
     
     > Is there a reference for how the authors computed the brightness temperature (Equations 1 and 2)? I see they did not include limb-darkening in that calculation. If they are choosing to ignore limb-darkening, but other refereed literature takes the same approach, that's fine, just provide a citation and explain why they can ignore limb darkening.
     
-    We calculate the brightness temperature with linear limb darkening in order to assess the accuracy of this assumption.
+    We calculate the brightness temperature with linear limb darkening in order to assess the accuracy of this assumption. We use Claret and Bloeman linear limb darkening coefficients and use Brightness temperature to describe the central point. It can have up to ~600 K differences from the assumption of a uniform surface.
+    
     
