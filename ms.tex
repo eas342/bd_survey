@@ -433,10 +433,22 @@ Our median particle radius of $r$=0.24$^{+0.05}_{-0.07}$~$\mu$m for \shb\ is con
 
 \textbf{
 \subsubsection{Testing the Hemispheric Assumption}
-We have assumed that the there is maximum surface heterogeneity on the brown dwarf to produce the rotationally-modulated flux variations and fit for the particle size distribution.
+We have previously assumed  that the there is maximum surface heterogeneity on the brown dwarf to produce the rotationally-modulated flux variations and fit for the particle size distribution.
+We assumed that the clouds were confined to one East-West hemisphere between longitudes 0\degree\ and 180\degree.
 We discuss here the implications of relaxing our assumption. 
+Let $\alpha_{min}$ and $\alpha_{max}$ be the minimum and maximum cloud coverage.
+If we assume that the clouds are optically thin, the ratio of maximum over minimum flux is
+\begin{equation}
+f_{R,NH} = \frac{1 - \tau \alpha_{min}}{1 - \tau \alpha_{max}},
+\end{equation}
+where $\tau$ is the clouds' optical depth and the $NH$ subscript denotes no hemispheric assumption.
+Using Equation \ref{eq:ampFromRatio}, the amplitude is
+\begin{equation}
+A_{NH} = \frac{\tau \left(\alpha_{max} - \alpha_{min} \right)}{2 - \tau \left(\alpha_{max} + \alpha_{min} \right)}.
+\end{equation}
+In the optically thin case ($\tau \ll1$) the linear term dominates, so the the amplitude, $A_{NH}$, is proportional to the optical depth $\tau$.
+So, only in the case where $\tau \gtrsim 1$ does the East-West hemispheric assumption break down. 
 }
-
 \section{Conclusions}\label{sec:conclusions}
 
 We obtained high precision ground-based spectrophotometry of two brown dwarfs of spectral \textbf{types} L4-L5: {\sha} and {\shb}.
