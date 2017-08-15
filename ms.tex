@@ -162,13 +162,13 @@ classifications of L7 for {\sha} and L5 for {\shb} (Figure~\ref{fig:tbright}). T
 
 We computed brightness temperature spectra from these data as
 \begin{equation}
-T_{\lambda,surf} = \frac{hc}{k\lambda}\left[\ln\left(1+\frac{2\pi{hc^2}}{F_{\lambda,surf}\lambda^5}\right)\right]^{-1}
+T_{\lambda,surf} = \frac{hc}{k\lambda}\left[\ln\left(1+\frac{2\pi{hc^2}}{F_{\lambda,surf}\lambda^5}\right)\right]^{-1},
 \end{equation}
 where the surface flux density $F_{\lambda,surf}$ is computed as
 \begin{equation}
-F_{\lambda,surf} = {\pi}B_{\lambda} = F_{\lambda,obs}\left(\frac{d}{R}\right)^2 = F_{\lambda,abs}\left(\frac{10~{\rm pc}}{R}\right)^2
+F_{\lambda,surf} = {\pi}B_{\lambda} = F_{\lambda,obs}\left(\frac{d}{R}\right)^2 = F_{\lambda,abs}\left(\frac{10~{\rm pc}}{R}\right)^2.
 \end{equation}
-$F_{\lambda,obs}$ and $F_{\lambda,abs}$ are the observed and absolute flux densities, $B_\lambda$ is the Planck function, $d$ the source distance and $R$ the source radius.
+$F_{\lambda,obs}$ and $F_{\lambda,abs}$ are the observed and absolute flux densities, $B_\lambda$ is the Planck function, $d$ \textbf{is} the source distance and $R$ \textbf{is} the source radius.
 \textbf{We have ignored limb darkening in our calculations, which affects the surface intensity of brown dwarf surfaces \citep[e.g.][]{2011A&A...529A..75C}.
 Since there are few empirical constraints on limb darkening for L-dwarfs, we assume a uniform brightness temperature surface, which gives an average brightness temperature of a non-homogeneous surface.}
 
@@ -196,7 +196,7 @@ We compared these two cases to solar-metallicity BT-Settl spectral models from \
 Both models overlap the data to some degree, although the young model shows an increasing brightness temperature with wavelength rather than a decreasing temperature.  These comparisons slightly favor the field surface gravity case, although differences in the properties of dust between source and models likely play a significant role. For {\shb}, 
 brightness temperatures range from 1850~K at $J$-band to 1670~K at $K$-band, again overlapping but declining more strongly with wavelength than the equivalent spectral model, which has a {\teff} similar to that inferred by \citet{2016ApJS..225...10F} and the  \citet{2015ApJ...810..158F} {\teff}/spectral type relation.
 
-
+\section{Observations}\label{sec:obs}
 \begin{deluxetable*}{lccccccccc}
 \tablecaption{Observations\label{tab:obsParam}}
 \tablewidth{0pt}
@@ -220,8 +220,6 @@ brightness temperatures range from 1850~K at $J$-band to 1670~K at $K$-band, aga
 \enddata
 \tablecomments{N$_{int}$ is the number of integrations and t$_{int}$ is the effective integration time for the 32 non-destructive reads up the ramp. The duration is the total time from start to end of the observations including array sampling and overheads. The FWHM is the measured full width half maximum of the spatial point spread function around 1.6$\mu$m, taken as the median value over the entire time series.}
 \end{deluxetable*}
-
-\section{Observations}\label{sec:obs}
 
 We observed {\sha} and {\shb} for one night each with the IRTF/SpeX (Table \ref{tab:obsParam}).
 {\sha} was observed for 4.65 hours, covering 1.5 rotation periods; {\shb} was observed for 7.47 hours, covering 1.8 rotation periods.
@@ -433,7 +431,7 @@ They find typical mean particle radii of 0.15 to 0.35 $\mu$m for a sample of L d
 Our median particle radius of $r$=0.24$^{+0.05}_{-0.07}$~$\mu$m for \shb\ is consistent with this range and may represent a partially cloudy version of the reddened brown dwarfs in \citet{hiranaka2016subMicronDust} or of WISEP J0047+6803.
 
 \textbf{
-\subsubsection{Testing the Hemispheric Assumption}
+\subsubsection{Exploring the Hemispheric Assumption}
 We have previously assumed  that the there is maximum surface heterogeneity on the brown dwarf to produce the rotationally-modulated flux variations and fit for the particle size distribution.
 We assumed that the clouds were confined to one East-West hemisphere between longitudes 0\degree\ and 180\degree.
 We discuss here the implications of relaxing our assumption. 
