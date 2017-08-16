@@ -218,13 +218,13 @@ brightness temperatures range from 1850~K at $J$-band to 1670~K at $K$-band, aga
 {\sha} & 2015-12-31 & 09:35:10 & 14:14:22 & 272 & 45 & 4.65 & 1.59-1.28 & J08354383-0819212 & 0.5 \\
 {\shb} & 2016-06-25 & 07:29:31 & 14:57:58 & 352 & 60 & 7.47 & 1.42-2.15 & J18212622+1414064 & 0.5 \\
 \enddata
-\tablecomments{N$_{int}$ is the number of integrations and t$_{int}$ is the effective integration time for the 32 non-destructive reads up the ramp. The duration is the total time from start to end of the observations including array sampling and overheads. The FWHM is the measured full width half maximum of the spatial point spread function around 1.6$\mu$m, taken as the median value over the entire time series.}
+\tablecomments{N$_{int}$ is the number of integrations and t$_{int}$ is the effective integration time for the 32 non-destructive reads up the ramp. The duration is the total time from start to end of the observations including array sampling and overheads. The FWHM is the measured full width half maximum of the spatial point spread function around \textbf{H band (1.7$\mu$m)}, taken as the median value over the entire time series.}
 \end{deluxetable*}
 
 We observed {\sha} and {\shb} for one night each with the IRTF/SpeX (Table \ref{tab:obsParam}).
 {\sha} was observed for 4.65 hours, covering 1.5 rotation periods; {\shb} was observed for 7.47 hours, covering 1.8 rotation periods.
 Following \citet{2014ApJ...783....5S}, we used SpeX in its prism-dispersed mode, obtaining 0.9--2.4~$\micron$ spectra in a single order at low dispersion. 
-Both target and reference star were observed simultaneously by orienting the 3$\arcsec$$\times$60$\arcsec$ slit to align with the visual binary axis. This orientation is generally misaligned with the parallactic angle, but the good seeing (0$\farcs$5 at $H$-band) and wide slit minimizes \textbf{differential} color refraction. The effective resolution of the spectral data, set by seeing and pointing errors, are $\lambda$/$\Delta\lambda$ $\approx$ 50. Integration times were 45~s and 60~s for {\sha} and {\shb}, respectively. The short-wavelength limit of our spectral coverage was set by the use of a 0.9~$\mu$m dichroic which deflected optical light into the MIT Optical Rapid Imaging System (MORIS) camera \citep{2011PASP..123..461G}, which was used for $i$-band guiding.
+Both target and reference star were observed simultaneously by orienting the 3$\arcsec$$\times$60$\arcsec$ slit to align with the visual binary axis. This orientation is generally misaligned with the parallactic angle, but the good seeing (0$\farcs$5 at $H$-band) and wide slit minimizes \textbf{differential} color refraction. The effective resolution of the spectral data, set by seeing and pointing errors, \textbf{was} $\lambda$/$\Delta\lambda$ $\approx$ 50. Integration times were 45~s and 60~s for {\sha} and {\shb}, respectively. The short-wavelength limit of our spectral coverage was set by the use of a 0.9~$\mu$m dichroic which deflected optical light into the MIT Optical Rapid Imaging System (MORIS) camera \citep{2011PASP..123..461G}, which was used for $i$-band guiding.
 
 
 
@@ -248,7 +248,7 @@ The variability in \shb\ is prominent at the short wavelengths with a magnitude 
 
 \textbf{The 2D images were rectified so that the X coordinates of all background spectra corresponded to the same wavelength.
 This was achieved by selecting a reference row between the sources and then cross-correlating this reference spectrum with all other illuminated detector rows.
-A third order polynomial was fit to the cross correlation peaks (masking out the sources) to determine a one dimensional smooth X (spectral) shift function as a function of Y (spatial) position  \citep{2016ApJ...826..156S}.
+A third order polynomial was fit to the cross correlation peaks (masking out the sources) to determine a one dimensional smooth X (spectral) shift solution as a function of Y (spatial) position  \citep{2016ApJ...826..156S}.
 Once the 2D spectral images were rectified, the background is subtracted along the Y (spatial) direction with a 4th order polynomial.
 The reduction software is available online\footnote{https://github.com/eas342/spectral\_pipeline\_and\_scripts}.}
  
@@ -257,15 +257,15 @@ The ThAr data is taken for wavelength calibration with the 0.3$\arcsec\times60\a
 This wavelength calibration data is taken at the very beginning and very end of the sequence to ensure the 3$\arcsec \times 60 \arcsec$ slit is unmoved during the rest of the calibration and science data.
 Dark frames are taken with the same exposure time as the science images and with the order sorting filter set to the closed position.
 We take flat field field data with an incandescent lamp to correct for high frequency, pixel-to-pixel variations.
-For {\sha}, we used a combination of the flat-field lamp and a sky frame to construct a pixel response map, removing large-scale ($\gtrsim$ 30 pixels) structure with low order polynomial fits along spatial and spectral axes, and normalizing to the median response. 
+For {\sha}, we used a combination of the flat-field lamp and a sky frame to construct a pixel response map, removing large-scale ($\gtrsim$ 30 pixels) structure with low order polynomial fits along spatial and spectral axes, and normalizing to the median response spectrum. 
 To correct for instrument flexure, we cross-correlated the sky frame with each science image to measure linear spatial shifts, which were $\pm$5~pixels or 0.5\arcsec\ for \sha\ and $\pm$1.5~pixels or 0.15\arcsec\ for \shb.}
 These shifts were used to apply a custom flat field for every image.
 For {\shb}, we did not have sufficient sky frames so we used our incandescent lamp image for both flat fielding and flexure analysis.
 
-As described in \citet{2016ApJ...826..156S}, we performed spatial background subtraction over the entire slit using a 4th-order polynomial fit \textbf{(described above)} to points more than 30 pixels away from the center of the source dispersion traces.  Spectra were optimally extracted \citep{1986ApJ...302..757H}, with spatial profiles fit to low order polynomials along the spectral direction one row at a time with 20$\sigma$ rejection to remove cosmic rays and bad pixels.
+As described in \citet{2016ApJ...826..156S}, we performed spatial background subtraction over the entire slit using a 4th-order polynomial fit to points more than 30 pixels away from the center of the source dispersion traces.  Spectra were optimally extracted \citep{1986ApJ...302..757H}, with spatial profiles fit to low order polynomials along the spectral direction one row at a time with 20$\sigma$ rejection to remove cosmic rays and bad pixels.
 These spatial profiles were then used to calculate a weighted sum spectrum across the illuminated detector for each source and exposure. 
 Typical signal-to-noise of the extracted spectra were 40 - 100 per spectral pixel (unbinned).
-Relative spectra (source/reference) were then computed for each exposure.
+Relative spectra (source \textbf{divided by} reference) were then computed for each exposure.
 Our image rectification process described above ensures that the wavelength solution is the same for each row of the image.
 However, there are small additional shifts of the sources within the \textbf{slit, so} another shift was performed between the sources to ensure that telluric features were removed when dividing the two spectra.
 
@@ -299,7 +299,7 @@ However, there are small additional shifts of the sources within the \textbf{sli
 	\label{fig:ampspec1821}
 	}
 	\caption{(Top panels) Sine fit amplitude versus wavelength for each brown dwarf. \sha\ shows only marginally significant variability near 1.7~$\micron$ and 2.1--2.4~$\micron$, and no obvious trends with wavelength. \shb\ has significant variability over wavelengths $<$1.7$\micron$ with a strong spectral slope.
-	 Also shown is the WFC3 amplitude spectrum of \shb\ from \citet{2015ApJ...798L..13Y}. The WFC3 observations were obtained on a different epoch, but show a similar slope.
+	 Also shown is the WFC3 amplitude spectrum of \shb\ from \citet{2015ApJ...798L..13Y}. The WFC3 observations were obtained \textbf{at} a different epoch, but show a similar slope.
 	 The amplitude spectrum for \shb\ is fit to a simple Mie scattering model with a log-normal particle size distribution of spherical forsterite grains; the best fit has a median particle size of 0.28 $\mu$m.
 	 In all plots the regions potentially contaminated by telluric absorption are shaded in light green.
 	 {\it Bottom Panels:} The time offset of maximum amplitude, $t_1$ (in hours), relative to the reference epoch (JD 2457388.0 for \sha\ and JD 2457565.0 for {\shb}).
@@ -357,7 +357,7 @@ F(t) = \left( A_1 \cos(2 \pi (t - t_1)/\tau) + A_2 \cos(4 \pi (t - t_2)/\tau) + 
 \end{equation}
 where $F(t)$ is the relative flux as a function of time $t$, $A_1$ and $A_2$ are the amplitudes of the two sinusoid terms, $t_1$ and $t_2$ are the time of maximum periodic flux for each sinusoid term, $\tau$ is period of the variations, $a(t)$ is the airmass as a function of time and $B$, $C$ and $D$ are constants quantifying baseline (i.e., non-astrophysical) trends.
 Since some wavelengths are affected by telluric contamination and we wish to avoid fitting harmonics, we impose a prior on the rotational period $\tau$.
-of 2.6 $< \tau < $3.6 hr for \sha\ and 3.7 $< \tau <$ 4.7 hr for {\shb}, $\pm$0.5 hr around the literature values.
+\textbf{We impose} 2.6 $< \tau < $3.6 hr for \sha\ and 3.7 $< \tau <$ 4.7 hr for {\shb}, $\pm$0.5 hr around the literature values.
 These priors are wide enough they don't drive the constraints on $\tau$ at short wavelengths for {\shb}, but narrow enough to ensure that the sinusoidal fits do not just fit the airmass trends with time.
 We also restrict the time of maximum periodic flux such that $-\tau/2 < t_1 < \tau/2$ and $-\tau/4 < t_2 < \tau/4$ to assure there are no 2$\pi$ degeneracies in the fit.
 We do not put any constraints on A$_1$ relative to A$_2$.
@@ -365,11 +365,11 @@ We do not put any constraints on A$_1$ relative to A$_2$.
 
 Figure \ref{fig:ampSpec} shows the MCMC posterior constraints for periodic amplitudes as a function of wavelength.
 For {\sha} (Figure \ref{fig:ampspec0835}) we find at most small amplitude variability ($\lesssim 0.5\%$), marginally significant at 1.7~$\mu$m and 2.1--2.35~$\mu$m, with a flat trend as a function of wavelength.
-\textbf{If one were to average all of these K-band points together, they are consistent with a 3.4 $\pm$ 0.1 hr rotation period, though this is somewhat driven by the prior 2.6 $< \tau < $3.6 hr.}
+\textbf{If one were to average all of the K-band points together, they are consistent with a 3.4 $\pm$ 0.1 hr rotation period, though this is somewhat driven by the prior 2.6 $< \tau < $3.6 hr.}
 
 \shb, on the other hand, shows highly significant variability with a decreasing trend in amplitude as function of wavelength.
 In both cases, we find no statistically significant wavelength dependence on the time of maximum variation $t_1$, and hence no phase variation.
-The period of \shb\ is found to be consistent with that of \citet{2015ApJ...799..154M}.
+The period of \shb\ is found to be consistent with that of \citet{2015ApJ...799..154M}, \textbf{4.2$\pm$0.1 hr}.
 If we optimistically assume all wavelengths are statistically independent, the weighted average rotation period is 4.10 $\pm$ 0.03 hours.
 
 Figure \ref{fig:amp2Spec} shows the posterior constraints on the secondary sinusoidal term.
