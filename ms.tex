@@ -300,7 +300,7 @@ However, there are small additional shifts of the sources within the \textbf{sli
 	}
 	\caption{(Top panels) Sine fit amplitude versus wavelength for each brown dwarf. \sha\ shows only marginally significant variability near 1.7~$\micron$ and 2.1--2.4~$\micron$, and no obvious trends with wavelength. \shb\ has significant variability over wavelengths $<$1.7$\micron$ with a strong spectral slope.
 	 Also shown is the WFC3 amplitude spectrum of \shb\ from \citet{2015ApJ...798L..13Y}. The WFC3 observations were obtained \textbf{at} a different epoch, but show a similar slope.
-	 The amplitude spectrum for \shb\ is fit to a simple Mie scattering model with a log-normal particle size distribution of spherical forsterite grains; the best fit has a median particle size of 0.28 $\mu$m.
+	 The amplitude spectrum for \shb\ is fit to a simple Mie scattering model with a log-normal particle size distribution of spherical forsterite grains; the best fit has a median particle \textbf{radius} of 0.28 $\mu$m.
 	 In all plots the regions potentially contaminated by telluric absorption are shaded in light green.
 	 {\it Bottom Panels:} The time offset of maximum amplitude, $t_1$ (in hours), relative to the reference epoch (JD 2457388.0 for \sha\ and JD 2457565.0 for {\shb}).
 	 Neither shows a clear trend with wavelength, indicating no significant phase offsets.
@@ -390,25 +390,34 @@ There is a multiplicative offset of 25\% between the IRTF and WFC3 spectrum that
 \begin{centering}
 \includegraphics[width=0.5\textwidth]{corner_j1821_mie_sc.pdf}
 \caption{Posterior distributions to the simple Mie scattering fit to the $A_1$ amplitude spectrum for \shb\ assuming a forsterite composition.
-The model includes an amplitude offset $B$ to account for areal coverage, a median particle radius $r$, and a scale parameter $\sigma_s$.
+The model includes an amplitude offset $K$ to account for areal coverage, a median particle radius $r$ and a scale parameter $\sigma_s$.
 The upper right inset plot shows the log-normal particle size distribution in blue for samples drawn from the posterior distribution.
 The red curve is the maximum likelihood log-normal particle size distribution.}\label{fig:corner1821mie}
 \end{centering}
 \end{figure}
 
-We model the wavelength dependence of variability amplitudes for \shb\ with a simple cloud model: an optically thin cloud layer consisting of a log-normal distribution of particle sizes.
-If we assume the cloud is confined to one \textbf{East/West hemisphere of the brown dwarf (i.e., confined to longitudes between 0\degree\ and 180\degree, which produces maximum surface heterogeneity), then} the amplitude of the variability is directly proportional to the opacity of the particles.
+We model the wavelength dependence of variability amplitudes for \shb\ with a simple cloud model: an \textbf{optically thin grouping of clouds} consisting of a log-normal distribution of particle sizes.
+\textbf{
+Let $\alpha_{min}$ and $\alpha_{max}$ be the minimum and maximum cloud coverages corresponding to the maximum and minimum flux levels, respectively.
+If we assume that the clouds are optically thin ($\tau \ll 1$), the ratio of maximum over minimum flux is
+\begin{equation}
+f_{R,Clouds} = \frac{1 - \tau \alpha_{min}}{1 - \tau \alpha_{max}},
+\end{equation}
+where $\tau$ is the clouds' optical depth.
+Using Equation \ref{eq:ampFromRatio}, the amplitude is
+\begin{equation}
+A_{Clouds} = \frac{\tau \left(\alpha_{max} - \alpha_{min} \right)}{2 - \tau \left(\alpha_{max} + \alpha_{min} \right)}.
+\end{equation}
+In the optically thin case ($\tau \ll1$) the linear term dominates, so the amplitude, $A_{Clouds}$, is proportional to the optical depth $\tau$.
+For the particle size distribution we assume a log-normal distribution with a median radius $r$ and width (scale parameter) $\sigma_s$ so our model reduces to
+\begin{equation}
+A_{Clouds} \approx K Q_{avg}(r,\sigma_s)
+\end{equation}
+where $A_{Clouds}$ is the variability amplitude, $K$ is a constant encapsulating the area and column density and $Q_{avg}(r,\sigma_s)$ is the extinction coefficient averaged over all particles.}
+
 We model the single particle extinction coefficient, $Q_{ext}$ from the \texttt{Python} Mie theory code \texttt{miescatter} \citep{bohren1983mie} to calculate the opacity as a function of wavelength.
 We assume that the particles are spherical forsterite grains (Mg$_2$SiO$_4$).
 We use a constant n=1.67 \textbf{and k=0.006 complex} index of refraction because the real and imaginary parts of the index of refraction are relatively constant across the optical and near infrared \citep{scott1996forsterite}.
-
-
-For the particle size distribution we assume a log-normal distribution with a median radius $r$ and width (scale parameter) $\sigma_s$.
-The spectral dependence is modeled as 
-\begin{equation}
-A = B \bar{Q_{avg}}(r,\sigma_s)
-\end{equation}
-where $A$ is the variability amplitude, $B$ is a constant encapsulating the area and column density and $\bar{Q_{avg}}(r,\sigma_s)$ is the average extinction coefficient averaged over all particles in the log-normal distribution.
 When fitting the amplitude spectra to our Mie model, we imposed a prior of $r < 5 \mu m$; beyond this scale, the models are essentially unchanged with median particle radius.
 
 %For \sha\ we find that since no significant variability is detected that the particle size is unconstrained over the prior of $0~\mu m < r < 5~\mu m$. We show the maximum likelihood model which has a near-zero amplitude.
@@ -416,7 +425,7 @@ For \shb, we find that the amplitude spectrum is well-fit by a Mie scattering mo
 Figure \ref{fig:ampspec1821} shows the best-fit model\textbf{, which} has a median particle radius of 0.28~$\mu$m and $\sigma_s$ = 0.3.
 This model has a reduced $\chi^2$ of 1.08 and is thus consistent with the measured amplitude spectrum.
 
-Figure \ref{fig:corner1821mie} shows the posterior distribution for the $B$, $r$ and $\sigma_s$ parameters.
+Figure \ref{fig:corner1821mie} shows the posterior distribution for the $K$, $r$ and $\sigma_s$ parameters.
 The derived median particle radius is $r$ = 0.24$^{+0.05}_{-0.07}$~$\mu$m 
 and $\sigma_s$ = 0.32$^{+0.15}_{-0.12}$.
 We show the maximum likelihood particle size distribution in the inset of Figure \ref{fig:corner1821mie} as well as a series of other possible distributions from the MCMC fitting.
@@ -430,30 +439,12 @@ In WISEP J0047+6803, the wavelength trend could be fit by $\sim0.4~\mu$m forster
 They find typical mean particle radii of 0.15 to 0.35 $\mu$m for a sample of L dwarfs.
 Our median particle radius of $r$=0.24$^{+0.05}_{-0.07}$~$\mu$m for \shb\ is consistent with this range and may represent a partially cloudy version of the reddened brown dwarfs in \citet{hiranaka2016subMicronDust} or of WISEP J0047+6803.
 
-\textbf{
-\subsubsection{Exploring the Hemispheric Assumption}
-We have previously assumed  that the there is maximum surface heterogeneity on the brown dwarf to produce the rotationally-modulated flux variations and fit for the particle size distribution.
-We assumed that the clouds were confined to one East-West hemisphere between longitudes 0\degree\ and 180\degree.
-We discuss here the implications of relaxing our assumption. 
-Let $\alpha_{min}$ and $\alpha_{max}$ be the minimum and maximum cloud coverage.
-If we assume that the clouds are optically thin, the ratio of maximum over minimum flux is
-\begin{equation}
-f_{R,NH} = \frac{1 - \tau \alpha_{min}}{1 - \tau \alpha_{max}},
-\end{equation}
-where $\tau$ is the clouds' optical depth and the $NH$ subscript denotes no hemispheric assumption.
-Using Equation \ref{eq:ampFromRatio}, the amplitude is
-\begin{equation}
-A_{NH} = \frac{\tau \left(\alpha_{max} - \alpha_{min} \right)}{2 - \tau \left(\alpha_{max} + \alpha_{min} \right)}.
-\end{equation}
-In the optically thin case ($\tau \ll1$) the linear term dominates, so the amplitude, $A_{NH}$, is proportional to the optical depth $\tau$ and our assumption that $A = B \bar{Q_{avg}(r,\sigma_s)}$ is valid.
-Only in the case where $\tau \gtrsim 1$ does the East-West hemispheric assumption break down. 
-}
 \section{Conclusions}\label{sec:conclusions}
 
 We obtained high precision ground-based spectrophotometry of two brown dwarfs of spectral \textbf{types} L4-L5: {\sha} and {\shb}.
 These brown dwarfs have temperatures near the condensation temperature of forsterite (Mg$_2$SiO$_4$).
 We find that {\sha} has marginal variability and no significant wavelength dependence; while
-{\shb} shows significant variability up to the 1.5\% amplitude (3.0\% peak-to-valley) at short wavelengths (0.9~$\mu$m) which declines towards the near infrared (2.4$~\mu$m).
+{\shb} shows significant variability up to the 1.5\% amplitude (3.0\% peak-to-valley) at short wavelengths (0.9~$\mu$m) which declines toward the near infrared (2.4$~\mu$m).
 A possible difference between the two brown dwarfs is the viewing geometry with \sha\ closer to pole-on and \shb\ closer to equator-on as shown in Table \ref{tab:bdProp}.
 Recently, \citet{vos2017viewingGeom} find that there are correlations between variability and color properties as a function of viewing geometry and that equator-on dwarfs show, on average, larger variability amplitudes.
 \textbf{\sha\ shows less variability than reported in the literature which shows at a tentative period of 3.1 hours \citep{2004MNRAS.354..378K,2014A&A...566A.111W}, so it likely exhibited a more homogeneous cloud distribution at our observed epoch.}

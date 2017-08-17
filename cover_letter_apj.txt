@@ -4,6 +4,9 @@ Dear Dr. Steven Kawaler and Anonymous Referee,
     
     Here we summarize the changes to our manuscript and respond to the referee's questions.
     
+    > Major Comment: How does the assumption that the sub-micron haze exists only on one hemisphere affect the inferred median particle size? That was unclear in the manuscript. If this could be explored a bit, that would strengthen the paper.
+    We have relaxed this assumption and now formulated the cloud coverage as two areal fractions at maximum and minimum flux as described in the new text. If the clouds are optically thin, our previous assumption (that the amplitude is directly proportional to the extinction coefficient) still holds as discussed in the text.
+    
     > Perhaps this betrays my ignorance, but are these objects definitely brown dwarfs? As I understand it, a brown dwarf is a gas ball that is cooling via Kelvin-Helmholtz contraction, but never begins nor sustains hydrogen fusion in their cores (which would make it a star). Stellar evolutionary models can make hydrogen-burning stars with mid-L spectral types. So, some L dwarfs are likely bona fide stars, and therefore not brown dwarfs. The transition from M to L is based on molecular lines seen in their spectra as a consequence of photospheric temperature, not whether they are burning hydrogen in their cores. 
 
     We have added 1 sentence justifications for each brown dwarf that they are likely below the hydrogen burning limit.
