@@ -1,28 +1,41 @@
 Dear Dr. Steven Kawaler and Anonymous Referee,
 
-    Thank you to anonymous referee for the thorough and careful reading of this work as well as the many suggestions that improved paper's clarity.
+    Thank you to anonymous referee for the careful reading of this work as well as the many suggestions that improved the paper's clarity.
     
     Here we summarize the changes to our manuscript and respond to the referee's questions.
     
     > Major Comment: How does the assumption that the sub-micron haze exists only on one hemisphere affect the inferred median particle size? That was unclear in the manuscript. If this could be explored a bit, that would strengthen the paper.
-    We have relaxed this assumption and now formulated the cloud coverage as two areal fractions at maximum and minimum flux as described in the new text. If the clouds are optically thin, our previous assumption (that the amplitude is directly proportional to the extinction coefficient) still holds as discussed in the text.
     
-    > Perhaps this betrays my ignorance, but are these objects definitely brown dwarfs? As I understand it, a brown dwarf is a gas ball that is cooling via Kelvin-Helmholtz contraction, but never begins nor sustains hydrogen fusion in their cores (which would make it a star). Stellar evolutionary models can make hydrogen-burning stars with mid-L spectral types. So, some L dwarfs are likely bona fide stars, and therefore not brown dwarfs. The transition from M to L is based on molecular lines seen in their spectra as a consequence of photospheric temperature, not whether they are burning hydrogen in their cores. 
-
+    We have relaxed this assumption and now formulated the cloud coverage as two areal fractions at maximum and minimum flux as described in the new text. If the clouds are optically thin, our previous assumption (that the amplitude is directly proportional to the extinction coefficient) still holds once we expand Equation 6 (in the attached manuscript) and keeps the linear terms.
+    
+    > Perhaps this betrays my ignorance, but are these objects definitely brown dwarfs? As I understand it, a brown dwarf is a gas ball that is cooling via Kelvin-Helmholtz contraction, but never begins nor sustains hydrogen fusion in their cores (which would make it a star). Stellar evolutionary models can make hydrogen-burning stars with mid-L spectral types. So, some L dwarfs are likely bona fide stars, and therefore not brown dwarfs. The transition from M to L is based on molecular lines seen in their spectra as a consequence of photospheric temperature, not whether they are burning hydrogen in their cores.
+    
     We have added 1 sentence justifications for each brown dwarf that they are likely below the hydrogen burning limit.
     
-    We replaced our uses of "calibrator" and "comparison star" with reference star to be consistent.
-    
-    We labeled the target and reference stars in the 2MASS 3-color images to clarify which ones are used.
+    We replaced our uses of "calibrator" and "comparison star" with reference star to be consistent and labeled the target and reference stars in the 2MASS 3-color images to clarify which ones are used.
     
     > "n=1.67 - 0.006 j COMPLEX index of refraction" add "complex" for clarity. And do people usually use j here instead of i?
     
-    We have instead used n=1.67 and k=0.006, which is more consistent with the literature conventions.
+    We have instead used n=1.67 and k=0.006, which is more consistent with literature conventions.
     
     > Is there a reference for how the authors computed the brightness temperature (Equations 1 and 2)? I see they did not include limb-darkening in that calculation. If they are choosing to ignore limb-darkening, but other refereed literature takes the same approach, that's fine, just provide a citation and explain why they can ignore limb darkening.
     
     Indeed, limb darkening can affect the brightness temperature of the brown dwarf mid-point. We have ignored the effect of limb darkening here since the models do not match the spectra very well and leave it for analysis in a future publication.
     
-
+    > "We find that 2MASS J0835−0819 exhibits marginal ( 0.5% per band) variability..." Without reading the full paper, I'm confused. Why was this object studied if it doesn't have high variability? I thought these were both rapidly rotating. How was it known to be rapidly rotating if it has undetectable variability? I suspect I will learn more from reading the paper, but since the abstract is the first thing the reader sees, I encourage the authors to explain this briefly with a short sentence. What it variable before, but not now?
+    
+    We have clarified that these two brown dwarfs have variability reported in the literature that motivated our time series spectroscopy.
+    
+    > It was not clear how the authors computed BT-Settl models with such specific temperatures and gravities. Did the run the PHOENIX code for those specific parameters? Or did they interpolate between pre-computed models? Interpolating between spectral models can lead to spectra representing unphysical atmospheres not in local thermal equilibrium. Whatever was chosen should be included in the manuscript.
+    
+    We have interpolated between models and now explain this in the text.
+    
+    > "The images were rectified by shifting each row to match a center row in between the two sources. This was achieved by cross correlating the reference row with all other detector rows (which have the same back- ground spectrum) and fitting a smooth function over the sources as in Schlawin et al. 2016." This part is very confusing. Are the "rows" in the dispersion or spatial direction? Is the reference row the center row, or the row(s?) with the reference/calibration star? Is the "smooth function" 1d or 2d? Is it polynomial? I sense this section should be longer for clarification and reproducibility. I realize I could look to Schlawin et al. (2016), but it would be nice if this had more description in this paper since it's such a new technique.
+    
+    The rows are the dispersion direction, the reference row is the row between the two stars and we use a 1D polynomial function for the shifts. There is now a more detailed description of the the data pipeline, as well as a github link to the code for those interested in the details.
+    
+    We have addressed the rest of the gramatical and clarifying points in the referee letter.
+    
+    - Schlawin et al. 
     
     

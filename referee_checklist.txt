@@ -4,7 +4,7 @@ The organization is clear and concise and the figures are well chosen. Figure 4 
 
 My comments and questions are listed below:
 
-Major Comment: How does the assumption that the sub-micron haze exists only on one hemisphere affect the inferred median particle size? That was unclear in the manuscript. If this could be explored a bit, that would strengthen the paper.
+D Major Comment: How does the assumption that the sub-micron haze exists only on one hemisphere affect the inferred median particle size? That was unclear in the manuscript. If this could be explored a bit, that would strengthen the paper.
 
 Less-major (but still important) comments:
 
