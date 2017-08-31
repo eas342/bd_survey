@@ -217,7 +217,7 @@ brightness temperatures range from 1850~K at $J$-band to 1670~K at $K$-band, aga
 {\sha} & 2015-12-31 & 09:35:10 & 272 & 45 & 4.65 & 1.59-1.28 & J08354383-0819212 & 0.5 \\
 {\shb} & 2016-06-25 & 07:29:31 & 352 & 60 & 7.47 & 1.42-2.15 & J18212622+1414064 & 0.5 \\
 \enddata
-\tablecomments{N$_{int}$ is the number of integrations and t$_{int}$ is the effective integration time for the 32 non-destructive reads up the ramp. The duration is the total time from start to end of the observations including array sampling and overheads. The FWHM is the measured full width half maximum of the spatial point spread function around \textbf{H band (1.7$\mu$m)}, taken as the median value over the entire time series.}
+\tablecomments{N$_{int}$ is the number of integrations and t$_{int}$ is the effective integration time for the 32 non-destructive reads up the ramp. The duration is the total time from start to end of the observations including array sampling and overheads. The FWHM is the measured full width \textbf{at} half maximum of the spatial point spread function around \textbf{H band (1.7$\mu$m)}, taken as the median value over the entire time series.}
 \end{deluxetable*}
 
 We observed {\sha} and {\shb} for one night each with the IRTF/SpeX (Table \ref{tab:obsParam}).
@@ -354,9 +354,9 @@ F(t) = \left( A_1 \cos(2 \pi (t - t_1)/\tau) + A_2 \cos(4 \pi (t - t_2)/\tau) + 
 \times (B t + C + D a(t))
 \end{split}
 \end{equation}
-where $F(t)$ is the relative flux as a function of time $t$, $A_1$ and $A_2$ are the amplitudes of the two sinusoid terms, $t_1$ and $t_2$ are the time of maximum periodic flux for each sinusoid term, $\tau$ is period of the variations, $a(t)$ is the airmass as a function of time and $B$, $C$ and $D$ are constants quantifying baseline (i.e., non-astrophysical) trends.
+where $F(t)$ is the relative flux as a function of time $t$, $A_1$ and $A_2$ are the amplitudes of the two sinusoid terms, $t_1$ and $t_2$ are the time of maximum periodic flux for each sinusoid term, $\tau$ is \textbf{the} period of the variations, $a(t)$ is the airmass as a function of time and $B$, $C$ and $D$ are constants quantifying baseline (i.e., non-astrophysical) trends.
 Since some wavelengths are affected by telluric contamination and we wish to avoid fitting harmonics, we impose a prior on the rotational period $\tau$.
-\textbf{We impose} 2.6 $< \tau < $3.6 hr for \sha\ and 3.7 $< \tau <$ 4.7 hr for {\shb}, $\pm$0.5 hr around the literature values.
+\textbf{We impose} 2.6 $< \tau <$ 3.6 hr for \sha\ and 3.7 $< \tau <$ 4.7 hr for {\shb}, $\pm$0.5 hr around the literature values.
 These priors are wide enough they don't drive the constraints on $\tau$ at short wavelengths for {\shb}, but narrow enough to ensure that the sinusoidal fits do not just fit the airmass trends with time.
 We also restrict the time of maximum periodic flux such that $-\tau/2 < t_1 < \tau/2$ and $-\tau/4 < t_2 < \tau/4$ to assure there are no 2$\pi$ degeneracies in the fit.
 We do not put any constraints on A$_1$ relative to A$_2$.
@@ -414,7 +414,7 @@ A_{Clouds} \approx K Q_{avg}(r,\sigma_s)
 \end{equation}
 where $A_{Clouds}$ is the variability amplitude, $K$ is a constant encapsulating the area and column density and $Q_{avg}(r,\sigma_s)$ is the extinction coefficient averaged over all particles.}
 
-We model the single particle extinction coefficient, $Q_{ext}$ from the \texttt{Python} Mie theory code \texttt{miescatter} \citep{bohren1983mie} to calculate the opacity as a function of wavelength.
+We model the single particle extinction coefficient, $Q_{ext}$ \textbf{with} the \texttt{Python} Mie theory code \texttt{miescatter} \citep{bohren1983mie} to calculate the opacity as a function of wavelength.
 We assume that the particles are spherical forsterite grains (Mg$_2$SiO$_4$).
 We use a constant n=1.67 \textbf{and k=0.006 complex} index of refraction because the real and imaginary parts of the index of refraction are relatively constant across the optical and near infrared \citep{scott1996forsterite}.
 When fitting the amplitude spectra to our Mie model, we imposed a prior of $r < 5 \mu m$; beyond this scale, the models are essentially unchanged with median particle radius.
@@ -436,7 +436,7 @@ In WISEP J0047+6803, the wavelength trend could be fit by $\sim0.4~\mu$m forster
 
 \citet{hiranaka2016subMicronDust} find that the observed spectra of reddened L dwarfs can be explained by extinction from a haze layer of sub-micron forsterite grains.
 They find typical mean particle radii of 0.15 to 0.35 $\mu$m for a sample of L dwarfs.
-Our median particle radius of $r$=0.24$^{+0.05}_{-0.07}$~$\mu$m for \shb\ is consistent with this range and may represent a partially cloudy version of the reddened brown dwarfs in \citet{hiranaka2016subMicronDust} or of WISEP J0047+6803.
+Our median particle radius of $r$=0.24$^{+0.05}_{-0.07}$~$\mu$m for \shb\ is consistent with this range and may represent a partially cloudy version of the reddened brown dwarfs in \citet{hiranaka2016subMicronDust} or WISEP J0047+6803.
 
 \section{Conclusions}\label{sec:conclusions}
 
@@ -463,6 +463,7 @@ Using ground-based facilities such as SpeX on IRTF allows us to expand our monit
 
 
 \section{Acknowledgements}
+\textbf{Thanks to the anonymous referee for useful improvements and corrections to this work.}
 Thanks to Vivien Parmentier for useful discussions on cloud versus a spotted temperature models.
 Funding for the E Schlawin is provided by NASA Goddard Spaceflight Center.
 The material is based upon work supported by
@@ -495,7 +496,7 @@ SpeX Prism Library Analysis Toolkit \citep{2017arXiv170700062B},
 
 We show the original light curves used in model fitting in Figure \ref{fig:tserNoDetrend}, which preserve the significant variations of flux as a function of time and airmass.
 Our sinusoidal model using Equation \ref{eq:cosfit} is shown for each of the light curves in Figure \ref{fig:tserNoDetrend}.
-For Figure~\ref{fig:tserDetrend} we remove the fit the baseline variations to show the astrophysical modulations due to brown dwarf rotation.
+For Figure~\ref{fig:tserDetrend} we remove the baseline variations to show the astrophysical modulations due to brown dwarf rotation.
 
 \begin{figure*}[!t]
 \centering
@@ -508,7 +509,7 @@ For Figure~\ref{fig:tserDetrend} we remove the fit the baseline variations to sh
 	\label{fig:tserPhase1821NoDetrend}
 	}
 	\caption{Time series for each system with an offset added for clarity, as in Fig \ref{fig:tserDetrend}, but in this case showing the raw light curves without de-trending.
-	Each wavelength bin is labeled on the right side. Significant variations in the baseline are modeled as linear functions of airmass and time which are most prominent near edges of telluric absorption features at 1.32$\mu$m and 1.81$\mu$m.
+	Each wavelength bin is labeled on the right side. Significant variations in the baseline are modeled as linear functions of airmass and time which are most prominent near edges of telluric absorption features at 1.3$\mu$m and 1.8$\mu$m.
 	Green brackets show regions where telluric absorption can contaminate the time series.}
 	\label{fig:tserNoDetrend}
 \end{figure*} 

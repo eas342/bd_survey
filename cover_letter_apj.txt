@@ -20,7 +20,7 @@ Dear Dr. Steven Kawaler and Anonymous Referee,
     
     > Is there a reference for how the authors computed the brightness temperature (Equations 1 and 2)? I see they did not include limb-darkening in that calculation. If they are choosing to ignore limb-darkening, but other refereed literature takes the same approach, that's fine, just provide a citation and explain why they can ignore limb darkening.
     
-    Indeed, limb darkening can affect the brightness temperature of the brown dwarf mid-point. We have ignored the effect of limb darkening here since the models do not match the spectra very well and leave it for analysis in a future publication.
+    Indeed, limb darkening can affect the brightness temperature of the brown dwarf mid-point. We have ignored the effect of limb darkening here since the models do not match the spectra very well and leave it for analysis in a future publication. This is explained in the text.
     
     > "We find that 2MASS J0835−0819 exhibits marginal ( 0.5% per band) variability..." Without reading the full paper, I'm confused. Why was this object studied if it doesn't have high variability? I thought these were both rapidly rotating. How was it known to be rapidly rotating if it has undetectable variability? I suspect I will learn more from reading the paper, but since the abstract is the first thing the reader sees, I encourage the authors to explain this briefly with a short sentence. What it variable before, but not now?
     
