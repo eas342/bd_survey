@@ -1,0 +1,53 @@
+Referee Report
+
+The authors have addressed my most serious concerns, and the paper is stronger. I have a handful of minor comments. I recommend the manuscript for publication in AAS journals if these comments are addressed to the satisfaction of the editor.
+
+Intro:
+
+D "...T dwarfs (e.g., Artigau et al. 2009; Buenzli et al. 2012; Metchev et al. 2015), virtually all L dwarfs and most T dwarfs likely have cloud deck heterogeneities leading..."
+
+D There should be a semi-colon after "Metchev et al. 2015)", not a comma. Two complete clauses without a conjunction -> semi-colon.
+
+"The amplitude of vari- ability as a function of wavelength samples the verti- cal depths of cloud layers (Apai et al. 2013) and amplitude..."
+
+D There should be a comma after (Apai et al. 2013). Two complete clauses with a conjunction -> comma.
+
+"...by simultaneously observing it and its L dwarf companion."
+
+D Reads awkwardly. I would change "it and its L dwarf companion" to "a physically associated L dwarf companion nearby on the sky".
+
+Section 2:
+
+D "We chose 2MASS J18212622+1414064 (visible in Figure 1) with H=12.0 at 32′′ separation for our monitoring observations."
+
+D Is there a reason for choosing this star and not the other two? If so, please state. Otherwise, the reader think the authors chose it randomly. Knowing why this star was chosen is useful for future investigations using this technique.
+
+Section 3:
+
+D "The 2D images were rectified so that the X co- ordinates of all background spectra corresponded to the same wavelength."
+
+D then later:
+
+D "to determine a one dimensional smooth X (spectral) shift solution"
+
+D X should be defined when it is introduced. I didn't know what X was when I first read this. And, since X and Y are barely used in the manuscript, I don't think they help with clarity. Just say "spectral coordinates" and "spatial coordinates" instead of X and Y.
+
+D "We take flat field data" take->took. Past tense for consistency.
+
+"These shifts were used to apply a custom flat field for every image." Did this shift preserve the pixel-to-pixel response calibration? I think shifting a flat field then applying it to data would cuase havoc, since the wrong pixels are calibrating the scienc pixels. This was a bit confusing. Maybe the authors could add a sentence to clarify.
+
+Section 4:
+
+"the standard deviations of the points is about 4× the expected read" Subject verb agreement. Subject is plural ("deviations"), verb is singular ("is").
+
+"Each of the raw light curves were fit to a double sinu- soidal model:" Subject verb agreement. "Each" is singular not plural. Each was, not each were.
+
+"The co-variance between A1 and A2 is very small". "Very small" is not scientific. Can you quantify?
+
+
+Section 5:
+
+"2MASS J0835−0819 shows less variability than reported in the literature which shows at a tentative period of 3.1 hours"
+
+typo in there. "which shows at a"
+
