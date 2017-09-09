@@ -260,7 +260,7 @@ Dark frames are taken with the same exposure time as the science images and with
 We \textbf{took} flat field field data with an incandescent lamp to correct for high frequency, pixel-to-pixel variations.
 For {\sha}, we used a combination of the flat-field lamp and a sky frame to construct a pixel response map, removing large-scale ($\gtrsim$ 30 pixels) structure with low order polynomial fits along spatial and spectral axes, and normalizing to the median response spectrum. 
 To correct for instrument flexure, we cross-correlated the sky frame with each science image to measure linear spatial shifts, which were $\pm$5~pixels or 0.5\arcsec\ for \sha\ and $\pm$1.5~pixels or 0.15\arcsec\ for \shb.
-These shifts were used to apply a custom flat field for every image\textbf{, while shifting the sky flat (with pixel-to-pixel response removed) and maintaining the position of the pixel-to-pixel flat}.
+These shifts were used to apply a custom flat field for every image\textbf{: the illumination flat (with pixel-to-pixel flat removed) is shifted to the cross correlation peaks and multiplied by the pixel-to-pixel flat structure, which is maintained at the same position}.
 For {\shb}, we did not have sufficient sky frames so we used our incandescent lamp image for both flat fielding and flexure analysis.
 
 As described in \citet{2016ApJ...826..156S}, we performed spatial background subtraction over the entire slit using a 4th-order polynomial fit to points more than 30 pixels away from the center of the source dispersion traces.  Spectra were optimally extracted \citep{1986ApJ...302..757H}, with spatial profiles fit to low order polynomials along the spectral direction one row at a time with 20$\sigma$ rejection to remove cosmic rays and bad pixels.
@@ -340,7 +340,7 @@ Both sources exhibit some systematic features in the strong telluric absorption 
 Individual narrow-band light curves are extracted for each target in 25 spectral bins of width 0.060~$\mu$m; these are shown in Figure~\ref{fig:tserDetrend}.
 The baseline trends (which scale linearly with time and linearly with airmass) have been removed from Figure~\ref{fig:tserDetrend}, but the original light curves can be viewed in Figure \ref{fig:tserNoDetrend}.
 The uncertainties in these curves due to photon and read noise range from 0.2\% to 0.6\% per exposure.
-We measure the standard deviations of the time series for wavelength regions that have no significant variations near the rotation period for each brown dwarf and compare it to the expected photon and read noise.
+We measure the standard deviation of the time series for wavelength regions that have no significant variations near the rotation period for each brown dwarf and compare it to the expected photon and read noise.
 In these wavelength bins, the standard deviations of the points is about 4$\times$ the expected read noise and photon noise.
 We attribute this to correlated errors between wavelengths and as a simple approximation multiply all error bars by a factor of 4 to account for these systematics.
 
@@ -349,7 +349,7 @@ These variations are periodic with ``double-hump'' structures at peak amplitudes
 The amplitude of these variations is strongly wavelength-dependent with $\sim$3.0\% peak-to-trough variations at short 
 wavelengths and near-zero amplitude at the longest wavelengths.
 
-Each of the raw light curves were fit to a double sinusoidal model:
+Each of the raw light curves \textbf{was} fit to a double sinusoidal model:
 \begin{equation}\label{eq:cosfit}
 \begin{split}
 F(t) = \left( A_1 \cos(2 \pi (t - t_1)/\tau) + A_2 \cos(4 \pi (t - t_2)/\tau) + 1\right) \\
@@ -447,7 +447,7 @@ We find that {\sha} has marginal variability and no significant wavelength depen
 {\shb} shows significant variability up to the 1.5\% amplitude (3.0\% peak-to-valley) at short wavelengths (0.9~$\mu$m), which declines toward the near infrared (2.4$~\mu$m).
 A possible difference between the two brown dwarfs is the viewing geometry with \sha\ closer to pole-on and \shb\ closer to equator-on as shown in Table \ref{tab:bdProp}.
 Recently, \citet{vos2017viewingGeom} find that there are correlations between variability and color properties as a function of viewing geometry and that equator-on dwarfs show, on average, larger variability amplitudes.
-\sha\ shows less variability than reported in the literature which shows at a tentative period of 3.1 hours \citep{2004MNRAS.354..378K,2014A&A...566A.111W}, so it likely exhibited a more homogeneous cloud distribution at our observed epoch.
+\sha\ shows less variability \textbf{than reported in the literature} \citep{2004MNRAS.354..378K,2014A&A...566A.111W}, so it likely exhibited a more homogeneous cloud distribution at our observed epoch.
 
 The variability of {\shb} is consistent with previous HST measurements for the system that also show a gradual decrease in variability amplitude with wavelength from 1.1~$\mu$m to 1.7 $\mu$m with no decrease in the water vapor band \citep{2016ApJ...826....8Y}.
 The lack of the variability in the water vapor bands in both the WFC3 data and the data presented here supports evidence of a high altitude aerosol layer in the atmosphere of this L dwarf.

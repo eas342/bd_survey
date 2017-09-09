@@ -34,20 +34,20 @@ D X should be defined when it is introduced. I didn't know what X was when I fir
 
 D "We take flat field data" take->took. Past tense for consistency.
 
-"These shifts were used to apply a custom flat field for every image." Did this shift preserve the pixel-to-pixel response calibration? I think shifting a flat field then applying it to data would cuase havoc, since the wrong pixels are calibrating the scienc pixels. This was a bit confusing. Maybe the authors could add a sentence to clarify.
+D "These shifts were used to apply a custom flat field for every image." Did this shift preserve the pixel-to-pixel response calibration? I think shifting a flat field then applying it to data would cuase havoc, since the wrong pixels are calibrating the scienc pixels. This was a bit confusing. Maybe the authors could add a sentence to clarify.
 
 Section 4:
 
-"the standard deviations of the points is about 4× the expected read" Subject verb agreement. Subject is plural ("deviations"), verb is singular ("is").
+D "the standard deviations of the points is about 4× the expected read" Subject verb agreement. Subject is plural ("deviations"), verb is singular ("is").
 
-"Each of the raw light curves were fit to a double sinu- soidal model:" Subject verb agreement. "Each" is singular not plural. Each was, not each were.
+D "Each of the raw light curves were fit to a double sinu- soidal model:" Subject verb agreement. "Each" is singular not plural. Each was, not each were.
 
 "The co-variance between A1 and A2 is very small". "Very small" is not scientific. Can you quantify?
 
 
 Section 5:
 
-"2MASS J0835−0819 shows less variability than reported in the literature which shows at a tentative period of 3.1 hours"
+D "2MASS J0835−0819 shows less variability than reported in the literature which shows at a tentative period of 3.1 hours"
 
-typo in there. "which shows at a"
+D typo in there. "which shows at a"
 
