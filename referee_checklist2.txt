@@ -42,7 +42,7 @@ D "the standard deviations of the points is about 4× the expected read" Subject
 
 D "Each of the raw light curves were fit to a double sinu- soidal model:" Subject verb agreement. "Each" is singular not plural. Each was, not each were.
 
-"The co-variance between A1 and A2 is very small". "Very small" is not scientific. Can you quantify?
+D "The co-variance between A1 and A2 is very small". "Very small" is not scientific. Can you quantify?
 
 
 Section 5:
