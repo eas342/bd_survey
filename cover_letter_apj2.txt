@@ -1,5 +1,0 @@
-Dear Dr. Steven Kawaler and Anonymous Referee,
-
-Thank you for catching the typos in this draft.
-
-We have chosen to define the X and Y directions of the 2D spectral images since they are only approximately spectral and spatial directions. The rest of the changes requested by the referee are in boldface text.
